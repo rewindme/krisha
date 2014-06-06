@@ -1,0 +1,25 @@
+%display-inline-block{display:inline-block;*display:inline;*zoom:1}
+%sp-img{background-image:url(../im/sp_img.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
+
+/* 메인 - header */
+.header{
+	position:relative;	
+	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block}
+	.cover{width:1180px;margin:0 auto;position:relative;zoom:1}
+	h1{color:#fff}
+	.gnb{position:absolute;right:238px;top:0;font-size:0;}
+	.gnb li{@extend %display-inline-block;}
+	.gnb li a{color:#fff;font-size:11px;letter-spacing:-1px}
+	.gnb li a:hover{text-decoration:underline}
+	.gnb li .bar{color:#fff;font-size:11px;padding:0 11px 0 12px}
+	
+	.search_bar{background-color:#fff;height:26px;width:193px;padding-right:30px;position:absolute;right:0;top:7px}
+	.search_bar .search_ipt{width:100%;height:26px;border:0;background-color:transparent}
+	.search_bar button{position:absolute;right:0;top:0;border:0;background-color:transparent}
+	.search_bar button i{@extend %sp-img;width:30px;height:26px;background-position:8px 5px}
+	
+	.category_cover{@extend .cover;height:90px}
+	.category{padding:38px 40px 0}
+	.category li{@extend %display-inline-block;height:13px;vertical-align:middle}
+	.category a{color:#454545}
+}
