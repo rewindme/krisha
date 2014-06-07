@@ -10,7 +10,7 @@
 <div class="header">
 	<div class="gnb_area">
 		<div class="cover">
-			<h1>KRISHA</h1>
+			<h1 class="logo"><i>KRISHA</i></h1>
 			<ul class="gnb">
 				<li><a href="#"><span class="cnt">( <em>1</em> )</span> 쇼핑백</a><span class="bar">|</span></li>
 				<li><a href="#">로그인</a><span class="bar">|</span></li>
@@ -22,84 +22,398 @@
 			<div class="search_bar">
 				<label for="search_krisha" class="blind">krisha 통합 검색</label>
 				<input type="text" class="search_ipt" id="search_krisha">
-				<button><i>검색</i></button>
+				<button class="btn_search"><i>검색</i></button>
 			</div>
 		</div>
 	</div>
 	<div class="category_cover">
 		<h2 class="blind">krisha 상품 카테고리</h2>
 		<ul class="category">
-			<li><a href="#">NEW ARRIVAL</a></li>
-			<li><a href="#">BEST 50</a></li>
-			<li><a href="#">EARRING</a></li>
-			<li><a href="#">NECKLACE</a></li>
-			<li><a href="#">BRACELET</a></li>
-			<li><a href="#">RING</a></li>
-			<li><a href="#">SILVER</a></li>
-			<li><a href="#">GOLD</a></li>
-			<li><a href="#">SET</a></li>
-			<li><a href="#">WATCH</a></li>
-			<li><a href="#">KEY RING</a></li>
-			<li><a href="#">NAIL</a></li>
-			<li><a href="#">HAIR ACC</a></li>
-			<li><a href="#">SPECIAL ITEM</a></li>
+			<li><a href="#" class="new_arrival"><i>NEW ARRIVAL</i></a></li>
+			<li class="selected"><a href="#" class="best_50"><i>BEST 50</i></a></li>
+			<li><a href="#" class="earring"><i>EARRING</i></a></li>
+			<li><a href="#" class="necklace"><i>NECKLACE</i></a></li>
+			<li><a href="#" class="bracelet"><i>BRACELET</i></a></li>
+			<li><a href="#" class="ring"><i>RING</i></a></li>
+			<li><a href="#" class="silver"><i>SILVER</i></a></li>
+			<li><a href="#" class="gold"><i>GOLD</i></a></li>
+			<li><a href="#" class="set"><i>SET</i></a></li>
+			<li><a href="#" class="watch"><i>WATCH</i></a></li>
+			<li><a href="#" class="key_ring"><i>KEY RING</i></a></li>
+			<li><a href="#" class="nail"><i>NAIL</i></a></li>
+			<li><a href="#" class="hair_acc"><i>HAIR ACC</i></a></li>
+			<li><a href="#" class="special_item"><i>SPECIAL ITEM</i></a></li>
 		</ul>
 	</div>
 </div>
 <div class="container">
 	<div class="hero">
 		<div class="slider">
-			<ul>
-				<li><a href="#"><img src="" alt="" width="" height=""></a></li>
-				<li><a href="#"><img src="" alt="" width="" height=""></a></li>
+			<ul style="left:0">
+				<li><a href="#"><img src="im/tmp_hero_01.jpg" alt="크리샤 상품명" width="1180" height="620"></a></li>
+				<li><a href="#"><img src="im/tmp_hero_01.jpg" alt="크리샤 상품명" width="1180" height="620"></a></li>
 			</ul>		
 		</div>
 		<button class="btn_prev"><i>이전 상품 보기</i></button>
 		<button class="btn_next"><i>다음 상품 보기</i></button>
 	</div>
+	
 	<div class="section_list recmd_item">
-		<h2>Recommend Item</h2>
-		<ul class="tab">
-			<li class="selected"><a href="#">EARRING</a></li>
-			<li><a href="#">NECKLACE</a></li>
-			<li><a href="#">BRACELET</a></li>
-			<li><a href="#">EARRING</a></li>
-			<li><a href="#">RING</a></li>
-			<li><a href="#">SILVER</a></li>
-			<li><a href="#">GOLD</a></li>
-			<li><a href="#">SET ITEM</a></li>
-		</ul>
+		<div class="section_head">
+			<h2 class="tit_recomm"><i>Recommend Item</i></h2>
+			<ul class="tab">
+				<li class="selected"><a href="#">EARRING</a></li>
+				<li><a href="#">NECKLACE</a></li>
+				<li><a href="#">BRACELET</a></li>
+				<li><a href="#">EARRING</a></li>
+				<li><a href="#">RING</a></li>
+				<li><a href="#">SILVER</a></li>
+				<li><a href="#">GOLD</a></li>
+				<li><a href="#">SET ITEM</a></li>
+			</ul>
+		</div>
 		<div class="prod_list">
 			<div class="slider">
 				<ul>
 					<li>
 						<a href="#">
 							<span class="prod_thumb">
-								<img src="" alt="" width="" height="">
+								<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
 							</span>
-							<strong>길거리 캐스팅</strong>
-							<span>길거리에서 볼 수 없었던 독특한 캐스팅의 귀걸이 탄생!</span>
-							<span class="price">25,000원</span>
+							<strong class="prod_name">길거리 캐스팅</strong>
+							<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+							<span class="price"><em>25,000</em>원</span>
+						</a>
+					</li>
+					<li class="selected">
+						<a href="#">
+							<span class="prod_thumb">
+								<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+							</span>
+							<strong class="prod_name">길거리 캐스팅</strong>
+							<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+							<span class="price discount">
+								<span class="before"><em>25,000</em>원</span>
+								<strong class="after"><em>75,000</em>원</strong>
+							</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<span class="prod_thumb">
-								<img src="" alt="" width="" height="">
+								<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
 							</span>
-							<strong>길거리 캐스팅</strong>
-							<span>길거리에서 볼 수 없었던 독특한 캐스팅의 귀걸이 탄생!</span>
+							<strong class="prod_name">길거리 캐스팅</strong>
+							<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+							<span class="price"><em>25,000</em>원</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="#">
+							<span class="prod_thumb">
+								<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+							</span>
+							<strong class="prod_name">길거리 캐스팅</strong>
+							<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
 							<span class="price discount">
-								<span class="before">25,000원</span>
-								<strong class="after">75,000원</strong>
+								<span class="before"><em>25,000</em>원</span>
+								<strong class="after"><em>75,000</em>원</strong>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="prod_thumb">
+								<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+							</span>
+							<strong class="prod_name">길거리 캐스팅</strong>
+							<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+							<span class="price"><em>25,000</em>원</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="#">
+							<span class="prod_thumb">
+								<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+							</span>
+							<strong class="prod_name">길거리 캐스팅</strong>
+							<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+							<span class="price discount">
+								<span class="before"><em>25,000</em>원</span>
+								<strong class="after"><em>75,000</em>원</strong>
 							</span>
 						</a>
 					</li>
 				</ul>
 			</div>
+			<div class="nav_dot">
+				<button class="selected"></button>
+				<button></button>
+				<button></button>
+				<button></button>
+			</div>
 			<button class="btn_prev"><i>이전 상품 보기</i></button>
 			<button class="btn_next"><i>다음 상품 보기</i></button>
 		</div>
+	</div>
+	<div class="banner_cover">
+		<a href="#"><img src="im/tmp_bnr_01.jpg" alt="tmp_bnr_01" width="354" height="120"></a>
+		<a href="#"><img src="im/tmp_bnr_02.jpg" alt="tmp_bnr_02" width="354" height="120"></a>
+		<a href="#"><img src="im/tmp_bnr_03.jpg" alt="tmp_bnr_03" width="354" height="120"></a>
+	</div>
+	<div class="section_list best_item">
+		<div class="section_head">
+			<h2 class="tit_best_item"><i>Best Item</i></h2>			
+		</div>
+		<div class="prod_list">
+			<ul>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="selected">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				
+			</ul>			
+		</div>
+	</div>
+	
+	<div class="section_list new_arrival">
+		<div class="section_head">
+			<h2 class="tit_new_arrival"><i>Nwe Arrival</i></h2>			
+		</div>
+		<div class="prod_list">
+			<ul>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="selected">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_01.jpg" alt="tmp_prod_01" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price"><em>25,000</em>원</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						<span class="prod_thumb">
+							<img src="im/tmp_prod_02.jpg" alt="tmp_prod_02" width="254" height="330">
+						</span>
+						<strong class="prod_name">길거리 캐스팅</strong>
+						<span class="prod_desc">길거리에서 볼 수 없었던<br>독특한 캐스팅의 귀걸이 탄생!</span>
+						<span class="price discount">
+							<span class="before"><em>25,000</em>원</span>
+							<strong class="after"><em>75,000</em>원</strong>
+						</span>
+					</a>
+				</li>
+				
+			</ul>			
+		</div>
+	</div>
+	<div class="banner_cover">
+		<a href="#"><img src="im/tmp_bnr_04.jpg" alt="tmp_bnr_04" width="1100" height="120"></a>		
 	</div>
 </div>
 </body>
