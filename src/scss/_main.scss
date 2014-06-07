@@ -9,7 +9,7 @@
 	position:relative;	
 	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block;width:100%}
 	.cover{@extend %cover;}
-	.logo{@extend %sp-img;width:125px;height:18px;background-position:-30px 0;position:relative;top:11px}
+	.logo a{@extend %sp-img;width:125px;height:18px;background-position:-30px 0;position:relative;top:11px}
 	.gnb{position:absolute;right:238px;top:0;font-size:0;}
 	.gnb li{@extend %display-inline-block;}
 	.gnb li a{color:#fff;font-size:11px;letter-spacing:-1px}
