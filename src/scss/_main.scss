@@ -2,11 +2,12 @@
 %sp-img{background-image:url(../im/sp_img.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
 %sp-ico{@extend %sp-img;background-image:url(../im/sp_ico.png)}
 %sp-main-tit{@extend %sp-img;background-image:url(../im/sp_main_tit.png)}
+%sp-pt-bg{@extend %sp-img;background-image:url(../im/pt_sp_bg.png);background-repeat:repeat-x}
 %cover{width:1180px;margin:0 auto;position:relative;zoom:1}
-
+body{background-color:#f8f8f8}
 /* 메인 - header */
 .header{
-	position:relative;	
+	position:relative;background-color:#fff;
 	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block;width:100%}
 	.cover{@extend %cover;}
 	.logo a{@extend %sp-img;width:125px;height:18px;background-position:-30px 0;position:relative;top:11px}
@@ -56,7 +57,7 @@
 	}	
 }
 
-.container{@extend %cover;}
+.container{@extend %cover;background-color:#fff}
 .hero{position:relative}
 /* 슬라이더 */
 .slider{overflow:hidden}
@@ -72,11 +73,25 @@
 	.tit_recomm{@extend %sp-main-tit;width:151px;height:22px;background-position:4px 3px}
 	.tit_best_item{@extend %sp-main-tit;width:75px;height:22px;background-position:4px -17px}
 	.tit_new_arrival{@extend %sp-main-tit;width:91px;height:22px;background-position:4px -37px}
+	.tit_general{@extend %sp-main-tit;width:106px;height:22px;background-position:4px -57px;margin-bottom:16px}
+	
 	.tab{position:absolute;right:0;top:0;white-space:nowrap;padding:0 3px}
 	.tab li{@extend %display-inline-block;padding-left:30px}
 	.tab a{color:#999;font-size:12px;letter-spacing:-1px;@extend %display-inline-block;height:23px;line-height:23px}
 	.tab a:hover,.tab .selected a{color:#454545}
 	.tab .selected a{border-bottom:2px solid #f54500}
+}
+
+/* general store 탭 */
+.general_store{
+	.section_head{height:auto;border:0}
+	.tab{position:static;overflow:hidden;padding:0 0 0 1px;@extend %sp-pt-bg;background-position:0 39px;height:40px}
+	.tab li{padding:0;border:1px solid #e4e4e4;float:left;margin-left:-1px;border-bottom:0}
+	.tab li.selected{border-color:#bfbfbf;border-bottom:1px solid #fff;position:relative;z-index:10;margin-bottom:-1px}
+	.tab a{width:160px;height:38px;line-height:38px;text-align:center}
+	.tab .selected a{border:0}
+	.tab .hot_sale a{width:293px;color:#f54500}
+	.inr_bnr{@extend %display-inline-block;background-color:#00a99d;color:#fff;height:20px;line-height:20px;padding:0 4px;margin-left:4px}
 }
 
 /* 상품 목록 */

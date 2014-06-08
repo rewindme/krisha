@@ -22,18 +22,22 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .header .logo a, .header .search_bar .btn_search, .header .category a, .header .gnb_area, .header .gnb li, .header .category li, .slider li, .section_head .tab li, .section_head .tab a, .prod_list li, .prod_list a { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .header .gnb_area, .header .gnb li, .header .category li, .slider li, .section_head .tab li, .section_head .tab a, .general_store .inr_bnr, .prod_list li, .prod_list a { display: inline-block; *display: inline; *zoom: 1; }
 
-.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .header .logo a, .header .search_bar .btn_search, .header .category a { background-image: url(../im/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
+.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a { background-image: url(../im/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
 .btn_next, .btn_prev, .nav_dot button { background-image: url(../im/sp_ico.png); }
 
-.section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival { background-image: url(../im/sp_main_tit.png); }
+.section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general { background-image: url(../im/sp_main_tit.png); }
+
+.general_store .tab { background-image: url(../im/pt_sp_bg.png); background-repeat: repeat-x; }
 
 .header .cover, .header .category_cover, .container { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
 
+body { background-color: #f8f8f8; }
+
 /* 메인 - header */
-.header { position: relative; }
+.header { position: relative; background-color: #fff; }
 .header .gnb_area { height: 40px; line-height: 40px; background-color: #5cc4b9; width: 100%; }
 .header .logo a { width: 125px; height: 18px; background-position: -30px 0; position: relative; top: 11px; }
 .header .gnb { position: absolute; right: 238px; top: 0; font-size: 0; }
@@ -76,6 +80,8 @@ i, .ht { color: transparent; font-size: 0; }
 .header .category .special_item { background-position: -425px -50px; width: 79px; margin-right: 0; }
 .header .category .special_item:hover, .header .category .selected .special_item { background-position: -425px -90px; }
 
+.container { background-color: #fff; }
+
 .hero { position: relative; }
 
 /* 슬라이더 */
@@ -94,11 +100,22 @@ i, .ht { color: transparent; font-size: 0; }
 .section_head .tit_recomm { width: 151px; height: 22px; background-position: 4px 3px; }
 .section_head .tit_best_item { width: 75px; height: 22px; background-position: 4px -17px; }
 .section_head .tit_new_arrival { width: 91px; height: 22px; background-position: 4px -37px; }
+.section_head .tit_general { width: 106px; height: 22px; background-position: 4px -57px; margin-bottom: 16px; }
 .section_head .tab { position: absolute; right: 0; top: 0; white-space: nowrap; padding: 0 3px; }
 .section_head .tab li { padding-left: 30px; }
 .section_head .tab a { color: #999; font-size: 12px; letter-spacing: -1px; height: 23px; line-height: 23px; }
 .section_head .tab a:hover, .section_head .tab .selected a { color: #454545; }
 .section_head .tab .selected a { border-bottom: 2px solid #f54500; }
+
+/* general store 탭 */
+.general_store .section_head { height: auto; border: 0; }
+.general_store .tab { position: static; overflow: hidden; padding: 0 0 0 1px; background-position: 0 39px; height: 40px; }
+.general_store .tab li { padding: 0; border: 1px solid #e4e4e4; float: left; margin-left: -1px; border-bottom: 0; }
+.general_store .tab li.selected { border-color: #bfbfbf; border-bottom: 1px solid #fff; position: relative; z-index: 10; margin-bottom: -1px; }
+.general_store .tab a { width: 160px; height: 38px; line-height: 38px; text-align: center; }
+.general_store .tab .selected a { border: 0; }
+.general_store .tab .hot_sale a { width: 293px; color: #f54500; }
+.general_store .inr_bnr { background-color: #00a99d; color: #fff; height: 20px; line-height: 20px; padding: 0 4px; margin-left: 4px; }
 
 /* 상품 목록 */
 .prod_list { position: relative; zoom: 1; }
