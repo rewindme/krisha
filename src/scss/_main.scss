@@ -2,6 +2,7 @@
 %sp-img{background-image:url(../im/sp_img.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
 %sp-ico{@extend %sp-img;background-image:url(../im/sp_ico.png)}
 %sp-main-tit{@extend %sp-img;background-image:url(../im/sp_main_tit.png)}
+%sp-fav{@extend %sp-img;background-image:url(../im/sp_fav.png)}
 %sp-pt-bg{@extend %sp-img;background-image:url(../im/pt_sp_bg.png);background-repeat:repeat-x}
 %cover{width:1180px;margin:0 auto;position:relative;zoom:1}
 body{background-color:#f8f8f8}
@@ -60,7 +61,7 @@ body{background-color:#f8f8f8}
 .container{@extend %cover;background-color:#fff}
 .hero{position:relative}
 /* 슬라이더 */
-.slider{overflow:hidden}
+.slider{overflow:hidden;zoom:1}
 .slider ul{position:relative;white-space:nowrap;font-size:0}
 .slider li{@extend %display-inline-block}	
 .btn_next,.btn_prev{@extend %sp-ico;border:0;width:46px;height:46px;position:absolute;left:40px;top:50%;margin-top:-23px;z-index:20;cursor:pointer}
@@ -132,5 +133,70 @@ body{background-color:#f8f8f8}
 /* 배너 */
 .banner_cover{padding:40px 31px 40px 30px;font-size:0}
 .banner_cover a{padding:0 9px 0 10px}
+
+/* 공지사항 영역 */
+.notice_box{padding:40px 38px 40px 40px;font-size:0}
+.bnr_box{background-color:#f2f2f2;@extend %display-inline-block;width:255px;height:210px;vertical-align:top;margin-right:20px}
+.bnr_box ul{padding:11px 17px 0}
+.bnr_box li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bnr_box a{color:#757575;padding:0 0 3px;line-height:18px;font-size:11px;letter-spacing:-1px}
+.bnr_box .innr_bnr{display:block;padding:16px}
+.bnr_box .innr_bnr img{vertical-align:top;border:0}
+.bnr_box.notice{width:290px}
+.bnr_box.cst_center{width:240px;margin:0;position:relative}
+.bnr_box.cst_center{
+	.delivery,
+	.qna,
+	.faq{position:absolute;left:26px;top:97px;width:44px;height:14px;z-index:20;background-color:#fff;opacity:0;filter:alpha(opacity=0)}
+	.qna{left:102px}
+	.faq{left:174px}
+}
+.tit_notice{@extend %sp-main-tit;width:108px;height:12px;background-position:0 -80px;margin:16px 0 0 16px}
+
+/* footer */
+.footer{@extend %cover;}
+.policy{
+	text-align:center;font-size:0;padding:17px 0;
+	li{@extend %display-inline-block;padding:0 13px}
+	a{color:#757575;@extend %display-inline-block;}
+	.corp_intro{@extend %sp-img;width:41px;height:16px;background-position:0 -118px}
+	.user_guide{@extend %sp-img;width:40px;height:16px;background-position:-51px -118px}
+	.terms{@extend %sp-img;width:41px;height:16px;background-position:-101px -118px}
+	.private{@extend %sp-img;width:81px;height:16px;background-position:-152px -118px}
+	.help_cs{@extend %sp-img;width:41px;height:16px;background-position:-243px -118px}
+}
+.contact{
+	color:#fff;background-color:#35c2de;font-size:11px;letter-spacing:-1px;line-height:18px;padding:20px 20px 20px 292px;position:relative;zoom:1;
+	.logo_yellowphant{@extend %sp-img;width:213px;height:40px;background-position:-350px -110px;position:absolute;left:40px;top:27px}
+	.logo_inipay{@extend %sp-img;width:43px;height:43px;background-position:-294px -111px;position:absolute;right:20px;top:25px}
+	.link{background-color:#f9e21e;color:#35c2de;@extend %display-inline-block;padding:0 3px;margin-left:4px;line-height:18px;vertical-align:middle}
+	.bar{padding:0 5px}
+}
+
+.favorite_bar{
+	position:fixed;left:50%;top:138px;margin:0 0 0 598px;
+	.tit_favorite{@extend %sp-fav;width:70px;height:45px;background-position:-60px -202px}
+	ul{border:1px solid #ddd;margin-bottom:3px;background-color:#fff}
+	li{vertical-align:top}
+	li a{@extend %sp-fav;width:68px;height:51px}
+	.logout{background-position:9px 8px}
+	.sign_up{background-position:9px -43px}
+	.shopping_bag{background-position:9px -94px}
+	.wish_list{background-position:9px -145px}
+	.my_krisha{background-position:9px -196px}
+	.delivery{background-position:9px -247px}
+	.gift{background-position:-55px 10px;height:71px}
+	.membership{background-position:-55px -61px;height:71px}
+	.counsel_kakao{background-position:-55px -132px;height:70px}
+
+	
+}
+
+
+
+
+
+
+
 
 

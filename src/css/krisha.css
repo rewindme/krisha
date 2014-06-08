@@ -3,7 +3,7 @@
 /* common */
 body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select { margin: 0; padding: 0; }
 
-body, input, textarea, select, button { font-family: Helvetica,'Apple SD Gothic Neo',Sans-serif; font-size: 14px; }
+body, input, textarea, select, button { font-family: Helvetica,'Apple SD Gothic Neo','nanumgothic','Dotum','돋움',Sans-serif; font-size: 14px; }
 
 img, fieldset { border: 0; }
 
@@ -14,7 +14,7 @@ em, address { font-style: normal; }
 a, a:link { text-decoration: none; }
 
 /* For Screen Reader */
-legend, .blind { position: absolute; top: 0; left: 0; width: 0; height: 0; overflow: hidden; visibility: hidden; font-size: 0; line-height: 0; }
+legend, .blind, i { position: absolute; top: 0; left: 0; width: 0; height: 0; overflow: hidden; visibility: hidden; font-size: 0; line-height: 0; }
 
 .ht { position: absolute; }
 
@@ -22,17 +22,19 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .header .gnb_area, .header .gnb li, .header .category li, .slider li, .section_head .tab li, .section_head .tab a, .general_store .inr_bnr, .prod_list li, .prod_list a { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .tit_notice, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .header .gnb_area, .header .gnb li, .header .category li, .slider li, .section_head .tab li, .section_head .tab a, .general_store .inr_bnr, .prod_list li, .prod_list a, .bnr_box, .policy li, .policy a, .contact .link { display: inline-block; *display: inline; *zoom: 1; }
 
-.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a { background-image: url(../im/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
+.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .tit_notice, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url(../im/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
 .btn_next, .btn_prev, .nav_dot button { background-image: url(../im/sp_ico.png); }
 
-.section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general { background-image: url(../im/sp_main_tit.png); }
+.section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .tit_notice { background-image: url(../im/sp_main_tit.png); }
+
+.favorite_bar .tit_favorite, .favorite_bar li a { background-image: url(../im/sp_fav.png); }
 
 .general_store .tab { background-image: url(../im/pt_sp_bg.png); background-repeat: repeat-x; }
 
-.header .cover, .header .category_cover, .container { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
+.header .cover, .header .category_cover, .container, .footer { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
 
 body { background-color: #f8f8f8; }
 
@@ -85,7 +87,7 @@ body { background-color: #f8f8f8; }
 .hero { position: relative; }
 
 /* 슬라이더 */
-.slider { overflow: hidden; }
+.slider { overflow: hidden; zoom: 1; }
 
 .slider ul { position: relative; white-space: nowrap; font-size: 0; }
 
@@ -151,5 +153,61 @@ body { background-color: #f8f8f8; }
 .banner_cover { padding: 40px 31px 40px 30px; font-size: 0; }
 
 .banner_cover a { padding: 0 9px 0 10px; }
+
+/* 공지사항 영역 */
+.notice_box { padding: 40px 38px 40px 40px; font-size: 0; }
+
+.bnr_box { background-color: #f2f2f2; width: 255px; height: 210px; vertical-align: top; margin-right: 20px; }
+
+.bnr_box ul { padding: 11px 17px 0; }
+
+.bnr_box li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.bnr_box a { color: #757575; padding: 0 0 3px; line-height: 18px; font-size: 11px; letter-spacing: -1px; }
+
+.bnr_box .innr_bnr { display: block; padding: 16px; }
+
+.bnr_box .innr_bnr img { vertical-align: top; border: 0; }
+
+.bnr_box.notice { width: 290px; }
+
+.bnr_box.cst_center { width: 240px; margin: 0; position: relative; }
+
+.bnr_box.cst_center .delivery, .bnr_box.cst_center .qna, .bnr_box.cst_center .faq { position: absolute; left: 26px; top: 97px; width: 44px; height: 14px; z-index: 20; background-color: #fff; opacity: 0; filter: alpha(opacity=0); }
+.bnr_box.cst_center .qna { left: 102px; }
+.bnr_box.cst_center .faq { left: 174px; }
+
+.tit_notice { width: 108px; height: 12px; background-position: 0 -80px; margin: 16px 0 0 16px; }
+
+/* footer */
+.policy { text-align: center; font-size: 0; padding: 17px 0; }
+.policy li { padding: 0 13px; }
+.policy a { color: #757575; }
+.policy .corp_intro { width: 41px; height: 16px; background-position: 0 -118px; }
+.policy .user_guide { width: 40px; height: 16px; background-position: -51px -118px; }
+.policy .terms { width: 41px; height: 16px; background-position: -101px -118px; }
+.policy .private { width: 81px; height: 16px; background-position: -152px -118px; }
+.policy .help_cs { width: 41px; height: 16px; background-position: -243px -118px; }
+
+.contact { color: #fff; background-color: #35c2de; font-size: 11px; letter-spacing: -1px; line-height: 18px; padding: 20px 20px 20px 292px; position: relative; zoom: 1; }
+.contact .logo_yellowphant { width: 213px; height: 40px; background-position: -350px -110px; position: absolute; left: 40px; top: 27px; }
+.contact .logo_inipay { width: 43px; height: 43px; background-position: -294px -111px; position: absolute; right: 20px; top: 25px; }
+.contact .link { background-color: #f9e21e; color: #35c2de; padding: 0 3px; margin-left: 4px; line-height: 18px; vertical-align: middle; }
+.contact .bar { padding: 0 5px; }
+
+.favorite_bar { position: fixed; left: 50%; top: 138px; margin: 0 0 0 598px; }
+.favorite_bar .tit_favorite { width: 70px; height: 45px; background-position: -60px -202px; }
+.favorite_bar ul { border: 1px solid #ddd; margin-bottom: 3px; background-color: #fff; }
+.favorite_bar li { vertical-align: top; }
+.favorite_bar li a { width: 68px; height: 51px; }
+.favorite_bar .logout { background-position: 9px 8px; }
+.favorite_bar .sign_up { background-position: 9px -43px; }
+.favorite_bar .shopping_bag { background-position: 9px -94px; }
+.favorite_bar .wish_list { background-position: 9px -145px; }
+.favorite_bar .my_krisha { background-position: 9px -196px; }
+.favorite_bar .delivery { background-position: 9px -247px; }
+.favorite_bar .gift { background-position: -55px 10px; height: 71px; }
+.favorite_bar .membership { background-position: -55px -61px; height: 71px; }
+.favorite_bar .counsel_kakao { background-position: -55px -132px; height: 70px; }
 
 /*# sourceMappingURL=krisha.css.map */
