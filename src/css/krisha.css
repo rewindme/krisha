@@ -22,24 +22,45 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .tit_notice, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .header .gnb_area, .header .gnb li, .header .category li, .slider li, .section_head .tab li, .section_head .tab a, .general_store .inr_bnr, .prod_list li, .prod_list a, .bnr_box, .policy li, .policy a, .contact .link { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .slider li, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .product_view .task a { display: inline-block; *display: inline; *zoom: 1; }
 
-.btn_next, .btn_prev, .nav_dot button, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .tit_notice, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url(../im/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url(../im/sp/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
-.btn_next, .btn_prev, .nav_dot button { background-image: url(../im/sp_ico.png); }
+.btn_next, .btn_prev, .nav_dot button { background-image: url(../im/sp/sp_ico.png); }
 
-.section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .tit_notice { background-image: url(../im/sp_main_tit.png); }
+.tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general { background-image: url(../im/sp/sp_main_tit.png); }
 
-.favorite_bar .tit_favorite, .favorite_bar li a { background-image: url(../im/sp_fav.png); }
+.favorite_bar .tit_favorite, .favorite_bar li a { background-image: url(../im/sp/sp_fav.png); }
 
-.general_store .tab { background-image: url(../im/pt_sp_bg.png); background-repeat: repeat-x; }
+.general_store .tab, .prod_tab { background-image: url(../im/sp/pt_sp_bg.png); background-repeat: repeat-x; }
 
-.header .cover, .header .category_cover, .container, .footer { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
+.container, .footer, .header .cover, .header .category_cover, .product_view .product_info { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
+
+.general_store .tab, .prod_tab, .section_head .tab { position: absolute; right: 0; top: 0; white-space: nowrap; padding: 0 3px; }
+.general_store .tab li, .prod_tab li, .section_head .tab li { padding-left: 30px; }
+.general_store .tab a, .prod_tab a, .section_head .tab a { color: #999; font-size: 12px; letter-spacing: -1px; height: 23px; line-height: 23px; }
+.general_store .tab a:hover, .prod_tab a:hover, .section_head .tab a:hover, .general_store .tab .selected a, .prod_tab .selected a, .section_head .tab .selected a { color: #454545; }
+.general_store .tab .selected a, .prod_tab .selected a, .section_head .tab .selected a { border-bottom: 2px solid #f54500; }
+
+.general_store .tab, .prod_tab { position: static; overflow: hidden; padding: 0 0 0 1px; background-position: 0 39px; height: 40px; }
+.general_store .tab li, .prod_tab li { padding: 0; border: 1px solid #e4e4e4; float: left; margin-left: -1px; border-bottom: 0; }
+.general_store .tab li.selected, .prod_tab li.selected { border-color: #bfbfbf; border-bottom: 1px solid #fff; position: relative; z-index: 10; margin-bottom: -1px; }
+.general_store .tab li.last, .prod_tab li.last { float: none; overflow: hidden; width: auto; display: block; margin-left: 0; position: relative; left: -1px; }
+.general_store .tab li.last a, .prod_tab li.last a { padding-right: 1px; }
+.general_store .tab a, .prod_tab a { width: 160px; height: 38px; line-height: 38px; text-align: center; }
+.general_store .tab .selected a, .prod_tab .selected a { border: 0; }
+.general_store .tab .hot_sale a, .prod_tab .hot_sale a { width: 293px; color: #f54500; }
 
 body { background-color: #f8f8f8; }
 
+.container { background-color: #fff; }
+
+.hero { position: relative; }
+
+.section_list { padding: 30px 40px 0; }
+
 /* 메인 - header */
-.header { position: relative; background-color: #fff; }
+.header { position: relative; background-color: #fff; min-width: 1180px; }
 .header .gnb_area { height: 40px; line-height: 40px; background-color: #5cc4b9; width: 100%; }
 .header .logo a { width: 125px; height: 18px; background-position: -30px 0; position: relative; top: 11px; }
 .header .gnb { position: absolute; right: 238px; top: 0; font-size: 0; }
@@ -82,9 +103,46 @@ body { background-color: #f8f8f8; }
 .header .category .special_item { background-position: -425px -50px; width: 79px; margin-right: 0; }
 .header .category .special_item:hover, .header .category .selected .special_item { background-position: -425px -90px; }
 
-.container { background-color: #fff; }
+/* footer */
+.policy { text-align: center; font-size: 0; padding: 17px 0; }
+.policy li { padding: 0 13px; }
+.policy a { color: #757575; }
+.policy .corp_intro { width: 41px; height: 16px; background-position: 0 -118px; }
+.policy .user_guide { width: 40px; height: 16px; background-position: -51px -118px; }
+.policy .terms { width: 41px; height: 16px; background-position: -101px -118px; }
+.policy .private { width: 81px; height: 16px; background-position: -152px -118px; }
+.policy .help_cs { width: 41px; height: 16px; background-position: -243px -118px; }
 
-.hero { position: relative; }
+.contact { color: #fff; background-color: #35c2de; font-size: 11px; letter-spacing: -1px; line-height: 18px; padding: 20px 20px 20px 292px; position: relative; zoom: 1; }
+.contact .logo_yellowphant { width: 213px; height: 40px; background-position: -350px -110px; position: absolute; left: 40px; top: 27px; }
+.contact .logo_inipay { width: 43px; height: 43px; background-position: -294px -111px; position: absolute; right: 20px; top: 25px; }
+.contact .link { background-color: #f9e21e; color: #35c2de; padding: 0 3px; margin-left: 4px; line-height: 18px; vertical-align: middle; }
+.contact .bar { padding: 0 5px; }
+
+/* 공지사항 영역 */
+.notice_box { padding: 40px 38px 40px 40px; font-size: 0; }
+
+.bnr_box { background-color: #f2f2f2; width: 255px; height: 210px; vertical-align: top; margin-right: 20px; }
+
+.bnr_box ul { padding: 11px 17px 0; }
+
+.bnr_box li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.bnr_box a { color: #757575; padding: 0 0 3px; line-height: 18px; font-size: 11px; letter-spacing: -1px; }
+
+.bnr_box .innr_bnr { display: block; padding: 16px; }
+
+.bnr_box .innr_bnr img { vertical-align: top; border: 0; }
+
+.bnr_box.notice { width: 290px; }
+
+.bnr_box.cst_center { width: 240px; margin: 0; position: relative; }
+
+.bnr_box.cst_center .delivery, .bnr_box.cst_center .qna, .bnr_box.cst_center .faq { position: absolute; left: 26px; top: 97px; width: 44px; height: 14px; z-index: 20; background-color: #fff; opacity: 0; filter: alpha(opacity=0); }
+.bnr_box.cst_center .qna { left: 102px; }
+.bnr_box.cst_center .faq { left: 174px; }
+
+.tit_notice { width: 108px; height: 12px; background-position: 0 -80px; margin: 16px 0 0 16px; }
 
 /* 슬라이더 */
 .slider { overflow: hidden; zoom: 1; }
@@ -96,27 +154,14 @@ body { background-color: #f8f8f8; }
 .btn_next { background-position: -66px 0; right: 40px; left: auto; }
 
 /* 섹션 */
-.section_list { padding: 30px 40px 0; }
-
 .section_head { height: 24px; margin-bottom: 20px; position: relative; border-bottom: 1px solid #e4e4e4; }
 .section_head .tit_recomm { width: 151px; height: 22px; background-position: 4px 3px; }
 .section_head .tit_best_item { width: 75px; height: 22px; background-position: 4px -17px; }
 .section_head .tit_new_arrival { width: 91px; height: 22px; background-position: 4px -37px; }
 .section_head .tit_general { width: 106px; height: 22px; background-position: 4px -57px; margin-bottom: 16px; }
-.section_head .tab { position: absolute; right: 0; top: 0; white-space: nowrap; padding: 0 3px; }
-.section_head .tab li { padding-left: 30px; }
-.section_head .tab a { color: #999; font-size: 12px; letter-spacing: -1px; height: 23px; line-height: 23px; }
-.section_head .tab a:hover, .section_head .tab .selected a { color: #454545; }
-.section_head .tab .selected a { border-bottom: 2px solid #f54500; }
 
 /* general store 탭 */
 .general_store .section_head { height: auto; border: 0; }
-.general_store .tab { position: static; overflow: hidden; padding: 0 0 0 1px; background-position: 0 39px; height: 40px; }
-.general_store .tab li { padding: 0; border: 1px solid #e4e4e4; float: left; margin-left: -1px; border-bottom: 0; }
-.general_store .tab li.selected { border-color: #bfbfbf; border-bottom: 1px solid #fff; position: relative; z-index: 10; margin-bottom: -1px; }
-.general_store .tab a { width: 160px; height: 38px; line-height: 38px; text-align: center; }
-.general_store .tab .selected a { border: 0; }
-.general_store .tab .hot_sale a { width: 293px; color: #f54500; }
 .general_store .inr_bnr { background-color: #00a99d; color: #fff; height: 20px; line-height: 20px; padding: 0 4px; margin-left: 4px; }
 
 /* 상품 목록 */
@@ -154,46 +199,44 @@ body { background-color: #f8f8f8; }
 
 .banner_cover a { padding: 0 9px 0 10px; }
 
-/* 공지사항 영역 */
-.notice_box { padding: 40px 38px 40px 40px; font-size: 0; }
+.product_view .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i { background-image: url(../im/sp/sp_prod_view.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
-.bnr_box { background-color: #f2f2f2; width: 255px; height: 210px; vertical-align: top; margin-right: 20px; }
+.product_view .info_head { font-family: nanumgothic,sans-serif; }
 
-.bnr_box ul { padding: 11px 17px 0; }
+.product_view { position: relative; zoom: 1; min-width: 1180px; }
+.product_view .cover_img { text-align: center; }
+.product_view .cover_img img { max-width: 100%; max-height: 100%; width: auto; height: auto; vertical-align: top; }
+.product_view .product_info { position: absolute; top: 0; left: 50%; margin-left: -590px; }
+.product_view .location { position: absolute; left: 40px; top: 13px; line-height: 16px; }
+.product_view .location .ico_home { width: 89px; height: 13px; background-position: 0 1px; }
+.product_view .location .slash { color: #999; vertical-align: top; font-size: 11px; }
+.product_view .location .current { color: #f54500; font-size: 11px; font-weight: bold; vertical-align: top; }
+.product_view .info_cover { position: absolute; left: 660px; top: 50px; }
+.product_view .info_head .prod_code { color: #f54500; font-size: 12px; margin-bottom: 4px; display: block; }
+.product_view .info_head .prod_name { color: #454545; font-size: 23px; letter-spacing: -1px; margin-bottom: 10px; font-weight: normal; }
+.product_view .info_head .prod_desc { color: #757575; font-size: 13px; line-height: 18px; }
+.product_view .info_head .price { color: #f54500; font-size: 24px; display: block; padding: 20px 0 9px; }
+.product_view .info_head .point { color: #454545; font-size: 14px; }
+.product_view .option { padding: 13px 0 0; }
+.product_view .option .tit { color: #454545; font-size: 14px; display: block; margin-bottom: 5px; padding-top: 15px; }
+.product_view .task { padding: 15px 0; }
+.product_view .task a { vertical-align: top; background-color: #fff; margin-right: 2px; }
+.product_view .task i { position: static; visibility: visible; }
+.product_view .task .btn_buy { background-color: #5cc4b9; padding: 17px 23px; }
+.product_view .task .btn_buy i { width: 111px; height: 22px; background-position: 0 -19px; vertical-align: top; }
+.product_view .task .btn_cart { padding: 18px 21px; }
+.product_view .task .btn_cart i { width: 16px; height: 20px; background-position: -120px 0; vertical-align: top; }
+.product_view .task .btn_like { padding: 18px 20px; }
+.product_view .task .btn_like i { width: 18px; height: 20px; background-position: -140px 0; vertical-align: top; }
 
-.bnr_box li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prod_section { padding: 45px 40px 0; }
 
-.bnr_box a { color: #757575; padding: 0 0 3px; line-height: 18px; font-size: 11px; letter-spacing: -1px; }
+.prod_tab { display: block; margin-bottom: 20px; }
+.prod_tab li { width: 14.1%; }
+.prod_tab li a { width: 100%; }
+.prod_tab li.selected a, .prod_tab .cnt { color: #f54500; font-weight: bold; }
 
-.bnr_box .innr_bnr { display: block; padding: 16px; }
-
-.bnr_box .innr_bnr img { vertical-align: top; border: 0; }
-
-.bnr_box.notice { width: 290px; }
-
-.bnr_box.cst_center { width: 240px; margin: 0; position: relative; }
-
-.bnr_box.cst_center .delivery, .bnr_box.cst_center .qna, .bnr_box.cst_center .faq { position: absolute; left: 26px; top: 97px; width: 44px; height: 14px; z-index: 20; background-color: #fff; opacity: 0; filter: alpha(opacity=0); }
-.bnr_box.cst_center .qna { left: 102px; }
-.bnr_box.cst_center .faq { left: 174px; }
-
-.tit_notice { width: 108px; height: 12px; background-position: 0 -80px; margin: 16px 0 0 16px; }
-
-/* footer */
-.policy { text-align: center; font-size: 0; padding: 17px 0; }
-.policy li { padding: 0 13px; }
-.policy a { color: #757575; }
-.policy .corp_intro { width: 41px; height: 16px; background-position: 0 -118px; }
-.policy .user_guide { width: 40px; height: 16px; background-position: -51px -118px; }
-.policy .terms { width: 41px; height: 16px; background-position: -101px -118px; }
-.policy .private { width: 81px; height: 16px; background-position: -152px -118px; }
-.policy .help_cs { width: 41px; height: 16px; background-position: -243px -118px; }
-
-.contact { color: #fff; background-color: #35c2de; font-size: 11px; letter-spacing: -1px; line-height: 18px; padding: 20px 20px 20px 292px; position: relative; zoom: 1; }
-.contact .logo_yellowphant { width: 213px; height: 40px; background-position: -350px -110px; position: absolute; left: 40px; top: 27px; }
-.contact .logo_inipay { width: 43px; height: 43px; background-position: -294px -111px; position: absolute; right: 20px; top: 25px; }
-.contact .link { background-color: #f9e21e; color: #35c2de; padding: 0 3px; margin-left: 4px; line-height: 18px; vertical-align: middle; }
-.contact .bar { padding: 0 5px; }
+.prod_view_detail { width: 980px; margin: 0 auto; padding: 25px 0 0; }
 
 .favorite_bar { position: fixed; left: 50%; top: 138px; margin: 0 0 0 598px; }
 .favorite_bar .tit_favorite { width: 70px; height: 45px; background-position: -60px -202px; }

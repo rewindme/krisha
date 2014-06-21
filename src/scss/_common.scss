@@ -1,0 +1,30 @@
+%display-inline-block{display:inline-block;*display:inline;*zoom:1}
+%sp-img{background-image:url(../im/sp/sp_img.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
+%sp-ico{@extend %sp-img;background-image:url(../im/sp/sp_ico.png)}
+%sp-main-tit{@extend %sp-img;background-image:url(../im/sp/sp_main_tit.png)}
+%sp-fav{@extend %sp-img;background-image:url(../im/sp/sp_fav.png)}
+%sp-pt-bg{@extend %sp-img;background-image:url(../im/sp/pt_sp_bg.png);background-repeat:repeat-x}
+%cover{width:1180px;margin:0 auto;position:relative;zoom:1}
+
+// 탭UI 우측기준 라인형
+%tab-linear{
+	position:absolute;right:0;top:0;white-space:nowrap;padding:0 3px;
+	li{@extend %display-inline-block;padding-left:30px}
+	a{color:#999;font-size:12px;letter-spacing:-1px;@extend %display-inline-block;height:23px;line-height:23px}
+	a:hover,
+	.selected a{color:#454545}
+	.selected a{border-bottom:2px solid #f54500}
+}
+
+// 탭UI 박스형
+%tab-box{
+	@extend %tab-linear;position:static;overflow:hidden;padding:0 0 0 1px;@extend %sp-pt-bg;background-position:0 39px;height:40px;
+	li{padding:0;border:1px solid #e4e4e4;float:left;margin-left:-1px;border-bottom:0}
+	li.selected{border-color:#bfbfbf;border-bottom:1px solid #fff;position:relative;z-index:10;margin-bottom:-1px}
+	li.last{float:none;overflow:hidden;width:auto;display:block;margin-left:0;position:relative;left:-1px}
+	li.last a{padding-right:1px}
+	a{width:160px;height:38px;line-height:38px;text-align:center}
+	.selected a{border:0}
+	.hot_sale a{width:293px;color:#f54500}
+}
+

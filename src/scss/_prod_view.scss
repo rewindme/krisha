@@ -1,0 +1,51 @@
+%sp-prod{background-image:url(../im/sp/sp_prod_view.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
+%nanum{font-family:nanumgothic,sans-serif;}
+
+$color-price:#f54500;
+$color-strong:#454545;
+$color-weak:#757575;
+
+.product_view{
+	position:relative;zoom:1;min-width:1180px;
+	.cover_img{text-align:center;}
+	.cover_img img{max-width:100%;max-height:100%;width:auto;height:auto;vertical-align:top}
+	
+	.product_info{@extend %cover;position:absolute;top:0;left:50%;margin-left:-590px}
+	
+	.location{
+		position:absolute;left:40px;top:13px;line-height:16px;
+		.ico_home{@extend %sp-prod;width:89px;height:13px;background-position:0 1px}
+		.slash{color:#999;vertical-align:top;font-size:11px}
+		.current{color:#f54500;font-size:11px;font-weight:bold;vertical-align:top}
+	}
+	
+	.info_cover{position:absolute;left:660px;top:50px}
+	.info_head{
+		@extend %nanum;
+		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block}
+		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:10px;font-weight:normal}
+		.prod_desc{color:$color-weak;font-size:13px;line-height:18px}
+		.price{color:$color-price;font-size:24px;display:block;padding:20px 0 9px}
+		.point{color:$color-strong;font-size:14px}
+	}
+	
+	.option{
+		padding:13px 0 0;
+		.tit{color:$color-strong;font-size:14px;display:block;margin-bottom:5px;padding-top:15px}
+	}
+	.task{
+		padding:15px 0;
+		a{vertical-align:top;@extend %display-inline-block;background-color:#fff;margin-right:2px}
+		i{position:static;visibility:visible}
+		.btn_buy{background-color:#5cc4b9;padding:17px 23px}
+		.btn_buy i{@extend %sp-prod;width:111px;height:22px;background-position:0 -19px;vertical-align:top}
+		
+		.btn_cart{padding:18px 21px}
+		.btn_cart i{@extend %sp-prod;width:16px;height:20px;background-position:-120px 0;vertical-align:top}
+		
+		.btn_like{padding:18px 20px}
+		.btn_like i{@extend %sp-prod;width:18px;height:20px;background-position:-140px 0;vertical-align:top}
+	}
+	
+}
+

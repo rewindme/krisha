@@ -1,0 +1,11 @@
+.prod_section{padding:45px 40px 0}
+.prod_tab{
+	@extend %tab-box;display:block;margin-bottom:20px;
+	li{width:14.1%}
+	li a{width:100%}
+	li.selected a,
+	.cnt{color:#f54500;font-weight:bold}
+	
+}	
+
+.prod_view_detail{width:980px;margin:0 auto;padding:25px 0 0} 

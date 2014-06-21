@@ -1,0 +1,5 @@
+body{background-color:#f8f8f8}
+.container{@extend %cover;background-color:#fff}
+.hero{position:relative}
+.section_list{padding:30px 40px 0}
+.footer{@extend %cover;}

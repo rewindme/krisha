@@ -1,0 +1,51 @@
+/* 메인 - header */
+.header{
+	position:relative;background-color:#fff;min-width:1180px;
+	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block;width:100%}
+	.cover{@extend %cover;}
+	.logo a{@extend %sp-img;width:125px;height:18px;background-position:-30px 0;position:relative;top:11px}
+	.gnb{position:absolute;right:238px;top:0;font-size:0;}
+	.gnb li{@extend %display-inline-block;}
+	.gnb li a{color:#fff;font-size:11px;letter-spacing:-1px}
+	.gnb li a:hover{text-decoration:underline}
+	.gnb li .bar{color:#fff;font-size:11px;padding:0 11px 0 12px}
+	
+	.search_bar{background-color:#fff;height:26px;width:193px;padding-right:30px;position:absolute;right:0;top:7px}
+	.search_bar .search_ipt{width:100%;height:26px;border:0;background-color:transparent;vertical-align:top}
+	.search_bar .btn_search{position:absolute;right:0;top:0;border:0;background-color:transparent;@extend %sp-img;width:30px;height:26px;background-position:8px 5px}
+	
+	.category_cover{@extend .cover;height:90px}
+	.category{padding:38px 40px 0;font-size:0}
+	.category li{@extend %display-inline-block;vertical-align:middle}
+	.category a{color:#454545;font-size:12px;letter-spacing:-1px;@extend %sp-img;height:13px;margin-right:32px}	
+	.category{
+		.new_arrival{background-position:0 -30px;width:80px}
+		.new_arrival:hover,.selected .new_arrival{background-position:0 -70px}		
+		.best_50{background-position:-112px -30px;width:46px}
+		.best_50:hover,.selected .best_50{background-position:-112px -70px}		
+		.earring{background-position:-191px -30px;width:52px}
+		.earring:hover,.selected .earring{background-position:-191px -70px}		
+		.necklace{background-position:-276px -30px;width:60px}
+		.necklace:hover,.selected .necklace{background-position:-276px -70px}
+		.bracelet{background-position:-369px -30px;width:58px}
+		.bracelet:hover,.selected .bracelet{background-position:-369px -70px}
+		.ring{background-position:-459px -30px;width:29px}
+		.ring:hover,.selected .ring{background-position:-459px -70px}
+		.silver{background-position:-520px -30px;width:40px}
+		.silver:hover,.selected .silver{background-position:-520px -70px}
+		.gold{background-position:0 -50px;width:32px}
+		.gold:hover,.selected .gold{background-position:0 -90px}
+		.set{background-position:-64px -50px;width:21px}
+		.set:hover,.selected .set{background-position:-64px -90px}
+		.watch{background-position:-116px -50px;width:42px}
+		.watch:hover,.selected .watch{background-position:-116px -90px}
+		.key_ring{background-position:-191px -50px;width:54px}
+		.key_ring:hover,.selected .key_ring{background-position:-191px -90px}
+		.nail{background-position:-278px -50px;width:28px}
+		.nail:hover,.selected .nail{background-position:-278px -90px}
+		.hair_acc{background-position:-338px -50px;width:55px}
+		.hair_acc:hover,.selected .hair_acc{background-position:-338px -90px}
+		.special_item{background-position:-425px -50px;width:79px;margin-right:0}
+		.special_item:hover,.selected .special_item{background-position:-425px -90px}
+	}	
+}
