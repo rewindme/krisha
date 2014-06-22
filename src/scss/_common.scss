@@ -5,6 +5,9 @@
 %sp-fav{@extend %sp-img;background-image:url(../im/sp/sp_fav.png)}
 %sp-pt-bg{@extend %sp-img;background-image:url(../im/sp/pt_sp_bg.png);background-repeat:repeat-x}
 %cover{width:1180px;margin:0 auto;position:relative;zoom:1}
+%sp-prod{background-image:url(../im/sp/sp_prod_view.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
+%nanum{font-family:nanumgothic,sans-serif;}
+
 
 // 탭UI 우측기준 라인형
 %tab-linear{
@@ -28,3 +31,6 @@
 	.hot_sale a{width:293px;color:#f54500}
 }
 
+$color-price:#f54500;
+$color-strong:#454545;
+$color-weak:#757575;
