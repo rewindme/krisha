@@ -1,0 +1,16 @@
+.favorite_bar{
+	position:fixed;left:50%;top:138px;margin:0 0 0 598px;
+	.tit_favorite{@extend %sp-fav;width:70px;height:45px;background-position:-60px -202px}
+	ul{border:1px solid #ddd;margin-bottom:3px;background-color:#fff}
+	li{vertical-align:top}
+	li a{@extend %sp-fav;width:68px;height:51px}
+	.logout{background-position:9px 8px}
+	.sign_up{background-position:9px -43px}
+	.shopping_bag{background-position:9px -94px}
+	.wish_list{background-position:9px -145px}
+	.my_krisha{background-position:9px -196px}
+	.delivery{background-position:9px -247px}
+	.gift{background-position:-55px 10px;height:71px}
+	.membership{background-position:-55px -61px;height:71px}
+	.counsel_kakao{background-position:-55px -132px;height:70px}	
+}

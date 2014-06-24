@@ -1,0 +1,76 @@
+/* 슬라이더 */
+.slider{overflow:hidden;zoom:1}
+.slider ul{position:relative;white-space:nowrap;font-size:0}
+.slider li{@extend %display-inline-block}	
+.btn_next,.btn_prev{@extend %sp-ico;border:0;width:46px;height:46px;position:absolute;left:40px;top:50%;margin-top:-23px;z-index:20;cursor:pointer}
+.btn_next{background-position:-66px 0;right:40px;left:auto}
+
+
+/* 섹션 */
+.section_head{
+	height:24px;margin-bottom:20px;position:relative;border-bottom:1px solid #e4e4e4;
+	.tit_recomm{@extend %sp-main-tit;width:151px;height:22px;background-position:4px 3px}
+	.tit_best_item{@extend %sp-main-tit;width:75px;height:22px;background-position:4px -17px}
+	.tit_new_arrival{@extend %sp-main-tit;width:91px;height:22px;background-position:4px -37px}
+	.tit_general{@extend %sp-main-tit;width:106px;height:22px;background-position:4px -57px;margin-bottom:16px}	
+	.tab{@extend %tab-linear}
+}
+
+/* general store 탭 */
+.general_store{
+	.section_head{height:auto;border:0}
+	.tab{@extend %tab-box}
+	.inr_bnr{@extend %display-inline-block;background-color:#00a99d;color:#fff;height:20px;line-height:20px;padding:0 4px;margin-left:4px}
+}
+
+/* 상품 목록 */
+.prod_list{
+	position:relative;zoom:1;
+	.btn_prev,.btn_next{position:absolute;left:0;top:146px;width:19px;height:39px;margin-top:0;background-position:0 -50px}
+	.btn_next{background-position:-58px -50px;right:0;left:auto}
+	.btn_prev:hover{background-position:-29px -50px}
+	.btn_next:hover{background-position:-87px -50px}
+	ul{font-size:0;width:1120px}
+	li{@extend %display-inline-block;width:208px;margin-right:15px;margin-bottom:28px}	
+	a{font-size:12px;@extend %display-inline-block;width:100%;line-height:16px}
+	.prod_thumb{border:1px solid #e5e5e5;background-color:#f8f8f8;display:block;overflow:hidden;margin-bottom:13px}
+	.selected .prod_thumb,
+	a:hover .prod_thumb{border-color:#f54500}
+	.prod_thumb img{vertical-align:top}
+	.prod_name{color:#454545;display:block;margin-bottom:7px}
+	.prod_desc{color:#999;display:block;margin-bottom:13px}
+	.price{font-weight:bold;color:#454545}
+	.price em{font-size:18px}
+	.price .before{color:#afafaf;text-decoration:line-through;margin-right:4px}
+	.price .before em{font-size:14px}
+	.price .after{color:#f54500}
+
+}
+/* recommend 상품 목록 */
+.recmd_item .prod_list ul{width:auto}
+.recmd_item .prod_list li{width:254px;margin-right:28px}
+
+/* 슬라이더 네비게이션 */
+.nav_dot{
+	text-align:center;font-size:0;padding-bottom:10px;
+	button{@extend %sp-ico;width:18px;height:18px;background-position:2px -98px;border:0;cursor:pointer}
+	button.selected{background-position:-18px -98px}
+	
+}
+
+/* 배너 */
+.banner_cover{padding:40px 31px 40px 30px;font-size:0}
+.banner_cover a{padding:0 9px 0 10px}
+
+
+
+
+
+
+
+
+
+
+
+
+

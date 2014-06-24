@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* Sungkyu, Choi */
+
+/* common */
+body,p,h1,h2,h3,h4,h5,h6,menu,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+
+body,input,textarea,select,button{font-family:Helvetica,'Apple SD Gothic Neo','nanumgothic','Dotum','돋움',Sans-serif;font-size:14px}
+img,fieldset{border:0}
+menu,ul,ol{list-style:none}
+em,address{font-style:normal}
+a,a:link{text-decoration:none}
+
+/* For Screen Reader */
+legend,.blind,i{position:absolute;top:0;left:0;width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;line-height:0}
+.ht{position:absolute}
+i,.ht{color:transparent;font-size:0}
+.u_hc,.u_skip{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;color:transparent;line-height:0}

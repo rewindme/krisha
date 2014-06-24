@@ -1,0 +1,19 @@
+/* 공지사항 영역 */
+.notice_box{padding:40px 38px 40px 40px;font-size:0}
+.bnr_box{background-color:#f2f2f2;@extend %display-inline-block;width:255px;height:210px;vertical-align:top;margin-right:20px}
+.bnr_box ul{padding:11px 17px 0}
+.bnr_box li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bnr_box a{color:#757575;padding:0 0 3px;line-height:18px;font-size:11px;letter-spacing:-1px}
+.bnr_box .innr_bnr{display:block;padding:16px}
+.bnr_box .innr_bnr img{vertical-align:top;border:0}
+.bnr_box.notice{width:290px}
+.bnr_box.cst_center{width:240px;margin:0;position:relative}
+.bnr_box.cst_center{
+	.delivery,
+	.qna,
+	.faq{position:absolute;left:26px;top:97px;width:44px;height:14px;z-index:20;background-color:#fff;opacity:0;filter:alpha(opacity=0)}
+	.qna{left:102px}
+	.faq{left:174px}
+}
+.tit_notice{@extend %sp-main-tit;width:108px;height:12px;background-position:0 -80px;margin:16px 0 0 16px}
+
