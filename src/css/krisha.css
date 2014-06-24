@@ -22,7 +22,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .slider li, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .slider li, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a { display: inline-block; *display: inline; *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url(../im/sp/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
@@ -36,7 +36,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
 
-.product_view .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next { background-image: url(../im/sp/sp_prod_view.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
+.product_view .location .ico_home, .login .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next { background-image: url(../im/sp/sp_prod_view.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
 .product_view .info_head { font-family: nanumgothic,sans-serif; }
 
@@ -54,6 +54,11 @@ i, .ht { color: transparent; font-size: 0; }
 .general_store .tab a, .prod_tab a { width: 160px; height: 38px; line-height: 38px; text-align: center; }
 .general_store .tab .selected a, .prod_tab .selected a { border: 0; }
 .general_store .tab .hot_sale a, .prod_tab .hot_sale a { width: 293px; color: #f54500; }
+
+.product_view .location, .login .location { position: absolute; left: 40px; top: 13px; line-height: 16px; }
+.product_view .location .ico_home, .login .location .ico_home { width: 89px; height: 13px; background-position: 0 1px; }
+.product_view .location .slash, .login .location .slash { color: #999; vertical-align: top; font-size: 11px; }
+.product_view .location .current, .login .location .current { color: #f54500; font-size: 11px; font-weight: bold; vertical-align: top; }
 
 body { background-color: #f8f8f8; }
 
@@ -207,10 +212,6 @@ body { background-color: #f8f8f8; }
 .product_view .cover_img { text-align: center; }
 .product_view .cover_img img { max-width: 100%; max-height: 100%; width: auto; height: auto; vertical-align: top; }
 .product_view .product_info { position: absolute; top: 0; left: 50%; margin-left: -590px; }
-.product_view .location { position: absolute; left: 40px; top: 13px; line-height: 16px; }
-.product_view .location .ico_home { width: 89px; height: 13px; background-position: 0 1px; }
-.product_view .location .slash { color: #999; vertical-align: top; font-size: 11px; }
-.product_view .location .current { color: #f54500; font-size: 11px; font-weight: bold; vertical-align: top; }
 .product_view .info_cover { position: absolute; left: 660px; top: 50px; }
 .product_view .info_head .prod_code { color: #f54500; font-size: 12px; margin-bottom: 4px; display: block; }
 .product_view .info_head .prod_name { color: #454545; font-size: 23px; letter-spacing: -1px; margin-bottom: 10px; font-weight: normal; }
@@ -308,5 +309,27 @@ body { background-color: #f8f8f8; }
 .favorite_bar .gift { background-position: -55px 10px; height: 71px; }
 .favorite_bar .membership { background-position: -55px -61px; height: 71px; }
 .favorite_bar .counsel_kakao { background-position: -55px -132px; height: 70px; }
+
+.login { padding: 130px 60px 80px; position: relative; }
+.login h2 { font-size: 16px; font-weight: normal; border-bottom: 1px solid #5cc4b9; line-height: 20px; padding-bottom: 8px; color: #5cc4b9; margin-bottom: 38px; }
+.login button, .login label { cursor: pointer; }
+
+.login_box { width: 490px; float: left; margin-right: 80px; border-bottom: 1px solid #e4e4e4; height: 425px; }
+.login_box .login_cover label { display: block; color: #808080; margin-bottom: 12px; font-size: 14px; }
+.login_box .login_cover .ipt_cover { display: block; border: 1px solid #e4e4e4; margin-bottom: 33px; }
+.login_box .login_cover .ipt_cover input { padding: 10px; height: 18px; border: 0; background: transparent; width: 470px; color: #f54500; }
+.login_box .option_cover { margin: -18px 0 30px; line-height: 18px; }
+.login_box .option_cover input { width: 13px; height: 13px; margin-right: 3px; vertical-align: middle; }
+.login_box .option_cover label { color: #757575; margin-right: 17px; }
+.login_box .submit_cover .btn_login { border: 1px solid #58bcb1; background-color: #5cc4b9; color: #fff; font-size: 16px; width: 118px; text-align: center; height: 43px; line-height: 43px; margin-bottom: 20px; }
+.login_box .submit_cover .forgot { color: #666; font-size: 14px; }
+.login_box .submit_cover .forgot a { color: #666; text-decoration: underline; font-size: 14px; }
+
+.membership_reward { overflow: hidden; border-bottom: 1px solid #e4e4e4; height: 425px; }
+.membership_reward h2 { color: #f54500; border-color: #f54500; margin-bottom: 31px; }
+.membership_reward p { font-size: 14px; line-height: 30px; color: #666; }
+.membership_reward p strong { color: #f54500; font-weight: normal; }
+.membership_reward .join_us_cover { padding-top: 121px; }
+.membership_reward .btn_join { border: 1px solid #db3e00; background-color: #f54500; color: #fff; font-size: 16px; width: 128px; text-align: center; height: 43px; line-height: 43px; margin-bottom: 20px; }
 
 /*# sourceMappingURL=krisha.css.map */

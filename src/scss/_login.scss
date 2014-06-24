@@ -1,0 +1,34 @@
+.login{
+	padding:130px 60px 80px;position:relative;
+	.location{@extend %location}
+	h2{font-size:16px;font-weight:normal;border-bottom:1px solid #5cc4b9;line-height:20px;padding-bottom:8px;color:#5cc4b9;margin-bottom:38px}	
+	button,label{cursor:pointer}
+}
+.login_box{
+	width:490px;float:left;margin-right:80px;border-bottom:1px solid #e4e4e4;height:425px;
+	.login_cover{
+		label{display:block;color:#808080;margin-bottom:12px;font-size:14px}
+		.ipt_cover{display:block;border:1px solid #e4e4e4;margin-bottom:33px}
+		.ipt_cover input{padding:10px;height:18px;border:0;background:transparent;width:470px;color:$color-price}
+	}
+	.option_cover{
+		margin:-18px 0 30px;line-height:18px;
+		input{width:13px;height:13px;margin-right:3px;vertical-align:middle}
+		label{color:$color-weak;margin-right:17px}
+	}
+	
+	.submit_cover{
+		.btn_login{border:1px solid #58bcb1;background-color:#5cc4b9;color:#fff;font-size:16px;width:118px;text-align:center;height:43px;line-height:43px;margin-bottom:20px}
+		.forgot{color:#666;font-size:14px}
+		.forgot a{color:#666;text-decoration:underline;font-size:14px}
+	}
+}
+.membership_reward{
+	overflow:hidden;border-bottom:1px solid #e4e4e4;height:425px;
+	h2{color:$color-price;border-color:$color-price;margin-bottom:31px}
+	p{font-size:14px;line-height:30px;color:#666}
+	p strong{color:$color-price;font-weight:normal}
+	
+	.join_us_cover{padding-top:121px}
+	.btn_join{border:1px solid #db3e00;background-color:$color-price;color:#fff;font-size:16px;width:128px;text-align:center;height:43px;line-height:43px;margin-bottom:20px}
+}

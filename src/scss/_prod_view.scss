@@ -1,5 +1,3 @@
-
-
 .product_view{
 	position:relative;zoom:1;min-width:1180px;
 	.cover_img{text-align:center;}
@@ -7,12 +5,7 @@
 	
 	.product_info{@extend %cover;position:absolute;top:0;left:50%;margin-left:-590px}
 	
-	.location{
-		position:absolute;left:40px;top:13px;line-height:16px;
-		.ico_home{@extend %sp-prod;width:89px;height:13px;background-position:0 1px}
-		.slash{color:#999;vertical-align:top;font-size:11px}
-		.current{color:#f54500;font-size:11px;font-weight:bold;vertical-align:top}
-	}
+	.location{@extend %location}
 	
 	.info_cover{position:absolute;left:660px;top:50px}
 	.info_head{
