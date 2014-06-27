@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 %display-inline-block{display:inline-block;*display:inline;*zoom:1}
 %sp-img{background-image:url(../im/sp/sp_img.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
 %sp-ico{@extend %sp-img;background-image:url(../im/sp/sp_ico.png)}
@@ -47,3 +49,4 @@
 $color-price:#f54500;
 $color-strong:#454545;
 $color-weak:#757575;
+$point-color1:#5cc4b9

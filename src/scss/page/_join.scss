@@ -1,0 +1,37 @@
+@charset "utf-8";
+.join{@extend %form_container}
+.join_box{
+	position:relative;zoom:1;
+	.progress{position:absolute;right:0;top:0;color:#999;font-size:13px;line-height:20px}
+	.progress .current{color:$point-color1;font-weight:normal}
+	
+	h3{font-size:14px;color:#666;margin-bottom:12px;font-weight:normal}		
+}
+.policy_cont{
+	width:510px;float:left;
+	&.terms{margin-right:40px}
+	.txt_box{border:1px solid #e4e4e4;padding:20px;height:278px;color:$color-weak;overflow:auto;line-height:18px;font-size:12px}
+	.txt_box pre{word-wrap:break-word;word-break:break-word;}
+	
+	.agree_cover{text-align:right;padding:8px 0}
+	.agree_cover input{@extend %input-fix;margin-left:10px}
+	.agree_cover label{color:#4c4c4c;font-size:12px;vertical-align:middle}
+}
+	
+.certify_cont{
+	.certification_box{border:1px solid #e4e4e4;text-align:center}
+	.choose_tab li{float:left;width:50%;line-height:51px;padding-bottom:7px}
+	.choose_tab li a{color:#666;text-align:center;display:block;height:51px;background-color:#ededed}
+	.choose_tab li.selected{background:url(../im/sp/bu_tab_selected.gif) center bottom no-repeat}
+	.choose_tab li.selected a{color:#fff;background-color:$point-color1}
+	
+	.ipt_area{clear:both;padding:30px 0;@extend %display-inline-block;text-align:left}
+	.ipt_area input{border:1px solid #e4e4e4;-webkit-appearance:none;border-radius:0;text-align:center;color:$color-price;height:43px;vertical-align:top;font-size:20px}
+	.ipt_tel1{width:98px}
+	.ipt_tel2{width:128px}
+	.ipt_cover{line-height:43px;font-size:16px;color:#666;margin-bottom:28px}
+	.tit{color:$color-price;margin-right:2px}
+	.btn_certify{@extend %btn-point2}
+	
+	.notice li{line-height:20px;margin-bottom:2px;color:$color-weak;font-size:12px}
+}

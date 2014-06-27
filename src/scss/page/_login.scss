@@ -1,8 +1,19 @@
-.login{
+@charset "utf-8";
+
+
+%form_container{
 	padding:130px 60px 80px;position:relative;
 	.location{@extend %location}
-	h2{font-size:16px;font-weight:normal;border-bottom:1px solid #5cc4b9;line-height:20px;padding-bottom:8px;color:#5cc4b9;margin-bottom:38px}	
+	h2{font-size:16px;font-weight:normal;border-bottom:1px solid $point-color1;line-height:20px;padding-bottom:8px;color:$point-color1;margin-bottom:38px}	
 	button,label{cursor:pointer}
+}
+
+%input-fix{width:13px;height:13px;margin-right:3px;vertical-align:middle}
+%btn-point2{border:1px solid #db3e00;background-color:$color-price;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px}
+
+/* 로그인 */
+.login{
+	@extend %form_container;
 }
 .login_box{
 	width:490px;float:left;margin-right:80px;border-bottom:1px solid #e4e4e4;height:425px;
@@ -13,12 +24,12 @@
 	}
 	.option_cover{
 		margin:-18px 0 30px;line-height:18px;
-		input{width:13px;height:13px;margin-right:3px;vertical-align:middle}
+		input{@extend %input-fix}
 		label{color:$color-weak;margin-right:17px}
 	}
 	
 	.submit_cover{
-		.btn_login{border:1px solid #58bcb1;background-color:#5cc4b9;color:#fff;font-size:16px;width:118px;text-align:center;height:43px;line-height:43px;margin-bottom:20px}
+		.btn_login{border:1px solid #58bcb1;background-color:$point-color1;color:#fff;font-size:16px;width:118px;text-align:center;height:43px;line-height:43px;margin-bottom:20px}
 		.forgot{color:#666;font-size:14px}
 		.forgot a{color:#666;text-decoration:underline;font-size:14px}
 	}
@@ -30,5 +41,5 @@
 	p strong{color:$color-price;font-weight:normal}
 	
 	.join_us_cover{padding-top:121px}
-	.btn_join{border:1px solid #db3e00;background-color:$color-price;color:#fff;font-size:16px;width:128px;text-align:center;height:43px;line-height:43px;margin-bottom:20px}
+	.btn_join{@extend %btn-point2;margin-bottom:20px}
 }

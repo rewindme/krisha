@@ -1,3 +1,5 @@
+@charset "utf-8";
+/* 즐겨찾기 사이드바 */
 .favorite_bar{
 	position:fixed;left:50%;top:138px;margin:0 0 0 598px;
 	.tit_favorite{@extend %sp-fav;width:70px;height:45px;background-position:-60px -202px}
