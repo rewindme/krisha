@@ -1,5 +1,5 @@
 @charset "utf-8";
-.join{@extend %form_container}
+.join{@extend %form_container;padding-bottom:50px}
 .join_box{
 	position:relative;zoom:1;
 	.progress{position:absolute;right:0;top:0;color:#999;font-size:13px;line-height:20px}

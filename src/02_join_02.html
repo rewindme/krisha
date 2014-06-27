@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>회원가입 : 회원정보입력</title>
+<link href="css/krisha.css" media="all" rel="stylesheet" type="text/css" />
+<script src="js/jquery.1.7.1.min.js"></script>
+<script src="js/markup.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+	<div class="gnb_area">
+		
+	</div>
+	<div class="category_cover">
+		
+	</div>
+</div>
+<!-- //header -->
+
+<!-- container -->
+<div class="container">
+	<div class="join">
+		<div class="location">
+			<a href="#" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<span class="slash">/</span>
+			<span class="current">회원가입</span>
+		</div>
+		<div class="join_box">
+			<h2>크리샤 회원가입</h2>
+			<p class="progress">1.약관동의 &gt; <strong class="current">2.회원정보입력 &gt;</strong> 3.회원가입완료</p>
+			<div class="form_container">
+				<div class="form_item ipt_name">
+					<label class="tit" for="ipt_name">이름</label>
+					<input type="text" id="ipt_name" placeholder="실명을 입력해주세요.">
+				</div>
+				<div class="form_item ipt_id">
+					<label class="tit" for="ipt_id">아이디</label>
+					<input type="text" id="ipt_id" placeholder="8~15자 사이의 영문자, 숫자로 입력하세요.">
+					<button class="btn_valid">중복확인</button>
+				</div>
+				<div class="form_item ipt_pw">
+					<div class="item_cover">
+						<label class="tit" for="ipt_pw">비밀번호</label>
+						<input type="password" id="ipt_pw" placeholder="비밀번호는 4~12자 사이로 입력하세요.">
+					</div>
+					<div class="item_cover">
+						<label class="tit" for="ipt_pw_confirm">비밀번호 확인</label>
+						<input type="password" id="ipt_pw_confirm" placeholder="비밀번호확인을 위해 한 번 더 입력해주세요.">
+					</div>
+				</div>
+				<div class="form_item ipt_birth">
+					<span class="tit">생년월일</span>
+					<label for="ipt_birth_year" class="blind">년</label>
+					<input type="text" id="ipt_birth_year" placeholder="년">
+					<label for="ipt_birth_month" class="blind">월</label>
+					<input type="text" id="ipt_birth_month" placeholder="월">
+					<label for="ipt_birth_day" class="blind">일</label>
+					<input type="text" id="ipt_birth_day" placeholder="일">
+					
+					<span>
+						<input type="radio" name="sun_lunar" id="choose_sun"><label for="choose_sun">양력</label>
+						<input type="radio" name="sun_lunar" id="choose_lunar"><label for="choose_lunar">음력</label>
+					</span>
+					<span>
+						<input type="radio" name="sex" id="choose_female"><label for="choose_female">여자</label>
+						<input type="radio" name="sex" id="choose_male"><label for="choose_male">남자</label>
+					</span>
+				</div>
+				<div class="form_item ipt_address">
+					<span>
+						<input type="text" id="ipt_addr_zip1"> - <input type="text" id="ipt_addr_zip2">
+						<button>우편번호 검색</button>
+					</span>
+					<span>
+						<input type="text"> - <input type="text">
+					</span>
+				</div>
+				
+				<div class="form_item ipt_tel">
+					<div class="item_cover">
+						<span class="tit">휴대폰 번호</span>
+						<input type="text" id="ipt_phone1">
+						<input type="text" id="ipt_phone2">
+						<input type="text" id="ipt_phone3">
+					</div>
+					<div class="item_cover">
+						<span class="tit">전화번호</span>
+						<input type="text" id="ipt_tel1">
+						<input type="text" id="ipt_tel2">
+						<input type="text" id="ipt_tel3">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>	
+	<!-- 공지사항 배너 -->
+	<div class="notice_box">
+		
+	</div>
+	<div class="favorite_bar">
+		
+	</div>	
+</div>
+<!-- //container -->
+<!-- footer -->
+<div class="footer">
+	<div class="policy">
+	
+	</div>
+	<div class="contact">
+		
+	</div>
+</div>
+<!-- //footer -->
+
+<script>
+load_section([
+	{section:'.gnb_area',fileName:'01_header.html'},
+	{section:'.category_cover',fileName:'01_header.html'},
+	{section:'.policy',fileName:'01_footer.html'},
+	{section:'.contact',fileName:'01_footer.html'},
+	{section:'.notice_box',fileName:'01_notice.html'},
+	{section:'.favorite_bar',fileName:'01_favorite_bar.html'}	
+])
+	
+</script>
+
+</body>
+</html>

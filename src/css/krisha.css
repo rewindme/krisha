@@ -338,6 +338,8 @@ body { background-color: #f8f8f8; }
 .membership_reward .join_us_cover { padding-top: 121px; }
 .membership_reward .btn_join { margin-bottom: 20px; }
 
+.join { padding-bottom: 50px; }
+
 .join_box { position: relative; zoom: 1; }
 .join_box .progress { position: absolute; right: 0; top: 0; color: #999; font-size: 13px; line-height: 20px; }
 .join_box .progress .current { color: #5cc4b9; font-weight: normal; }
