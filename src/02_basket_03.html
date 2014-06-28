@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>쇼핑백</title>
+<title>결제완료</title>
 <link href="css/krisha.css" media="all" rel="stylesheet" type="text/css" />
 <script src="js/jquery.1.7.1.min.js"></script>
 <script src="js/markup.js"></script>
@@ -26,24 +26,24 @@
 		<div class="location">
 			<a href="#" class="ico_home"><i class="blind">KRISHA HOME</i></a>
 			<span class="slash">/</span>
-			<span class="current">쇼핑백</span>
+			<span class="current">주문결제</span>
 		</div>
 		<div class="info_column">
 			<table class="order_list">
 				<caption><span class="blind">상품정보</span></caption>
 				<colgroup>
 					<col style="width:auto">
-					<col style="width:70px">
-					<col style="width:146px">
-					<col style="width:74px">
-					<col style="width:79px">
+					<col style="width:110px">
+					<col style="width:100px">
+					<col style="width:68px">
+					<col style="width:112px">
 				</colgroup>
 				<tr>
 					<th>상품정보</th>
 					<th>판매가격</th>
+					<th>포인트</th>
 					<th>수량</th>
 					<th>주문금액</th>
-					<th>삭제</th>
 				</tr>
 				<tr>
 					<td class="prod_name">
@@ -56,12 +56,9 @@
 						</div>
 					</td>
 					<td>30,000원</td>
-					<td>
-						<input type="text" value="1" class="ipt_text"><label class="blind">수량 입력</label>
-						<button class="btn_modify">변경</button>
-					</td>
+					<td>300P</td>
+					<td>1개</td>
 					<td class="order_price">30,000원</td>
-					<td><button class="btn_remove">삭제</button></td>
 				</tr>
 				<tr>
 					<td class="prod_name">
@@ -74,24 +71,53 @@
 						</div>
 					</td>
 					<td>30,000원</td>
-					<td>
-						<input type="text" value="1" class="ipt_text"><label class="blind">수량 입력</label>
-						<button class="btn_modify">변경</button>
-					</td>
+					<td>300P</td>
+					<td>1개</td>
 					<td class="order_price">30,000원</td>
-					<td><button class="btn_remove">삭제</button></td>
 				</tr>
 			</table>
-			<div class="help_msg">
-				<h3>장바구니 이용안내</h3>
-				<p>장바구니에 담긴 상품은 접속을 종료하시거나 일정시간 페이지 이동이 없으면 장바구니가 자동으로 비워집니다.<br>
-보관하시려면 <strong>관심상품</strong>에 등록하시기 바랍니다.<br>
-총 결제금액이 <strong>3만원 	이상인 경우 배송비 무료</strong>입니다.</p>
+			<div class="order_reciept_info">
+				<h3 class="tit_bar">배송지 정보</h3>
+				<table class="form_tb">
+					<caption><span class="blind">배송지 정보</span></caption>
+					<colgroup>
+						<col style="width:160px">
+						<col style="width:auto">
+					</colgroup>
+					<tr>
+						<th>주문하시는분</th>
+						<td>크리샤</td>
+					</tr>
+					<tr>
+						<th>받으시는 분</th>
+						<td>장우준</td>
+					</tr>
+					<tr>
+						<th>전화번호</th>
+						<td>02-6403-0089</td>
+					</tr>
+					<tr>
+						<th>휴대폰번호</th>
+						<td>02-6403-0089</td>
+					</tr>
+					<tr>
+						<th>이메일</th>
+						<td>krisha@krisha.co.kr</td>
+					</tr>
+					<tr>
+						<th>배송지 주소</th>
+						<td>155-719 서울시 금천구 가선동 543-1 대성디폴리스 A동 2211호</td>
+					</tr>
+					<tr>
+						<th>배송시 요청사항</th>
+						<td>경비실에 맡겨두고 가주세요.</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<div class="aside_column">
-			<h3 class="tit_bar">주문결제금액</h3>
-			<div class="total_price">				
+			<h3 class="tit_bar">결제정보</h3>			
+			<div class="total_price">
 				<table class="price_summary">
 					<caption><span class="blind">주문결제금액</span></caption>
 					<colgroup>
@@ -99,7 +125,7 @@
 						<col style="width:105px;">
 					</colgroup>
 					<tr>
-						<th>상품합계금액</th>
+						<th>총 주문금액</th>
 						<td>60,000원</td>
 					</tr>
 					<tr>
@@ -107,14 +133,48 @@
 						<td><strong>무료배송</strong></td>
 					</tr>
 					<tr>
-						<th>총 주문금액</th>
+						<th>할인금액</th>
+						<td><strong>3,000원</strong></td>
+					</tr>
+					<tr>
+						<th>실제 결제금액</th>
+						<td><strong>120,000원</strong></td>
+					</tr>
+					<tr>
+						<th>적립예정 포인트</th>
+						<td><strong>600P</strong></td>
+					</tr>
+				</table>
+			</div>
+			<div class="pay_method">
+				<table class="price_summary">
+					<caption><span class="blind">결제정보</span></caption>
+					<colgroup>
+						<col style="width:auto">
+						<col style="width:105px;">
+					</colgroup>
+					<tr>
+						<th>결제방법</th>
+						<td>가상계좌</td>
+					</tr>
+					<tr>
+						<th>계좌정보</th>
+						<td>우리은행[에스크로]</td>
+					</tr>
+					<tr>
+						<th>계좌번호</th>
+						<td>3284739847384792834324</td>
+					</tr>
+					<tr>
+						<th>실제 결제금액</th>
 						<td><strong>120,000원</strong></td>
 					</tr>
 				</table>
 			</div>
 			<div class="task_btn">
-				<button class="btn_order">주문하기</button>
-				<button class="btn_shopping">계속 쇼핑하기</button>
+				<button class="btn_print_bill">영수증출력</button>
+				<button class="btn_payment">주문확인</button>
+				<button class="btn_cancel">쇼핑계속하기</button>
 			</div>
 		</div>
 		

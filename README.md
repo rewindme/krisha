@@ -7,6 +7,9 @@ krisha
 ##Sub
 [http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_sub.html]
 
+##List
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_list.html]
+
 ##Login
 [http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_login.html]
 
@@ -14,6 +17,12 @@ krisha
 [http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_join_01.html]
 [http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_join_02.html]
 [http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_join_03.html]
+
+##Basket
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_basket_01.html]
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_basket_02.html]
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_basket_03.html]
+
 
 
 

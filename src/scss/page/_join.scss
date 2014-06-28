@@ -1,9 +1,44 @@
 @charset "utf-8";
 %btn-gray-h40{@extend %btn-gray;height:40px;vertical-align:top;width:108px}
-%sp-rd{background:url(../im/sp/sp_component.png) no-repeat}
-%sp-cmplt{background:url(../im/sp/sp_join_complete.png) no-repeat}
+%form_item{
+	.tit{display:block;color:#666;font-size:14px}
+	.ipt_text,.choose_email{@extend %ipt-text;height:18px;line-height:18px;padding:10px;width:368px;box-sizing:content-box;margin-right:6px}
+	.btn_valid{@extend %btn-gray-h40}	
+	.hyphen{color:#e4e4e4;margin-right:4px}
+	
+	.choose_email{width:213px;color:#999}
+	
+	&.ipt_pw,&.ipt_tel{
+		overflow:hidden;
+		.item_cover{width:405px;float:left}
+	}
+	&.ipt_birth{
+		.ipt_text{text-align:center}
+	}
+	
+	&.ipt_address{
+		.btn_find_zip{@extend %btn-gray-h40}
+		.item_cover{display:block;margin-bottom:10px}
+	}
+	
+	&.ipt_path{
+		label{width:90px}
+	}
+	
+	&.ipt_email{
+		.ipt_text{width:213px}
+		.hyphen{color:#999}
+	}	
+}
 
-.join{@extend %form_container;padding-bottom:50px}
+.join{
+	@extend %form_container;padding-bottom:50px;
+	.submit_cover{
+		text-align:center;padding:30px 0;
+		.btn_cancel{@extend %btn-gray-h40;margin-right:10px}
+		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:108px}
+	}
+}
 .join_box{
 	position:relative;zoom:1;
 	.progress{position:absolute;right:0;top:0;color:#999;font-size:13px;line-height:20px}
@@ -43,47 +78,9 @@
 /* 회원정보입력 */
 .form_item{
 	margin-bottom:21px;line-height:40px;
-	.tit{display:block;color:#666;font-size:14px}
-	.ipt_text,.choose_email{@extend %ipt-text;height:18px;line-height:18px;padding:10px;width:368px;box-sizing:content-box;margin-right:6px}
-	.btn_valid{@extend %btn-gray-h40}	
-	.hyphen{color:#e4e4e4;margin-right:4px}
-	.ipt_rdo{
-		position:relative;height:20px;overflow:hidden;
-		input{position:absolute;z-index:-1}
-		label{@extend %display-inline-block;height:20px;@extend %sp-rd;height:20px;line-height:20px;padding-left:23px;color:#999;background-position:0 -38px;margin-right:15px}
-		input:checked + label{background-position:0 0}
-	}
-	.choose_email{width:213px;color:#999}
-	
-	&.ipt_pw,&.ipt_tel{
-		overflow:hidden;
-		.item_cover{width:405px;float:left}
-	}
-	&.ipt_birth{
-		.ipt_text{text-align:center}
-	}
-	
-	&.ipt_address{
-		.btn_find_zip{@extend %btn-gray-h40}
-		.item_cover{display:block;margin-bottom:10px}
-	}
-	
-	&.ipt_path{
-		label{width:90px}
-	}
-	
-	&.ipt_email{
-		.ipt_text{width:213px}
-		.hyphen{color:#999}
-	}
+	@extend %form_item;
 	
 }
-.submit_cover{
-	text-align:center;padding:30px 0;
-	.btn_cancel{@extend %btn-gray-h40;margin-right:10px}
-	.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:108px}
-}
-
 /* 회원가입 완료 */
 .join_complete{
 	padding:157px 0 0 130px;
