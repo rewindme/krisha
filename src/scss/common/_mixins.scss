@@ -8,7 +8,10 @@
 %sp-pt-bg{@extend %sp-img;background-image:url(../im/sp/pt_sp_bg.png);background-repeat:repeat-x}
 %cover{width:1180px;margin:0 auto;position:relative;zoom:1}
 %sp-prod{background-image:url(../im/sp/sp_prod_view.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
+%sp-rd{background:url(../im/sp/sp_component.png) no-repeat}
 %nanum{font-family:nanumgothic,sans-serif;}
+%sp-cmplt{background:url(../im/sp/sp_join_complete.png) no-repeat}
+
 
 $color-price:#f54500;
 $color-strong:#454545;
@@ -50,9 +53,16 @@ $point-color1:#5cc4b9;
 }
 
 //버튼
+%btn-point1{border:1px solid #58bcb1;background-color:$point-color1;color:#fff;font-size:16px;text-align:center;height:43px;line-height:43px}
 %btn-point2{border:1px solid #db3e00;background-color:$color-price;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px}
 %btn-gray{border:1px solid #aeaeae;background-color:#b4b4b4;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px}
 
 //input
 %ipt-text{border:1px solid #e4e4e4;-webkit-appearance:none;border-radius:0;vertical-align:top;}
 %input-fix{width:13px;height:13px;margin-right:3px;vertical-align:middle}
+.ipt_rdo{
+	position:relative;height:20px;overflow:hidden;
+	input{position:absolute;z-index:-1}
+	label{@extend %display-inline-block;height:20px;@extend %sp-rd;height:20px;line-height:20px;padding-left:23px;color:#999;background-position:0 -38px;margin-right:15px}
+	input:checked + label{background-position:0 0}
+}
