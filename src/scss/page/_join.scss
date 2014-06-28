@@ -1,4 +1,8 @@
 @charset "utf-8";
+%btn-gray-h40{@extend %btn-gray;height:40px;vertical-align:top;width:108px}
+%sp-rd{background:url(../im/sp/sp_component.png) no-repeat}
+%sp-cmplt{background:url(../im/sp/sp_join_complete.png) no-repeat}
+
 .join{@extend %form_container;padding-bottom:50px}
 .join_box{
 	position:relative;zoom:1;
@@ -35,3 +39,67 @@
 	
 	.notice li{line-height:20px;margin-bottom:2px;color:$color-weak;font-size:12px}
 }
+
+/* 회원정보입력 */
+.form_item{
+	margin-bottom:21px;line-height:40px;
+	.tit{display:block;color:#666;font-size:14px}
+	.ipt_text,.choose_email{border:1px solid #e4e4e4;-webkit-appearance:none;border-radius:0;height:18px;line-height:18px;padding:10px;width:368px;box-sizing:content-box;vertical-align:top;margin-right:6px}
+	.btn_valid{@extend %btn-gray-h40}	
+	.hyphen{color:#e4e4e4;margin-right:4px}
+	.ipt_rdo{
+		position:relative;height:20px;overflow:hidden;
+		input{position:absolute;z-index:-1}
+		label{@extend %display-inline-block;height:20px;@extend %sp-rd;height:20px;line-height:20px;padding-left:23px;color:#999;background-position:0 -38px;margin-right:15px}
+		input:checked + label{background-position:0 0}
+	}
+	.choose_email{width:213px;color:#999}
+	
+	&.ipt_pw,&.ipt_tel{
+		overflow:hidden;
+		.item_cover{width:405px;float:left}
+	}
+	&.ipt_birth{
+		.ipt_text{text-align:center}
+	}
+	
+	&.ipt_address{
+		.btn_find_zip{@extend %btn-gray-h40}
+		.item_cover{display:block;margin-bottom:10px}
+	}
+	
+	&.ipt_path{
+		label{width:90px}
+	}
+	
+	&.ipt_email{
+		.ipt_text{width:213px}
+		.hyphen{color:#999}
+	}
+	
+}
+.submit_cover{
+	text-align:center;padding:30px 0;
+	.btn_cancel{@extend %btn-gray-h40;margin-right:10px}
+	.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:108px}
+}
+
+/* 회원가입 완료 */
+.join_complete{
+	padding:157px 0 0 130px;
+	.logo_krisha{@extend %sp-cmplt;width:324px;height:114px;background-position:0 32px;display:block;border-right:1px solid $point-color1;float:left}
+	.welcome_msg{overflow:hidden;padding:0 0 0 31px;}
+	.img_welcome{@extend %sp-cmplt;width:430px;height:68px;background-position:0 -122px;margin:0 0 8px 0;padding:0}
+	.welcome_msg p{color:$color-weak;line-height:21px;font-size:14px}
+	.welcome_msg strong{color:$color-price;font-weight:normal}
+	.submit_cover{padding:135px 0 110px}
+}
+
+
+
+
+
+
+
+
+

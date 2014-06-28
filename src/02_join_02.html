@@ -34,65 +34,88 @@
 			<div class="form_container">
 				<div class="form_item ipt_name">
 					<label class="tit" for="ipt_name">이름</label>
-					<input type="text" id="ipt_name" placeholder="실명을 입력해주세요.">
+					<input type="text" id="ipt_name" class="ipt_text" placeholder="실명을 입력해주세요.">
 				</div>
 				<div class="form_item ipt_id">
 					<label class="tit" for="ipt_id">아이디</label>
-					<input type="text" id="ipt_id" placeholder="8~15자 사이의 영문자, 숫자로 입력하세요.">
+					<input type="text" id="ipt_id" class="ipt_text" placeholder="8~15자 사이의 영문자, 숫자로 입력하세요.">
 					<button class="btn_valid">중복확인</button>
 				</div>
 				<div class="form_item ipt_pw">
 					<div class="item_cover">
 						<label class="tit" for="ipt_pw">비밀번호</label>
-						<input type="password" id="ipt_pw" placeholder="비밀번호는 4~12자 사이로 입력하세요.">
+						<input type="password" id="ipt_pw" class="ipt_text" placeholder="비밀번호는 4~12자 사이로 입력하세요.">
 					</div>
 					<div class="item_cover">
 						<label class="tit" for="ipt_pw_confirm">비밀번호 확인</label>
-						<input type="password" id="ipt_pw_confirm" placeholder="비밀번호확인을 위해 한 번 더 입력해주세요.">
+						<input type="password" id="ipt_pw_confirm" class="ipt_text" placeholder="비밀번호확인을 위해 한 번 더 입력해주세요.">
 					</div>
 				</div>
 				<div class="form_item ipt_birth">
 					<span class="tit">생년월일</span>
 					<label for="ipt_birth_year" class="blind">년</label>
-					<input type="text" id="ipt_birth_year" placeholder="년">
-					<label for="ipt_birth_month" class="blind">월</label>
-					<input type="text" id="ipt_birth_month" placeholder="월">
-					<label for="ipt_birth_day" class="blind">일</label>
-					<input type="text" id="ipt_birth_day" placeholder="일">
+					<input type="text" id="ipt_birth_year" class="ipt_text" placeholder="년" style="width:88px">
 					
-					<span>
-						<input type="radio" name="sun_lunar" id="choose_sun"><label for="choose_sun">양력</label>
-						<input type="radio" name="sun_lunar" id="choose_lunar"><label for="choose_lunar">음력</label>
-					</span>
-					<span>
-						<input type="radio" name="sex" id="choose_female"><label for="choose_female">여자</label>
-						<input type="radio" name="sex" id="choose_male"><label for="choose_male">남자</label>
-					</span>
+					<label for="ipt_birth_month" class="blind">월</label>
+					<input type="text" id="ipt_birth_month" class="ipt_text" placeholder="월" style="width:48px">
+					
+					<label for="ipt_birth_day" class="blind">일</label>
+					<input type="text" id="ipt_birth_day" class="ipt_text" placeholder="일" style="width:48px">
+					
+					<span class="ipt_rdo"><input type="radio" name="sun_lunar" id="choose_sun" checked="checked"><label for="choose_sun">양력</label></span>
+					<span class="ipt_rdo"><input type="radio" name="sun_lunar" id="choose_lunar"><label for="choose_lunar">음력</label></span>
+					<span class="ipt_rdo"><input type="radio" name="sex" id="choose_female" checked="checked"><label for="choose_female">여자</label></span>
+					<span class="ipt_rdo"><input type="radio" name="sex" id="choose_male"><label for="choose_male">남자</label></span>
 				</div>
 				<div class="form_item ipt_address">
-					<span>
-						<input type="text" id="ipt_addr_zip1"> - <input type="text" id="ipt_addr_zip2">
-						<button>우편번호 검색</button>
+					<span class="tit">주소</span>
+					<span class="item_cover">
+						<input type="text" class="ipt_text" id="ipt_addr_zip1" style="width:48px"><span class="hyphen">-</span><input type="text" class="ipt_text" id="ipt_addr_zip2" style="width:48px">
+						<button class="btn_find_zip">우편번호 검색</button>
 					</span>
-					<span>
-						<input type="text"> - <input type="text">
+					<span class="item_cover">
+						<input type="text" class="ipt_text"> <input type="text" class="ipt_text">
 					</span>
 				</div>
 				
 				<div class="form_item ipt_tel">
 					<div class="item_cover">
 						<span class="tit">휴대폰 번호</span>
-						<input type="text" id="ipt_phone1">
-						<input type="text" id="ipt_phone2">
-						<input type="text" id="ipt_phone3">
+						<input type="text" id="ipt_phone1" class="ipt_text" style="width:88px">
+						<input type="text" id="ipt_phone2" class="ipt_text" style="width:88px">
+						<input type="text" id="ipt_phone3" class="ipt_text" style="width:88px">
 					</div>
 					<div class="item_cover">
 						<span class="tit">전화번호</span>
-						<input type="text" id="ipt_tel1">
-						<input type="text" id="ipt_tel2">
-						<input type="text" id="ipt_tel3">
+						<input type="text" id="ipt_tel1" class="ipt_text" style="width:88px">
+						<input type="text" id="ipt_tel2" class="ipt_text" style="width:88px">
+						<input type="text" id="ipt_tel3" class="ipt_text" style="width:88px">
 					</div>
 				</div>
+				<div class="form_item ipt_email">
+					<span class="tit">이메일</span>
+					<input type="text" id="ipt_email1" class="ipt_text"><span class="hyphen">@</span>
+					<input type="text" id="ipt_email2" class="ipt_text">
+					<select class="choose_email">
+						<option>메일계정선택</option>
+						<option>네이버</option>
+					</select>					
+				</div>
+				<div class="form_item ipt_path">
+					<span class="tit">가입경로</span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path1" checked="checked"><label for="ipt_path1">온라인 광고</label></span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path2"><label for="ipt_path2">네이버</label></span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path3"><label for="ipt_path3">다음</label></span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path4"><label for="ipt_path4">네이트</label></span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path5"><label for="ipt_path5">블로그</label></span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path6"><label for="ipt_path6">카페</label></span>
+					<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path7"><label for="ipt_path7">기타</label></span>
+				</div>
+				<div class="submit_cover">
+					<button class="btn_cancel">취소하기</button>
+					<button class="btn_signup">회원가입</button>
+				</div>
+				
 			</div>
 		</div>
 		

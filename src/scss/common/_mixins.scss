@@ -10,6 +10,10 @@
 %sp-prod{background-image:url(../im/sp/sp_prod_view.png);background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
 %nanum{font-family:nanumgothic,sans-serif;}
 
+$color-price:#f54500;
+$color-strong:#454545;
+$color-weak:#757575;
+$point-color1:#5cc4b9;
 
 // 탭UI 우측기준 라인형
 %tab-linear{
@@ -45,8 +49,8 @@
 	letter-spacing:-1px;
 }
 
+//버튼
+%btn-point2{border:1px solid #db3e00;background-color:$color-price;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px}
+%btn-gray{border:1px solid #aeaeae;background-color:#b4b4b4;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px}
 
-$color-price:#f54500;
-$color-strong:#454545;
-$color-weak:#757575;
-$point-color1:#5cc4b9
+
