@@ -22,7 +22,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .slider li, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .certify_cont .ipt_area, .form_item .ipt_rdo label { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .slider li, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .certify_cont .ipt_area, .form_item .ipt_rdo label, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a { display: inline-block; *display: inline; *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .logo a, .header .search_bar .btn_search, .header .category a, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url(../im/sp/sp_img.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
@@ -36,7 +36,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next { background-image: url(../im/sp/sp_prod_view.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next { background-image: url(../im/sp/sp_prod_view.png); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
 .product_view .info_head { font-family: nanumgothic,sans-serif; }
 
@@ -55,10 +55,10 @@ i, .ht { color: transparent; font-size: 0; }
 .general_store .tab .selected a, .prod_tab .selected a { border: 0; }
 .general_store .tab .hot_sale a, .prod_tab .hot_sale a { width: 293px; color: #f54500; }
 
-.product_view .location, .login .location, .join .location { position: absolute; left: 40px; top: 13px; line-height: 16px; }
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home { width: 89px; height: 13px; background-position: 0 1px; }
-.product_view .location .slash, .login .location .slash, .join .location .slash { color: #999; vertical-align: top; font-size: 11px; }
-.product_view .location .current, .login .location .current, .join .location .current { color: #f54500; font-size: 11px; font-weight: bold; vertical-align: top; }
+.product_view .location, .login .location, .join .location, .container .location { position: absolute; left: 40px; top: 13px; line-height: 16px; }
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .container .location .ico_home { width: 89px; height: 13px; background-position: 0 1px; }
+.product_view .location .slash, .login .location .slash, .join .location .slash, .container .location .slash { color: #999; vertical-align: top; font-size: 11px; }
+.product_view .location .current, .login .location .current, .join .location .current, .container .location .current { color: #f54500; font-size: 11px; font-weight: bold; vertical-align: top; }
 
 .membership_reward .btn_join, .certify_cont .btn_certify, .submit_cover .btn_signup { border: 1px solid #db3e00; background-color: #f54500; color: #fff; font-size: 16px; text-align: center; height: 45px; line-height: 43px; width: 128px; }
 
@@ -404,5 +404,25 @@ body { background-color: #f8f8f8; }
 .join_complete .welcome_msg p { color: #757575; line-height: 21px; font-size: 14px; }
 .join_complete .welcome_msg strong { color: #f54500; font-weight: normal; }
 .join_complete .submit_cover { padding: 135px 0 110px; }
+
+.category_detail { padding: 40px; }
+.category_detail .hero { margin-bottom: 26px; }
+.category_detail .hero img { vertical-align: top; }
+
+.goods_list .tab { border: 1px solid #e4e4e4; font-size: 0; }
+.goods_list .tab li { border: 1px solid #e4e4e4; vertical-align: top; margin: -1px 0 -1px -1px; }
+.goods_list .tab li a { font-size: 12px; color: #818181; height: 48px; line-height: 48px; width: 182px; vertical-align: top; text-align: center; }
+.goods_list .tab li.all, .goods_list .tab li.selected { position: relative; border: 1px solid #f54500; z-index: 10; }
+.goods_list .tab li.selected a { color: #454545; }
+.goods_list .tab li.all { background-color: #f54500; border-color: #db3e00; }
+.goods_list .tab li.all a { color: #fff; }
+.goods_list .sorting_option { background-color: #f8f8f8; border: 1px solid #ededed; border-top: 0; height: 34px; line-height: 34px; text-align: right; padding: 0 15px; margin-bottom: 25px; }
+.goods_list .sorting_option a { color: #999; font-size: 11px; }
+.goods_list .sorting_option a.selected { color: #f54500; font-weight: bold; }
+.goods_list .sorting_option .bar { color: #e3e3e3; font-size: 11px; padding: 0 4px 0 4px; }
+.goods_list .navigation { font-family: tahoma; font-size: 0; padding-bottom: 0; }
+.goods_list .navigation a { border: 1px solid #e4e4e4; font-size: 15px; height: 46px; line-height: 46px; font-weight: normal; width: 46px; padding: 0; margin-right: -1px; }
+.goods_list .navigation a.selected { color: #f54500; background-color: #f8f8f8; }
+.goods_list .navigation a.nav_prev, .goods_list .navigation a.nav_next { padding: 0 18px; width: auto; }
 
 /*# sourceMappingURL=krisha.css.map */
