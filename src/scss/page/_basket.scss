@@ -1,0 +1,54 @@
+%tit-bar{border-bottom:2px solid $point-color1;color:#666;font-weight:normal;height:29px;line-height:29px;font-size:14px}
+
+.basket{
+	@extend %form_container;overflow:hidden;
+	
+	.info_column{width:750px;float:left;margin-right:40px}
+	.aside_column{width:270px;float:left;.tit_bar{border-color:$color-price;color:$color-price}}
+	.tit_bar{@extend %tit-bar;font-size:16px;color:$point-color1;margin-bottom:15px}
+	
+}
+
+.order_list{
+	width:100%;border-collapse:collapse;padding:0;border:0;
+	th{@extend %tit-bar}
+	td{padding:20px 0;border-bottom:1px solid #e4e4e4;text-align:center;color:#666;font-size:14px}
+	.prod_name{padding-left:10px;text-align:left;vertical-align:middle}
+	.prod_thumb{border:1px solid #e4e4e4;@extend %display-inline-block;vertical-align:middle;margin-right:18px}
+	.prod_thumb img{vertical-align:top}
+	.prod_info{
+		@extend %display-inline-block;vertical-align:middle;line-height:18px;
+		.name{color:#666;font-size:14px;margin-bottom:4px;}
+		.status{font-size:12px;color:$color-price}
+	}
+	
+	.ipt_text{@extend %ipt-text;width:48px;text-align:center;height:18px;line-height:18px;padding:8px 0}
+	.btn_modify{@extend %btn-gray;width:48px;height:36px;line-height:34px;font-size:14px}
+	.order_price{color:$color-price}
+	.btn_remove{background:none;border:0;width:48px;height:36px;line-height:34px;font-size:14px;color:#666}
+}
+
+.help_msg{
+	border-bottom:1px solid #e4e4e4;line-height:24px;padding:45px 0 45px 10px;
+	h3{font-size:16px;color:#666;font-weight:normal}
+	p{font-size:12px;color:#999}
+	strong{color:$color-price;font-weight:normal}
+}
+
+.total_price{
+	border-bottom:1px solid #e4e4e4;padding-bottom:24px;
+	.price_summary{
+		width:100%;border-collapse:collapse;padding:0;border:0;
+		th,td{text-align:left;padding:18px 0;font-weight:normal;color:#666;font-size:15px}
+		td{text-align:right}
+		.desc{font-size:11px}
+		strong{color:$color-price}
+	}
+	
+}
+
+.task_btn{
+	border-bottom:1px solid #e4e4e4;padding:40px 0 49px;
+	.btn_order{@extend %btn-point2;width:100%;margin-bottom:7px}
+	.btn_shopping{@extend %btn-gray;width:100%}
+}
