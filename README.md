@@ -10,6 +10,11 @@ krisha
 ##Login
 [http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_login.html]
 
+##Join
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_join_01.html]
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_join_02.html]
+[http://htmlpreview.github.io/?https://github.com/rewindme/krisha/blob/develop/src/02_join_03.html]
+
 
 
 ##Header
