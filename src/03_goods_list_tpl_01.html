@@ -1,0 +1,43 @@
+{*** 갤러리형 | goods/goods_list.php ***}
+<!--{ ? !id }--><? {id} = "es_".md5(crypt('')); ?><!--{ / }-->
+
+<!-- 상품 리스트 -->
+<div class="prod_list">
+	<ul>
+	<!--{ @ loop }-->
+	<li>
+		<a href="{.goods_view_url}">
+			<span class="prod_thumb">
+				{=goodsimg(.img_s,size,'class="'+ .css_selector +'"')}
+			</span>				
+			<strong class="prod_name"><!--{ ? .goodsnm }-->{.goodsnm}<!--{ / }--> <!--{ ? .soldout_icon }-->{? .soldout_icon == 'custom'}<img src="../data/goods/icon/custom/soldout_icon">{:}<img src="../../img/icon/good_icon_soldout.gif">{/}<!--{ / }--></strong>
+			
+			<!--{ ? .shortdesc}--><span class="prod_desc">{.shortdesc}</span><!--{ / }-->
+			<!--{ ? !.strprice }-->
+				<!--{ ? .price}-->
+				<!--{ ? .consumer > 1}-->
+				<span class="price discount">
+					<span class="before"><em>{=number_format(.consumer)}</em>원</span>
+					<strong class="after"><em>{=number_format(.price)}</em>원</strong> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
+				</span>					
+				<!--{ : }--><span class="price"><em>{=number_format(.price)}</em>원</span> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
+				<!--{ / }-->
+				<!--{ / }-->
+				
+				<!--{? .soldout_price_string}-->{.soldout_price_string}<!--{/}-->
+				<!--{? .soldout_price_image}-->{.soldout_price_image}<!--{/}-->
+			<!--{ : }--><span class="price">{.strprice}</span>
+			<!--{ / }-->
+			<!--{ ? .icon }--><div>{.icon}</div><!--{ / }-->
+			<!--{ ? .coupon }--><div class="eng"><b style="color:red">{.coupon}<font class="small">원</font></b> <img src="../../img/icon/good_icon_coupon.gif" align="absmiddle"></div><!--{ / }-->
+		</a>
+	</li>
+	<!--{ / }-->
+	</ul>
+</div>
+
+<!-- 품절상품 마스크 -->
+<div id="el-goods-soldout-image-mask" style="display:none;position:absolute;top:0;left:0;background:url({ ? _cfg_soldout.display_overlay == 'custom'}../data/goods/icon/custom/soldout_overlay{:}../data/goods/icon/icon_soldout{_cfg_soldout.display_overlay}{/}) no-repeat center center;"></div>
+<script>
+addOnloadEvent(function(){ setGoodsImageSoldoutMask() });
+</script>
