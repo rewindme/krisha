@@ -22,30 +22,35 @@
 <!-- container -->
 <div class="container">
 	
-</div>
+</div>`
 <!-- //container -->
+
+{*** 메인용 하단파일 | main/index.php ***}
 <!-- footer -->
 <div class="footer">
 	<div class="policy">
+
 		<ul>
-			<li><a href="#" class="corp_intro"><i>회사소개</i></a></li>
-			<li><a href="#" class="user_guide"><i>이용안내</i></a></li>
-			<li><a href="#" class="terms"><i>이용약관</i></a></li>
-			<li><a href="#" class="private"><i>개인정보취급방침</i></a></li>
-			<li><a href="#" class="help_cs"><i>고객센터</i></a></li>
+			<li><a href="../service/company.php" class="corp_intro"><i>회사소개</i></a></li>
+			<li><a href="../service/guide.php" class="user_guide"><i>이용안내</i></a></li>
+			<li><a href="../service/agreement.php" class="terms"><i>이용약관</i></a></li>
+			<li><a href="../service/private.php" class="private"><i>개인정보취급방침</i></a></li>
+			<li><a href="../service/customer.php" class="help_cs"><i>고객센터</i></a></li>
 		</ul>
 	</div>
 	<div class="contact">
 		<span class="logo_yellowphant"><i>Yellowphant</i></span>
 		<p>
-			<strong>옐로우펀트</strong> 서울시 금천구 서부샛길 606 대성디폴리스 A2211<span class="bar">|</span>대표이사 : 장우준 <a href="#" class="link">사업자정보확인</a><br>
-			사업자등록번호 :108-20-31445 <span class="bar">|</span> 통신판매업신고 : 제2013-서울금천-0738호 <span class="bar">|</span> 개인정보보호책임자 : 이혜림<br>
-			고객센터 : 070-4640-0443 <span class="bar">|</span> 이메일 : help@krisha.co.kr <span class="bar">|</span> 계좌번호 : 국민은행 929001-01-274450
+			<strong>{_cfg['compName']}</strong> {_cfg['address']}<span class="bar">|</span>대표이사 : {_cfg['ceoName']} <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" class="link">사업자정보확인</a><br>
+			사업자등록번호 :{_cfg['compSerial']} <span class="bar">|</span> 통신판매업신고 : {_cfg['orderSerial']} <span class="bar">|</span> 개인정보보호책임자 : {_cfg['adminName']}<br>
+			고객센터 : {_cfg['compPhone']} <span class="bar">|</span> 이메일 : <a href="javascript:popup('../proc/popup_email.php?to={_cfg['adminEmail']}&hidden=1',650,600)" class="txt">{_cfg['adminEmail']}</a> <span class="bar">|</span> 계좌번호 : <!--{ @ dataBank() }-->{.bank} {.account} {.name}	<!--{ / }--> 
 		</p>
-		<span class="logo_inipay"><i>inipay</i></span>
+<!-- 		<span class="logo_inipay"><i>inipay</i></span> -->
 	</div>
 </div>
 <!-- //footer -->
+
+
 
 </body>
 </html>
