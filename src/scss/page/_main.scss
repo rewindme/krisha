@@ -16,6 +16,7 @@
 	.tit_new_arrival{@extend %sp-main-tit;width:91px;height:22px;background-position:4px -37px}
 	.tit_general{@extend %sp-main-tit;width:106px;height:22px;background-position:4px -57px;margin-bottom:16px}	
 	.tab{@extend %tab-linear}
+	.tab .hot_sale{display:none}
 }
 
 /* general store 탭 */
@@ -24,6 +25,7 @@
 	.tab{@extend %tab-box;display:block}
 	.tab .selected a{color:#f54500}
 	.inr_bnr{@extend %display-inline-block;background-color:#00a99d;color:#fff;height:20px;line-height:20px;padding:0 4px;margin-left:4px}
+	.tab .hot_sale{display:inline-block}
 }
 
 /* 상품 목록 */
@@ -36,10 +38,12 @@
 	ul{font-size:0;width:1120px}
 	li{@extend %display-inline-block;width:208px;margin-right:15px;margin-bottom:28px;vertical-align:top}	
 	a{font-size:12px;@extend %display-inline-block;width:100%;line-height:16px}
-	.prod_thumb{border:1px solid #e5e5e5;background-color:#f8f8f8;display:block;overflow:hidden;margin-bottom:13px}
-	.selected .prod_thumb,
-	a:hover .prod_thumb{border-color:#f54500}
-	.prod_thumb img{vertical-align:top}
+	.prod_thumb{background-color:#fff;display:block;overflow:hidden;margin-bottom:13px;height:270px;white-space:nowrap;position:relative;}
+	.prod_thumb:before{content:'';position:absolute;left:0;top:0;right:0;bottom:0;border:1px solid #e5e5e5}
+	.prod_thumb:after{content:'';height:100%;vertical-align:middle;display:inline-block;width:0}
+	.selected .prod_thumb:before,
+	a:hover .prod_thumb:before{border-color:#f54500}
+	.prod_thumb img{vertical-align:middle;max-width:100%}
 	.prod_name{color:#454545;display:block;margin-bottom:7px}
 	.prod_name img{vertical-align:-2px}
 	.prod_desc{color:#999;display:block;margin-bottom:13px}
@@ -54,6 +58,9 @@
 /* .recmd_item .prod_list ul{width:auto} */
 .recmd_item .prod_list ul{width:1133px}
 .recmd_item .prod_list li{width:254px;margin-right:28px}
+.recmd_item .prod_list{
+	.prod_thumb{height:330px}
+}
 
 /* 슬라이더 네비게이션 */
 .nav_dot{

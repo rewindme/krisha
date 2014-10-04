@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>서브 : 상품 목록</title>
-<link href="css/krisha.css" media="all" rel="stylesheet" type="text/css" />
-<script src="js/jquery.1.7.1.min.js"></script>
-<script src="js/markup.js"></script>
-</head>
-<body>
-<!-- header -->
-<div class="header">
-	<div class="gnb_area">
-		
-	</div>
-	<div class="category_cover">
-		
-	</div>
-</div>
-<!-- //header -->
+{*** 분류화면 | goods/goods_list.php ***}
+{ # header }
 
 <!-- container -->
 <div class="container">
@@ -28,9 +9,11 @@
 		<span class="current">팔찌</span>
 	</div>
 	<div class="category_detail">
-		<div class="hero">
+		<!--
+<div class="hero">
 			<img src="im/hero_bracelet.jpg" alt="bracelet-팔찌" width="1100" height="140">
 		</div>
+-->
 		<div class="best_item">
 			<div class="section_head">
 				<h2 class="tit_best_item"><i>Best Item</i></h2>			
@@ -247,28 +230,4 @@
 	</div>	
 </div>
 <!-- //container -->
-<!-- footer -->
-<div class="footer">
-	<div class="policy">
-	
-	</div>
-	<div class="contact">
-		
-	</div>
-</div>
-<!-- //footer -->
-
-<script>
-load_section([
-	{section:'.gnb_area',fileName:'01_header.html'},
-	{section:'.category_cover',fileName:'01_header.html'},
-	{section:'.policy',fileName:'01_footer.html'},
-	{section:'.contact',fileName:'01_footer.html'},
-	{section:'.notice_box',fileName:'01_notice.html'},
-	{section:'.favorite_bar',fileName:'01_favorite_bar.html'}	
-])
-	
-</script>
-
-</body>
-</html>
+{ # footer }

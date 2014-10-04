@@ -12,9 +12,12 @@
 	.help_cs{@extend %sp-img;width:41px;height:16px;background-position:-243px -118px}
 }
 .contact{
-	color:#fff;background-color:#35c2de;font-size:11px;letter-spacing:-1px;line-height:18px;padding:20px 20px 20px 292px;position:relative;zoom:1;
+	color:#fff;background-color:#35c2de;font-size:11px;line-height:18px;padding:20px 20px 20px 292px;position:relative;zoom:1;
 	.logo_yellowphant{@extend %sp-img;width:213px;height:40px;background-position:-350px -110px;position:absolute;left:40px;top:27px}
 	.logo_inipay{@extend %sp-img;width:43px;height:43px;background-position:-294px -111px;position:absolute;right:20px;top:25px}
 	.link{background-color:#f9e21e;color:#35c2de;@extend %display-inline-block;padding:0 3px;margin-left:4px;line-height:18px;vertical-align:middle}
+	a,.txt{color:#fff}
+	a:hover,
+	a.txt:hover{text-decoration:underline}
 	.bar{padding:0 5px}
 }

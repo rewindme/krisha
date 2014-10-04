@@ -28,6 +28,11 @@ function {id}_tab(tabNo) {
 	<!--{ @ dpCfg['tabLoop'] }-->
 	<li class="<!--{ ? .index_ == 0 }-->selected<!--{ : }--> <!--{ / }-->" id="{id}_t{.index_}" onclick="{id}_tab({.index_})"><a href="javascript:return false;"><!--{ dpCfg['tabName'+(.index_ + 1)] }--></a></li>
 	<!--{ / }-->
+	<li class="hot_sale">
+		<!--{ @ dataBanner( 36 ) }--> 
+		<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+		<!--{ / }-->
+	</li>
 </ul>
 <!--{ / }-->
 </div> <!-- //section_head -->

@@ -1,0 +1,95 @@
+{*** 하단기본파일 | main/index.php ***}
+<div id="footer_top" align="{_cfg['shopAlign']}">
+	<table width="{_cfg['shopSize']}px" id="cs_contents" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top" width="206" height="91"> 
+		<!-- 고객센터 01 : Start -->
+		<div id="cscenter">
+			<div><a href="../service/customer.php"><img src="../../img/main/cscenter.jpg"></a></div>
+			<div class="cstel">{_cfg['compPhone']}</div>
+			<dl>
+				<dd><span class="txt">MON - FRI</span> am 10:00 - pm 18:00</dd>
+				<dd>LUNCH <span class="txt">am 12:00 - pm 13:00</span></dd>
+				<dd><span class="txt">SAT, SUN, HOLIDAY</span> off</dd>
+			</dl>
+		</div>
+		<!-- 고객센터 01 : End --> 
+		</td>
+		<td valign="top" width="227">
+			<!-- 공지사항 -->
+			<div id="notice">
+				<div><a href="../board/list.php?id=notice"><img src="../../img/main/notice.jpg"></a></div>
+				<ul style="padding-top:10px;">
+					<!--{ @ dataBoardArticle( 'notice', 4 ) }-->
+					<li><img src="../../img/main/notice_dot.gif"><a href="../board/view.php?id={.id}&no={.no}" style="color:#494949">{=strcut(.subject,30)}</a></li>
+					<!--{ / }-->
+				</ul>
+			</div>
+		</td>
+		<td valign="top" width="556" rowspan="2"><!-- 하단배너 (배너관리에서 수정가능) --><!--{ @ dataBanner( 42 ) }-->{.tag}<!--{ / }--></td>
+	</tr>
+	<tr>
+		<td style="padding-top:6px;">
+			<!-- 메인 무통장입금 : Start -->
+			<table width="100%" id="bankinfo" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td style="padding-bottom:8px;"><img src="../../img/main/bankinfo.jpg"></td>
+				</tr>
+				<!--{ @ dataBank() }-->
+				<tr>
+					<td style="line-height:14px;">{.bank}</td>
+				</tr>
+				<tr>
+					<td class="bold" style="line-height:16px;">{.account} {.name}</td>
+				</tr>
+				<tr>
+					<td height="5"></td>
+				</tr>
+				<!--{ / }--> 
+			</table>
+			<!-- 메인 무통장입금 : End -->
+		</td>
+		<td align="left" valign="top"><!-- 하단배너 (배너관리에서 수정가능) --><!--{ @ dataBanner( 41 ) }-->{.tag}<!--{ / }--></td>
+	</tr>
+</table>
+<div style=" border-top:solid 1px #e6e6e6;">
+	<ul id="f_menu" style="width:{_cfg['shopSize']}px">
+		<li><a href="../service/company.php" class="fmenu">회사소개</a></li>
+		<li><img src="../../img/common/bar2.gif"></li>
+		<li><a href="../service/agreement.php" class="fmenu">이용약관</a></li>
+		<li><img src="../../img/common/bar2.gif"></li>
+		<li><a href="../service/private.php" class="fmenu"><strong>개인정보취급방침</strong></a></li>
+		<li><img src="../../img/common/bar2.gif"></li>
+		<li><a href="../service/guide.php" class="fmenu">이용안내</a></li>
+		<li><img src="../../img/common/bar2.gif"></li>
+		<li><a href="../service/sitemap.php" class="fmenu">사이트맵</a></li>
+	</ul>
+	<div id="f_company" style="width:{_cfg['shopSize']}px">
+		<p class="line_h17">
+		<span class="txt">회사</span> {_cfg['compName']}
+		<img src="../../img/common/bar2.gif">
+		<span class="txt">주소</span> {_cfg['address']} 
+		</p>
+		<p class="line_h17">
+		<span class="txt">대표</span> {_cfg['ceoName']} 
+		<img src="../../img/common/bar2.gif">
+		<span class="txt">사업자등록번호</span> {_cfg['compSerial']} <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank"><img src="../../img/common/btn_business.gif" style="vertical-align:top;"></a>
+		<img src="../../img/common/bar2.gif">
+		<span class="txt">통신판매업신고번호</span> {_cfg['orderSerial']} 
+		<img src="../../img/common/bar2.gif">
+		<span class="txt">개인정보관리자</span> {_cfg['adminName']} 
+		</p>
+		<p class="line_h17">
+		<span class="txt">전화번호</span> {_cfg['compPhone']} 
+		<img src="../../img/common/bar2.gif">
+		<span class="txt">팩스번호</span> {_cfg['compFax']} 
+		<img src="../../img/common/bar2.gif">
+		<span class="txt">메일</span> <a href="javascript:popup('../proc/popup_email.php?to={_cfg['adminEmail']}&hidden=1',650,600)" class="txt">{_cfg['adminEmail']}</a>
+		</p>
+		<p class="line_h17"><span class="txt">호스팅제공</span> (주)고도소프트 <img src="../../img/common/footer_godomall.png" style="vertical-align:middle;"></p>
+		<p class="line_h20">
+		Copyright ⓒ <strong>{_cfg['shopUrl']}</strong> All right reserved
+		</p>
+	</div>
+</div>
+</div>

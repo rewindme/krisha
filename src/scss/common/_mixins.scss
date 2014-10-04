@@ -30,14 +30,16 @@ $point-color1:#5cc4b9;
 
 // 탭UI 박스형
 %tab-box{
-	@extend %tab-linear;position:static;overflow:hidden;padding:0 0 0 1px;@extend %sp-pt-bg;background-position:0 39px;height:40px;
+	@extend %tab-linear;position:static;padding:0 0 0 1px;@extend %sp-pt-bg;background-position:0 39px;height:40px;zoom:1;
 	li{padding:0;border:1px solid #e4e4e4;float:left;margin-left:-1px;border-bottom:0}
 	li.selected{border-color:#bfbfbf;border-bottom:1px solid #fff;position:relative;z-index:10;margin-bottom:-1px}
 	li.last{float:none;overflow:hidden;width:auto;display:block;margin-left:0;position:relative;left:-1px}
 	li.last a{padding-right:1px}
 	a{width:160px;height:38px;line-height:38px;text-align:center}
 	.selected a{border:0}
-	.hot_sale a{width:293px;color:#f54500}
+	.hot_sale{border:0;height:auto;width:293px;position:relative;height:39px;overflow:visible}
+	.hot_sale a{position:absolute;left:0;bottom:0;width:auto;height:auto;color:#f54500}
+	&:after{content:'';clear:both;display:block;height:0;visibility:hidden}
 }
 
 // 로케이션
@@ -45,7 +47,7 @@ $point-color1:#5cc4b9;
 	position:absolute;left:40px;top:13px;line-height:16px;
 	.ico_home{@extend %sp-prod;width:89px;height:13px;background-position:0 1px}
 	.slash{color:#999;vertical-align:top;font-size:11px}
-	.current{color:#f54500;font-size:11px;font-weight:bold;vertical-align:top}
+	.current,.current a{color:#f54500;font-size:11px;font-weight:bold;vertical-align:top}
 }
 %font-11px{
 	font-size:11px;
