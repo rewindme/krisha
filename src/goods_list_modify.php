@@ -38,7 +38,7 @@
 					<!--{ @ dataCategory( _category, true ) }-->					
 					<!--{ ? substr(_category,0,3) == .category} -->
 						<!--{ ? _category == .category }-->
-						<li class="all"><a href="?category={=substr(_category,0,3)}">{.catnm}<span class="cnt">({pg->recode['total']})</span></a></li>
+						<li class="all"><a href="?category={=substr(_category,0,3)}">{.catnm} <span class="cnt">({pg->recode['total']})</span></a></li>
 						<!--{ : }-->
 						<li><a href="?category={=substr(_category,0,3)}">{.catnm} <span class="cnt">전체보기</span></a></li>
 						<!--{ / }-->

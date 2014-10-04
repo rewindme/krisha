@@ -23,7 +23,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .ipt_rdo label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .slider li, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cover .qty_cnt_up, .qty_cover .qty_cnt_down, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .ipt_rdo label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info { display: inline-block; *display: inline; *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png"); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
@@ -37,7 +37,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info { width: 1180px; margin: 0 auto; position: relative; zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .navigation .btn_prev, .navigation .btn_next { background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png"); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cover .qty_cnt_up, .qty_cover .qty_cnt_down, .navigation .btn_prev, .navigation .btn_next { background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png"); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
 .ipt_rdo label { background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
 
@@ -154,9 +154,9 @@ body { background-color: #f8f8f8; }
 .tit_notice { width: 108px; height: 12px; background-position: 0 -80px; margin: 16px 0 0 16px; }
 
 /* 슬라이더 */
-.slider { overflow: hidden; zoom: 1; }
+.slider { position: relative; width: 1180px; height: 620px; overflow: hidden; zoom: 1; }
 
-.slider ul { position: relative; white-space: nowrap; font-size: 0; }
+.slider .slider_cover { cursor: move; position: absolute; width: 1180px; height: 620px; left: 0; right: 0; overflow: hidden; }
 
 .btn_next, .btn_prev { border: 0; width: 46px; height: 46px; position: absolute; left: 40px; top: 50%; margin-top: -23px; z-index: 20; cursor: pointer; }
 
@@ -220,17 +220,18 @@ body { background-color: #f8f8f8; }
 
 /* 상품 상세 탑 */
 .product_view { position: relative; zoom: 1; min-width: 1180px; }
-.product_view .cover_img { text-align: center; }
-.product_view .cover_img img { max-width: 100%; max-height: 100%; width: auto; height: auto; vertical-align: top; }
+.product_view .cover_img { text-align: center; background-color: #e9eceb; }
+.product_view .cover_img img { max-width: 100%; width: auto; height: auto; vertical-align: top; }
 .product_view .product_info { position: absolute; top: 0; left: 50%; margin-left: -590px; }
 .product_view .info_cover { position: absolute; left: 660px; top: 50px; }
 .product_view .info_head .prod_code { color: #f54500; font-size: 12px; margin-bottom: 4px; display: block; }
 .product_view .info_head .prod_name { color: #454545; font-size: 23px; letter-spacing: -1px; margin-bottom: 10px; font-weight: normal; }
 .product_view .info_head .prod_desc { color: #757575; font-size: 13px; line-height: 18px; }
-.product_view .info_head .price { color: #f54500; font-size: 24px; display: block; padding: 20px 0 9px; }
 .product_view .info_head .point { color: #454545; font-size: 14px; }
+.product_view .info_head .price { padding: 20px 0 9px; }
+.product_view .price { color: #f54500; font-size: 24px; display: block; }
+.product_view .tit { color: #454545; font-size: 14px; display: block; margin-bottom: 5px; padding-top: 15px; }
 .product_view .option { padding: 13px 0 0; }
-.product_view .option .tit { color: #454545; font-size: 14px; display: block; margin-bottom: 5px; padding-top: 15px; }
 .product_view .task { padding: 15px 0; }
 .product_view .task a { vertical-align: top; background-color: #fff; margin-right: 2px; }
 .product_view .task i { position: static; visibility: visible; }
@@ -240,6 +241,13 @@ body { background-color: #f8f8f8; }
 .product_view .task .btn_cart i { width: 16px; height: 20px; background-position: -120px 0; vertical-align: top; }
 .product_view .task .btn_like { padding: 18px 20px; }
 .product_view .task .btn_like i { width: 18px; height: 20px; background-position: -140px 0; vertical-align: top; }
+
+.qty_cover { height: 24px; }
+.qty_cover .qty_cont { position: relative; display: inline-block; *display: inline; zoom: 1; vertical-align: middle; padding-right: 15px; }
+.qty_cover .qty_ipt { text-align: right; height: 20px; width: 20px; border: 1px solid #999; vertical-align: middle; }
+.qty_cover .qty_cnt_up, .qty_cover .qty_cnt_down { position: absolute; right: 0; top: 0; width: 11px; height: 12px; border: 0; background-color: transparent; background-position: 2px -44px; cursor: pointer; }
+.qty_cover .qty_cnt_down { bottom: 0; top: auto; background-position: 2px -54px; }
+.qty_cover .qty_ea { vertical-align: middle; }
 
 .prod_section { padding: 45px 40px 0; }
 
@@ -482,3 +490,5 @@ body { background-color: #f8f8f8; }
 .use_point .btn_use_point { width: 100px; }
 .use_point .btn_lookup, .use_point .btn_regist { width: 47px; }
 .use_point .point_cover { margin-bottom: 27px; }
+
+/*# sourceMappingURL=krisha.css.map */

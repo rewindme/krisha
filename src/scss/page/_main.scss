@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /* 슬라이더 */
-.slider{overflow:hidden;zoom:1}
-.slider ul{position:relative;white-space:nowrap;font-size:0}
-.slider li{@extend %display-inline-block}	
+.slider{position:relative;width:1180px;height:620px;overflow:hidden;zoom:1}
+
+.slider .slider_cover{cursor:move;position:absolute;width:1180px;height:620px;left:0;right:0;overflow:hidden}
 .btn_next,.btn_prev{@extend %sp-ico;border:0;width:46px;height:46px;position:absolute;left:40px;top:50%;margin-top:-23px;z-index:20;cursor:pointer}
 .btn_next{background-position:-66px 0;right:40px;left:auto}
 

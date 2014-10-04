@@ -2,8 +2,8 @@
 /* 상품 상세 탑 */
 .product_view{
 	position:relative;zoom:1;min-width:1180px;
-	.cover_img{text-align:center;}
-	.cover_img img{max-width:100%;max-height:100%;width:auto;height:auto;vertical-align:top}
+	.cover_img{text-align:center;background-color:#e9eceb}
+	.cover_img img{max-width:100%;width:auto;height:auto;vertical-align:top}
 	
 	.product_info{@extend %cover;position:absolute;top:0;left:50%;margin-left:-590px}
 	
@@ -15,13 +15,13 @@
 		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block}
 		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:10px;font-weight:normal}
 		.prod_desc{color:$color-weak;font-size:13px;line-height:18px}
-		.price{color:$color-price;font-size:24px;display:block;padding:20px 0 9px}
 		.point{color:$color-strong;font-size:14px}
+		.price{padding:20px 0 9px}
 	}
-	
+	.price{color:$color-price;font-size:24px;display:block}
+	.tit{color:$color-strong;font-size:14px;display:block;margin-bottom:5px;padding-top:15px}
 	.option{
 		padding:13px 0 0;
-		.tit{color:$color-strong;font-size:14px;display:block;margin-bottom:5px;padding-top:15px}
 	}
 	.task{
 		padding:15px 0;
@@ -37,5 +37,14 @@
 		.btn_like i{@extend %sp-prod;width:18px;height:20px;background-position:-140px 0;vertical-align:top}
 	}
 	
+}
+
+.qty_cover{
+	height:24px;
+	.qty_cont{position:relative;display:inline-block;*display:inline;zoom:1;vertical-align:middle;padding-right:15px}
+	.qty_ipt{text-align:right;height:20px;width:20px;border:1px solid #999;vertical-align:middle}
+	.qty_cnt_up,.qty_cnt_down{position:absolute;right:0;top:0;width:11px;height:12px;border:0;background-color:transparent;@extend %sp-prod;background-position:2px -44px;cursor:pointer}
+	.qty_cnt_down{bottom:0;top:auto;background-position:2px -54px}
+	.qty_ea{vertical-align:middle}
 }
 
