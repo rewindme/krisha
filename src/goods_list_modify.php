@@ -35,7 +35,16 @@
 			</div>
 			<div class="goods_list">
 				<ul class="tab">
-					<li <!--{ ? _category == substr(_category,0,3) } class="all" <!-- { / } -->><a href="?category={=substr(_category,0,3)}">전체보기 <span class="cnt">({pg->recode['total']})</span></a></li>					
+					<!--{ @ dataCategory( _category, true ) }-->					
+					<!--{ ? substr(_category,0,3) == .category} -->
+						<!--{ ? _category == .category }-->
+						<li class="all"><a href="?category={=substr(_category,0,3)}">{.catnm}<span class="cnt">({pg->recode['total']})</span></a></li>
+						<!--{ : }-->
+						<li><a href="?category={=substr(_category,0,3)}">{.catnm} <span class="cnt">전체보기</span></a></li>
+						<!--{ / }-->
+					<!--{ / }-->
+					<!--{ / }-->
+					
 					<!--{ @ dataSubCategory( _category, true ) }-->
 					<li <!--{ ? _category == .category }-->class="all"<!--{ / }-->><a href="?category={.category}">{.catnm} <span class="cnt">({.gcnt+0})</span></a></li>
 					<!--{ ? .index_!=.size_-1 }--> <!--{ / }-->
