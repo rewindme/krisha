@@ -1,0 +1,246 @@
+{*** 회원가입 본인확인 | member/join.php ***}
+<script language="javascript">
+function checkSubmit() {
+	var oForm = document.getElementById("form");
+
+	var rdo_jumin		= document.getElementById("RnCheckType_jumin");
+	var rdo_ipin		= document.getElementById("RnCheckType_ipin");
+	var rdo_hpauthDream = document.getElementById("RnCheckType_hpauthDream");
+	
+	if (rdo_ipin && rdo_ipin.checked)  {
+		goIDCheckIpin();
+	} else if (rdo_hpauthDream && rdo_hpauthDream.checked) {
+		gohpauthDream();
+	} else if (rdo_jumin && rdo_jumin.checked) {
+		if(chkagreement(oForm)) {
+			if (chkForm2(oForm)) {
+				oForm.submit();
+			}
+		}
+	}else {
+		if (chkagreement(oForm)) oForm.submit();
+
+	}
+}
+</script>
+<div class="container">
+	<div class="join">
+		<div class="location">
+			<a href="#" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<span class="slash">/</span>
+			<span class="current">회원가입</span>
+		</div>
+		<div class="join_box">
+			<h2>크리샤 회원가입</h2>
+			<p class="progress"><strong class="current">1.약관동의 &gt;</strong> 2.회원정보입력 &gt; 3.회원가입완료</p>
+			<form id=form name=frmAgree method=post action="indb.php" target="ifrmHidden" onSubmit="return chkForm2(this)">
+				<input type=hidden name=mode value="chkRealName">
+				<input type=hidden name=rncheck value="none">
+				<input type=hidden name=nice_nm value="">
+				<input type=hidden name=pakey value="">
+				<input type=hidden name=birthday value="">
+				<input type=hidden name=mobile value="">
+				<input type=hidden name=sex value="">
+				<input type=hidden name=dupeinfo value="">
+				<input type=hidden name=foreigner value="">
+				<input type=hidden name=phone value="">
+				<input type=hidden name=type>
+				
+				<!-- 네이버체크아웃(회원연동) -->
+				<!--{=naverCheckout_oneclickStep}-->
+				
+				<div class="policy_cont terms">
+					<h3>이용약관</h3>
+					<div class="txt_box">
+						<pre>{termsAgreement}</pre>
+					</div>
+					<p class="agree_cover">
+						<input type="radio" name="agree" id="agree_1" value="y"><label for="agree_1">동의함</label>
+						<input type="radio" name="agree" id="agree_2" value="n"><label for="agree_2">동의하지 않음</label>
+					</p>
+				</div>
+				<div class="policy_cont">
+					<h3>개인정보취급방침</h3>
+					<div class="txt_box">
+						<pre>{termsPolicyCollection2}</pre>
+					</div>
+					<p class="agree_cover">
+						<input type="radio" name="private1" id="agree_privacy_1" value="y"><label for="agree_privacy_1">동의함</label>
+						<input type="radio" name="private1" id="agree_privacy_2" value="n"><label for="agree_privacy_2">동의하지 않음</label>
+					</p>
+				</div>
+				<!--{ ? _cfg['private2YN'] == 'Y' // 개인정보 제3자 제공 관련 사용여부 }-->
+				<div style="padding-top:10; background:#F1F1F1;  text-align:center;">
+					<div align="left" style="height:26;padding:3px 0 0 10px;">
+					<b>● 개인정보 제3자 제공 관련</b>
+					</div>
+					<div id="boxScroll" class="scroll">
+					{termsThirdPerson}
+					</div>
+					<div align=center class=noline style="height:30;margin-top:10px;" >
+					<input type="radio" name="private2" value="y" required fld_esssential label="개인정보 제3자 제공 관련" msgR="동의 여부를 체크해주세요."> 동의합니다 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="private2" value="n" required fld_esssential label="개인정보 제3자 제공 관련" msgR="동의 여부를 체크해주세요."> 동의하지 않습니다
+					</div>
+				</div>				
+				<!--{ / }-->
+				<!--{ ? _cfg['private3YN'] == 'Y' // 개인정보취급 위탁 관련 사용여부 }-->
+				<div style="padding-top:10; background:#F1F1F1;  text-align:center;">
+					<div align="left" style="height:26;padding:3px 0 0 10px;">
+					<b>● 개인정보취급 위탁 관련</b>
+					</div>
+					<div id="boxScroll" class="scroll">
+					{termsEntrust}
+					</div>
+					<div align=center class=noline style="height:30;margin-top:10px;" >
+					<input type="radio" name="private3" value="y" required fld_esssential label="개인정보취급 위탁 관련" msgR="동의 여부를 체크해주세요."> 동의합니다 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="private3" value="n" required fld_esssential label="개인정보취급 위탁 관련" msgR="동의 여부를 체크해주세요."> 동의하지 않습니다
+					</div>
+				</div>
+				<!--{ / }-->
+				
+				<div class="certify_cont">
+					<h3>실명/가입여부확인</h3>
+					<div class="certification_box">
+						<ul class="choose_tab">
+							<li class="selected"><a href="#">휴대폰인증</a></li>
+							<li><a href="#">아이핀인증</a></li>
+						</ul>
+						<div class="ipt_area">
+							<p class="ipt_cover">
+								<span class="tit">휴대폰번호입력</span>
+								<label for="tel_01" class="blind">전화번호 첫번째자리</label><input type="text" id="tel_01" class="ipt_tel1"> -
+								<label for="tel_02" class="blind">전화번호 첫번째자리</label><input type="text" id="tel_02" class="ipt_tel2"> -
+								<label for="tel_03" class="blind">전화번호 첫번째자리</label><input type="text" id="tel_03" class="ipt_tel2">
+								<button class="btn_certify">인증하기</button>
+							</p>
+							<ul class="notice">
+								<li>&middot; 주민등록번호 입력없이 전화번호로 회원가입이 가능합니다. (단, 본인 소유 휴대폰)</li>
+								<li>&middot; 안전한 회원가입을 위하여 메시지 수신 가능한 휴대폰으로 인증을 진행해주세요. (동일번호로 1개 아이디 가입가능)</li>
+								<li>&middot; 극소수 익명 사용자의 대량 가입을 막기 위하여 휴대폰 인증을 시행하고 있습니다.</li>
+								<li>&middot; 통신사의 사정으로 휴대폰 인증 번호를 받지 못하는 경우도 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- 본인확인 인증수단 -->
+					<!--{ ? realnameyn == 'y' ||  ipinyn == 'y' || niceipinyn == 'y' || hpauthDreamyn == 'y' }-->
+					<div style="padding-left:7"><font color=f7443f><b>본인확인 인증 수단</b></font></div>
+					<table height="35">
+						<tr>
+						<!--{ ? realnameyn == 'y' }-->	
+							<td class="noline">
+								<label for="RnCheckType_jumin" style="width:130px;height:20px;display:inline-block;background:url('../img/ipin/Regist_realName_title_1.gif') no-repeat 17px 3px;">
+								<input type="radio" name="RnCheckType" value="jumin" id="RnCheckType_jumin" onclick="selectRnCheckType()">
+								</label>
+							</td>
+							<td width="5">&nbsp;</td>				
+						<!--{ / }-->
+						<!--{ ? ipinyn == 'y' || niceipinyn == 'y' }-->
+							<td class="noline">
+								<label for="RnCheckType_ipin" style="width:150px;height:20px;display:inline-block;background:url('../img/ipin/Regist_realName_title_2.gif') no-repeat 17px 3px;">
+								<input type="radio" name="RnCheckType" value="ipin" id="RnCheckType_ipin" onclick="selectRnCheckType()">
+								</label>
+							</td>
+							<td width="5">&nbsp;</td>
+						<!--{ / }-->
+						<!--{ ? hpauthDreamyn == 'y' }-->
+							<td class="noline">
+								<label for="RnCheckType_hpauthDream" style="width:150px;height:20px;display:inline-block;background:url('../img/auth/hpauth_title_3.gif') no-repeat 17px 3px;">
+								<input type="radio" name="RnCheckType" value="hpauthDream" id="RnCheckType_hpauthDream" onclick="selectRnCheckType()">
+								</label>
+							</td>
+							<td width="5">&nbsp;</td>
+						<!--{ / }-->		
+					</tr>
+					</table>
+					<!--{ / }-->
+					
+					
+					<!--{ ? realnameyn == 'y' // 실명인증여부 }-->	
+					<!--{ = include_file( "member/NiceCheck.htm" ) }-->
+					<!--{ / }-->
+					
+					<!--{ ? ipinyn == 'y' // 아이핀인증여부 }-->
+					<!--{ = include_file( "member/NiceIpin.htm" ) }-->
+					<!--{ :  //새로운 아이핀인증여부 }-->
+					<!--{ = include_file( "member/NewNiceIpin.htm" ) }-->
+					<!--{ / }-->
+					
+					<!--{ ? hpauthDreamyn == 'y' //휴대폰인증여부 }-->
+					<!--{ = include_file( "member/hpauthDream.htm" ) }-->
+					<!--{ / }-->
+				</div>
+				<div class="submit_cover">					
+					<a href="javascript:checkSubmit();" class="btn_signup">다음으로</a>
+					<a href="javascript:history.back()" class="btn_cancel">이전으로</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+<script>
+function defaultRnCheckType() {
+	var authtype = document.getElementsByName("RnCheckType");
+
+	if (authtype.item(0) != null) {
+		var div_jumin		= document.getElementById("div_RnCheck_jumin");
+		var div_ipin		= document.getElementById("div_RnCheck_ipin");
+		var div_hpauthDream = document.getElementById("div_RnCheck_hpauthDream");
+
+		if (authtype.item(0).value == 'jumin')
+		{
+			div_jumin.style.display='';
+		} else if(authtype.item(0).value == 'ipin') {
+			div_ipin.style.display='';
+		} else if(authtype.item(0).value == 'hpauthDream') {
+			div_hpauthDream.style.display='';
+		}
+		authtype.item(0).checked = true;
+	}	
+}
+
+function selectRnCheckType(){
+
+	var div_jumin		= document.getElementById("div_RnCheck_jumin");
+	var div_ipin		= document.getElementById("div_RnCheck_ipin");
+	var div_hpauthDream = document.getElementById("div_RnCheck_hpauthDream");
+
+	var rdo_jumin		= document.getElementById("RnCheckType_jumin");
+	var rdo_ipin		= document.getElementById("RnCheckType_ipin");
+	var rdo_hpauthDream = document.getElementById("RnCheckType_hpauthDream");
+
+	if(rdo_jumin && rdo_jumin.checked == true){
+		if (div_jumin != null) { div_jumin.style.display=''; }
+		if (div_ipin != null) { div_ipin.style.display='none'; }
+		if (div_hpauthDream != null) { div_hpauthDream.style.display='none'; }
+	}
+	if(rdo_ipin && rdo_ipin.checked == true){
+		if (div_jumin != null)	{ div_jumin.style.display='none'; }
+		if (div_ipin != null)	{ div_ipin.style.display=''; }
+		if (div_hpauthDream != null) { div_hpauthDream.style.display='none'; }
+	}
+	if(rdo_hpauthDream && rdo_hpauthDream.checked == true){
+		if (div_jumin != null)	{ div_jumin.style.display='none'; }
+		if (div_ipin != null)	{ div_ipin.style.display='none'; }
+		if (div_hpauthDream != null) { div_hpauthDream.style.display=''; }
+	}
+}
+
+function chkForm2(fm)
+{
+	if (typeof(goIDCheck) != "undefined"){
+		if (goIDCheck(fm) === false) return false;
+	}
+
+	return chkForm(fm);
+}
+
+function chkagreement(fm){
+	if (chkRadioSelect(fm,'agree','y','[회원가입 이용약관]에 동의를 하셔야 회원가입이 가능합니다.') === false) return false;
+	if (chkRadioSelect(fm,'private1','y','[개인정보보호를 위한 이용자 동의사항]에 동의를 하셔야 회원가입이 가능합니다.') === false) return false;
+
+	return true;
+}
+</script>
+<script>defaultRnCheckType();</script>
