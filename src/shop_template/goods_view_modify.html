@@ -453,7 +453,8 @@ function fnGodoTooltipHide_(obj) {
 				<!--{ / }-->
 			
 				<!--{ ? chk_point}-->
-				<span class="tit">고객선호도</span><p><!--{ @ array_fill(0,chk_point,'') }-->★<!--{ / }--></p>
+				<span class="tit">고객선호도</span>
+				<p><!--{ @ array_fill(0,chk_point,'') }-->★<!--{ / }--></p>
 				<!--{ / }-->
 				<!--{ ? icon }--><span class="tit">제품상태</span><p>{icon}</p><!--{ / }-->
 				
@@ -981,8 +982,8 @@ function chkGoodsForm(form) {
 			<li class="selected"><a href="#view_detail_01">상품상세정보</a></li>
 			<li><a href="#view_detail_02">관련상품</a></li>
 			
-			<li><a href="#view_detail_03">상품후기 ( <strong class="cnt">2</strong> )건</a></li>
-			<li><a href="#view_detail_04">상품 Q&amp;A ( <strong class="cnt">20</strong> )건</a></li>
+			<li><a href="#view_detail_03">상품후기</a></li>
+			<li><a href="#view_detail_04">상품 Q&amp;A</a></li>
 			<li><a href="#view_detail_05">상품고시정보</a></li>
 			<li><a href="#view_detail_06">배송&amp;교환 반품안내</a></li>
 		</ul>
@@ -1052,8 +1053,8 @@ function chkGoodsForm(form) {
 			<li><a href="#view_detail_01">상품상세정보</a></li>
 			<li class="selected"><a href="#view_detail_02">관련상품</a></li>
 			
-			<li><a href="#view_detail_03">상품후기 ( <strong class="cnt">2</strong> )건</a></li>
-			<li><a href="#view_detail_04">상품 Q&amp;A ( <strong class="cnt">20</strong> )건</a></li>
+			<li><a href="#view_detail_03">상품후기</a></li>
+			<li><a href="#view_detail_04">상품 Q&amp;A</a></li>
 			<li><a href="#view_detail_05">상품고시정보</a></li>
 			<li><a href="#view_detail_06">배송&amp;교환 반품안내</a></li>
 		</ul>
@@ -1073,7 +1074,7 @@ function chkGoodsForm(form) {
 						<span class="prod_desc">길거리에서 볼 수 없었던<br> 독특한 캐스팅의 귀걸이 탄생!</span>
 						
 						<!--{ ? _cfg_related.dp_price }-->
-						<span class="price"><em><!--{ ? .strprice }-->{.strprice}<!--{ : }-->{=number_format(.price)}원<!--{ / }--></em>원</span>
+						<span class="price"><em><!--{ ? .strprice }-->{.strprice}<!--{ : }-->{=number_format(.price)}<!--{ / }--></em>원</span>
 						<!--{ / }-->
 						<!--{ ? .icon }--><div style="padding:5">{.icon}</div><!--{ / }-->
 					</a>
@@ -1102,20 +1103,15 @@ function chkGoodsForm(form) {
 			<li><a href="#view_detail_01">상품상세정보</a></li>
 			<li><a href="#view_detail_02">관련상품</a></li>
 			
-			<li class="selected"><a href="#view_detail_03">상품후기 ( <strong class="cnt">2</strong> )건</a></li>
-			<li><a href="#view_detail_04">상품 Q&amp;A ( <strong class="cnt">20</strong> )건</a></li>
+			<li class="selected"><a href="#view_detail_03">상품후기</a></li>
+			<li><a href="#view_detail_04">상품 Q&amp;A</a></li>
 			<li><a href="#view_detail_05">상품고시정보</a></li>
 			<li><a href="#view_detail_06">배송&amp;교환 반품안내</a></li>
 		</ul>
 		<!-- 게시판 -->
 		<div class="review_area">
-			<div class="review_top">
-				<img src="im/bnr_review_reward.jpg" alt="솔질하고 센스있는 후기 올리고 포인트 적립받자!" width="655" height="147">
-				<a href="#" class="btn_upload"><img src="im/sp/btn_write_review.jpg" alt="상품후기 올리기" width="180" height="100"></a>
-			</div>
-			<div class="text_board">
-				<iframe id="inreview" src="./goods_review_list.php?goodsno={goodsno}" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="" scrolling="no"></iframe>
-			</div>
+			<iframe id="inreview" src="./goods_review_list.php?goodsno={goodsno}" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="" scrolling="no"></iframe>
+			
 		</div>
 	</div>
 
@@ -1125,20 +1121,14 @@ function chkGoodsForm(form) {
 			<li><a href="#view_detail_01">상품상세정보</a></li>
 			<li><a href="#view_detail_02">관련상품</a></li>
 			
-			<li><a href="#view_detail_03">상품후기 ( <strong class="cnt">2</strong> )건</a></li>
-			<li class="selected"><a href="#view_detail_04">상품 Q&amp;A ( <strong class="cnt">20</strong> )건</a></li>
+			<li><a href="#view_detail_03">상품후기</a></li>
+			<li class="selected"><a href="#view_detail_04">상품 Q&amp;A</a></li>
 			<li><a href="#view_detail_05">상품고시정보</a></li>
 			<li><a href="#view_detail_06">배송&amp;교환 반품안내</a></li>
 		</ul>
 		<!-- 게시판 -->
 		<div class="review_area">
-			<div class="review_top">
-				<img src="im/bnr_qna.jpg" alt="상품에 대해 궁금하신 점이 있으시면 글을 남겨주세요!" width="635" height="115">
-				<a href="#" class="btn_upload"><img src="im/sp/btn_write_question.jpg" alt="상품질문 올리기" width="220" height="70"></a>
-			</div>
-			<div class="text_board">
-				<iframe id="inqna" src="./goods_qna_list.php?goodsno={goodsno}" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="" scrolling="no"></iframe>
-			</div>
+			<iframe id="inqna" src="./goods_qna_list.php?goodsno={goodsno}" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="" scrolling="no"></iframe>
 		</div>
 	</div>
 
@@ -1147,8 +1137,8 @@ function chkGoodsForm(form) {
 		<ul class="prod_tab">
 			<li><a href="#view_detail_01">상품상세정보</a></li>
 			<li><a href="#view_detail_02">관련상품</a></li>
-			<li><a href="#view_detail_03">상품후기 ( <strong class="cnt">2</strong> )건</a></li>
-			<li><a href="#view_detail_04">상품 Q&amp;A ( <strong class="cnt">20</strong> )건</a></li>
+			<li><a href="#view_detail_03">상품후기</a></li>
+			<li><a href="#view_detail_04">상품 Q&amp;A</a></li>
 			<li class="selected"><a href="#view_detail_05">상품고시정보</a></li>
 			<li><a href="#view_detail_06">배송&amp;교환 반품안내</a></li>
 		</ul>
@@ -1185,8 +1175,8 @@ function chkGoodsForm(form) {
 			<li><a href="#view_detail_01">상품상세정보</a></li>
 			<li><a href="#view_detail_02">관련상품</a></li>
 			
-			<li><a href="#view_detail_03">상품후기 ( <strong class="cnt">2</strong> )건</a></li>
-			<li><a href="#view_detail_04">상품 Q&amp;A ( <strong class="cnt">20</strong> )건</a></li>
+			<li><a href="#view_detail_03">상품후기</a></li>
+			<li><a href="#view_detail_04">상품 Q&amp;A</a></li>
 			<li><a href="#view_detail_05">상품고시정보</a></li>
 			<li class="selected"><a href="#view_detail_06">배송&amp;교환 반품안내</a></li>
 		</ul>

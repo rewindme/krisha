@@ -2,7 +2,7 @@
 /* 상품 상세 탑 */
 .product_view{
 	position:relative;zoom:1;min-width:1180px;
-	.cover_img{text-align:center;background-color:#e9eceb}
+	.cover_img{text-align:center;background-color:#f2f2f2;}
 	.cover_img img{max-width:100%;width:auto;height:auto;vertical-align:top}
 	
 	.product_info{@extend %cover;position:absolute;top:0;left:50%;margin-left:-590px}

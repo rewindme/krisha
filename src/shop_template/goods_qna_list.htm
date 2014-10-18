@@ -1,0 +1,141 @@
+{*** 상품문의 목록 | goods/goods_view.php ***}
+<html>
+<head>
+<script src="../common.js"></script>
+<link rel="styleSheet" href="../style.css">
+<script id="qna_chk"></script>
+<script type="text/javascript">
+function dynamicScript(url) {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+
+	script.onload = script.onreadystatechange = function() {
+		if(!script.readyState || script.readyState == "loaded" || script.readyState == "complete"){
+			script.onload = script.onreadystatechange = null;
+		}
+	}
+
+	script.src = url;
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+function popup_register( mode, goodsno, sno )
+{
+<!--{ ? empty(_cfg['qnaWriteAuth']) && !_sess  }-->
+	alert( "회원전용입니다." );
+<!--{ : }-->
+	if ( mode == 'del_qna' ) var win = window.open("goods_qna_del.php?mode=" + mode + "&sno=" + sno,"qna_register","width=400,height=200");
+	else var win = window.open("goods_qna_register.php?mode=" + mode + "&goodsno=" + goodsno + "&sno=" + sno,"qna_register","width=650,height=752,scrollbars=yes");
+	win.focus();
+<!--{ / }-->
+}
+
+var preContent;
+var IntervarId;
+
+function view_content(sno)
+{
+	var obj = document.getElementById('content_id_'+sno);
+	
+	if(obj.style.display == "none"){
+		dynamicScript("./goods_qna_chk.php?mode=view&sno="+sno);
+	}else{
+		obj.style.display = "none";
+	}
+	preContent = obj;
+	
+	IntervarId = setInterval( 'resizeFrame();', 100 );
+}
+
+function popup_pass(sno){
+	var win = window.open("goods_qna_pass.php?sno=" + sno,"qna_register","width=400,height=200");
+}
+
+function resizeFrame()
+{
+    var oBody = document.body;
+    var tb_contents = document.getElementById("contents-wrapper");
+    var i_height = tb_contents.offsetHeight;
+    if(i_height==0){
+    	i_height  = 100;
+    }   
+    parent.resizeFrameHeight('inqna',i_height);
+    if ( IntervarId ) clearInterval( IntervarId );
+
+	var i_width = tb_contents.offsetWidth;
+    if(i_width==0){
+    	i_width  = 100;
+    }   
+    parent.resizeFrameWidth('inqna',i_width);
+    if ( IntervarId ) clearInterval( IntervarId );
+}
+
+</script>
+</head>
+<body style="margin-top:10px;background-color:#fff" onload="setTimeout('resizeFrame()',1)">
+
+<div id="contents-wrapper">
+	<div class="review_top">
+		<!--{ @ dataBanner( 42 ) }-->
+		<a href="{.linkaddr}" target="{? .target} {.target} { : }_top{ / }"><img src="{.img}" alt=""></a>
+		<!--{ / }-->
+		<span class="btn_cover">
+			<a href="./goods_qna.php" class="btn_view_list" target="_parent">상품Q&amp;A 전체보기</a><a href="javascript:;"  onclick="popup_register( 'add_qna', '{_goodsno}' )" class="btn_upload_qna">상품질문 올리기</a>
+		</span>
+	</div>
+	<div class="text_board">
+		<div class="board">
+			<div class="board_head">
+				<ul>
+					<li class="count"></li>
+					<li class="subject">상품문의</li>
+					<li class="writer">작성자</li>
+					<li class="date">작성일</li>
+				</ul>
+			</div>
+			<div class="board_body">
+				<ul>
+					<!--{ @ _loop }-->
+					<li>
+						<span class="count">
+							<!--{ ? .type == 'Q' }-->								
+							<span class="receipt">상품문의</span>								
+							<!--{ : }-->
+							<span class="complete">답변완료</span>
+							<!--{ / }-->
+						</span>
+						<div class="subject" onclick="view_content('{.sno}');">
+							<a href="javascript:;" class="subject_cover">
+								<div class="remain_cover">
+									<h4 class="subject_tit">
+										<!--{ ? .type == 'Q' }-->
+										{.subject}
+										<span class="reply_cnt">{? .replecnt > 0}{.replecnt}{/}</span>
+										<!--{ ? .secretIcon }-->&nbsp;<img src="../img/ico_lock.png" align=absmiddle><!--{ / }-->
+										
+										<!--{ : }-->
+										<img src="../img/ico_reply.png" alt="답변글">
+										{.subject}
+										<!--{ ? .secretIcon }-->&nbsp;<img src="../img/ico_lock.png" align=absmiddle><!--{ / }-->
+										<!--{ / }-->
+									</h4>											
+								</div>
+							</a>
+						</div>
+						<span class="writer">{ ? .name }{.name}{ : .m_name }{.m_name}{ : }{.m_id}{ / }</span>
+						<span class="date">{=substr(.regdt,0,10)}</span>								
+						<div id="content_id_{.sno}" style="display:none" class="contents_area"></div>
+					</li>
+					<!--{ / }-->
+
+							
+				</ul>
+			</div>
+		</div>
+		<div class="navigation">
+			{pg->page['navi']}
+		</div>
+	</div>
+</div>
+</body>
+</html>

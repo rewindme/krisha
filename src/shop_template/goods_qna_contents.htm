@@ -1,0 +1,17 @@
+{*** 상품문의 상세 | goods/goods_qna_contents.php ***}
+<!--{ ? authview == 'Y' }-->
+{contents}
+<div class="task_article">
+<!--{ ? parent == sno && !notice }-->
+	<a href="javascript:;" onclick="popup_register( 'reply_qna', '{goodsno}', '{sno}' );" class="btn_answer">답변</a>
+	<!--{ / }-->
+	<!--{ ? authmodify == 'Y' }-->
+	<a href="javascript:;" onclick="popup_register( 'mod_qna', '{goodsno}', '{sno}' );" class="btn_modify">수정</a>
+	<!--{ / }-->
+	<!--{ ? authdelete == 'Y' }-->
+	<a href="javascript:;" onclick="popup_register( 'del_qna', '{goodsno}', '{sno}' );" class="btn_delete">삭제</a>
+	<!--{ / }-->
+</div>
+<!--{ : }-->
+비밀글 입니다.
+<!--{ / }-->
