@@ -35,8 +35,8 @@
 	@extend %form_container;padding-bottom:50px;
 	.submit_cover{
 		text-align:center;padding:30px 0;
-		.btn_cancel{@extend %btn-gray-h40;margin-right:10px}
-		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:108px}
+		.btn_cancel{@extend %btn-gray-h40;margin-right:10px;display:inline-block}
+		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:108px;display:inline-block}
 	}
 }
 .join_box{
@@ -83,7 +83,7 @@
 }
 /* 회원가입 완료 */
 .join_complete{
-	padding:157px 0 0 130px;
+	padding:157px 0 100px 130px;
 	.logo_krisha{@extend %sp-cmplt;width:324px;height:114px;background-position:0 32px;display:block;border-right:1px solid $point-color1;float:left}
 	.welcome_msg{overflow:hidden;padding:0 0 0 31px;}
 	.img_welcome{@extend %sp-cmplt;width:430px;height:68px;background-position:0 -122px;margin:0 0 8px 0;padding:0}
