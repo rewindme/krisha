@@ -39,5 +39,5 @@
 	p strong{color:$color-price;font-weight:normal}
 	
 	.join_us_cover{padding-top:121px}
-	.btn_join{@extend %btn-point2;margin-bottom:20px}
+	.btn_join{@extend %btn-point2;margin-bottom:20px;display:inline-block}
 }

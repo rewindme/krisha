@@ -23,7 +23,7 @@ i, .ht { color: transparent; font-size: 0; }
 
 .u_hc, .u_skip { visibility: hidden; overflow: hidden; position: absolute; left: -999em; width: 0; height: 0; font-size: 0; color: transparent; line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cover .qty_cnt_up, .qty_cover .qty_cnt_down, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .ipt_rdo label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info { display: inline-block; *display: inline; *zoom: 1; }
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cover .qty_cnt_up, .qty_cover .qty_cnt_down, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .form_item .btn_valid, .order_reciept_info .btn_valid, .ipt_address.form_item .btn_find_zip, .ipt_address.order_reciept_info .btn_find_zip, .join .submit_cover .btn_cancel, .order_reciept_info .btn_find_zip, .order_list .btn_modify, .task_btn .btn_shopping, .task_btn .btn_cancel, .use_point button, .ipt_rdo label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info { display: inline-block; *display: inline; *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay { background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png"); background-repeat: no-repeat; background-color: transparent; vertical-align: top; }
 
@@ -218,6 +218,9 @@ body { background-color: #f8f8f8; }
 
 .banner_cover a { padding: 0 9px 0 10px; }
 
+/* 임시 */
+#left_cs { position: fixed; right: 50%; margin-right: 600px; top: 140px; z-index: 100; }
+
 /* 상품 상세 탑 */
 .product_view { position: relative; zoom: 1; min-width: 1180px; }
 .product_view .cover_img { text-align: center; background-color: #e9eceb; }
@@ -350,7 +353,7 @@ body { background-color: #f8f8f8; }
 .membership_reward p { font-size: 14px; line-height: 30px; color: #666; }
 .membership_reward p strong { color: #f54500; font-weight: normal; }
 .membership_reward .join_us_cover { padding-top: 121px; }
-.membership_reward .btn_join { margin-bottom: 20px; }
+.membership_reward .btn_join { margin-bottom: 20px; display: inline-block; }
 
 .form_item .btn_valid, .order_reciept_info .btn_valid, .ipt_address.form_item .btn_find_zip, .ipt_address.order_reciept_info .btn_find_zip, .join .submit_cover .btn_cancel, .order_reciept_info .btn_find_zip { height: 40px; vertical-align: top; width: 108px; }
 
@@ -368,8 +371,8 @@ body { background-color: #f8f8f8; }
 
 .join { padding-bottom: 50px; }
 .join .submit_cover { text-align: center; padding: 30px 0; }
-.join .submit_cover .btn_cancel { margin-right: 10px; }
-.join .submit_cover .btn_signup { height: 40px; vertical-align: top; width: 108px; }
+.join .submit_cover .btn_cancel { margin-right: 10px; display: inline-block; }
+.join .submit_cover .btn_signup { height: 40px; vertical-align: top; width: 108px; display: inline-block; }
 
 .join_box { position: relative; zoom: 1; }
 .join_box .progress { position: absolute; right: 0; top: 0; color: #999; font-size: 13px; line-height: 20px; }
@@ -401,7 +404,7 @@ body { background-color: #f8f8f8; }
 .form_item { margin-bottom: 21px; line-height: 40px; }
 
 /* 회원가입 완료 */
-.join_complete { padding: 157px 0 0 130px; }
+.join_complete { padding: 157px 0 100px 130px; }
 .join_complete .logo_krisha { width: 324px; height: 114px; background-position: 0 32px; display: block; border-right: 1px solid #5cc4b9; float: left; }
 .join_complete .welcome_msg { overflow: hidden; padding: 0 0 0 31px; }
 .join_complete .img_welcome { width: 430px; height: 68px; background-position: 0 -122px; margin: 0 0 8px 0; padding: 0; }

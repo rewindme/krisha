@@ -1,0 +1,467 @@
+{*** 회원가입/수정 폼 | member/join.php ***}
+
+<script src="../godo.password_strength.js" type="text/javascript"></script>
+
+<form id=form name=frmMember method=post action="{memActionUrl}" onsubmit="return chkForm2(this)">
+<input type=hidden name=mode value="{_mode}">
+<input type=hidden name=rncheck value="{rncheck}">
+<input type=hidden name=dupeinfo value="{dupeinfo}">
+<input type=hidden name=pakey value="{pakey}">
+<input type=hidden name=foreigner value="{foreigner}">
+<input type=hidden name=passwordSkin value="Y"><!-- 비밀번호 작성 규칙 보완 스킨패치 여부 -->
+<!--{ ? _sess }--><input type=hidden name=m_id value="{m_id}"><!--{ / }-->
+<input type=hidden name=private1 value="{private1}">
+<!--{ ? _mode=="joinMember" }-->
+<input type=hidden name=private2 value="{private2}">
+<input type=hidden name=private3 value="{private3}">
+<!--{ : }-->
+	<!--{ ? _cfg['private2YN'] == 'Y' // 개인정보 제3자 제공 관련 사용여부 }-->
+<div style="padding-top:10; background:#F1F1F1;  text-align:center;">
+<div align="left" style="height:26;padding:3px 0 0 10px;">
+<b>● 개인정보 제3자 제공 관련</b>
+</div>
+<div id="boxScroll" class="scroll">
+<!--{ = include_file( "/service/_private2.txt" ) }-->
+</div>
+<div align=center class=noline style="height:30;margin-top:10px;" >
+<input type="radio" name="private2" value="y" {_checked.private2.y} required fld_esssential label="개인정보 제3자 제공 관련" msgR="동의 여부를 체크해주세요."> 동의합니다 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="private2" value="n" {_checked.private2.n} required fld_esssential  label="개인정보 제3자 제공 관련" msgR="동의 여부를 체크해주세요."> 동의하지 않습니다
+</div>
+</div>
+<p>
+	<!--{ / }-->
+	<!--{ ? _cfg['private3YN'] == 'Y' // 개인정보취급 위탁 관련 사용여부 }-->
+<div style="padding-top:10; background:#F1F1F1;  text-align:center;">
+<div align="left" style="height:26;padding:3px 0 0 10px;">
+<b>● 개인정보취급 위탁 관련</b>
+</div>
+<div id="boxScroll" class="scroll">
+<!--{ = include_file( "/service/_private3.txt" ) }-->
+</div>
+<div align=center class=noline style="height:30;margin-top:10px;" >
+<input type="radio" name="private3" value="y" {_checked.private3.y} required fld_esssential label="개인정보취급 위탁 관련" msgR="동의 여부를 체크해주세요."> 동의합니다 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="private3" value="n" {_checked.private3.n} required fld_esssential label="개인정보취급 위탁 관련" msgR="동의 여부를 체크해주세요."> 동의하지 않습니다
+</div>
+</div>
+<p>
+	<!--{ / }-->
+<!--{ / }-->
+
+<!-- 네이버체크아웃(회원연동) -->
+<!--{=naverCheckout_oneclickStep}-->
+	<div class="form_container">
+		<div class="form_item ipt_name">
+			<label class="tit" for="name">이름</label>		
+			<!--{ ? _mode=="joinMember" && name }-->
+			<input type="hidden" name="name" value="{name}">{name}
+			<!--{ : }-->
+			<input type="text" name="name" id="name" value="{name}" required fld_esssential class="ipt_text" placeholder="실명을 입력해주세요.">
+			<!--{ / }-->		
+		</div>
+		
+		<!--{ ? _checked.useField.nickname }-->
+		<div class="form_item ipt_name">
+			<label class="tit" for="nickname">닉네임</label>		
+			<input type="text" name="nickname" id="nickname" value="{nickname}" {_required.nickname} class="ipt_text" placeholder="닉네임을 입력해주세요.">
+			<input type="hidden" name="chk_nickname" <!--{ ? _required.nickname && !_sess }-->required fld_esssential<!--{ / }--> label="닉네임중복체크">		
+			<a href="javascript:chkNickname()" class="btn_valid">중복확인</a>
+		</div>
+		<!--{ / }-->
+	
+		<div class="form_item ipt_id">
+			<label class="tit" for="ipt_id">아이디</label>
+			
+			<!--{ ? !_sess }-->
+			<input type="text" name="m_id" value="{m_id}" maxlength="16" required fld_esssential option="regId" id="ipt_id" class="ipt_text" placeholder="8~15자 사이의 영문자, 숫자로 입력하세요.">		
+			<input type="hidden" name="chk_id" required fld_esssential label="아이디중복체크">
+			<a href="javascript:chkId()" class="btn_valid">중복확인</a>
+			<!--{ : }-->
+			<span class=eng><b>{m_id}</b></span>
+			<!--{ / }-->		
+		</div>
+		<!--{ ? _mode == 'modMember' }-->	
+		<div class="form_item ipt_pw">
+			<div class="item_cover">
+				<label class="tit" for="ipt_pw">비밀번호</label>
+				<a href="javascript:void(0);" onclick="openPasswordField()">비밀번호 변경</a>
+				<a href="javascript:void(0);" onclick="_ID('pwdManual').style.display='block';">비밀번호 도움말</a>
+				<!-- 비밀번호 도움말 -->
+				<div id="pwdManual">
+					<p>
+						비밀번호에 영문 대소문자, 숫자, 특수문자를 조합하시면 비밀번호 안전도가 높아져 도용의 위험이 줄어듭니다.
+					</p>
+					<ul>
+						<li>영문 대소문자는 구분이 되며, 한가지 문자로만 입력은 위험합니다.</li>
+						<li>사용가능한 특수문자 : ! " @ # $ % ^ & ' ( ) * + = , - _ . : ; < > ? /  ` ~ | { } </li>
+						<li>ID, 주민번호 , 생일, 전화번호 등의 개인정보와 통상 사용 순서대로의 3자 이상 연속 사용은 피해주세요.</li>
+						<li>비밀번호는 주기적으로 바꾸어 사용하시는 것이 안전합니다.</li>
+					</ul>
+					<p class="close">
+						<a href="javascript:void(0);" onclick="_ID('pwdManual').style.display='none';"><img src="../img/common/close_x.gif" /></a>
+					</p>
+				</div>
+				
+				<table cellpadding="0" cellspacing="0" border="0">
+				<!--{ ? strlen(password) > 0 }-->
+				<tr>
+					<td class="memberCols3">현재 비밀번호</td>
+					<td>
+					<input type="password" name="originalPassword" id="originalPassword" />
+					<span style="font:8pt 돋움;color:#007FC8">현재 비밀번호를 입력해 주세요.</span>
+					</td>
+				</tr>
+				<!--{ / }-->
+				<tr>
+					<td class="memberCols3">새 비밀번호</td>
+					<td>
+					<input type="password" name="newPassword" id="newPassword" onfocus="checkPassword(this)" onkeyup="checkPassword(this)" onblur="emptyPwState()" label="새 비밀번호" option=regPass maxlength="16" />
+		
+						<div class="passwordStrenth" id="el-password-strength-indicator">
+						<dl>
+							<dt>비밀번호 안전도</dt>
+							<dd id="el-password-strength-indicator-level"></dd>
+						</dl>
+						<p id="el-password-strength-indicator-msg"></p>
+						</div>
+		
+					<span style="font:8pt 돋움;color:#007FC8">새로 변경할 비밀번호를 입력해 주세요.</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="memberCols3">새 비밀번호 확인</td>
+					<td>
+					<input type="password" name="confirmPassword" id="confirmPassword" label="새 비밀번호" option=regPass maxlength="16" />
+					<span style="font:8pt 돋움;color:#007FC8">새로 변경할 비밀번호를 다시 한번 입력해 주세요.</span>
+					</td>
+				</tr>
+				</table>
+			</div>		
+		</div>
+		<!--{ : }-->
+		<div class="form_item ipt_pw">
+			<div class="item_cover">
+				<label class="tit" for="ipt_pw">비밀번호</label>
+				<input type="password" name="password" onfocus="checkPassword(this)" onkeyup="checkPassword(this)" onblur="emptyPwState()" maxlength="16"  required fld_esssential option="regPass" id="ipt_pw" class="ipt_text" placeholder="비밀번호는 4~12자 사이로 입력하세요.">
+				<div class="passwordStrenth" id="el-password-strength-indicator">
+				<dl>
+					<dt>비밀번호 안전도</dt>
+					<dd id="el-password-strength-indicator-level"></dd>
+				</dl>
+				<p id="el-password-strength-indicator-msg"></p>
+				</div>
+			</div>
+			<div class="item_cover">
+				<label class="tit" for="ipt_pw_confirm">비밀번호 확인</label>
+				<input type="password" id="ipt_pw_confirm" name="password2" required fld_esssential option="regPass" maxlength="16" class="ipt_text" placeholder="비밀번호확인을 위해 한 번 더 입력해주세요.">
+			</div>
+		</div>
+		<!--{ / }-->
+		<div class="form_item ipt_birth">
+			<!--{ ? _checked.useField.birth }-->
+			<span class="tit">생년월일</span>
+			<label for="ipt_birth_year" class="blind">년</label>
+			<input type="text" id="ipt_birth_year" class="ipt_text" placeholder="년" style="width:88px" name="birth_year" value="{birth_year}" {_required.birth} size="4" maxlength="4">
+			
+			<label for="ipt_birth_month" class="blind">월</label>
+			<input type="text" id="ipt_birth_month" class="ipt_text" placeholder="월" style="width:48px" name="birth[]" value="{birth[0]}" {_required.birth} size="2" maxlength="2">
+			
+			<label for="ipt_birth_day" class="blind">일</label>
+			<input type="text" id="ipt_birth_day" class="ipt_text" placeholder="일" style="width:48px" name="birth[]" value="{birth[1]}" {_required.birth} size="2" maxlength="2">
+			
+			<!--{ ? _checked.useField.calendar }-->
+			<span class="ipt_rdo"><input type="radio" name="calendar" value="s" id="choose_sun" checked="checked"><label for="choose_sun">양력</label></span>
+			<span class="ipt_rdo"><input type="radio" name="calendar" value="l" id="choose_lunar" {_checked.calendar.l}><label for="choose_lunar">음력</label></span>
+			<!--{ / }-->
+			
+			<!--{ ? _checked.useField.sex }-->
+			<span class="ipt_rdo"><input type="radio" name="sex" id="choose_female" {_required.sex} value="w" {_checked.sex.w}><label for="choose_female">여자</label></span>
+			<span class="ipt_rdo"><input type="radio" name="sex" id="choose_male" {_required.sex} value="m" {_checked.sex.m}><label for="choose_male">남자</label></span>
+			<!--{ / }-->
+			<!--{ / }-->
+		</div>
+	
+	
+		<!--{ ? _checked.useField.address }-->
+		<div class="form_item ipt_address">
+			<span class="tit">주소</span>
+			<span class="item_cover">
+				<input type="text" class="ipt_text" name="zipcode[]" id="zipcode0" size="3" readonly value="{zipcode[0]}" {_required.address} style="width:48px"><span class="hyphen">-</span><input type="text" class="ipt_text" name="zipcode[]" id="zipcode1" size="3" readonly value="{zipcode[1]}" {_required.address} style="width:48px">
+				<a href="javascript:popup('../proc/popup_address.php',500,432)" class="btn_find_zip">우편번호 검색</a>
+			</span>
+			<span class="item_cover">
+				<input type="text" name="address" id="address" value="{address}" class="ipt_text" readonlY size="30" {_required.address} label="주소">
+				<input type="text" name="address_sub" id="address_sub" value="{address_sub}" class="ipt_text" size="30" onkeyup="SameAddressSub(this)" oninput="SameAddressSub(this)" label="세부주소">
+				<input type="hidden" name="road_address" id="road_address" value="{road_address}">
+				<div style="padding:5px 5px 0 1px;" id="div_road_address">{road_address}</div>
+				<div style="padding:5px 0 0 1px" id="div_road_address_sub"><!--{ ? road_address }-->{address_sub}<!--{ / }--></div>
+			</span>
+		</div>
+		<!--{ / }-->
+	
+	
+	
+		<div class="form_item ipt_tel">
+			<!--{ ? _checked.useField.phone }-->
+			<div class="item_cover">
+				<span class="tit">휴대폰 번호</span>
+				<input type="text" id="ipt_phone1" class="ipt_text" style="width:88px" name="mobile[]" value="{mobile[0]}" size="4" maxlength="4" {_required.mobile} option="regNum">
+				<input type="text" id="ipt_phone2" class="ipt_text" style="width:88px" name="mobile[]" value="{mobile[1]}" size="4" maxlength="4" {_required.mobile} option="regNum">
+				<input type="text" id="ipt_phone3" class="ipt_text" style="width:88px" name="mobile[]" value="{mobile[2]}" size="4" maxlength="4" {_required.mobile} option="regNum">
+				
+				<!--{ ? _checked.useField.sms }-->
+				<div>
+					<input type="checkbox" name="sms" id="chk_sms" {_checked.sms}><label for="chk_sms">정보,이벤트SMS수신</label>
+					<p>※ 주문 관련 정보 등 주요 안내 사항은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
+				</div>
+				<!--{ / }-->
+			</div>
+			<!--{ / }-->
+			
+			<!--{ ? _checked.useField.phone }-->
+			<div class="item_cover">
+				<span class="tit">전화번호</span>
+				<input type="text" id="ipt_tel1" class="ipt_text" style="width:88px" name="phone[]" value="{phone[0]}" size="4" maxlength="4" {_required.phone} option="regNum">
+				<input type="text" id="ipt_tel2" class="ipt_text" style="width:88px" name="phone[]" value="{phone[1]}" size="4" maxlength="4" {_required.phone} option="regNum">
+				<input type="text" id="ipt_tel3" class="ipt_text" style="width:88px" name="phone[]" value="{phone[2]}" size="4" maxlength="4" {_required.phone} option="regNum">
+			</div>
+			<!--{ / }-->
+		</div>
+		
+		<!--{ ? _checked.useField.email }-->
+		<div class="form_item ipt_email">
+			<label class="tit" for="ipt_email">이메일</label>
+			<input type="text" id="ipt_email" class="ipt_text" name="email" value="{email}" size="30" {_required.email} option="regEmail">
+			<!--{ ? !_sess }--><input type=hidden name=chk_email {_required.email} label="이메일중복체크"><!--{ / }-->
+			<a href="javascript:void(0)" onClick="chkEmail()" class="btn_find_zip">이메일 중복 체크</a>
+			<!--{ ? _checked.useField.mailling }-->
+			<div>
+				<input type="checkbox" name="mailling" id="mailling" {_checked.mailling}><label for="mailling">정보,이벤트메일수신</label>
+				<p>※ 주문 관련 정보, 주요 공지사항 및 이벤트 당첨 안내 등은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
+			</div>
+			<!--{ / }-->
+		</div>
+		<!--{ / }-->
+		
+		<div class="form_item ipt_path">
+			<span class="tit">가입경로</span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path1" checked="checked"><label for="ipt_path1">온라인 광고</label></span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path2"><label for="ipt_path2">네이버</label></span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path3"><label for="ipt_path3">다음</label></span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path4"><label for="ipt_path4">네이트</label></span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path5"><label for="ipt_path5">블로그</label></span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path6"><label for="ipt_path6">카페</label></span>
+			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path7"><label for="ipt_path7">기타</label></span>
+		</div>
+		<!--{ ? _checked.useField.ex1 }-->
+		<tr>
+			<td class=memberCols1><!--{ ? _required.ex1 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex1}</td>
+			<td class=memberCols2><input type=text name=ex1 {_required.ex1} value="{ex1}" style="width:300px"></td>
+		</tr>
+		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
+		<!--{ / }-->
+		<!--{ ? _checked.useField.ex2 }-->
+		<tr>
+			<td class=memberCols1><!--{ ? _required.ex2 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex2}</td>
+			<td class=memberCols2><input type=text name=ex2 {_required.ex2} value="{ex2}" style="width:300px"></td>
+		</tr>
+		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
+		<!--{ / }-->
+		<!--{ ? _checked.useField.ex3 }-->
+		<tr>
+			<td class=memberCols1><!--{ ? _required.ex3 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex3}</td>
+			<td class=memberCols2><input type=text name=ex3 {_required.ex3} value="{ex3}" style="width:300px"></td>
+		</tr>
+		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
+		<!--{ / }-->
+		<!--{ ? _checked.useField.ex4 }-->
+		<tr>
+			<td class=memberCols1><!--{ ? _required.ex4 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex4}</td>
+			<td class=memberCols2><input type=text name=ex4 {_required.ex4} value="{ex4}" style="width:300px"></td>
+		</tr>
+		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
+		<!--{ / }-->
+		<!--{ ? _checked.useField.ex5 }-->
+		<tr>
+			<td class=memberCols1><!--{ ? _required.ex5 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex5}</td>
+			<td class=memberCols2><input type=text name=ex5 {_required.ex5} value="{ex5}" style="width:300px"></td>
+		</tr>
+		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
+		<!--{ / }-->
+		<!--{ ? _checked.useField.ex6 }-->
+		<tr>
+			<td class=memberCols1><!--{ ? _required.ex6 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex6}</td>
+			<td class=memberCols2><input type=text name=ex6 {_required.ex6} value="{ex6}" style="width:300px"></td>
+		</tr>
+		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
+		<!--{ / }-->
+		
+		<!--{ ? !_sess }-->
+		<div class="submit_cover">
+			<button onClick="history.back()" class="btn_cancel">취소하기</button>
+			<button type="submit" class="btn_signup">회원가입</button>
+		</div>
+		<!--{ : }-->
+		<div class="submit_cover">
+			<button onClick="history.back()" class="btn_cancel">취소하기</button>
+			<button type="submit" class="btn_signup">수정완료</button>
+		</div>
+		<!--{ / }-->
+		
+	</div>
+</form>
+
+<iframe id="ifrmRnCheck" name="ifrmRnCheck" style="width:500px;height:500px;display:none;"></iframe>
+
+<script>
+
+function chkId()
+{
+var form = document.frmMember;
+if (!chkText(form.m_id,form.m_id.value,"아이디를 입력해주세요")) return;
+if (!chkPatten(form.m_id,form.m_id.getAttribute('option'),"아이디는 4자 이상 16자 이하의 영문자,숫자 조합만 가능합니다")) return;
+ifrmHidden.location.href = "indb.php?mode=chkId&m_id=" + form.m_id.value;
+}
+
+function chkEmail()
+{
+var form = document.frmMember;
+if (!chkText(form.email,form.email.value,"이메일을 입력해주세요")) return;
+if (!chkPatten(form.email,form.email.getAttribute('option'),"정상적인 이메일 주소를 입력해주세요")) return;
+ifrmHidden.location.href = "indb.php?mode=chkEmail&email=" + form.email.value + "&m_id=" + form.m_id.value;
+}
+
+function chkNickname()
+{
+var form = document.frmMember;
+if (!chkText(form.nickname,form.nickname.value,"닉네임을 입력해주세요")) return;
+ifrmHidden.location.href = "indb.php?mode=chkNickname&nickname=" + form.nickname.value + "&m_id=" + form.m_id.value;
+}
+
+function chkBirth(obj)
+{
+var birth = document.getElementsByName(obj.name)[0].value;
+var di = document.getElementsByName(obj.name)[1].value;
+var objBirth = document.getElementsByName('birth[]');
+
+if(di.substring(0,1) == 1 || di.substring(0,1) == 2) var dy="19";
+else var dy="20";
+
+obj.form.birth_year.value = (birth) ? dy + birth.substring(0,2) : "";
+objBirth[0].value = birth.substring(2,4);
+objBirth[1].value = birth.substring(4,6);
+}
+
+function chkSex(obj)
+{
+var resno = obj.value;
+if (resno) obj.form.sex[1-resno.substring(0,1)%2].checked = true;
+}
+
+function openPasswordField() {
+	if(navigator.appName.indexOf("Microsoft") > -1) {
+		_ID('pwLayer01').style.display='block';
+		_ID('pwLayer02').style.display='block';
+	}
+	else {
+		_ID('pwLayer01').style.display='table-row';
+		_ID('pwLayer02').style.display='table-row';
+	}
+}
+
+function checkPassword(el) {
+
+	if(el.value) {
+
+		var param = {
+			form : document.frmMember,
+			fields : ['m_id', 'birth_year', 'phone[]', 'birth[]', 'mobile[]', 'email']
+		}
+
+		nsGodo_PasswordStrength.appendBlacklist(param);
+		nsGodo_PasswordStrength.appendBlacklist(param);
+
+
+		var result = nsGodo_PasswordStrength.check( el );
+
+		_ID('el-password-strength-indicator-msg').innerText = result.msg;
+		_ID('el-password-strength-indicator-level').className = 'lv'+result.level;
+		_ID('el-password-strength-indicator-level').innerText = result.levelText;
+		_ID('el-password-strength-indicator').style.display = 'block';
+
+
+	}
+	else {
+		emptyPwState();
+	}
+
+}
+
+function emptyPwState() {
+	_ID('el-password-strength-indicator').style.display = "none";
+}
+
+function chkForm2(f) {
+	<!--{ ? _mode=="modMember"}-->
+	if(_ID('pwLayer01').style.display != "none") {
+		if(!_ID('originalPassword').value) {
+			alert("현재 비밀번호를 입력해 주세요.");
+			_ID('originalPassword').focus();
+			return false;
+		}
+		if(!_ID('newPassword').value) {
+			alert("새 비밀번호를 입력해 주세요.");
+			_ID('newPassword').focus();
+			return false;
+		}
+		if(!_ID('confirmPassword').value) {
+			alert("새 비밀번호 확인을 입력해 주세요.");
+			_ID('confirmPassword').focus();
+			return false;
+		}
+		if(_ID('newPassword').value != _ID('confirmPassword').value) {
+			alert("새 비밀번호와 비빌번호 확인이 일치하지 않습니다.");
+			_ID('confirmPassword').focus();
+			return false;
+		}
+	}
+	<!--{ / }-->
+
+	if (document.getElementById('avoidDbl')) btn = document.getElementById('avoidDbl').innerHTML;
+
+	if (chkForm(f) === false) {
+		return false;
+	}
+
+	// 만14세 미만 회원가입 가능여부 생년월일로 체크
+	var under14Code = '{under14Code}';
+	var under14Status = '{under14Status}';
+	if (under14Code == 'needBirthCheck') {
+		var birthDay = '';
+		if (typeof(f['birth_year']) != 'undefined' && typeof(f['birth[]'][0]) != 'undefined' && typeof(f['birth[]'][0]) != 'undefined') {
+			bY = '0000' + f['birth_year'].value;
+			bM = '00' + f['birth[]'][0].value;
+			bD = '00' + f['birth[]'][1].value;
+			birthDay = bY.substring(bY.length-4) + bM.substring(bM.length-2) + bD.substring(bD.length-2);
+		}
+		if (chkUnder14(birthDay, under14Status, under14Code) === false) {
+			if (document.getElementById('avoidDbl')) document.getElementById('avoidDbl').innerHTML = btn;
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function goIDCheckIpin() {
+<!--{ ? _ipin['nice_useyn'] == 'y' }-->
+	var popupWindow = window.open( "", "popupCertKey", "width=450, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no" );
+	ifrmRnCheck.location.href="../member/ipin/IPINMain.php?callType=applyipin";
+<!--{ : _ipin['useyn'] == 'y' }-->
+	var popupWindow = window.open( "", "popupCertKey", "top=100, left=200, status=0, width=417, height=490" );
+	ifrmRnCheck.location.href="../member/ipin/IPINCheckRequest.php?callType=applyipin";
+<!--{ / }-->
+
+	return;
+}
+
+</script>

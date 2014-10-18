@@ -66,13 +66,14 @@ function {id}_tab(tabNo) {
 				<!--{ ? ..shortdesc}--><span class="prod_desc">{..shortdesc}</span><!--{ / }-->
 				<!--{ ? !..strprice }-->
 					<!--{ ? ..price}-->
-					<!--{ ? ..consumer > 1}-->
-					<span class="price discount">
-						<span class="before"><em>{=number_format(..consumer)}</em>원</span>
-						<strong class="after"><em>{=number_format(..price)}</em>원</strong> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
-					</span>					
-					<!--{ : }--><span class="price"><em>{=number_format(..price)}</em>원</span> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
-					<!--{ / }-->
+						<!--{ ? ..consumer > 1}-->
+						<span class="price discount">
+							<span class="before"><em>{=number_format(..consumer)}</em>원</span>
+							<strong class="after"><em>{=number_format(..price)}</em>원</strong> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
+						</span>					
+						<!--{ : }-->
+						<span class="price"><em>{=number_format(..price)}</em>원</span> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
+						<!--{ / }-->
 					<!--{ / }-->
 					
 					<!--{? .soldout_price_string}-->{.soldout_price_string}<!--{/}-->
