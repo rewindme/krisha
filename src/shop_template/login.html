@@ -44,6 +44,39 @@ window.onload = function(){ document.form.m_id.focus(); }
 			<div class="join_us_cover">
 				<a href="../member/join.php?MODE=agreement" class="btn_join">회원가입</a>
 			</div>
+			
+			<!-- 비회원 주문 확인 -->
+			<!--{ ? guest_disabled != 'y' }-->
+			<!--{ ? _GET.guest }-->
+			<h3 class="sub_tit">비회원 바로구매</h3>
+			<!--{ : }-->			
+			<h3 class="sub_tit">비회원 주문확인</h3>
+			<!--{ / }-->
+			
+			<div class="order_guest">
+				<!--{ ? _GET.guest }-->
+				<a href="../order/order.php?guest=1" class="btn_guest_order">비회원 구매</a>
+				<!--{ : }-->
+				<form id="form" method="post" action="/shop/member/login_ok.php?&amp;" onsubmit="return chkForm(this)">
+				<input type="hidden" name="mode" value="guest">
+				<input type="hidden" name="returnUrl" value="http://krisha.co.kr/shop/main/index.php">
+				<span class="ipt_wrap">
+					<label for="nameOrder" class="blind">주문자명</label>
+					<input type="text" placeholder="주문자명" id="nameOrder" name="nameOrder" size="10" required="" label="주문자명">
+				</span>			
+				<span class="ipt_wrap">				
+					<label for="ordno" class="blind">주문번호</label>					
+					<input type="text" name="ordno" id="ordno" size="20" required=""  placeholder="주문번호">
+				</span>
+				<span class="submit_area">
+				<button type="submit" class="btn_order">주문확인</button>
+				</span>
+				<p class="desc">비회원 주문확인은 주문자명과 주문번호를 입력해주세요.</p>
+				</form>
+				<!--{ / }-->
+			</div>	
+			<!--{ / }-->
+			<!-- //비회원 주문 확인 -->
 		</div>
 		<!--{ ? SocialMemberEnabled }-->
 		<div style="overflow: hidden; float: left; width: 100%;">
@@ -58,45 +91,7 @@ window.onload = function(){ document.form.m_id.focus(); }
 			</div>
 		</div>
 		<!--{ / }-->
-		<!--{ ? guest_disabled != 'y' }-->
-		<div style="padding-top:15;"><img src="../img/common/login_03.gif" border=0></div>
-		<div style="border:1px solid #DEDEDE;" class="hundred">
-		<table width=100% cellpadding=0 cellspacing=0 border=0>
-		<tr>
-			<td style="border:5px solid #F3F3F3;padding:10">
 		
-			<!--{ ? _GET.guest }-->
-			<div align=center style="padding:8px"><a href="../order/order.php?guest=1">비회원으로 구매하기</a></div>
-			<!--{ : }-->
-			<form id=form method=post action="../member/login_ok.php" onsubmit="return chkForm(this)">
-			<input type=hidden name=mode value="guest">
-			<input type=hidden name=returnUrl value="{_returnUrl}">
-			<table cellpadding=1 border=0 align=center>
-			<tr><td align=center><img src="../img/common/login_07.gif" border=0></td></tr>
-			<tr>
-				<td align=center>
-		
-				<table>
-				<tr>
-					<td class="input_txt">주문자명</td>
-					<td style="padding:0 10px 0 5px"><input type=text name=nameOrder size=10 required label='주문자명'></td>
-					<td class="input_txt">주문번호</td>
-					<td style="padding-left:5px"><input type=text name=ordno size=20 required label='주문번호'></td>
-					<td><input type=image src="../img/common/btn_ok.gif"></td>
-				</tr>
-				</table>
-		
-				</td>
-			</tr>
-			</table>
-			</form>
-			<!--{ / }-->
-		
-			</td>
-		</tr>
-		</table>
-		</div><p>
-		<!--{ / }-->
 	</div>	
 
 { # footer }

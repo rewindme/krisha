@@ -55,10 +55,43 @@ $point-color1:#5cc4b9;
 }
 
 //버튼
-%btn-point1{border:1px solid #58bcb1;background-color:$point-color1;color:#fff;font-size:16px;text-align:center;height:43px;line-height:43px;@extend %display-inline-block;}
-%btn-point2{border:1px solid #db3e00;background-color:$color-price;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px;@extend %display-inline-block;}
-a%btn-point2{line-height:47px}
-%btn-gray{border:1px solid #aeaeae;background-color:#b4b4b4;color:#fff;font-size:16px;text-align:center;height:45px;line-height:43px;width:128px;@extend %display-inline-block;}
+%btn-point1{
+	@extend %display-inline-block;
+	border:1px solid #58bcb1;
+	background-color:$point-color1;
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	height:43px;
+	line-height:43px;
+}
+
+%btn-point2{
+	@extend %display-inline-block;
+	border:1px solid #db3e00;
+	background-color:$color-price;
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	height:45px;
+	line-height:43px;
+	width:128px;
+}
+a%btn-point2{
+	line-height:47px
+}
+
+%btn-gray{
+	@extend %display-inline-block;
+	border:1px solid #aeaeae;
+	background-color:#b4b4b4;
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	height:45px;
+	line-height:43px;
+	width:128px;
+}
 
 //input
 %ipt-text{border:1px solid #e4e4e4;-webkit-appearance:none;border-radius:0;vertical-align:top;}
