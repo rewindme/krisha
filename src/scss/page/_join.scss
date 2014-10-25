@@ -1,8 +1,11 @@
 @charset "utf-8";
 %btn-gray-h40{@extend %btn-gray;height:40px;vertical-align:top;width:108px}
+a%btn-gray-h40{height:38px;line-height:38px}
 %form_item{
 	.tit{display:block;color:#666;font-size:14px}
 	.ipt_text,.choose_email{@extend %ipt-text;height:18px;line-height:18px;padding:10px;width:368px;box-sizing:content-box;margin-right:6px}
+	.ipt_text:focus{border-color:#f54500}
+	.ipt_text[readonly]{border-color:#e4e4e4}
 	.btn_valid{@extend %btn-gray-h40}	
 	.hyphen{color:#e4e4e4;margin-right:4px}
 	
@@ -10,14 +13,37 @@
 	
 	&.ipt_pw,&.ipt_tel{
 		overflow:hidden;
-		.item_cover{width:405px;float:left}
+		.item_cover{width:400px;float:left;position:relative}
+		.item_cover p{white-space:nowrap}
+	}
+	&.ipt_tel{
+		.ipt_text{width:102px!important;margin-right:5px;text-align:center}
+	}
+	&.ipt_pw{
+		.passwordStrenth{
+			display:none;
+			position:absolute;
+			left:100%;bottom:0;
+			background-color:#f54500;
+			z-index:50;
+			padding:0 10px;
+			white-space:nowrap;
+			width:370px;
+			dl{
+				display:inline-block;
+				dt{display:none}
+				dd{display:inline-block;color:#fff;font-weight:bold}
+			}
+			p{display:inline-block;color:#fff;font-size:12px}
+			
+		}
 	}
 	&.ipt_birth{
 		.ipt_text{text-align:center}
 	}
 	
 	&.ipt_address{
-		.btn_find_zip{@extend %btn-gray-h40}
+		
 		.item_cover{display:block;margin-bottom:10px}
 	}
 	
@@ -26,17 +52,28 @@
 	}
 	
 	&.ipt_email{
-		.ipt_text{width:213px}
+		.ipt_text{width:368px}
 		.hyphen{color:#999}
-	}	
+	}
+	.btn_find_zip{@extend %btn-gray-h40}
+	.btn_chk_email{@extend %btn-gray-h40;width:138px}
+	
+	.chk_sms{
+		padding:10px 0;font-size:12px;color:#666;line-height:18px;white-space:nowrap;
+		input{margin-right:3px}
+		p{color:#999;display:inline;margin-left:10px}
+	}
+	
+
 }
 
 .join{
 	@extend %form_container;padding-bottom:50px;
 	.submit_cover{
-		text-align:center;padding:30px 0;
+		text-align:center;padding:40px 0;
+		border-top:1px solid #e4e4e4;
 		.btn_cancel{@extend %btn-gray-h40;margin-right:10px;display:inline-block}
-		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:108px;display:inline-block}
+		a.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;width:auto;padding:0 20px;display:inline-block;line-height:42px}
 	}
 }
 .join_box{
@@ -83,11 +120,11 @@
 }
 /* 회원가입 완료 */
 .join_complete{
-	padding:157px 0 100px 130px;
-	.logo_krisha{@extend %sp-cmplt;width:324px;height:114px;background-position:0 32px;display:block;border-right:1px solid $point-color1;float:left}
+	padding:140px 0 140px 130px;
+	.logo_krisha{@extend %sp-cmplt;width:324px;height:114px;background-position:0 36px;display:block;border-right:1px solid $point-color1;float:left}
 	.welcome_msg{overflow:hidden;padding:0 0 0 31px;}
-	.img_welcome{@extend %sp-cmplt;width:430px;height:68px;background-position:0 -122px;margin:0 0 8px 0;padding:0}
-	.welcome_msg p{color:$color-weak;line-height:21px;font-size:14px}
+	.img_welcome{@extend %sp-cmplt;width:430px;height:68px;background-position:0 -122px;margin:0 0 10px 0;padding:0}
+	.welcome_msg p{color:$color-weak;line-height:18px;font-size:14px}
 	.welcome_msg strong{color:$color-price;font-weight:normal}
 	.submit_cover{padding:135px 0 110px}
 }

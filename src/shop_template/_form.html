@@ -72,7 +72,7 @@
 			<label class="tit" for="ipt_id">아이디</label>
 			
 			<!--{ ? !_sess }-->
-			<input type="text" name="m_id" value="{m_id}" maxlength="16" required fld_esssential option="regId" id="ipt_id" class="ipt_text" placeholder="8~15자 사이의 영문자, 숫자로 입력하세요.">		
+			<input type="text" name="m_id" value="{m_id}" maxlength="16" required fld_esssential option="regId" id="ipt_id" class="ipt_text" placeholder="4~16자 사이의 영문자, 숫자로 입력하세요.">		
 			<input type="hidden" name="chk_id" required fld_esssential label="아이디중복체크">
 			<a href="javascript:chkId()" class="btn_valid">중복확인</a>
 			<!--{ : }-->
@@ -141,7 +141,8 @@
 		<div class="form_item ipt_pw">
 			<div class="item_cover">
 				<label class="tit" for="ipt_pw">비밀번호</label>
-				<input type="password" name="password" onfocus="checkPassword(this)" onkeyup="checkPassword(this)" onblur="emptyPwState()" maxlength="16"  required fld_esssential option="regPass" id="ipt_pw" class="ipt_text" placeholder="비밀번호는 4~12자 사이로 입력하세요.">
+				<input type="password" name="password" onfocus="checkPassword(this)" onkeyup="checkPassword(this)" onblur="emptyPwState()" maxlength="16"  required fld_esssential option="regPass" id="ipt_pw" class="ipt_text" placeholder="비밀번호는 10~16자 사이로 입력하세요.">
+				
 				<div class="passwordStrenth" id="el-password-strength-indicator">
 				<dl>
 					<dt>비밀번호 안전도</dt>
@@ -149,6 +150,7 @@
 				</dl>
 				<p id="el-password-strength-indicator-msg"></p>
 				</div>
+				
 			</div>
 			<div class="item_cover">
 				<label class="tit" for="ipt_pw_confirm">비밀번호 확인</label>
@@ -209,8 +211,8 @@
 				<input type="text" id="ipt_phone3" class="ipt_text" style="width:88px" name="mobile[]" value="{mobile[2]}" size="4" maxlength="4" {_required.mobile} option="regNum">
 				
 				<!--{ ? _checked.useField.sms }-->
-				<div>
-					<input type="checkbox" name="sms" id="chk_sms" {_checked.sms}><label for="chk_sms">정보,이벤트SMS수신</label>
+				<div class="chk_sms">
+					<input type="checkbox" name="sms" id="chk_sms" {_checked.sms}><label for="chk_sms">쇼핑 정보 및 이벤트 SMS 수신 동의</label>
 					<p>※ 주문 관련 정보 등 주요 안내 사항은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
 				</div>
 				<!--{ / }-->
@@ -232,26 +234,16 @@
 			<label class="tit" for="ipt_email">이메일</label>
 			<input type="text" id="ipt_email" class="ipt_text" name="email" value="{email}" size="30" {_required.email} option="regEmail">
 			<!--{ ? !_sess }--><input type=hidden name=chk_email {_required.email} label="이메일중복체크"><!--{ / }-->
-			<a href="javascript:void(0)" onClick="chkEmail()" class="btn_find_zip">이메일 중복 체크</a>
+			<a href="javascript:void(0)" onClick="chkEmail()" class="btn_chk_email">이메일 중복 체크</a>
 			<!--{ ? _checked.useField.mailling }-->
-			<div>
-				<input type="checkbox" name="mailling" id="mailling" {_checked.mailling}><label for="mailling">정보,이벤트메일수신</label>
-				<p>※ 주문 관련 정보, 주요 공지사항 및 이벤트 당첨 안내 등은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
+			<div class="chk_sms">
+				<input type="checkbox" name="mailling" id="mailling" {_checked.mailling}><label for="mailling">쇼핑 정보 및 이벤트 SMS 수신 동의</label>
+				<p>※ 주문정보, 공지사항 및 이벤트 당첨 안내 등은 수신 동의 여부에 관계없이 발송됩니다.</p>
 			</div>
 			<!--{ / }-->
 		</div>
 		<!--{ / }-->
 		
-		<div class="form_item ipt_path">
-			<span class="tit">가입경로</span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path1" checked="checked"><label for="ipt_path1">온라인 광고</label></span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path2"><label for="ipt_path2">네이버</label></span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path3"><label for="ipt_path3">다음</label></span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path4"><label for="ipt_path4">네이트</label></span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path5"><label for="ipt_path5">블로그</label></span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path6"><label for="ipt_path6">카페</label></span>
-			<span class="ipt_rdo"><input type="radio" name="ipt_path" id="ipt_path7"><label for="ipt_path7">기타</label></span>
-		</div>
 		<!--{ ? _checked.useField.ex1 }-->
 		<tr>
 			<td class=memberCols1><!--{ ? _required.ex1 }--><font color=FF6000>*</font> <!--{ / }-->{_joinset.ex1}</td>
@@ -297,13 +289,11 @@
 		
 		<!--{ ? !_sess }-->
 		<div class="submit_cover">
-			<button onClick="history.back()" class="btn_cancel">취소하기</button>
-			<button type="submit" class="btn_signup">회원가입</button>
+			<button onClick="history.back()" class="btn_cancel">취소하기</button><button type="submit" class="btn_signup">회원가입</button>
 		</div>
 		<!--{ : }-->
 		<div class="submit_cover">
-			<button onClick="history.back()" class="btn_cancel">취소하기</button>
-			<button type="submit" class="btn_signup">수정완료</button>
+			<button onClick="history.back()" class="btn_cancel">취소하기</button><button type="submit" class="btn_signup">수정완료</button>
 		</div>
 		<!--{ / }-->
 		
