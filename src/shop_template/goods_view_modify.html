@@ -344,7 +344,11 @@ function fnGodoTooltipHide_(obj) {
 
 			<div class="info_head">
 				<!--{ ? goodscd }-->
-				<span class="prod_code">{goodscd}</span>
+				<span class="prod_code">{goodscd} 
+					<!--{ ? chk_point}-->
+					<span class="rating"><!--{ @ array_fill(0,chk_point,'') }-->★<!--{ / }--></span>
+					<!--{ / }--> 
+				</span>
 				<!--{ / }-->
 				
 				<h2 class="prod_name">
@@ -355,24 +359,26 @@ function fnGodoTooltipHide_(obj) {
 					<!--{/}-->
 				</h2>
 				<p class="prod_desc">{shortdesc}</p>
-<!-- 				<span class="price_orgin">{=number_format(consumer)}</span> -->
+					<!--{? consumer}-->
+					<span class="price_orgin">{=number_format(consumer)}원</span>
+					<!--{ / }-->
 				<!--{? clevel == '0' || slevel >= clevel || (slevel < clevel && auth_step[2] == 'Y')}-->
 					<!--{ ? runout && _cfg_soldout.price == 'image'}-->
 					<span class="price">SOLDOUT</span>
 					<!--{ : runout && _cfg_soldout.price == 'string'}-->
 					<span class="price">{_cfg_soldout.price_string}</span>
 					<!--{ : !strprice }-->
-					<span class="price">{=number_format(price)}</span>
+					<span class="price"><strong>{=number_format(price)}</strong>원</span>
 					<!--{ / }-->				
 
-				<span class="point">{=number_format(reserve)} POINT</span>
+				<span class="point">적립금 <strong>{=number_format(reserve)}</strong>원</span>
 				<!--{/}-->
 			</div>
 			<div class="option">
 				<!--{ ? _opt && _typeOption=="single" }-->
 				<label for="select_color" class="tit">{optnm}</label>
 				<select id="select_color" class="combo_box" name="opt[]" onchange="chkOption(this);chkOptimg();nsGodo_MultiOption.set();" required fld_esssential msgR="{optnm} 선택을 해주세요">
-				<option value="">== 옵션선택 ==
+				<option value="">== 옵션선택1 ==
 				<!--{ @ _opt }--><!--{ @ .value_ }-->
 				<option value="{..opt1}{?..opt2}|{..opt2}{/}" {?usestock&&!..stock} disabled class=disabled{/}>{..opt1}{?..opt2}/{..opt2}{/} {?..price!=price}({=number_format(..price)}원){/}
 				<!--{ ? usestock && !..stock }--> [품절]<!--{ / }-->
@@ -385,17 +391,17 @@ function fnGodoTooltipHide_(obj) {
 				
 					
 					<!--{ @ _optnm }-->
-
+					<div class="option_cover">
 					<label for="option1" class="tit">{.value_}</label>
 					<!-- 옵션 선택 -->
-					<!--{ ? !.index_ }-->
+					<!--{ ? !.index_ }-->					
 					<select name="opt[]" onchange="subOption(this);chkOptimg();selicon(this);nsGodo_MultiOption.set();" required fld_esssential msgR="{.value_} 선택을 해주세요">
-					<option value="">== 옵션선택 ==
+					<option value="">{.value_}선택
 					<!--{ @ (_opt) }--><option value="{..key_}">{..key_}<!--{ / }-->
 					</select>
 					<!--{ : }-->
-					<select name="opt[]" onchange="chkOption(this);selicon(this);nsGodo_MultiOption.set();" required fld_esssential msgR="{.value_} 선택을 해주세요"><option value="">==선택==</select>
-					<!--{ / }-->
+					<select name="opt[]" onchange="chkOption(this);selicon(this);nsGodo_MultiOption.set();" required fld_esssential msgR="{.value_} 선택을 해주세요"><option value="">==선택==</select>						<!--{ / }-->
+					
 					<!-- 옵션 이미지 아이콘 -->
 					<!--{? optkind[.index_] == 'img'}-->
 					<!--{ ? !.index_ }-->
@@ -419,7 +425,7 @@ function fnGodoTooltipHide_(obj) {
 					<!--{ / }-->
 				
 					<input type="hidden" name="opt_txt[]" value="">
-
+					</div>
 					<!--{ / }-->
 
 
@@ -452,11 +458,10 @@ function fnGodoTooltipHide_(obj) {
 				<input type=hidden name=ea step="{? sales_unit}{sales_unit}{:}1{/}" min="{? min_ea}{min_ea}{:}1{/}" max="{? max_ea}{max_ea}{:}0{/}" value={? min_ea}{min_ea}{:}1{/}>
 				<!--{ / }-->
 			
-				<!--{ ? chk_point}-->
-				<span class="tit">고객선호도</span>
-				<p><!--{ @ array_fill(0,chk_point,'') }-->★<!--{ / }--></p>
+				
+				<!--{ ? icon }-->				
+				<div class="prod_icon">{icon}</div>
 				<!--{ / }-->
-				<!--{ ? icon }--><span class="tit">제품상태</span><p>{icon}</p><!--{ / }-->
 				
 				<div id="el-multi-option-display" class="goods-multi-option" style="display:none">
 					<span class="tit">QTY</span>

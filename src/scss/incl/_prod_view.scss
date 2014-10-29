@@ -12,16 +12,24 @@
 	.info_cover{position:absolute;left:660px;top:50px}
 	.info_head{
 		@extend %nanum;
-		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block}
+		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block;font-weight:bold;font-family:arial}
 		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:10px;font-weight:normal}
-		.prod_desc{color:$color-weak;font-size:13px;line-height:18px}
-		.point{color:$color-strong;font-size:14px}
-		.price{padding:20px 0 9px}
+		.prod_desc{color:$color-weak;font-size:13px;line-height:18px;margin-bottom:15px}
+		.point{color:$color-strong;font-size:12px}
+		.price_orgin{margin-bottom:2px;color:#afafaf;text-decoration:line-through;display:block}
+		.price{padding:0}
+		.price strong,
+		.point strong{font-family:arial;font-size:24px;}
+		.point strong{font-size:14px;vertical-align:-1px}
+		.rating{display:none}
 	}
-	.price{color:$color-price;font-size:24px;display:block}
+	.price{color:$color-price;display:block;font-size:18px}
 	.tit{color:$color-strong;font-size:14px;display:block;margin-bottom:5px;padding-top:15px}
 	.option{
-		padding:13px 0 0;
+		padding:17px 0 0;
+		.tit{padding:0}
+		select{border:1px solid #d8d8d8;border-radius:0;height:29px}
+		.option_cover{display:inline-block;margin-right:5px}
 	}
 	.task{
 		padding:15px 0;
@@ -48,3 +56,7 @@
 	.qty_ea{vertical-align:middle}
 }
 
+.prod_icon{
+	position:absolute;top:0;right:100%;white-space:nowrap;margin-right:20px;
+	img{vertical-align:top}
+}

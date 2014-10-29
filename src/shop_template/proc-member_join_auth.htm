@@ -32,7 +32,7 @@ function checkSubmit() {
 		</div>
 		<div class="join_box">
 			<h2>크리샤 회원가입</h2>
-			<p class="progress"><strong class="current">1.약관동의 &gt;</strong> 2.회원정보입력 &gt; 3.회원가입완료</p>
+			<p class="progress"><strong class="current">1.약관동의 <span class="ico_arrow"></span> </strong> 2.회원정보입력 <span class="ico_arrow"></span>  3.회원가입완료</p>
 			<form id=form name=frmAgree method=post action="indb.php" target="ifrmHidden" onSubmit="return chkForm2(this)">
 				<input type=hidden name=mode value="chkRealName">
 				<input type=hidden name=rncheck value="none">
@@ -98,7 +98,7 @@ function checkSubmit() {
 				</div>
 				<!--{ / }-->
 				
-				<div class="certify_cont">
+				<div class="certify_cont" style="display:none">
 					<h3>실명/가입여부확인</h3>
 					<div class="certification_box">
 						<ul class="choose_tab">
@@ -170,7 +170,7 @@ function checkSubmit() {
 					<!--{ = include_file( "member/hpauthDream.htm" ) }-->
 					<!--{ / }-->
 				</div>
-				<div class="submit_cover">										
+				<div class="submit_cover nb">										
 					<a href="javascript:history.back()" class="btn_cancel">이전으로</a>
 					<a href="javascript:checkSubmit();" class="btn_signup">다음으로</a>
 				</div>
