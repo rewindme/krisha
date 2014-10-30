@@ -464,14 +464,15 @@ function fnGodoTooltipHide_(obj) {
 				<!--{ / }-->
 				
 				<div id="el-multi-option-display" class="goods-multi-option" style="display:none">
-					<span class="tit">QTY</span>
-					<table border="0" cellpadding="0" cellspacing="0" width="100%">
-					</table>
-				
+					<div class="multi_option_tit">옵션선택</div>
+					<div id="goods_multi_cover">
+						
+					</div>
 					
-					<span class="tit">총 금액</span>
-					<span class="price" id="el-multi-option-total-price"></span>
-					
+					<div class="multi_option_total">
+						<span class="tit">총 금액</span>
+						<span class="price" id="el-multi-option-total-price"></span>
+					</div>
 				</div>
 
 
@@ -754,23 +755,15 @@ var nsGodo_MultiOption = function() {
 				document.getElementById('el-multi-option-display').style.display = 'block';
 
 				// 행 추가
-				var childs = document.getElementById('el-multi-option-display').childNodes;
-				for (var k in childs)
-				{
-					if (childs[k].tagName == 'TABLE') {
-						var table = childs[k];
-						break;
-					}
-				}
-
-				var td, tr = table.insertRow(0);
 				var html = '';
-
-				tr.id = key;
-
+				
+				var multi_box = document.getElementById('goods_multi_cover');
+				var multi_cover = document.createElement("div");
+				multi_cover.setAttribute('class','multi_option_cover')
+				multi_cover.setAttribute('id',key);
+				
 				// 입력 옵션명
-				td = tr.insertCell(-1);
-				html = '<div style="font-size:11px;color:#010101;padding:3px 0 0 8px;">';
+				html = '<label for="el-ea-'+key+'" class="tit">';
 				var tmp,tmp_addopt = [];
 				for (var i=0,m=_data.addopt_inputable.length;i<m ;i++ )
 				{
@@ -778,15 +771,12 @@ var nsGodo_MultiOption = function() {
 					if (tmp[2]) tmp_addopt.push(tmp[2]);
 				}
 				html += self._optJoin(tmp_addopt);
-				html += '</div>';
+
 
 				// 옵션명
-				html += '<div style="font-size:11px;color:#010101;padding:3px 0 0 8px;">';
 				html += self._optJoin(_data.opt);
-				html += '</div>';
 
 				// 추가 옵션명
-				html += '<div style="font-size:11px;color:#A0A0A0;padding:3px 0 0 8px;">';
 				var tmp,tmp_addopt = [];
 				for (var i=0,m=_data.addopt.length;i<m ;i++ )
 				{
@@ -794,21 +784,21 @@ var nsGodo_MultiOption = function() {
 					if (tmp[2]) tmp_addopt.push(tmp[2]);
 				}
 				html += self._optJoin(tmp_addopt);
-				html += '</div>';
+				html += '</label>';
 
-				td.innerHTML = html;
+				
 
 				// 수량
-				td = tr.insertCell(-1);
-				html = '';
-				html += '<div class="qty_cover">'
+
+
+
 				html += '<span class="qty_cont">'
 				html += '<input type=text name=_multi_ea[] id="el-ea-'+key+'" size=2 value='+ _data.ea +' class="qty_ipt" onblur="nsGodo_MultiOption.ea(\'set\',\''+key+'\',this.value);">'
 				html += '<button class="qty_cnt_up" onClick="nsGodo_MultiOption.ea(\'up\',\''+key+'\');"><i>수량 추가</i></button>'
 				html += '<button class="qty_cnt_down" onClick="nsGodo_MultiOption.ea(\'down\',\''+key+'\');"><i>수량 감소</i></button>'
 				html += '</span>'
-				html += '</div>'
-				td.innerHTML = html;
+
+				
 
 				// 옵션가격
 				_data.opt_price = _data.price;
@@ -822,18 +812,19 @@ var nsGodo_MultiOption = function() {
 					tmp = _data.addopt_inputable[i].split('^');
 					if (tmp[3]) _data.opt_price = _data.opt_price + parseInt(tmp[3]);
 				}
-				td = tr.insertCell(-1);
-				td.style.cssText = 'padding-right:10px;text-align:right;font-weight:bold;color:#6A6A6A;';
-				html = '';
-				html += '<span id="el-price-'+key+'">'+comma( _data.opt_price *  _data.ea) + '원</span>';
-				html += '<a href="javascript:void(0);" onClick="nsGodo_MultiOption.del(\''+key+'\');return false;"><img src="../img/common/btn_multioption_del.gif"></a>';
-				td.innerHTML = html;
+				
+				html += '<div class="price" id="el-price-'+key+'">'+comma( _data.opt_price *  _data.ea) + '원</div>';
+				html += '<button class="btn_remove" onClick="nsGodo_MultiOption.del(\''+key+'\');return false;"><i class="blind">삭제</i></button>';
+				
+				multi_cover.innerHTML = html;
 
 				self.data[key] = _data;
 				self.data_size++;
 
 				// 총 금액
 				self.totPrice();
+				
+				multi_box.appendChild(multi_cover);
 
 
 			}

@@ -39,26 +39,64 @@
 				<span class="point">490 POINT</span>
 			</div>
 			<div class="option">
-				<label for="select_color" class="tit">OPTION</label>
-				<select id="select_color" class="combo_box">
-					<option>색상선택</option>					
-					<option>빨강</option>
-					<option>노랑</option>					
-				</select>
-								
-				<label for="select_qty" class="tit">QTY</label>
-				<select id="select_qty" class="combo_box">
-					<option>1</option>					
-					<option>2</option>
-					<option>3</option>					
-				</select>
-				<div class="qty_cover">
-					<span class="qty_cont">
-						<input type="text" class="qty_ipt">
-						<button class="qty_cnt_up"><i>수량 추가</i></button>
-						<button class="qty_cnt_down"><i>수량 감소</i></button>
-					</span>
-					<span class="qty_ea">개</span>					
+				<div class="option_cover">
+					<label for="select_color" class="tit">OPTION</label>
+					<select id="select_color" class="combo_box">
+						<option>색상선택</option>					
+						<option>빨강</option>
+						<option>노랑</option>					
+					</select>
+				</div>			
+				<div class="option_cover">
+					<label for="select_qty" class="tit">QTY</label>
+					<select id="select_qty" class="combo_box">
+						<option>1</option>					
+						<option>2</option>
+						<option>3</option>					
+					</select>
+				</div>
+				<div class="option_cover">
+					<div class="qty_cover">
+						<label for="add_qty" class="tit">수량</label>
+						<span class="qty_cont">
+							<input id="add_qty" type="text" class="qty_ipt" value="44">
+							<button class="qty_cnt_up"><i>수량 추가</i></button>
+							<button class="qty_cnt_down"><i>수량 감소</i></button>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div id="el-multi-option-display" class="goods-multi-option" style="display: block;">
+				<div class="multi_option_tit">옵션선택</div>
+				<div id="goods_multi_cover">
+					<div class="multi_option_cover">
+						<label for="add_qty_result" class="tit">파랑 / 5호</label>
+						<span class="qty_cont">
+							<input type="text" id="add_qty_result" class="qty_ipt" value="44">
+							<button class="qty_cnt_up"><i>수량 추가</i></button>
+							<button class="qty_cnt_down"><i>수량 감소</i></button>
+						</span>
+						<div class="price">
+							40,000원
+						</div>
+						<button class="btn_remove"><i class="blind">삭제</i></button>
+					</div>
+					<div class="multi_option_cover">
+						<label for="add_qty_result" class="tit">파랑 / 5호</label>
+						<span class="qty_cont">
+							<input type="text" id="add_qty_result" class="qty_ipt" value="44">
+							<button class="qty_cnt_up"><i>수량 추가</i></button>
+							<button class="qty_cnt_down"><i>수량 감소</i></button>
+						</span>
+						<div class="price">
+							40,000원
+						</div>
+						<button class="btn_remove"><i class="blind">삭제</i></button>
+					</div>
+				</div>
+				<div class="multi_option_total">
+					<span class="tit">총 금액</span>
+					<span class="price" id="el-multi-option-total-price">50,000원</span>
 				</div>
 			</div>
 			<div class="task">
