@@ -48,19 +48,24 @@ opt2icon['{.key_}'] = "{.value_}";
 <!--{ / }-->
 
 /* 필수 옵션 분리형 스크립트 start */
+
 var opt = new Array();
-opt[0] = new Array("('1차옵션을 먼저 선택해주세요','')");
+opt[0] = new Array("('<?php $optnm = split('/',{optnm}); echo $optnm[0] ?>을(를) 먼저 선택해주세요','')");
+
 <!--{ @ _opt }-->
-opt['{.index_+1}'] = new Array("('== 옵션선택 ==','')",<!--{ @ .value_ }-->"('{=addslashes(addslashes(..opt2))}{?..price!=price} ({=number_format(..price)}원){/}{?usestock&&!..stock} [품절]{/}','{=addslashes(addslashes(..opt2))}','{?usestock&&!..stock}soldout{/}')"{?..index_!=..size_-1},{/}<!--{ / }-->);
+opt['{.index_+1}'] = new Array("('<?php $optnm = split('/',{optnm}); echo $optnm[1] ?>','')",<!--{ @ .value_ }-->"('{=addslashes(addslashes(..opt2))}{?..price!=price} ({=number_format(..price)}원){/}{?usestock&&!..stock} [품절]{/}','{=addslashes(addslashes(..opt2))}','{?usestock&&!..stock}soldout{/}')"{?..index_!=..size_-1},{/}<!--{ / }-->);
 <!--{ / }-->
+
 function subOption(obj)
 {
 	var el = document.getElementsByName('opt[]');
 	var sub = opt[obj.selectedIndex];
 	while (el[1].length>0) el[1].options[el[1].options.length-1] = null;
+	
 	for (i=0;i<sub.length;i++){
 		var div = sub[i].replace("')","").split("','");
 		eval("el[1].options[i] = new Option" + sub[i]);
+		
 		if (div[2]=="soldout"){
 			el[1].options[i].style.color = "#808080";
 			el[1].options[i].setAttribute('disabled','disabled');
@@ -369,16 +374,33 @@ function fnGodoTooltipHide_(obj) {
 					<span class="price">{_cfg_soldout.price_string}</span>
 					<!--{ : !strprice }-->
 					<span class="price"><strong>{=number_format(price)}</strong>원</span>
-					<!--{ / }-->				
+						<!--{ ? delivery_type == 1 }-->
+						<span class="point">배송비 <b>무료배송</b> /</span>
+						<!--{ : delivery_type == 2 }-->
+						<span class="point">개별배송비 <strong>{=number_format(goods_delivery)}</strong>원 /</span>
+						<!--{ : delivery_type == 3 }-->
+						<span class="point">착불배송비 <strong>{=number_format(goods_delivery)}</strong>원 /</span>
+						<!--{ : delivery_type == 4 }-->
+						<span class="point">고정배송비 <strong>{=number_format(goods_delivery)}</strong>원 /</span>
+						<!--{ : delivery_type == 5 }-->
+						<span class="point">수량별배송비 <strong>{=number_format(goods_delivery)}</strong>원 (수량에 따라 배송비 추가) /</span>
+						<!--{ / }-->
+					<!--{ : }-->
+					<span class="price">{strprice}</span>
+					<!--{ / }-->
 
+					
+					
+					
+						
 				<span class="point">적립금 <strong>{=number_format(reserve)}</strong>원</span>
 				<!--{/}-->
 			</div>
 			<div class="option">
 				<!--{ ? _opt && _typeOption=="single" }-->
-				<label for="select_color" class="tit">{optnm}</label>
+				<label for="select_color" class="blind">{optnm}</label>
 				<select id="select_color" class="combo_box" name="opt[]" onchange="chkOption(this);chkOptimg();nsGodo_MultiOption.set();" required fld_esssential msgR="{optnm} 선택을 해주세요">
-				<option value="">== 옵션선택1 ==
+				<option value="">{optnm}
 				<!--{ @ _opt }--><!--{ @ .value_ }-->
 				<option value="{..opt1}{?..opt2}|{..opt2}{/}" {?usestock&&!..stock} disabled class=disabled{/}>{..opt1}{?..opt2}/{..opt2}{/} {?..price!=price}({=number_format(..price)}원){/}
 				<!--{ ? usestock && !..stock }--> [품절]<!--{ / }-->
@@ -392,15 +414,16 @@ function fnGodoTooltipHide_(obj) {
 					
 					<!--{ @ _optnm }-->
 					<div class="option_cover">
-					<label for="option1" class="tit">{.value_}</label>
+					<label for="option1" class="blind">{.value_}</label>
 					<!-- 옵션 선택 -->
 					<!--{ ? !.index_ }-->					
 					<select name="opt[]" onchange="subOption(this);chkOptimg();selicon(this);nsGodo_MultiOption.set();" required fld_esssential msgR="{.value_} 선택을 해주세요">
-					<option value="">{.value_}선택
+					<option value="">{.value_}
 					<!--{ @ (_opt) }--><option value="{..key_}">{..key_}<!--{ / }-->
 					</select>
 					<!--{ : }-->
-					<select name="opt[]" onchange="chkOption(this);selicon(this);nsGodo_MultiOption.set();" required fld_esssential msgR="{.value_} 선택을 해주세요"><option value="">==선택==</select>						<!--{ / }-->
+					<select name="opt[]" onchange="chkOption(this);selicon(this);nsGodo_MultiOption.set();" required fld_esssential msgR="{.value_} 선택을 해주세요"><option value="">{.value_}</select>						
+					<!--{ / }-->
 					
 					<!-- 옵션 이미지 아이콘 -->
 					<!--{? optkind[.index_] == 'img'}-->
@@ -435,7 +458,7 @@ function fnGodoTooltipHide_(obj) {
 				
 
 				<!--{ ? !_opt }-->
-				<label class="tit">QTY</label>
+				<label class="tit">수량</label>
 				<!--{ ? !runout }-->
 				<div class="qty_cover">
 					<span class="qty_cont">
@@ -443,7 +466,6 @@ function fnGodoTooltipHide_(obj) {
 						<button class="qty_cnt_up" onClick="chg_cart_ea(frmView.ea,'up')"><i>수량 추가</i></button>
 						<button class="qty_cnt_down" onClick="chg_cart_ea(frmView.ea,'dn')"><i>수량 감소</i></button>
 					</span>
-					<span class="qty_ea">개</span>					
 				</div>
 					
 				<div style="padding-left:10px;float:left" class="stxt">
@@ -464,7 +486,7 @@ function fnGodoTooltipHide_(obj) {
 				<!--{ / }-->
 				
 				<div id="el-multi-option-display" class="goods-multi-option" style="display:none">
-					<div class="multi_option_tit">옵션선택</div>
+<!-- 					<div class="multi_option_tit">옵션선택</div> -->
 					<div id="goods_multi_cover">
 						
 					</div>
@@ -1038,6 +1060,34 @@ function chkGoodsForm(form) {
 			</div>
 			<!--{/}-->
 			<div>
+				<span class="goods_name">{goodsnm}</span>
+				<span class="short_desc">
+					<?php echo preg_replace('#<[^>]+>#', ' ',{shortdesc}); ?>
+				</span>
+				
+				<!--{ ? extra_info.size_ }-->
+					<table width='100%' border='0' cellpadding='0' cellspacing='0' class="tb_info">
+					<caption><i class="blind">상품정보제공 고시 상세정보</i></caption>
+					<colgroup>
+					<col width="15%">
+					<col width="*">
+					<col width="15%">
+					<col width="*">				
+					</colgroup>
+					<tr>
+					<!--{ @ extra_info }-->
+						<th>{=extra_info.title}</th>
+						<td {? .colspan > 1}colspan="{.colspan}"{/}>{=extra_info.desc}</td>
+						{? .nkey && (! _extra_info[ .nkey ] || .key_ % 2 == 0)}
+						</tr><tr>
+						{/}
+					<!--{ / }-->
+					</tr>
+					</table>
+				<!--{ / }-->
+				
+			</div>
+			<div>
 			{longdesc}
 			</div>
 		</div>
@@ -1141,16 +1191,14 @@ function chkGoodsForm(form) {
 		<div class="notice_info">
 			<h3 class="tit">상품정보제공 고시 상세정보</h3>
 			<!--{ ? extra_info.size_ }-->
-				<style>
-				table.extra-information {background:#e0e0e0;margin:30px 0 60px 0;}
-				table.extra-information th,
-				table.extra-information td {font-weight:normal;text-align:left;padding-left:15px;background:#ffffff;font-family:Dotum;font-size:11px;height:28px;}
-		
-				table.extra-information th {width:15%;background:#f5f5f5;color:#515151;}
-				table.extra-information td {width:35%;color:#666666;}
-		
-				</style>
-				<table width=100% border=0 cellpadding=0 cellspacing=1 class="extra-information">
+				<table width='100%' border='0' cellpadding='0' cellspacing='0' class="tb_info">
+				<caption><i class="blind">상품정보제공 고시 상세정보</i></caption>
+				<colgroup>
+				<col width="15%">
+				<col width="*">	
+				<col width="15%">
+				<col width="*">			
+				</colgroup>
 				<tr>
 				<!--{ @ extra_info }-->
 					<th>{=extra_info.title}</th>

@@ -36,11 +36,25 @@
 			<div class="goods_list">
 				<ul class="tab">
 					<!--{ @ dataCategory( _category, true ) }-->					
-					<!--{ ? substr(_category,0,3) == .category} -->
+					<!--{ ? substr(_category,0,3) == .category}-->
 						<!--{ ? _category == .category }-->
-						<li class="all"><a href="?category={=substr(_category,0,3)}">{.catnm} <span class="cnt">({pg->recode['total']})</span></a></li>
+						<li class="all">
+							<a href="?category={=substr(_category,0,3)}"><?php 
+									$cate_name_raw = {=currPosition( substr(_category,0,3))};
+									$cate_name = preg_replace('#<[^>]+>#', ' ',$cate_name_raw);
+									echo $cate_name; 
+								?><span class="cnt">({pg->recode['total']})</span>
+							</a>
+						</li>
+						
+
+						
 						<!--{ : }-->
-						<li><a href="?category={=substr(_category,0,3)}">{.catnm} <span class="cnt">전체보기</span></a></li>
+						<li><a href="?category={=substr(_category,0,3)}"><?php 
+									$cate_name_raw = {=currPosition( substr(_category,0,3))};
+									$cate_name = preg_replace('#<[^>]+>#', ' ',$cate_name_raw);
+									echo $cate_name; 
+								?><span class="cnt">전체보기</span></a></li>
 						<!--{ / }-->
 					<!--{ / }-->
 					<!--{ / }-->

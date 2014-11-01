@@ -2,18 +2,18 @@
 /* 상품 상세 탑 */
 .product_view{
 	position:relative;zoom:1;min-width:1180px;
-	.cover_img{text-align:center;background-color:#f2f2f2;}
+	.cover_img{text-align:center;background-color:#f2f2f2;max-height:600px;overflow:hidden}
 	.cover_img img{max-width:100%;width:auto;height:auto;vertical-align:top}
 	
 	.product_info{@extend %cover;position:absolute;top:0;left:50%;margin-left:-590px}
 	
 	.location{@extend %location}
 	
-	.info_cover{position:absolute;left:660px;top:50px}
+	.info_cover{position:absolute;left:660px;top:40px}
 	.info_head{
 		@extend %nanum;
 		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block;font-weight:bold;font-family:arial}
-		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:10px;font-weight:normal}
+		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:6px;font-weight:normal}
 		.prod_desc{color:$color-weak;font-size:13px;line-height:18px;margin-bottom:15px}
 		.point{color:$color-strong;font-size:12px}
 		.price_orgin{margin-bottom:2px;color:#afafaf;text-decoration:line-through;display:block}
@@ -24,15 +24,15 @@
 		.rating{display:none}
 	}
 	.price{color:$color-price;display:block;font-size:18px}
-	.tit{color:$color-strong;font-size:14px;display:block;margin-bottom:5px;padding-top:15px}
+	.tit{color:$color-strong;font-size:12px;display:block;margin-bottom:5px;padding-top:15px}
 	.option{
 		padding:17px 0 0;
 		.tit{padding:0}
-		select{border:1px solid #d8d8d8;border-radius:0;height:29px}
+		select{border:1px solid #d8d8d8;border-radius:0;height:29px;font-size:12px}
 		.option_cover{display:inline-block;margin-right:5px}
 	}
 	.task{
-		padding:15px 0;
+		padding:18px 0 0;
 		a{vertical-align:top;@extend %display-inline-block;background-color:#fff;margin-right:2px}
 		i{position:static;visibility:visible}
 		.btn_buy{background-color:#5cc4b9;padding:17px 23px}
@@ -47,22 +47,24 @@
 	
 }
 
+.qty_cover{margin-bottom:10px}
 
 .qty_cont{
 	display:inline-block;border:1px solid #d8d8d8;position:relative;width:50px;height:26px;padding:0 27px;vertical-align:middle;background-color:#fff;
-	.qty_ipt{vertical-align:top;border:0;width:100%;height:100%;text-align:center;color:#666}
+	.qty_ipt{vertical-align:top;border:0;width:100%;height:100%;text-align:center;color:#666;font-size:12px}
 	.qty_cnt_up,
 	.qty_cnt_down{position:absolute;right:0;top:0;width:26px;height:26px;border:0;background-color:transparent;@extend %sp-prod;background-position:9px -43px;cursor:pointer;border-left:1px solid #d8d8d8}
 	.qty_cnt_down{left:0;right:auto;background-position:-11px -43px;border-left:0;border-right:1px solid #d8d8d8}
 }
 
 .goods-multi-option{
+	padding:8px 0 0 0;
 	.multi_option_tit{padding:10px 0 5px;}
 	
 	.multi_option_cover{
 		width:92px;display:inline-block;background-color:#fff;position:relative;
 		border:1px solid #d8d8d8;border-radius:3.1px;margin:0 4px 4px 0;
-		.tit{display:block;line-height:20px;text-align:center;padding:10px 0 4px;margin:0;}
+		.tit{display:block;line-height:16px;text-align:center;padding:12px 0 4px;margin:0;}
 		.qty_cont{border-width:1px 0;width:54px;height:18px;padding:0 19px;background-color:#e5e5e5}
 		.qty_ipt{background-color:#f2f2f2}
 		.qty_cnt_up,
@@ -73,7 +75,9 @@
 	}	
 	
 	.multi_option_total{
-		.tit{padding-top:5px;margin:0}
+		padding:5px 0 0 0;
+		.tit{margin:0;display:inline-block;vertical-align:middle}
+		.price{display:inline-block;vertical-align:middle}
 	}
 
 

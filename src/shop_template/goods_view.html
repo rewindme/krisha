@@ -404,76 +404,76 @@ function fnGodoTooltipHide_(obj) {
 	<!--{ / }-->
 
 	<!--{ ? runout && _cfg_soldout.price == 'image'}-->
-	<tr><th>판매가격 :</th><td><img src="../data/goods/icon/custom/soldout_price"></td></tr>
+	<tr><th>판매가격1 :</th><td><img src="../data/goods/icon/custom/soldout_price"></td></tr>
 	<!--{ : runout && _cfg_soldout.price == 'string'}-->
-	<tr><th>판매가격 :</th><td><b>{_cfg_soldout.price_string}</b></td></tr>
+	<tr><th>판매가격2 :</th><td><b>{_cfg_soldout.price_string}</b></td></tr>
 	<!--{ : !strprice }-->
 	<tr>
-		<th>판매가격 :</th>
+		<th>판매가격3 :</th>
 		<td>
 		<b><span id=price>{=number_format(price)}</span>원</b>
 		</td>
 	</tr>
-	<!--{ ? special_discount_amount }-->
-	<tr>
-		<th>상품할인금액 :</th>
-		<td style="font-weight:bold">-{=number_format(special_discount_amount)}원</span></b></td>
-	</tr>
-	<!--{ / }-->
-	<!--{ ? memberdc }-->
-	<tr>
-		<th>회원할인가 :</th>
-		<td style="font-weight:bold"><span id=obj_realprice>{=number_format(realprice)}원&nbsp;(-{=number_format(memberdc)}원)</span></b></td>
-	</tr>
-	<!--{ / }-->
-	<!--{ ? coupon }-->
-	<tr><th>쿠폰적용가 :</th>
-	<td>
-	<span id=obj_coupon style="font-weight:bold;color:#EF1C21">{=number_format(couponprice)}원&nbsp;(-{=number_format(coupon)}원)</span>
-	<div>{about_coupon}</div>
-	</td></tr>
-	<!--{ / }-->
-	<!--{ ? consumer }-->
-	<tr>
-		<th>소비자가격 :</th>
+		<!--{ ? special_discount_amount }-->
+		<tr>
+			<th>상품할인금액 :</th>
+			<td style="font-weight:bold">-{=number_format(special_discount_amount)}원</span></b></td>
+		</tr>
+		<!--{ / }-->
+		<!--{ ? memberdc }-->
+		<tr>
+			<th>회원할인가 :</th>
+			<td style="font-weight:bold"><span id=obj_realprice>{=number_format(realprice)}원&nbsp;(-{=number_format(memberdc)}원)</span></b></td>
+		</tr>
+		<!--{ / }-->
+		<!--{ ? coupon }-->
+		<tr><th>쿠폰적용가 :</th>
 		<td>
-		<span id=consumer>{=number_format(consumer)}</span>원
-		</td>
-	</tr>
-	<!--{ / }-->
+		<span id=obj_coupon style="font-weight:bold;color:#EF1C21">{=number_format(couponprice)}원&nbsp;(-{=number_format(coupon)}원)</span>
+		<div>{about_coupon}</div>
+		</td></tr>
+		<!--{ / }-->
+		<!--{ ? consumer }-->
+		<tr>
+			<th>소비자가격 :</th>
+			<td>
+			<span id=consumer>{=number_format(consumer)}</span>원
+			</td>
+		</tr>
+		<!--{ / }-->
 	<tr><th>적립금 :</th><td><span id=reserve>{=number_format(reserve)}</span>원</td></tr>
-	<!--{ ? naverNcash == 'Y' }-->
-	<tr id="naver-mileage-accum" style="display: none;">
-		<th>네이버&nbsp;&nbsp;<br/>마일리지 :</th>
+		<!--{ ? naverNcash == 'Y' }-->
+		<tr id="naver-mileage-accum" style="display: none;">
+			<th>네이버&nbsp;&nbsp;<br/>마일리지 :</th>
+			<td>
+				<!--{ ? exception }-->
+				{exception}
+				<!--{ : }-->
+				<span id="naver-mileage-accum-rate" style="font-weight:bold;color:#1ec228;"></span> 적립
+				<!--{ / }-->
+				<img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_info4.png" onclick="javascript:mileage_info();" style="cursor: pointer; vertical-align: middle;">
+			</td>
+		</tr>
+		<!--{ / }-->
+		<!--{ ? coupon_emoney }-->
+		<tr><th>쿠폰적립금 :</th>
 		<td>
-			<!--{ ? exception }-->
-			{exception}
-			<!--{ : }-->
-			<span id="naver-mileage-accum-rate" style="font-weight:bold;color:#1ec228;"></span> 적립
-			<!--{ / }-->
-			<img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_info4.png" onclick="javascript:mileage_info();" style="cursor: pointer; vertical-align: middle;">
-		</td>
-	</tr>
-	<!--{ / }-->
-	<!--{ ? coupon_emoney }-->
-	<tr><th>쿠폰적립금 :</th>
-	<td>
-	<span id=obj_coupon_emoney style="font-weight:bold;color:#EF1C21"></span> &nbsp;<span style="font:bold 9pt tahoma; color:#FF0000" >{=number_format(coupon_emoney)}원</span>
-	</td></tr>
-	<!--{ / }-->
-	<!--{ ? delivery_type == 1 }-->
-	<tr><th>배송비 :</th><td>무료배송</td></tr>
-	<!--{ : delivery_type == 2 }-->
-	<tr><th>개별배송비 :</th><td>{=number_format(goods_delivery)}원</td></tr>
-	<!--{ : delivery_type == 3 }-->
-	<tr><th>착불배송비 :</th><td>{=number_format(goods_delivery)}원</td></tr>
-	<!--{ : delivery_type == 4 }-->
-	<tr><th>고정배송비 :</th><td>{=number_format(goods_delivery)}원</td></tr>
-	<!--{ : delivery_type == 5 }-->
-	<tr><th>수량별배송비 :</th><td>{=number_format(goods_delivery)}원 (수량에 따라 배송비가 추가됩니다.)</td></tr>
-	<!--{ / }-->
+		<span id=obj_coupon_emoney style="font-weight:bold;color:#EF1C21"></span> &nbsp;<span style="font:bold 9pt tahoma; color:#FF0000" >{=number_format(coupon_emoney)}원</span>
+		</td></tr>
+		<!--{ / }-->
+		<!--{ ? delivery_type == 1 }-->
+		<tr><th>배송비 :</th><td>무료배송</td></tr>
+		<!--{ : delivery_type == 2 }-->
+		<tr><th>개별배송비 :</th><td>{=number_format(goods_delivery)}원</td></tr>
+		<!--{ : delivery_type == 3 }-->
+		<tr><th>착불배송비 :</th><td>{=number_format(goods_delivery)}원</td></tr>
+		<!--{ : delivery_type == 4 }-->
+		<tr><th>고정배송비 :</th><td>{=number_format(goods_delivery)}원</td></tr>
+		<!--{ : delivery_type == 5 }-->
+		<tr><th>수량별배송비 :</th><td>{=number_format(goods_delivery)}원 (수량에 따라 배송비가 추가됩니다.)</td></tr>
+		<!--{ / }-->
 	<!--{ : }-->
-	<tr><th>판매가격 :</th><td><b>{strprice}</b></td></tr>
+	<tr><th>판매가격44 :</th><td><b>{strprice}</b></td></tr>
 	<!--{ / }-->
 </table>
 <!--{/}-->

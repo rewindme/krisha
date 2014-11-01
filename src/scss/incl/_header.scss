@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 메인 - header */
 .header{
-	position:relative;background-color:#fff;min-width:1180px;
+	position:relative;background-color:#fff;min-width:1180px;height:130px;
 	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block;width:100%}
 	.cover{@extend %cover;}
 	/* .logo a{@extend %sp-img;width:125px;height:18px;background-position:-30px 0;position:relative;top:11px} */
@@ -17,13 +17,39 @@
 	.gnb li .bar{color:#fff;font-size:11px;padding:0 11px 0 12px}
 	
 	.search_bar{background-color:#fff;height:26px;width:193px;padding-right:30px;position:absolute;right:0;top:7px}
-	.search_bar .search_ipt{width:100%;height:26px;border:0;background-color:transparent;vertical-align:top}
+	.search_bar .search_ipt{box-sizing:border-box;padding-left:8px;width:100%;height:26px;border:0;background-color:transparent;vertical-align:top;font-size:12px;color:#666}
 	.search_bar .btn_search{position:absolute;right:0;top:0;border:0;background-color:transparent;@extend %sp-img;width:30px;height:26px;background-position:8px 5px}
 	
 	.category_cover{@extend .cover;height:90px;line-height:90px}
-	.category{padding:0 40px;font-size:0}
+	
+	.category_cover.fix_fake,.category_cover.fix_top{
+		position:fixed;top: 0;left:0;right:0;width: auto;height: 50px;line-height: 50px;z-index: 100;
+		box-shadow:0;transition:0.2s box-shadow;
+		#t_cate{
+		    width:1180px;
+		    margin:0 auto;
+		    position:relative;
+		}
+	}
+	.category_cover.fix_top{
+		background-color: #fff;box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	    
+	    
+		
+		.category{padding-left:150px;padding-right:0;}
+		
+		.fixed_logo{display:block;position:absolute;left:0;top:-1px}
+	}
+	.fixed_logo{display:none}
+    
+
+	
+	
+	.category{padding:0 40px;font-size:1px;text-align:justify}
+	.category:after{content:'';display:inline-block;width:90%;height:2px;line-height:0}
 	.category li{@extend %display-inline-block;vertical-align:middle}
-	.category a{color:#454545;font-size:12px;letter-spacing:-1px;display:inline-block;min-height:13px;margin-right:32px;vertical-align:middle}	
+	.category a{color:#454545;font-size:12px;letter-spacing:-1px;display:inline-block;min-height:13px;margin-right:0;*margin-right:32px;vertical-align:middle}
+	.category li:last-child a{margin:0}
 	.category a:hover{color:#f54500}
 	.category a img{vertical-align:middle;}
 }

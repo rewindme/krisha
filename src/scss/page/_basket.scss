@@ -13,7 +13,7 @@
 	width:100%;border-collapse:collapse;padding:0;border:0;margin-bottom:45px;
 	th{@extend %tit-bar}
 	td{padding:20px 0;border-bottom:1px solid #e4e4e4;text-align:center;color:#666;font-size:14px}
-	.prod_name{padding-left:10px;text-align:left;vertical-align:middle}
+	.prod_name{padding-left:0px;text-align:left;vertical-align:middle}
 	.prod_thumb{border:1px solid #e4e4e4;@extend %display-inline-block;vertical-align:middle;margin-right:18px}
 	.prod_thumb img{vertical-align:top}
 	.prod_info{
@@ -23,7 +23,8 @@
 	}
 	
 	.ipt_text{@extend %ipt-text;width:48px;text-align:center;height:18px;line-height:18px;padding:8px 0}
-	.btn_modify{@extend %btn-gray;width:48px;height:36px;line-height:34px;font-size:14px}
+	.qty_cont{margin-bottom:4px}
+	.btn_modify{@extend %btn-gray;width:106px;height:28px;line-height:28px;font-size:11px}
 	.order_price{color:$color-price}
 	.btn_remove{background:none;border:0;width:48px;height:36px;line-height:34px;font-size:14px;color:#666}
 }
