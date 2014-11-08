@@ -50,7 +50,7 @@ i, .ht {
   color: transparent;
   line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point button, .ipt_rdo label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -86,7 +86,7 @@ i, .ht {
   background-color: transparent;
   vertical-align: top; }
 
-.ipt_rdo label {
+.ipt_rdo label, .ipt_chk label {
   background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
 
 .product_view .info_head {
@@ -211,7 +211,7 @@ i, .ht {
 .review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .task_btn a.btn_order, .task_btn a.btn_payment {
   line-height: 47px; }
 
-.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point button {
+.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point {
   border: 1px solid #aeaeae;
   background-color: #b4b4b4;
   color: #fff;
@@ -233,14 +233,14 @@ i, .ht {
   margin-right: 3px;
   vertical-align: middle; }
 
-.ipt_rdo {
+.ipt_rdo, .ipt_chk {
   position: relative;
   height: 20px;
   overflow: hidden; }
-  .ipt_rdo input {
+  .ipt_rdo input, .ipt_chk input {
     position: absolute;
     z-index: -1; }
-  .ipt_rdo label {
+  .ipt_rdo label, .ipt_chk label {
     height: 20px;
     height: 20px;
     line-height: 20px;
@@ -248,8 +248,14 @@ i, .ht {
     color: #999;
     background-position: 0 -38px;
     margin-right: 15px; }
-  .ipt_rdo input:checked + label {
+  .ipt_rdo input:checked + label, .ipt_chk input:checked + label {
     background-position: 0 0; }
+
+.ipt_chk label {
+  background-position: 0 -114px;
+  padding-left: 26px; }
+.ipt_chk input:checked + label {
+  background-position: 0 -76px; }
 
 body {
   background-color: #f8f8f8; }
@@ -1886,10 +1892,20 @@ body {
 .form_tb .ipt_text {
   height: 18px;
   line-height: 18px;
-  padding: 9px 0;
-  width: 360px;
+  padding: 10px;
+  width: 340px;
   color: #454545;
   margin-right: 9px; }
+.form_tb .ipt_text:focus {
+  border-color: #f54500; }
+.form_tb .phone_cell .ipt_text {
+  text-align: center;
+  width: 90px; }
+.form_tb .road_address {
+  color: #999;
+  font-size: 11px;
+  line-height: 18px;
+  margin-top: -5px; }
 
 .order_person_info, .order_reciept_info, .pay_method {
   border-bottom: 1px solid #e4e4e4;
@@ -1904,6 +1920,13 @@ body {
 .order_reciept_info .btn_find_zip {
   height: 38px;
   line-height: 38px; }
+.order_reciept_info .zip_code .ipt_text {
+  width: 47px;
+  text-align: center; }
+.order_reciept_info .road_address {
+  margin: 0;
+  line-height: 18px;
+  padding: 10px 0 0; }
 
 .pay_method li {
   margin-bottom: 30px; }
@@ -1920,9 +1943,10 @@ body {
   .use_point .tit .desc {
     color: #999; }
   .use_point .ipt_text {
-    padding: 9px;
-    width: 142px; }
-  .use_point button {
+    width: 140px;
+    padding: 10px;
+    text-align: center; }
+  .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point {
     height: 36px;
     line-height: 36px;
     font-size: 14px; }
@@ -1932,3 +1956,7 @@ body {
     width: 47px; }
   .use_point .point_cover {
     margin-bottom: 27px; }
+  .use_point .desc {
+    color: #999;
+    font-size: 11px;
+    padding: 5px 0 0; }

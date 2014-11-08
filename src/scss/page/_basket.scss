@@ -2,8 +2,9 @@
 
 .basket{
 	@extend %form_container;overflow:hidden;
-	
+	//750px
 	.info_column{width:750px;float:left;margin-right:40px}
+	//270px
 	.aside_column{width:270px;float:left;.tit_bar{border-color:$color-price;color:$color-price}}
 	.tit_bar{@extend %tit-bar;font-size:16px;color:$point-color1;margin-bottom:24px}
 	
@@ -76,7 +77,11 @@
 .form_tb{
 	th,td{text-align:left;padding:10px 0;font-weight:normal;color:#666;font-size:14px;vertical-align:top;line-height:38px}
 	th{padding-left:8px}
-	.ipt_text{@extend %ipt-text;height:18px;line-height:18px;padding:9px 0;width:360px;color:#454545;margin-right:9px}
+	.ipt_text{@extend %ipt-text;height:18px;line-height:18px;padding:10px;width:340px;color:#454545;margin-right:9px}
+	.ipt_text:focus{border-color:#f54500}
+	.phone_cell .ipt_text{text-align:center;width:90px}
+	.address,.road_address{}
+	.road_address{color:#999;font-size:11px;line-height:18px;margin-top:-5px}
 }
 
 .order_person_info,
@@ -88,7 +93,10 @@
 	.item_cover{display:block;margin-bottom:10px}
 	.hyphen{line-height:38px}
 	.btn_find_zip{@extend %btn-gray-h40;height:38px;line-height:38px}
-
+	.zip_code{
+		.ipt_text{width:47px;text-align:center}
+	}
+	.road_address{margin:0;line-height:18px;padding:10px 0 0}
 }
 
 .pay_method{
@@ -99,9 +107,12 @@
 	border-bottom:1px solid #e4e4e4;padding:16px 0 17px;
 	.tit{color:$color-price;font-size:12px;line-height:18px;margin-bottom:5px;display:block}
 	.tit .desc{color:#999}
-	.ipt_text{@extend %ipt-text;padding:9px;width:142px}
-	button{@extend %btn-gray;height:36px;line-height:36px;font-size:14px}
+	.ipt_text{@extend %ipt-text;width:140px;padding:10px;text-align:center}
+	
+	.btn_lookup,.btn_regist,.btn_use_point{@extend %btn-gray;height:36px;line-height:36px;font-size:14px}
 	.btn_use_point{width:100px}
 	.btn_lookup,.btn_regist{width:47px}	
 	.point_cover{margin-bottom:27px}
+	.btn_use_point{}
+	.desc{color:#999;font-size:11px;padding:5px 0 0}
 }

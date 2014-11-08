@@ -1,5 +1,5 @@
 {*** 장바구니 상품목록 | goods/goods_cart.php ***}
-<div class="info_column">
+
 	<table class="order_list">
 		<caption><span class="blind">상품정보</span></caption>
 		<colgroup>
@@ -136,84 +136,9 @@
 총 결제금액이 <strong>3만원 	이상인 경우 배송비 무료</strong>입니다.</p>
 	</div>
 	<!--{/}-->
-</div>
 
-<div class="aside_column">
-	<h3 class="tit_bar">주문결제금액</h3>
-	<div class="total_price">
-		<table class="price_summary">
-			<caption><span class="blind">주문결제금액</span></caption>
-			<colgroup>
-				<col style="width:auto">
-				<col style="width:165px;">
-			</colgroup>
-			<tr>
-				<th>상품합계금액</th>
-				<td><strong><span id="el-orderitem-total-price">{=number_format(cart->goodsprice)}</span>원</strong></td>
-			</tr>
-			<tr>
-				<th><!-- { ?_set.emoney.emoney_standard == 1} -->받으실예상적립금<!-- { : } -->받으실적립금<!-- { / } --></th>
-				<td><span id="el-orderitem-total-reserve">{=number_format(cart->bonus)}</span>원</td>
-			</tr>
-			
-			<tr>
-				<th>배송비</th>
-				<td>
-					<span id="el-orderitem-total-delivery">
-					<!--{ ? _orderitem_mode=="cart" }-->
-						<!--{ ? cart->goodsprice }-->
-						<?php if ( {cart->goodsprice} > 30000){ ?>
-						무료배송
-						<?php } else {?>
-						2,500원 
-						<?php } ?>
-						<!--{:}-->
-						3만원 이상 무료배송
-						<!--{/}-->
-					<!--{:}-->				
-					<!--{ ? number_format(cart->delivery) > 0 }-->{=number_format(cart->delivery)}<!--{:}-->무료배송<!--{/}-->
-					<!--{/}-->
-					</span>
-				</td>
-			</tr>
-			<tr>
-				<th>총 주문 금액</th>
-				<td>
-					<!--{ ? _orderitem_mode=="cart" }-->
-						<!--{ ? cart->goodsprice }-->
-						<strong id="el-orderitem-total-price-all">
-						<?php if ( {cart->goodsprice} > 30000){ ?>{=number_format(cart->totalprice)}<?php } else { 
-							echo (number_format({cart->goodsprice} + 2500));
-						} ?>원						
-						</strong>
-						<!--{:}-->
-						<strong id="el-orderitem-total-price-all">0원</strong>
-						<!--{/}-->
-					<!--{:}-->				
-						<strong id="el-orderitem-total-price-all">{=number_format(cart->totalprice)}원</strong>
-					<!--{/}-->
-				</td>
-			</tr>
-			
-			<!--{? view_aboutdc}-->
-			<tr>
-				<th>어바웃쿠폰</th>
-				<td>{=number_format(about_coupon)}원</td>
-			</tr>
-			<!--{ / }-->			
-		</table>
-	</div>
-	<!--{ ? _orderitem_mode=="cart" }-->
-	<div class="task_btn">
-		<!--{ ? count(cart->item) }-->
-		<a href="javascript:void(0);" class="btn_order" onClick="nsGodo_CartAction.order();return false;">주문하기</a>
-		<a href="javascript:void(0);" class="btn_wishlist" onClick="nsGodo_CartAction.wishList();return false;">관심상품 담기</a>
-		<a href="javascript:void(0);" class="btn_remove" onClick="nsGodo_CartAction.del();return false;">삭제하기</a>
-		<!--{ / }-->
-		<a href="../index.php" class="btn_shopping">계속 쇼핑하기</a>
-	</div>
-	<!--{/}-->
-</div>
+
+
 
 
 

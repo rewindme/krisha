@@ -96,9 +96,18 @@ a%btn-point2{
 //input
 %ipt-text{border:1px solid #e4e4e4;-webkit-appearance:none;border-radius:0;vertical-align:top;}
 %input-fix{width:13px;height:13px;margin-right:3px;vertical-align:middle}
-.ipt_rdo{
+
+%fake-form{
 	position:relative;height:20px;overflow:hidden;
 	input{position:absolute;z-index:-1}
 	label{@extend %display-inline-block;height:20px;@extend %sp-rd;height:20px;line-height:20px;padding-left:23px;color:#999;background-position:0 -38px;margin-right:15px}
 	input:checked + label{background-position:0 0}
+}
+.ipt_rdo{
+	@extend %fake-form;	
+}
+.ipt_chk{
+	@extend %fake-form;	
+	label{background-position:0 -114px;padding-left:26px}
+	input:checked + label{background-position:0 -76px}
 }

@@ -44,421 +44,425 @@
 			<!--{ / }-->
 		
 			<div id=apply_coupon></div>
-
-			<!--{ = include_file( "proc/orderitem.htm" ) }-->
-			<!-- 01 주문자정보 -->
-			<table width=100% style="border:1px solid #DEDEDE" cellpadding=0 cellspacing=0>
-	<tr>
-		<td width=150 valign=top align=right bgcolor="#F3F3F3"><img src="../img/common/order_step_01.gif"></td>
-		<td style="padding:10px">
-	
-		<table>
-		<col width=100>
-		<tr>
-			<td>주문하시는분</td>
-			<td><input type=text name=nameOrder value="{name}" style="font-weight:bold" {_style_member} required msgR="주문하시는분의 이름을 적어주세요"></td>
-		</tr>
-		<!--{ ? _sess }-->
-		<tr>
-			<td>주소</td>
-			<td>
-				{address} {address_sub}
-				<!--{ ? road_address }--><div style="padding-top:5px;font:12px dotum;color:#999;">{road_address} {address_sub}</div><!--{ / }-->
-			</td>
-		</tr>
-		<!--{ / }-->
-		<tr>
-			<td>전화번호</td>
-			<td>
-			<input type=text name=phoneOrder[] value="{phone[0]}" size=3 maxlength=3 option=regNum required label="주문자 전화번호"> -
-			<input type=text name=phoneOrder[] value="{phone[1]}" size=4 maxlength=4 option=regNum required label="주문자 전화번호"> -
-			<input type=text name=phoneOrder[] value="{phone[2]}" size=4 maxlength=4 option=regNum required label="주문자 전화번호">
-			</td>
-		</tr>
-		<tr>
-			<td>핸드폰번호</td>
-			<td>
-			<input type=text name=mobileOrder[] value="{mobile[0]}" size=3 maxlength=3 option=regNum required label="주문자 핸드폰번호"> -
-			<input type=text name=mobileOrder[] value="{mobile[1]}" size=4 maxlength=4 option=regNum required label="주문자 핸드폰번호"> -
-			<input type=text name=mobileOrder[] value="{mobile[2]}" size=4 maxlength=4 option=regNum required label="주문자 핸드폰번호">
-			</td>
-		</tr>
-		<tr>
-			<td>이메일</td>
-			<td><input type=text name=email value="{email}" required option=regEmail></td>
-		</tr>
-		</table>
-	
-		</td>
-	</tr>
-	</table><div style="font-size:0;height:5px"></div>
-			
-			<!-- 02 배송정보 -->
-			<table width=100% style="border:1px solid #DEDEDE" cellpadding=0 cellspacing=0>
-	<tr>
-		<td width=150 valign=top align=right bgcolor="#F3F3F3"><img src="../img/common/order_step_02.gif"></td>
-		<td style="padding:10px">
-	
-		<table>
-		<col width=100>
-		<tr>
-			<td>배송지 확인</td>
-			<td class=noline>
-			<input type=checkbox onclick="ctrl_field(this.checked)" {?_sess}checked{/}> 주문고객 정보와 동일합니다
-			</td>
-		</tr>
-		<tr>
-			<td>받으실분</td>
-			<td><input type=text name=nameReceiver value="{name}" required></td>
-		</tr>
-		<tr>
-			<td>받으실곳</td>
-			<td>
-			<input type=text name=zipcode[] id="zipcode0" size=3 class=line readonly value="{zipcode[0]}" required> -
-			<input type=text name=zipcode[] id="zipcode1" size=3 class=line readonly value="{zipcode[1]}" required>
-			<a href="javascript:popup('../proc/popup_address.php',500,432)"><img src="../img/common/btn_zipcode.gif" align=absmiddle></a>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type=text name=address id="address" class=lineBig readonly value="{address}" required></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-				<input type=text name=address_sub id="address_sub" class=lineBig value="{address_sub}" onkeyup="SameAddressSub(this)" oninput="SameAddressSub(this)" label="세부주소">
-				<input type="hidden" name="road_address" id="road_address" style="width:100%" value="{road_address}" class="line">
-				<div style="padding:5px 5px 0 1px;font:12px dotum;color:#999;" id="div_road_address">{road_address}</div>
-				<div style="padding:5px 0 0 1px;font:12px dotum;color:#999;" id="div_road_address_sub"><!--{ ? road_address }-->{address_sub}<!--{ / }--></div>
-			</td>
-		</tr>
-		<tr>
-			<td>전화번호</td>
-			<td>
-			<input type=text name=phoneReceiver[] value="{phone[0]}" size=3 maxlength=3 option=regNum required label="수령자 전화번호"> -
-			<input type=text name=phoneReceiver[] value="{phone[1]}" size=4 maxlength=4 option=regNum required label="수령자 전화번호"> -
-			<input type=text name=phoneReceiver[] value="{phone[2]}" size=4 maxlength=4 option=regNum required label="수령자 전화번호">
-			</td>
-		</tr>
-		<tr>
-			<td>핸드폰번호</td>
-			<td>
-			<input type=text name=mobileReceiver[] value="{mobile[0]}" size=3 maxlength=3 option=regNum required label="수령자 핸드폰번호"> -
-			<input type=text name=mobileReceiver[] value="{mobile[1]}" size=4 maxlength=4 option=regNum required label="수령자 핸드폰번호"> -
-			<input type=text name=mobileReceiver[] value="{mobile[2]}" size=4 maxlength=4 option=regNum required label="수령자 핸드폰번호">
-			</td>
-		</tr>
-		<tr>
-			<td>남기실 말씀</td>
-			<td><input type=text name=memo style="width:100%"></td>
-		</tr>
-		<tr><td colspan=2>&nbsp;</td></tr>
-		<tr id="paper_delivery_menu">
-			<td>배송선택</td>
-			<td class="noline">
-	
-			<div style='float:left'><input type="radio" name="deliPoli" value="0" checked onclick="getDelivery()" onblur="chk_emoney(document.frmOrder.emoney)"> 기본배송</div>
-			<!--{ @ _r_deli}-->
-			<!--{? .value_ }-->
-			<div style='float:left;padding-left:10'><input type="radio" name="deliPoli" value="{.index_ + 1}" onclick="getDelivery()" onblur="chk_emoney(document.frmOrder.emoney)"> {.value_}</div>
-			<!--{ / }-->
-			<!--{ / }-->
-			</td>
-		</tr>
-		<!--{ ? _sess}-->
-		<tr>
-			<td>회원정보 반영</td>
-			<td class=noline><input type="checkbox" name="updateMemberInfo" value="y" /> 위 내용을 회원정보에 반영합니다.(주소/전화번호/핸드폰번호)</td>
-		</tr>
-		<!--{/}-->
-		</table>
-	
-		</td>
-	</tr>
-	</table><div style="font-size:0;height:5px"></div>
-			
-			<!-- 03 결제금액 -->
-			<table width=100% style="border:1px solid #DEDEDE" cellpadding=0 cellspacing=0>
-	<tr>
-		<td width=150 valign=top align=right bgcolor="#F3F3F3"><img src="../img/common/order_step_03.gif"></td>
-		<td style="padding:10px">
-	
-		<table>
-		<col width=100>
-		<tr>
-			<td>상품합계금액</td>
-			<td><p id="paper_goodsprice" style="width:146px;text-align:right;font-weight:bold;float:left;margin:0">{=number_format(cart->goodsprice)}</p> 원</td>
-		</tr>
-		<tr>
-			<td>배송비</td>
-			<td>
-			<div id="paper_delivery_msg1"><div id="paper_delivery" style="width:146px;text-align:right;font-weight:bold;float:left;margin:0"></div>원</div>
-			<div id="paper_delivery_msg2" style="display:none;width:160;text-align:right"></div>
-			<div id="paper_delivery_msg_extra"  class="small red" style="display:none;"></div>
-			</td>
-		</tr>
-		<!--{ ? view_aboutdc //어바웃쿠폰}-->
-		<tr>
-			<td>어바웃 쿠폰</td>
-			<td><span style="width:145;text-align:right">{=number_format(about_coupon)}</span> 원</td>
-		</tr>
-		<!--{ / }-->
-		<!--{ ? cart->special_discount_amount }-->
-		<tr>
-			<td>상품할인</td>
-			<td><span id='special_discount_amount' style="width:145;text-align:right">{=number_format(cart->special_discount_amount)}</span> 원</td>
-		</tr>
-		<!--{ / }-->
-		<!--{ ? _sess }-->
-		<tr>
-			<td>회원할인</td>
-			<td><span id='memberdc' style="width:145;text-align:right">{=number_format(cart->dcprice)}</span> 원</td>
-		</tr>
-		<tr>
-			<td>쿠폰 적용</td>
-			<td>
-	
-			<table cellpadding=0 cellspacing=0>
-			<tr>
-				<td width=60 align=right>할인 :</td>
-				<td style="padding-left:3px">
-				<input type=text name=coupon size=12 style="text-align:right" value=0 readonly> 원
-				<a href="javascript:popup('../proc/popup_coupon.php',600,700)"><img src="../img/common/btn_coupon.gif" align=absmiddle hspace=2></a><span id="del_coupon" style="visibility:hidden"><a href='javascript:del_coupon();'><img src="../img/common/btn_coupon_del.gif" align=absmiddle hspace=2></a></span>
-				</td>
-			</tr>
-			<tr>
-				<td width=60 align=right>적립 :</td>
-				<td style="padding-left:3px">
-				<input type=text name=coupon_emoney size=12 style="text-align:right" value=0 readonly> 원
-				</td>
-			</tr>
-			</table>
-	
-			</td>
-		</tr>
-		<tr>
-			<td valign=top style="padding-top:4px">적립금 적용</td>
-			<td>
-	
-			<table cellpadding=0 cellspacing=0>
-			<div style="display:{?_member.emoney}block;{ : }none;{ / }}">
-			<tr>
-				<td width=60 align=right>적립금 :</td>
-				<td style="padding-left:3px">
-				<input type=text name=emoney id="emoney" size=12 style="text-align:right" value=0 onblur="chk_emoney(this);" onkeyup="calcu_settle();" onkeydown="if (event.keyCode == 13) {return false;}"  { ? _set.emoney.totallimit > cart->goodsprice }disabled{/}> 원
-				<!--{ ? _set.emoney.totallimit > cart->goodsprice }-->
-				<span class="small red">{=number_format(_set.emoney.totallimit)}원 이상 주문시 적립금 사용 가능.</span>
-				<!--{ : }-->
-				(보유적립금 : {=number_format(_member.emoney)}원)
-				<!--{ / }-->
-				</td>
-			</tr>
-			</div>
-			<tr>
-				<td colspan=2 class="small red">
-				<!--{ ? _member.emoney < _set.emoney.hold }-->
-				<div>보유적립금이 {=number_format(_set.emoney.hold)}원이상 일 경우 사용하실 수 있습니다.</div>
-				<!--{ : }-->
-				<!--{ ? _emoney_max && _emoney_max >= _set.emoney.min}-->
-				적립금은 {=number_format(_set.emoney.min)}원부터 <span id=print_emoney_max>{=number_format(_emoney_max)}</span>원까지 사용이 가능합니다.
-				<!--{ : _emoney_max && _emoney_max < _set.emoney.min}-->
-				적립금은 최소 {=number_format(_set.emoney.min)}원 이상 사용하여야 합니다.
-				<!--{ / }-->
-				<!--{ / }-->
-				<input type=hidden name=emoney_max value="{ _emoney_max }">
-				</td>
-			</tr>
-			</table>
-	
-			</td>
-		</tr>
-		<!--{ / }-->
-		<!--{ ? ncash.useyn == 'Y' }-->
-		<tr id="naver-mileage-accum" style="display: none;">
-			<td>적립금 선택</td>
-			<td class="noline">
-				{? _sess  && ncash.save_mode == 'choice' }
-				<input type="radio" name="save_mode" value="" onclick="naver_mileage_initialize(this);"> 쇼핑몰 적립금<br/>
-				<input type="radio" name="save_mode" value="ncash"> 네이버 마일리지 <img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_on.png"/><br/>
-				{ : _sess  && ncash.save_mode == 'both' }
-				<input type="radio" name="save_mode" value="" onclick="naver_mileage_initialize(this);"> 쇼핑몰 적립금만 적립<br/>
-				<input type="radio" name="save_mode" value="both" checked> 쇼핑몰 적립금 과 네이버 마일리지 <img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_on.png"/> 동시 적립<br/>
-				{:}
-				<input type="radio" name="save_mode" value="unused" onclick="naver_mileage_initialize(this);"> 네이버 마일리지 사용/적립 안함<br/>
-				<input type="radio" name="save_mode" value="ncash"> 네이버 마일리지 <img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_on.png"/><br/>
-				{/}
-				<div id="save_button"><img src="../img/nmileage/n_mileage_use.gif" onClick="javascript:cash_save_use();" class="mileage_button"> 버튼을 클릭해서 <span id="naver-mileage-accum-rate" style="color: #1ec228; font-weight: bold;"></span> 적립받고 사용하세요 <img class="n_mileage" src="../img/nmileage/n_mileage_info2.gif" onclick="mileage_info();"></div>
-				<div id="ncash_view"></div>
-				<input type="hidden" id="exception_price" name="exception_price" value="{ncash.exception_price}">
-				<input type="hidden" id="reqTxId{ncash.api_id}" name="reqTxId{ncash.api_id}" value="">
-				<input type="hidden" id="mileageUseAmount{ncash.api_id}" name="mileageUseAmount{ncash.api_id}" value="">
-				<input type="hidden" id="cashUseAmount{ncash.api_id}" name="cashUseAmount{ncash.api_id}" value="">
-				<input type="hidden" id="totalUseAmount{ncash.api_id}" name="totalUseAmount{ncash.api_id}" value="">
-				<input type="hidden" id="baseAccumRate" name="baseAccumRate" value="">
-				<input type="hidden" id="addAccumRate" name="addAccumRate" value="">
-			</td>
-		</tr>
-		<!--{ / }-->
-	
-		<!--{ ? _egg.use=="Y" && (_egg.scope=="A" || (_egg.scope=="P" && cart->totalprice-cart->dcprice>=_egg.min)) && _egg.feepayer == "B" }-->
-		<tr>
-			<td>보증보험 수수료</td>
-			<td><p id=paper_eggFee style="width:146px;text-align:right;font-weight:bold;float:left;margin:0">0</p> 원</td>
-		</tr>
-		<!--{ / }-->
-	
-		<tr>
-			<td>총 결제금액</td>
-			<td><span id=paper_settlement style="width:146px;text-align:right;font:bold 14px tahoma; color:FF6C68;">{=number_format(cart->totalprice-cart->dcprice-cart->special_discount_amount)}</span> 원</td>
-		</tr>
-		</table>
-		</td>
-	</tr>
-	</table><div style="font-size:0;height:5px"></div>
-			<!-- 구매안전표시 start -->{=displayEggBanner(1)}<!-- 구매안전표시 end -->
-			<!-- 04 결제수단 -->
-			<table width=100% style="border:1px solid #DEDEDE" cellpadding=0 cellspacing=0>
-	<tr>
-		<td width=150 valign=top align=right bgcolor="#F3F3F3"><img src="../img/common/order_step_04.gif"></td>
-		<td style="padding:10px">
-	
-		<input type=hidden name=escrow value="N">
-		<table>
-		<col width=100>
-		<tr>
-			<td>일반결제</td>
-			<td class=noline>
-			<!--{ ? _set.use.a }-->
-			<input type=radio name=settlekind value="a" onclick="input_escrow(this,'N')"> 무통장입금
-			<!--{ / }-->
-			<!--{ ? _set.use.c }-->
-			<input type=radio name=settlekind value="c" onclick="input_escrow(this,'N')"> 신용카드
-			<!--{ / }-->
-			<!--{ ? _set.use.o }-->
-			<input type=radio name=settlekind value="o" onclick="input_escrow(this,'N')"> 계좌이체
-			<!--{ / }-->
-			<!--{ ? _set.use.v }-->
-			<input type=radio name=settlekind value="v" onclick="input_escrow(this,'N')"> 가상계좌
-			<!--{ / }-->
-			<!--{ ? _set.use.h }-->
-			<input type=radio name=settlekind value="h" onclick="input_escrow(this,'N')"> 핸드폰
-			<!--{ / }-->
-			<!--{ ? _set.use.p }-->
-			<input type=radio name=settlekind value="p" onclick="input_escrow(this,'N')"> 포인트
-			<!--{ / }-->
-			<!--{ ? _set.use.u }-->
-			<input type=radio name=settlekind value="u" onclick="input_escrow(this,'N')"> CUP (중국카드)
-			<!--{ / }-->
-			<!--{ ? _set.use.y }-->
-			<input type=radio name=settlekind value="y" onclick="input_escrow(this,'N')"> 옐로페이
-			<!--{ / }-->
-			</td>
-		</tr>
-	
-		<!--{ ?  _escrow.use=="Y" && cart->totalprice-cart->dcprice>=_escrow.min }-->
-		<tr>
-			<td>에스크로결제</td>
-			<td class=noline>
-			<!--{ ? _escrow.c }-->
-			<input type=radio name=settlekind value="c" onclick="input_escrow(this,'Y')"> 신용카드
-			<!--{ / }-->
-			<!--{ ? _escrow.o }-->
-			<input type=radio name=settlekind value="o" onclick="input_escrow(this,'Y')"> 계좌이체
-			<!--{ / }-->
-			<!--{ ? _escrow.v }-->
-			<input type=radio name=settlekind value="v" onclick="input_escrow(this,'Y')"> 가상계좌
-			<!--{ / }-->
-			</td>
-		</tr>
-		<!--{ / }-->
-	
-		<!--{ ? useIpayPg===true }-->
-		<tr>
-			<td>옥션 iPay</td>
-			<td class="noline">
-				<input type=radio name=settlekind value="i" onclick="input_escrow(this,'Y')"> 아이페이 안전결제
-				<div class="small" style="padding-left:25px;">
-					- 결제수단은 iPay 결제창에서 선택합니다.<br>
-					- iPay 결제창에서 상품가격은 쇼핑몰 할인혜택이 적용된 가격입니다.
+			<div class="info_column">
+				<!--{ = include_file( "proc/orderitem.htm" ) }-->
+				
+				<!-- 01 주문자정보 -->
+				<div class="order_person_info">
+					<h3 class="tit_bar">주문자 정보</h3>
+					<table class="form_tb">
+						<caption><span class="blind">주문자 정보 입력</span></caption>
+						<colgroup>
+							<col style="width:160px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th><label for="order_person_name">주문하시는분</label></th>
+							<td><input type="text" name="nameOrder" value="{name}"  id="order_person_name" class="ipt_text" required msgR="주문하시는분의 이름을 적어주세요"></td>
+						</tr>
+						<!--{ ? _sess }-->
+						<tr>
+							<th>주소</th>
+							<td>
+								<div class="address">{address} {address_sub}</div>
+								<!--{ ? road_address }-->
+								<div class="road_address">{road_address} {address_sub}</div>
+								<!--{ / }-->
+							</td>
+						</tr>
+						<!--{ / }-->
+						<tr>
+							<th>전화번호</th>
+							<td class="phone_cell">
+								<input type="text" id="order_person_tel_01" class="ipt_text" name="phoneOrder[]" value="{phone[0]}" size="3" maxlength="3" option="regNum" required>
+								<input type="text" id="order_person_tel_02" class="ipt_text" name="phoneOrder[]" value="{phone[1]}" size="4" maxlength="4" option="regNum" required>
+								<input type="text" id="order_person_tel_03" class="ipt_text" name="phoneOrder[]" value="{phone[2]}" size="4" maxlength="4" option="regNum" required>
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰번호</th>
+							<td class="phone_cell">
+								<input type="text" id="order_person_phone_01" class="ipt_text" name="mobileOrder[]" value="{mobile[0]}" size="3" maxlength="3" option="regNum" required>
+								<input type="text" id="order_person_phone_02" class="ipt_text" name="mobileOrder[]" value="{mobile[1]}" size="4" maxlength="4" option="regNum" required>
+								<input type="text" id="order_person_phone_03" class="ipt_text" name="mobileOrder[]" value="{mobile[2]}" size="4" maxlength="4" option="regNum" required>							
+							</td>
+						</tr>
+						<tr>
+							<th><label for="order_person_email">이메일</label></th>
+							<td>
+								<input type="text" id="order_person_email" class="ipt_text" name="email" value="{email}" required option="regEmail">
+							</td>
+						</tr>
+					</tbody></table>
 				</div>
-			</td>
-		</tr>
-		<!--{ / }-->
-	
-		<!--{ ? _set.use.a }-->
-		<tr>
-			<th></th>
-			<td class="small red">(무통장입금의 경우 입금확인 후부터 배송단계가 진행됩니다)</td>
-		</tr>
-		<!--{ / }-->
-		<tr>
-			<th></th>
-			<td class="small red"><div id="coupon_typinfo" style="display:none">무통장입금에서만 사용가능한 쿠폰을 선택하였습니다. <br>다른 결제 수단을 선택하시려면 쿠폰을 제거 하여 주십시오.</div></td>
-		</tr>
-		</table>
-	
-		<!--{ ? _egg.use=="Y" && (_egg.scope=="A" || (_egg.scope=="P" && cart->totalprice-cart->dcprice>=_egg.min)) }-->
-		<table id="egg" style="display:none; margin-top:10px;">
-		<col width=100>
-		<tr>
-			<td valign=top style="padding-top:4px">전자보증보험</td>
-			<td>
-			<!--{ ? _egg.scope == "P" }-->
-			<div>구매 시 안전거래(매매보호) 사용유무를 직접 선택하실 수 있습니다.</div>
-			<!--{ / }-->
-	
-			<div style="color:#FF6C68; font-weight:bold; margin-bottom:5px;">아래의 주의사항을 꼭 확인하세요!</div>
-	
-			<!--{ ? _egg.scope == "P" }-->
-			<div class=noline>&#149; 전자보증보험 발급여부 : <input type=radio name=eggIssue value="Y" onclick="egg_required()"> 발급 <input type=radio name=eggIssue value="N" onclick="egg_required()"> 미발급</div>
-			<!--{ / }-->
-	
-			<div>&#149; <font color=444444>전자보증보험 안내 (100% 매매보호 안전결제)<br>
-			물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험증권이 발급됩니다. 증권이 발급되는 것의 의미는,
-			물품대금 결제시에 소비자에게 서울보증보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여,
-			피해발생시 쇼핑몰보증보험으로써 완벽하게 보호받을 수 있습니다.<br>
-			또한, <span class='red'>입력하신 개인정보는 증권발급을 위한 정보로 사용되며 다른 용도로는 사용되지 않습니다.</span>
-			</font></div>
-	
-			<!--{ ? _egg.feepayer != "B" }-->
-			<div>&#149; <font color=444444>보증보험 발행으로 구매시 별도의 수수료가 부과되지 않습니다.</font></div>
-			<!--{ : _egg.feepayer == "B" && _egg.feerate > 0 }-->
-			<div>&#149; <font color=444444>보증보험 발행으로 구매시 <span style="color:#FF6C68; font-weight:bold;">보증보험증권 발급수수료는 구매자께서 부담</span>하시게 됩니다.<br>
-			보증보험 발급수수료(총 결제금액의 {_egg.feerate}%) : <span id=infor_eggFee></span></font>
+				<!-- 02 배송정보 -->
+				<div class="order_reciept_info">
+					<h3 class="tit_bar">배송지 정보</h3>
+					<table class="form_tb">
+						<caption><span class="blind">배송지 정보 입력</span></caption>
+						<colgroup>
+							<col style="width:160px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody><tr>
+							<th>배송지 선택</th>
+							<td>
+								<span class="ipt_chk"><input type="checkbox" name="addr_preset" id="addr_preset_1" onclick="ctrl_field(this.checked)" {?_sess}checked{/}><label for="addr_preset_1">주문하시는 분과 같은 주소</label></span>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="recipient">받으시는분</label></th>
+							<td>
+								<input type="text" id="recipient" class="ipt_text" name="nameReceiver" value="{name}" required>
+							</td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td class="phone_cell">
+								<input type=text name=phoneReceiver[] value="{phone[0]}" size=3 maxlength=3 option=regNum required label="수령자 전화번호" class="ipt_text">
+								<input type=text name=phoneReceiver[] value="{phone[1]}" size=4 maxlength=4 option=regNum required label="수령자 전화번호" class="ipt_text">
+								<input type=text name=phoneReceiver[] value="{phone[2]}" size=4 maxlength=4 option=regNum required label="수령자 전화번호" class="ipt_text">
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰번호</th>
+							<td class="phone_cell">
+								<input type=text name=mobileReceiver[] value="{mobile[0]}" size=3 maxlength=3 option=regNum required label="수령자 핸드폰번호" class="ipt_text">
+								<input type=text name=mobileReceiver[] value="{mobile[1]}" size=4 maxlength=4 option=regNum required label="수령자 핸드폰번호" class="ipt_text">
+								<input type=text name=mobileReceiver[] value="{mobile[2]}" size=4 maxlength=4 option=regNum required label="수령자 핸드폰번호" class="ipt_text">
+							</td>
+						</tr>
+						<tr>
+							<th>주소</th>
+							<td>
+								<span class="item_cover zip_code">
+									<input type=text name=zipcode[] id="zipcode0" size=3 readonly value="{zipcode[0]}" required class="ipt_text"><span class="hyphen">-</span>
+									<input type=text name=zipcode[] id="zipcode1" size=3 readonly value="{zipcode[1]}" required class="ipt_text">
+									<a href="javascript:popup('../proc/popup_address.php',500,432)" class="btn_find_zip">우편번호 검색</a>
+								</span>
+								<span class="item_cover" style="margin-bottom:0">
+									<input type="text" class="ipt_text" style="width:545px;margin-bottom:5px" name="address" id="address" readonly value="{address}" required>
+									<input type="text" name="address_sub" id="address_sub" class="ipt_text" value="{address_sub}" style="width:545px;" onkeyup="SameAddressSub(this)" oninput="SameAddressSub(this)" label="세부주소">
+									<input type="hidden" name="road_address" id="road_address" style="width:100%" value="{road_address}" class="line">
+									<div class="road_address" >
+										<span id="div_road_address">{road_address}</span>
+										<span id="div_road_address_sub"><!--{ ? road_address }-->{address_sub}<!--{ / }--></span>
+									</div>
+									
+								</span>
+															
+							</td>
+						</tr>
+						<tr>
+							<th><label for="message">남기실 말씀</label></th>
+							<td>
+								<input type="text" id="message" name="memo" class="ipt_text" placeholder="배송 관련 요청 사항을 적어주세요." style="width:545px">
+							</td>
+						</tr>
+						<tr id="paper_delivery_menu">
+							<th>배송방법 선택</th>
+							<td>
+								<span class="ipt_rdo">
+								<input type="radio" id="deliPoli0" name="deliPoli" value="0" checked onclick="getDelivery()" onblur="chk_emoney(document.frmOrder.emoney)"> 
+								<label for="deliPoli0">택배</label>
+								</span>
+								
+								<!--{ @ _r_deli}-->
+									<!--{? .value_ }-->
+									<span class="ipt_rdo">
+										<input type="radio" name="deliPoli" id="deliPoli_{.index_ +1}" value="{.index_ + 1}" onclick="getDelivery()" onblur="chk_emoney(document.frmOrder.emoney)">
+										<label for="deliPoli_{.index_ +1}">{.value_}</label>
+									</span>
+									<!--{ / }-->
+								<!--{ / }-->
+							</td>
+						</tr>
+						<!--{ ? _sess}-->
+						<tr>
+							<th>회원정보 반영</th>
+							<td>
+								<span class="ipt_chk">
+									<input type="checkbox" id="updateMemberInfo" name="updateMemberInfo" value="y" />
+									<label for="updateMemberInfo">위 내용을 회원정보에 반영합니다.(주소/전화번호/핸드폰번호)</label>
+								</span>
+							</td>
+						</tr>
+						<!--{/}-->
+					</tbody></table>
+				</div>
 			</div>
-			<input type=hidden name=eggFee>
-			<input type=hidden name=eggFeeRateYn value=Y>
-			<!--{ / }-->
-	
-			<div style="padding-top:10px;">&#149; 생년월일 :
-				<input type="text"t name="eggBirthYear" size=4 maxlength=4 />년
-				<select name="eggBirthMon">
-				<option value="">선택</option>
-				<? for ($i = 1; $i <= 12; $i++ ){ echo '<option value="'.$i.'">'.$i.'</option>'; } ?>
-				</select>월
-				<select name="eggBirthDay">
-				<option value="">선택</option>
-				<? for ($i = 1; $i <= 31; $i++ ){ echo '<option value="'.$i.'">'.$i.'</option>'; } ?>
-				</select>일
-			</div>
-			<div class=noline>&#149; 성별 : <input type=radio name=eggSex value="1"> 남성 <input type=radio name=eggSex value="2"> 여성</div>
-			<div style="text-align:center;" class=noline><input type=checkbox name=eggAgree value="Y"> 개인정보 이용에 동의합니다</div>
-			</td>
-		</tr>
-		</table>
-		<!--{ / }-->
-	
-		<!--{ ? _pg.receipt=='Y' && _set.receipt.order=='Y' }-->
-		<!--{ = include_file( "proc/_cashreceiptOrder.htm" ) }-->
-		<!--{ / }-->
-	
-		</td>
-	</tr>
-	</table><div style="font-size:0;height:5px"></div>
-			
-			<div style="padding:20px" align=center class="noline">
-			<input type="image" src="../img/common/btn_payment.gif">
-			<img src="../img/common/btn_cancel.gif" onclick="history.back()" style="cursor:pointer">
+			<div class="aside_column">
+				<h3 class="tit_bar">주문결제금액</h3>
+				<div class="use_point">	
+					<!--{ ? _sess }-->
+					<div class="point_cover">
+						<span class="tit">적립금 사용
+							<span class="desc" style="display:{?_member.emoney}inline;{ : }none;{ / }">(사용가능 적립금 : {=number_format(_member.emoney)}원)</span>
+						</span>
+						<div style="display:{?_member.emoney}block;{ : }none;{ / }">
+							<input type="text" class="ipt_text" placeholder="사용하실 적립금을 입력해 주세요" name="emoney" id="emoney" size="12" value="0" onblur="chk_emoney(this);" onkeyup="calcu_settle();" onkeydown="if (event.keyCode == 13) {return false;}"  { ? _set.emoney.totallimit > cart->goodsprice }disabled{/}>
+							<a href="javascript:void(0)" onclick="var t=document.getElementById('emoney');t.value='{_member.emoney}';chk_emoney(t)" class="btn_use_point">모두사용</a>
+							<!--{ ? _set.emoney.totallimit > cart->goodsprice }-->
+							<p class="desc">{=number_format(_set.emoney.totallimit)}원 이상 주문시 적립금 사용 가능.</p>
+							<!--{ / }-->							
+						</div>
+						<div class="desc">
+							<!--{ ? _member.emoney < _set.emoney.hold }-->
+							<div>보유적립금이 {=number_format(_set.emoney.hold)}원이상 일 경우 사용하실 수 있습니다.</div>
+							<!--{ : }-->
+								<!--{ ? _emoney_max && _emoney_max >= _set.emoney.min}-->
+								적립금은 {=number_format(_set.emoney.min)}원부터 <span id=print_emoney_max>{=number_format(_emoney_max)}</span>원까지 사용이 가능합니다.
+								<!--{ : _emoney_max && _emoney_max < _set.emoney.min}-->
+								적립금은 최소 {=number_format(_set.emoney.min)}원 이상 사용하여야 합니다.
+								<!--{ / }-->
+							<!--{ / }-->
+							<input type=hidden name=emoney_max value="{ _emoney_max }">
+						</div>
+						
+
+						
+					</div>
+					<div class="point_cover">
+						<span class="tit">할인 쿠폰 사용</span>
+						<p>
+							<input type="text" name="coupon" size="12" class="ipt_text" placeholder="쿠폰할인" value="0" readonly>
+							
+							<a href="javascript:popup('../proc/popup_coupon.php',600,700)" class="btn_lookup">조회</a>
+							<span id="del_coupon"><a href='javascript:del_coupon();' class="btn_regist">취소</a></span>
+<!-- 							<input type=text name=coupon_emoney size=12 style="text-align:right" value=0 readonly> 원 -->
+						</p>
+					</div>
+
+						
+					<!--{ / }-->
+					
+					
+					
+					
+					
+					<!--{ ? ncash.useyn == 'Y' }-->
+					<tr id="naver-mileage-accum" style="display: none;">
+						<td>적립금 선택</td>
+						<td class="noline">
+							{? _sess  && ncash.save_mode == 'choice' }
+							<input type="radio" name="save_mode" value="" onclick="naver_mileage_initialize(this);"> 쇼핑몰 적립금<br/>
+							<input type="radio" name="save_mode" value="ncash"> 네이버 마일리지 <img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_on.png"/><br/>
+							{ : _sess  && ncash.save_mode == 'both' }
+							<input type="radio" name="save_mode" value="" onclick="naver_mileage_initialize(this);"> 쇼핑몰 적립금만 적립<br/>
+							<input type="radio" name="save_mode" value="both" checked> 쇼핑몰 적립금 과 네이버 마일리지 <img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_on.png"/> 동시 적립<br/>
+							{:}
+							<input type="radio" name="save_mode" value="unused" onclick="naver_mileage_initialize(this);"> 네이버 마일리지 사용/적립 안함<br/>
+							<input type="radio" name="save_mode" value="ncash"> 네이버 마일리지 <img src="\{_cfg.rootDir}/proc/naver_mileage/images/n_mileage_on.png"/><br/>
+							{/}
+							<div id="save_button"><img src="../img/nmileage/n_mileage_use.gif" onClick="javascript:cash_save_use();" class="mileage_button"> 버튼을 클릭해서 <span id="naver-mileage-accum-rate" style="color: #1ec228; font-weight: bold;"></span> 적립받고 사용하세요 <img class="n_mileage" src="../img/nmileage/n_mileage_info2.gif" onclick="mileage_info();"></div>
+							<div id="ncash_view"></div>
+							<input type="hidden" id="exception_price" name="exception_price" value="{ncash.exception_price}">
+							<input type="hidden" id="reqTxId{ncash.api_id}" name="reqTxId{ncash.api_id}" value="">
+							<input type="hidden" id="mileageUseAmount{ncash.api_id}" name="mileageUseAmount{ncash.api_id}" value="">
+							<input type="hidden" id="cashUseAmount{ncash.api_id}" name="cashUseAmount{ncash.api_id}" value="">
+							<input type="hidden" id="totalUseAmount{ncash.api_id}" name="totalUseAmount{ncash.api_id}" value="">
+							<input type="hidden" id="baseAccumRate" name="baseAccumRate" value="">
+							<input type="hidden" id="addAccumRate" name="addAccumRate" value="">
+						</td>
+					</tr>
+					<!--{ / }-->
+				
+					<!--{ ? _egg.use=="Y" && (_egg.scope=="A" || (_egg.scope=="P" && cart->totalprice-cart->dcprice>=_egg.min)) && _egg.feepayer == "B" }-->
+					<tr>
+						<td>보증보험 수수료</td>
+						<td><p id=paper_eggFee style="width:146px;text-align:right;font-weight:bold;float:left;margin:0">0</p> 원</td>
+					</tr>
+					<!--{ / }-->
+					</table>
+					
+				</div>
+				<div class="total_price">
+					<table class="price_summary">
+						<caption><span class="blind">주문결제금액</span></caption>
+						<colgroup>
+							<col style="width:auto">
+							<col style="width:105px;">
+						</colgroup>
+						<tbody><tr>
+							<th>상품합계금액</th>
+							<td><span id="paper_goodsprice">{=number_format(cart->goodsprice)}</span>원</td>
+						</tr>
+						<tr>
+							<th>배송비<br><span class="desc">결제금액 3만원이상 무료배송</span></th>
+							<td>
+								<div id="paper_delivery_msg1">
+									<strong><span id="paper_delivery"></span>원</strong>
+								</div>
+								<div id="paper_delivery_msg2" style="display:none"></div>
+								<div id="paper_delivery_msg_extra" class="small red" style="display:none;"></div>
+							</td>
+						</tr>
+						<!--{ ? view_aboutdc //어바웃쿠폰}-->
+						<tr>
+							<th>어바웃 쿠폰</th>
+							<td><strong><span>{=number_format(about_coupon)}</span>원</strong></td>
+						</tr>
+						<!--{ / }-->
+						<!--{ ? cart->special_discount_amount }-->
+						<tr>
+							<th>상품할인</th>
+							<td><strong><span id='special_discount_amount'>{=number_format(cart->special_discount_amount)}</span> 원</strong></td>
+						</tr>
+						<!--{ / }-->
+						<!--{ ? _sess }-->
+						<tr>
+							<th>회원할인</th>
+							<td><strong><span id='memberdc'>{=number_format(cart->dcprice)}</span> 원</strong></td>
+						</tr>
+						<!--{/}-->
+						<tr>
+							<th>총 결제금액</th>
+							<td>
+								<strong><span id="paper_settlement">{=number_format(cart->totalprice-cart->dcprice-cart->special_discount_amount)}</span> 원</strong>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				
+				<!-- 04 결제수단 -->
+				<div class="pay_method">
+					<input type=hidden name=escrow value="N">
+					<table>
+					<col width=100>
+					<tr>
+						<td>일반결제</td>
+						<td class=noline>
+						<!--{ ? _set.use.a }-->
+						<input type=radio name=settlekind value="a" onclick="input_escrow(this,'N')"> 무통장입금
+						<!--{ / }-->
+						<!--{ ? _set.use.c }-->
+						<input type=radio name=settlekind value="c" onclick="input_escrow(this,'N')"> 신용카드
+						<!--{ / }-->
+						<!--{ ? _set.use.o }-->
+						<input type=radio name=settlekind value="o" onclick="input_escrow(this,'N')"> 계좌이체
+						<!--{ / }-->
+						<!--{ ? _set.use.v }-->
+						<input type=radio name=settlekind value="v" onclick="input_escrow(this,'N')"> 가상계좌
+						<!--{ / }-->
+						<!--{ ? _set.use.h }-->
+						<input type=radio name=settlekind value="h" onclick="input_escrow(this,'N')"> 핸드폰
+						<!--{ / }-->
+						<!--{ ? _set.use.p }-->
+						<input type=radio name=settlekind value="p" onclick="input_escrow(this,'N')"> 포인트
+						<!--{ / }-->
+						<!--{ ? _set.use.u }-->
+						<input type=radio name=settlekind value="u" onclick="input_escrow(this,'N')"> CUP (중국카드)
+						<!--{ / }-->
+						<!--{ ? _set.use.y }-->
+						<input type=radio name=settlekind value="y" onclick="input_escrow(this,'N')"> 옐로페이
+						<!--{ / }-->
+						</td>
+					</tr>
+				
+					<!--{ ?  _escrow.use=="Y" && cart->totalprice-cart->dcprice>=_escrow.min }-->
+					<tr>
+						<td>에스크로결제</td>
+						<td class=noline>
+						<!--{ ? _escrow.c }-->
+						<input type=radio name=settlekind value="c" onclick="input_escrow(this,'Y')"> 신용카드
+						<!--{ / }-->
+						<!--{ ? _escrow.o }-->
+						<input type=radio name=settlekind value="o" onclick="input_escrow(this,'Y')"> 계좌이체
+						<!--{ / }-->
+						<!--{ ? _escrow.v }-->
+						<input type=radio name=settlekind value="v" onclick="input_escrow(this,'Y')"> 가상계좌
+						<!--{ / }-->
+						</td>
+					</tr>
+					<!--{ / }-->
+				
+					<!--{ ? useIpayPg===true }-->
+					<tr>
+						<td>옥션 iPay</td>
+						<td class="noline">
+							<input type=radio name=settlekind value="i" onclick="input_escrow(this,'Y')"> 아이페이 안전결제
+							<div class="small" style="padding-left:25px;">
+								- 결제수단은 iPay 결제창에서 선택합니다.<br>
+								- iPay 결제창에서 상품가격은 쇼핑몰 할인혜택이 적용된 가격입니다.
+							</div>
+						</td>
+					</tr>
+					<!--{ / }-->
+				
+					<!--{ ? _set.use.a }-->
+					<tr>
+						<th></th>
+						<td class="small red">(무통장입금의 경우 입금확인 후부터 배송단계가 진행됩니다)</td>
+					</tr>
+					<!--{ / }-->
+					<tr>
+						<th></th>
+						<td class="small red"><div id="coupon_typinfo" style="display:none">무통장입금에서만 사용가능한 쿠폰을 선택하였습니다. <br>다른 결제 수단을 선택하시려면 쿠폰을 제거 하여 주십시오.</div></td>
+					</tr>
+					</table>
+				
+					<!--{ ? _egg.use=="Y" && (_egg.scope=="A" || (_egg.scope=="P" && cart->totalprice-cart->dcprice>=_egg.min)) }-->
+					<table id="egg" style="display:none; margin-top:10px;">
+					<col width=100>
+					<tr>
+						<td valign=top style="padding-top:4px">전자보증보험</td>
+						<td>
+						<!--{ ? _egg.scope == "P" }-->
+						<div>구매 시 안전거래(매매보호) 사용유무를 직접 선택하실 수 있습니다.</div>
+						<!--{ / }-->
+				
+						<div style="color:#FF6C68; font-weight:bold; margin-bottom:5px;">아래의 주의사항을 꼭 확인하세요!</div>
+				
+						<!--{ ? _egg.scope == "P" }-->
+						<div class=noline>&#149; 전자보증보험 발급여부 : <input type=radio name=eggIssue value="Y" onclick="egg_required()"> 발급 <input type=radio name=eggIssue value="N" onclick="egg_required()"> 미발급</div>
+						<!--{ / }-->
+				
+						<div>&#149; <font color=444444>전자보증보험 안내 (100% 매매보호 안전결제)<br>
+						물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험증권이 발급됩니다. 증권이 발급되는 것의 의미는,
+						물품대금 결제시에 소비자에게 서울보증보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여,
+						피해발생시 쇼핑몰보증보험으로써 완벽하게 보호받을 수 있습니다.<br>
+						또한, <span class='red'>입력하신 개인정보는 증권발급을 위한 정보로 사용되며 다른 용도로는 사용되지 않습니다.</span>
+						</font></div>
+				
+						<!--{ ? _egg.feepayer != "B" }-->
+						<div>&#149; <font color=444444>보증보험 발행으로 구매시 별도의 수수료가 부과되지 않습니다.</font></div>
+						<!--{ : _egg.feepayer == "B" && _egg.feerate > 0 }-->
+						<div>&#149; <font color=444444>보증보험 발행으로 구매시 <span style="color:#FF6C68; font-weight:bold;">보증보험증권 발급수수료는 구매자께서 부담</span>하시게 됩니다.<br>
+						보증보험 발급수수료(총 결제금액의 {_egg.feerate}%) : <span id=infor_eggFee></span></font>
+						</div>
+						<input type=hidden name=eggFee>
+						<input type=hidden name=eggFeeRateYn value=Y>
+						<!--{ / }-->
+				
+						<div style="padding-top:10px;">&#149; 생년월일 :
+							<input type="text"t name="eggBirthYear" size=4 maxlength=4 />년
+							<select name="eggBirthMon">
+							<option value="">선택</option>
+							<? for ($i = 1; $i <= 12; $i++ ){ echo '<option value="'.$i.'">'.$i.'</option>'; } ?>
+							</select>월
+							<select name="eggBirthDay">
+							<option value="">선택</option>
+							<? for ($i = 1; $i <= 31; $i++ ){ echo '<option value="'.$i.'">'.$i.'</option>'; } ?>
+							</select>일
+						</div>
+						<div class=noline>&#149; 성별 : <input type=radio name=eggSex value="1"> 남성 <input type=radio name=eggSex value="2"> 여성</div>
+						<div style="text-align:center;" class=noline><input type=checkbox name=eggAgree value="Y"> 개인정보 이용에 동의합니다</div>
+						</td>
+					</tr>
+					</table>
+					<!--{ / }-->
+				
+					<!--{ ? _pg.receipt=='Y' && _set.receipt.order=='Y' }-->
+					<!--{ = include_file( "proc/_cashreceiptOrder.htm" ) }-->
+					<!--{ / }-->
+				</div>
+				
+				<div style="padding:20px" align=center class="noline">
+				<input type="image" src="../img/common/btn_payment.gif">
+				<img src="../img/common/btn_cancel.gif" onclick="history.back()" style="cursor:pointer">
+				</div>
+				<!-- 구매안전표시 start -->{=displayEggBanner(1)}<!-- 구매안전표시 end -->
 			</div>
 		
 		</form>
