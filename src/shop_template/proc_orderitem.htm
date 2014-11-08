@@ -7,15 +7,19 @@
 			<col style="width:40px">
 			<!--{ / }-->
 			<col style="width:auto">
-			<col style="width:70px">
-			<col style="width:146px">
-			<col style="width:74px">
+			<col style="width:110px">
+			<col style="width:110px">
+			<col style="width:110px">
 			<!--{ ? _orderitem_mode!=="cart" }--><col style="width:79px"><!--{ / }-->
 		</colgroup>
 		<thead>
 		<tr>
 			<!--{ ? _orderitem_mode=="cart" }-->
-			<th><a href="javascript:void(0);" onClick="chkBox('idxs[]','rev');nsGodo_CartAction.recalc();">선택</a></th>
+			<th>
+				<!-- <a href="javascript:void(0);" onClick="chkBox('idxs[]','rev');nsGodo_CartAction.recalc();">선택</a> -->
+				<input type="checkbox" checked="checked" onClick="chkBox('idxs[]','rev');nsGodo_CartAction.recalc();">
+				
+			</th>
 			<!--{ / }-->
 			<th>상품정보</th>
 			<th>판매가격</th>
@@ -25,12 +29,13 @@
 		</tr>
 		</thead>
 		<tbody>
+		<!--{ ? cart->item }-->
 		<!--{ @ cart->item }-->
 		<tr>
 			<input type="hidden" name="adultpro[]" value="{.use_only_adult}">
 			<!--{ ? _orderitem_mode=="cart" }-->
 			<td align=center>
-				<input type="checkbox" name="idxs[]" value="{.index_}" onClick="nsGodo_CartAction.recalc();">
+				<input type="checkbox" name="idxs[]" value="{.index_}" checked="checked" onClick="nsGodo_CartAction.recalc();">
 			</td>
 			<!--{ / }-->
 		
@@ -51,7 +56,7 @@
 						<!--{ / }-->
 						
 						<!--{ ? _orderitem_mode=="cart" }-->
-						<a href="javascript:void(0);" onClick="nsGodo_CartAction.editOption('{.index_}');">선택옵션수정</a>
+						<a href="javascript:void(0);" onClick="nsGodo_CartAction.editOption('{.index_}');" class="btn_modify_option">옵션수정</a>
 						<!--{ / }-->
 					</p>
 				</div>
@@ -66,7 +71,7 @@
 				</span>
 				
 				<!-- 적립금 -->
-				<span>{=number_format(.reserve)}원</span>
+				<span class="point">적립금 {=number_format(.reserve)}원</span>
 			</td>
 			<td>
 				<!--{ ? _orderitem_mode=="cart" }-->
@@ -109,22 +114,28 @@
 			</td>
 			<!--{ / }-->
 			<!--{ / }-->
-		
-			
 		</tr>
-		
 			<!--{ ? _orderitem_mode=="cart" }-->
 			<script>nsGodo_CartAction.pushdata({reserve:{=.reserve},price:{=(.price + .addprice)},ea:{=.ea}});</script>
 			<!--{ / }-->
 		<!--{ / }-->
+		<!--{:}-->
+		<tr>
+			<td colspan="5">
+				<p class="blank_msg">현재 장바구니에 담긴 상품이 없습니다.</p>
+			</td>
+		</tr>
+		<!--{/}-->
 		</tbody>
 	</table>
+	<!--{ ? _orderitem_mode=="cart" }-->
 	<div class="help_msg">
 		<h3>장바구니 이용안내</h3>
 		<p>장바구니에 담긴 상품은 접속을 종료하시거나 일정시간 페이지 이동이 없으면 장바구니가 자동으로 비워집니다.<br>
-보관하시려면 <strong>관심상품</strong>에 등록하시기 바랍니다.<br>
+장바구니에 담긴 상품을 보관하시려면 <strong>관심상품</strong>에 등록하시기 바랍니다.<br>
 총 결제금액이 <strong>3만원 	이상인 경우 배송비 무료</strong>입니다.</p>
 	</div>
+	<!--{/}-->
 </div>
 
 <div class="aside_column">
@@ -134,7 +145,7 @@
 			<caption><span class="blind">주문결제금액</span></caption>
 			<colgroup>
 				<col style="width:auto">
-				<col style="width:105px;">
+				<col style="width:165px;">
 			</colgroup>
 			<tr>
 				<th>상품합계금액</th>
@@ -146,15 +157,41 @@
 			</tr>
 			
 			<tr>
-				<th>배송 및 처리</th>
+				<th>배송비</th>
 				<td>
-					{=number_format(cart->delivery)}
+					<span id="el-orderitem-total-delivery">
+					<!--{ ? _orderitem_mode=="cart" }-->
+						<!--{ ? cart->goodsprice }-->
+						<?php if ( {cart->goodsprice} > 30000){ ?>
+						무료배송
+						<?php } else {?>
+						2,500원 
+						<?php } ?>
+						<!--{:}-->
+						3만원 이상 무료배송
+						<!--{/}-->
+					<!--{:}-->				
+					<!--{ ? number_format(cart->delivery) > 0 }-->{=number_format(cart->delivery)}<!--{:}-->무료배송<!--{/}-->
+					<!--{/}-->
+					</span>
 				</td>
 			</tr>
 			<tr>
 				<th>총 주문 금액</th>
 				<td>
-					<strong>{=number_format(cart->totalprice)}원</strong>
+					<!--{ ? _orderitem_mode=="cart" }-->
+						<!--{ ? cart->goodsprice }-->
+						<strong id="el-orderitem-total-price-all">
+						<?php if ( {cart->goodsprice} > 30000){ ?>{=number_format(cart->totalprice)}<?php } else { 
+							echo (number_format({cart->goodsprice} + 2500));
+						} ?>원						
+						</strong>
+						<!--{:}-->
+						<strong id="el-orderitem-total-price-all">0원</strong>
+						<!--{/}-->
+					<!--{:}-->				
+						<strong id="el-orderitem-total-price-all">{=number_format(cart->totalprice)}원</strong>
+					<!--{/}-->
 				</td>
 			</tr>
 			
@@ -166,10 +203,16 @@
 			<!--{ / }-->			
 		</table>
 	</div>
+	<!--{ ? _orderitem_mode=="cart" }-->
 	<div class="task_btn">
-		<button class="btn_order">주문하기</button>
-		<button class="btn_shopping">계속 쇼핑하기</button>
+		<!--{ ? count(cart->item) }-->
+		<a href="javascript:void(0);" class="btn_order" onClick="nsGodo_CartAction.order();return false;">주문하기</a>
+		<a href="javascript:void(0);" class="btn_wishlist" onClick="nsGodo_CartAction.wishList();return false;">관심상품 담기</a>
+		<a href="javascript:void(0);" class="btn_remove" onClick="nsGodo_CartAction.del();return false;">삭제하기</a>
+		<!--{ / }-->
+		<a href="../index.php" class="btn_shopping">계속 쇼핑하기</a>
 	</div>
+	<!--{/}-->
 </div>
 
 
