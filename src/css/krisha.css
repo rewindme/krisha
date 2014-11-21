@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Sungkyu, Choi */
 /* common */
 body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
@@ -5,7 +6,7 @@ body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, fo
   padding: 0; }
 
 body, input, textarea, select, button {
-  font-family: Helvetica, 'Apple SD Gothic Neo', 'nanumgothic', 'Dotum', '돋움', Sans-serif;
+  font-family: Helvetica,'Apple SD Gothic Neo','nanumgothic','Dotum','돋움',Sans-serif;
   font-size: 14px; }
 
 img, fieldset {
@@ -50,7 +51,8 @@ i, .ht {
   color: transparent;
   line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -80,7 +82,8 @@ i, .ht {
   position: relative;
   zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
   background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
   background-repeat: no-repeat;
   background-color: transparent;
@@ -90,7 +93,7 @@ i, .ht {
   background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
 
 .product_view .info_head {
-  font-family: nanumgothic, sans-serif; }
+  font-family: nanumgothic,sans-serif; }
 
 .join_complete .logo_krisha, .join_complete .img_welcome {
   background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_join_complete.png") no-repeat; }
@@ -109,7 +112,10 @@ i, .ht {
     letter-spacing: -1px;
     height: 23px;
     line-height: 23px; }
-  .general_store .tab a:hover, .prod_tab a:hover, .section_head .tab a:hover, .general_store .tab .selected a, .prod_tab .selected a, .section_head .tab .selected a {
+  .general_store .tab a:hover, .prod_tab a:hover, .section_head .tab a:hover,
+  .general_store .tab .selected a,
+  .prod_tab .selected a,
+  .section_head .tab .selected a {
     color: #454545; }
   .general_store .tab .selected a, .prod_tab .selected a, .section_head .tab .selected a {
     border-bottom: 2px solid #f54500; }
@@ -480,7 +486,8 @@ body {
     vertical-align: middle; }
   .contact a, .contact .txt {
     color: #fff; }
-  .contact a:hover, .contact a.txt:hover {
+  .contact a:hover,
+  .contact a.txt:hover {
     text-decoration: underline; }
   .contact .bar {
     padding: 0 5px; }
@@ -528,7 +535,9 @@ body {
   margin: 0;
   position: relative; }
 
-.bnr_box.cst_center .delivery, .bnr_box.cst_center .qna, .bnr_box.cst_center .faq {
+.bnr_box.cst_center .delivery,
+.bnr_box.cst_center .qna,
+.bnr_box.cst_center .faq {
   position: absolute;
   left: 26px;
   top: 97px;
@@ -688,7 +697,8 @@ body {
     vertical-align: middle;
     display: inline-block;
     width: 0; }
-  .prod_list .selected .prod_thumb:before, .prod_list a:hover .prod_thumb:before {
+  .prod_list .selected .prod_thumb:before,
+  .prod_list a:hover .prod_thumb:before {
     border-color: #f54500;
     z-index: 30; }
   .prod_list .prod_thumb img {
@@ -812,7 +822,8 @@ body {
     display: block; }
   .product_view .info_head .price {
     padding: 0; }
-  .product_view .info_head .price strong, .product_view .info_head .point strong {
+  .product_view .info_head .price strong,
+  .product_view .info_head .point strong {
     font-family: arial;
     font-size: 24px; }
   .product_view .info_head .point strong {
@@ -894,7 +905,8 @@ body {
     text-align: center;
     color: #666;
     font-size: 12px; }
-  .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down {
+  .qty_cont .qty_cnt_up,
+  .qty_cont .qty_cnt_down {
     position: absolute;
     right: 0;
     top: 0;
@@ -938,7 +950,8 @@ body {
       background-color: #e5e5e5; }
     .goods-multi-option .multi_option_cover .qty_ipt {
       background-color: #f2f2f2; }
-    .goods-multi-option .multi_option_cover .qty_cnt_up, .goods-multi-option .multi_option_cover .qty_cnt_down {
+    .goods-multi-option .multi_option_cover .qty_cnt_up,
+    .goods-multi-option .multi_option_cover .qty_cnt_down {
       width: 18px;
       height: 18px;
       background-position: 5px -47px; }
@@ -988,7 +1001,8 @@ body {
     width: 14.1%; }
   .prod_tab li a {
     width: 100%; }
-  .prod_tab li.selected a, .prod_tab .cnt {
+  .prod_tab li.selected a,
+  .prod_tab .cnt {
     color: #f54500;
     font-weight: bold; }
 
@@ -1110,7 +1124,9 @@ body {
     background-color: #f8f8f8;
     padding: 18px 21px;
     color: #999; }
-  .board .receipt, .board .complete, .board .label_reply {
+  .board .receipt,
+  .board .complete,
+  .board .label_reply {
     border: 1px solid #5cc4b9;
     border-radius: 3px;
     color: #5cc4b9;
@@ -1177,7 +1193,9 @@ body {
   .text_board .task_article {
     text-align: right;
     padding: 10px 20px 0 0; }
-  .text_board .btn_answer, .text_board .btn_modify, .text_board .btn_delete {
+  .text_board .btn_answer,
+  .text_board .btn_modify,
+  .text_board .btn_delete {
     background-color: #999;
     display: inline-block;
     color: #fff;
@@ -1653,7 +1671,8 @@ body {
     width: auto;
     vertical-align: top;
     padding: 0 16px; }
-  .goods_list .tab li.all, .goods_list .tab li:hover {
+  .goods_list .tab li.all,
+  .goods_list .tab li:hover {
     position: relative;
     border: 1px solid #f54500;
     z-index: 10; }
@@ -1907,7 +1926,9 @@ body {
   line-height: 18px;
   margin-top: -5px; }
 
-.order_person_info, .order_reciept_info, .pay_method {
+.order_person_info,
+.order_reciept_info,
+.pay_method {
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 10px;
   margin-bottom: 45px; }
@@ -1960,3 +1981,5 @@ body {
     color: #999;
     font-size: 11px;
     padding: 5px 0 0; }
+
+/*# sourceMappingURL=krisha.css.map */
