@@ -111,3 +111,7 @@ a%btn-point2{
 	label{background-position:0 -114px;padding-left:26px}
 	input:checked + label{background-position:0 -76px}
 }
+
+%clear{
+	&:after{content:'';clear:both;display:block;height:0;visibility:hidden}
+}

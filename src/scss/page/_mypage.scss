@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.mypage{
+	$color-selected:#f54500;
+	$color-normal:#e4e4e4;
+		
+	.tit_mykrisha{
+		@include use-sprite(my_krisha);
+		
+		margin-bottom:20px;
+	}
+	
+	.mypage_head{
+		
+		
+		ul{
+			@extend %clear;
+			border-bottom:1px solid $color-selected;
+			
+		}
+		li{
+			float:left;
+			width:140px;
+			height:38px;
+			line-height:38px;
+			border:1px solid $color-normal;
+			border-bottom:0;
+			margin-right:-1px;
+			
+			a{
+				display:block;
+				text-align:center;
+				color:#666;
+				font-size:14px;
+			}
+		}
+		li.selected{
+			position:relative;
+			border:1px solid $color-selected;
+			border-bottom:1px solid #fff;
+			margin-bottom:-1px;
+			a {
+				color:$color-selected;
+			}
+		}
+	}
+	.mypage_body{
+		
+	}
+	
+	.mypage_table{
+		width:100%;
+		border-collapse:collapse;
+		padding:0;
+		table-layout:fixed;
+		
+		caption{}
+		td{
+			border-bottom:1px solid $color-normal;
+			text-align:center;
+			padding:16px 0;
+			color:#666;
+			
+			&.title{
+				text-align:left;
+			}
+		}
+		
+		.order_no{
+			display:block;
+			color:$color-selected;
+			font-weight:normal;
+		}
+		.date{
+			display:block;
+			color:#666;
+			font-size:11px;
+			
+		}
+		.view_order{
+			color:#666;
+			text-decoration:underline;
+			font-size:12px;
+		}
+	}
+	.navigation{
+		a{
+			color:#757575;
+		}
+		b{
+			color:$color-selected;
+			padding:0 6px;
+		}
+	}
+}
