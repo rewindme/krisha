@@ -50,7 +50,7 @@ i, .ht {
   color: transparent;
   line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -211,7 +211,7 @@ i, .ht {
 .review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .task_btn a.btn_order, .task_btn a.btn_payment {
   line-height: 47px; }
 
-.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point {
+.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home {
   border: 1px solid #aeaeae;
   background-color: #b4b4b4;
   color: #fff;
@@ -1497,6 +1497,8 @@ body {
     .join .submit_cover.nb {
       border-top: 0;
       padding-top: 60px; }
+  .join h2 {
+    margin-bottom: 21px; }
 
 .join_box {
   position: relative;
@@ -1703,7 +1705,7 @@ body {
     padding: 0 18px;
     width: auto; }
 
-.basket .tit_bar, .order_list th {
+.basket .tit_bar, .order_list th, .privacy_statement .tit_bar {
   border-bottom: 2px solid #5cc4b9;
   color: #666;
   font-weight: normal;
@@ -1717,16 +1719,19 @@ body {
     width: 750px;
     float: left;
     margin-right: 40px; }
+  .basket .tit_bar {
+    font-size: 16px;
+    color: #5cc4b9;
+    margin-bottom: 25px; }
   .basket .aside_column {
     width: 270px;
     float: left; }
     .basket .aside_column .tit_bar {
       border-color: #f54500;
-      color: #f54500; }
-  .basket .tit_bar {
-    font-size: 16px;
-    color: #5cc4b9;
-    margin-bottom: 24px; }
+      color: #f54500;
+      margin-bottom: 25px; }
+    .basket .aside_column .task_btn {
+      padding: 3px 0 26px; }
 
 .order_list {
   width: 100%;
@@ -1826,17 +1831,17 @@ body {
 
 .total_price {
   border-bottom: 1px solid #e4e4e4;
-  padding-bottom: 24px;
-  margin-bottom: 38px; }
+  margin-bottom: 25px; }
 
 .price_summary {
   width: 100%;
   border-collapse: collapse;
   padding: 0;
-  border: 0; }
+  border: 0;
+  margin-bottom: 7px; }
   .price_summary th, .price_summary td {
     text-align: left;
-    padding: 10px 0;
+    padding: 0 0 15px;
     font-weight: normal;
     color: #666;
     font-size: 15px; }
@@ -1846,10 +1851,33 @@ body {
     font-size: 11px; }
   .price_summary strong {
     color: #f54500; }
+  .price_summary .bank_sender {
+    text-align: right;
+    width: 134px;
+    padding: 3px 6px;
+    font-size: 12px;
+    color: #666; }
+  .price_summary .real_price {
+    border-bottom: 1px dotted #e4e4e4; }
+    .price_summary .real_price .real_price_tit {
+      display: block;
+      font-size: 12px; }
+    .price_summary .real_price strong {
+      font-size: 30px;
+      display: block;
+      text-align: right; }
+  .price_summary .txt_point {
+    text-align: right;
+    font-size: 12px;
+    color: #666; }
+    .price_summary .txt_point .txt_point_tit {
+      font-size: 12px; }
+    .price_summary .txt_point .point_number {
+      font-size: 15px; }
 
 .task_btn {
   border-bottom: 1px solid #e4e4e4;
-  padding: 0 0 38px;
+  padding: 0 0 40px;
   overflow: hidden; }
   .task_btn .btn_order, .task_btn .btn_payment {
     width: 100%;
@@ -1877,39 +1905,50 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     line-height: 45px; }
+  .task_btn .now_paying {
+    color: #f54500;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 40px; }
 
 /* 주문결제 */
-.form_tb th, .form_tb td {
-  text-align: left;
-  padding: 10px 0;
-  font-weight: normal;
-  color: #666;
-  font-size: 14px;
-  vertical-align: top;
-  line-height: 38px; }
-.form_tb th {
-  padding-left: 8px; }
-.form_tb .ipt_text {
-  height: 18px;
-  line-height: 18px;
-  padding: 10px;
-  width: 340px;
-  color: #454545;
-  margin-right: 9px; }
-.form_tb .ipt_text:focus {
-  border-color: #f54500; }
-.form_tb .phone_cell .ipt_text {
-  text-align: center;
-  width: 90px; }
-.form_tb .road_address {
-  color: #999;
-  font-size: 11px;
-  line-height: 18px;
-  margin-top: -5px; }
+.form_tb {
+  margin-bottom: 10px; }
+  .form_tb th, .form_tb td {
+    text-align: left;
+    padding: 0 0 15px;
+    font-weight: normal;
+    color: #666;
+    font-size: 14px;
+    vertical-align: top;
+    line-height: 38px; }
+  .form_tb th {
+    padding-left: 8px; }
+  .form_tb .ipt_text {
+    height: 18px;
+    line-height: 18px;
+    padding: 10px;
+    width: 340px;
+    color: #454545;
+    margin-right: 9px; }
+  .form_tb .ipt_text:focus {
+    border-color: #f54500; }
+  .form_tb .phone_cell .ipt_text {
+    text-align: center;
+    width: 90px; }
+  .form_tb .road_address {
+    color: #999;
+    font-size: 11px;
+    line-height: 18px;
+    margin-top: -5px; }
+  .form_tb.no_form th, .form_tb.no_form td {
+    line-height: 1.5; }
 
 .order_person_info, .order_reciept_info, .pay_method {
   border-bottom: 1px solid #e4e4e4;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   margin-bottom: 45px; }
 
 .order_reciept_info .item_cover {
@@ -1928,12 +1967,23 @@ body {
   line-height: 18px;
   padding: 10px 0 0; }
 
-.pay_method li {
-  margin-bottom: 30px; }
+.pay_method {
+  padding-bottom: 0;
+  margin-bottom: 25px; }
+  .pay_method li {
+    margin-bottom: 23px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+  .pay_method .desc {
+    color: #999;
+    font-size: 11px;
+    margin-top: 0px; }
 
 .use_point {
   border-bottom: 1px solid #e4e4e4;
-  padding: 16px 0 17px; }
+  padding: 1px 0;
+  margin-bottom: 25px; }
   .use_point .tit {
     color: #f54500;
     font-size: 12px;
@@ -1945,7 +1995,8 @@ body {
   .use_point .ipt_text {
     width: 140px;
     padding: 10px;
-    text-align: center; }
+    text-align: center;
+    color: #999; }
   .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point {
     height: 36px;
     line-height: 36px;
@@ -1955,8 +2006,80 @@ body {
   .use_point .btn_lookup, .use_point .btn_regist {
     width: 47px; }
   .use_point .point_cover {
-    margin-bottom: 27px; }
+    margin-bottom: 25px; }
   .use_point .desc {
     color: #999;
     font-size: 11px;
     padding: 5px 0 0; }
+
+.eggBanner_1 {
+  border: 1px solid #dedede;
+  border-top: 0;
+  padding: 10px 13px 7px; }
+  .eggBanner_1 * {
+    height: auto !important;
+    padding: 0 !important;
+    font-size: 12px;
+    border: 0 !important;
+    display: inline !important;
+    line-height: 18px;
+    vertical-align: baseline !important;
+    color: #999; }
+  .eggBanner_1 span.red, .eggBanner_1 span.red b {
+    color: #f54500; }
+
+.card_gate {
+  position: absolute; }
+
+.account_select {
+  max-width: 150px; }
+
+.privacy_statement {
+  margin-bottom: 30px; }
+  .privacy_statement .tit_bar {
+    font-size: 16px;
+    color: #5cc4b9;
+    margin-bottom: 10px; }
+  .privacy_statement .desc {
+    color: #666;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 11px; }
+  .privacy_statement .scroll {
+    border: 1px solid #e4e4e4;
+    overflow: auto;
+    max-height: 190px;
+    *height: 190px;
+    padding: 20px;
+    line-height: 18px;
+    font-size: 11px;
+    color: #666; }
+  .privacy_statement a {
+    color: #666;
+    text-decoration: underline; }
+  .privacy_statement .btns {
+    text-align: right;
+    padding: 10px 0 0;
+    font-size: 12px;
+    line-height: 18px; }
+    .privacy_statement .btns input {
+      width: 13px;
+      height: 13px;
+      overflow: hidden;
+      margin-right: 3px;
+      vertical-align: middle;
+      margin-left: 14px; }
+    .privacy_statement .btns label {
+      display: inline-block;
+      vertical-align: middle;
+      color: #454545; }
+
+.task_btn_bottom {
+  padding: 30px 0;
+  text-align: center; }
+  .task_btn_bottom .btn_home {
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    width: auto;
+    padding: 0 15px; }

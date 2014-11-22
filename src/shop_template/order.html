@@ -1,25 +1,7 @@
 {*** 주문하기(주문서작성) | order/order.php ***}
 { # header }
 <script id="delivery"></script>
-<!--{ ? !_sess }-->
-<!-- 비회원 개인정보 취급방침 내용 -->
-<div style="margin-top:20;">
-	<img src="../img/common/order_txt_non.gif" border=0>
-</div>
-<div style="padding-top:10; background:#F1F1F1;  text-align:center;">
-	<div align="left" style="height:26;padding:3px 0 0 10px;">
-		<b>● 비회원 주문에 대한 개인정보 수집에 대한 동의</b> (자세한 내용은 “<a href="../service/private.php">개인정보취급방침</a>”을 확인하시기 바랍니다)
-	</div>
-	<div id="boxScroll" class="scroll">
-		{termsPolicyCollection3}
-	</div>
 
-	<div align=center class=noline style="height:30;margin-top:10px;" >
-		<input type="radio" name="private" value="y" onclick="javascript:document.frmOrder.private.value='y';"> 동의합니다 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="radio" name="private" value="n" onclick="javascript:document.frmOrder.private.value='';"> 동의하지 않습니다
-	</div>
-</div>
-<!--{ / }-->
 
 
 
@@ -32,6 +14,20 @@
 			<span class="slash">/</span>
 			<span class="current">주문결제</span>
 		</div>
+		<!--{ ? !_sess }-->
+		<!-- 비회원 개인정보 취급방침 내용 -->
+		<div class="privacy_statement">
+			<h3 class="tit_bar">비회원 주문정보 수집동의</h3>
+			<p class="desc">● 비회원 주문에 대한 개인정보 수집에 대한 동의(자세한 내용은 <a href="/shop/service/private.php" target="_blank">"개인정보취급방침"</a>을 확인하시기 바랍니다.)</p>
+			<div id="boxScroll" class="scroll">
+				{termsPolicyCollection3}
+			</div>
+			<div class="btns">
+				<input type="radio" id="private1" name="private" value="y" onclick="javascript:document.frmOrder.private.value='y';"><label for="private1">동의함</label>
+				<input type="radio" id="private2" name="private" value="n" checked="checked" onclick="javascript:document.frmOrder.private.value='';"><label for="private2">동의하지 않음</label>
+			</div>
+		</div>
+		<!--{ / }-->
 		<form id=form name=frmOrder action="{orderActionUrl}" method=post onsubmit="return chkForm2(this)">
 			<input type=hidden name=ordno value="{ordno}">
 		
@@ -194,8 +190,18 @@
 			</div>
 			<div class="aside_column">
 				<h3 class="tit_bar">주문결제금액</h3>
-				<div class="use_point">	
+				<div class="use_point" <!--{ ? !_sess }-->style="border:0;padding:0"<!--{ / }-->>	
 					<!--{ ? _sess }-->
+					<div class="point_cover">
+						<span class="tit">할인 쿠폰 사용</span>
+						<p>
+							<input type="text" name="coupon" size="12" class="ipt_text" placeholder="쿠폰할인" value="0" readonly>
+							
+							<a href="javascript:popup('../proc/popup_coupon.php',600,700)" class="btn_lookup">조회</a>
+							<span id="del_coupon"><a href='javascript:del_coupon();' class="btn_regist">취소</a></span>
+							<input type="hidden" name=coupon_emoney size=12 style="text-align:right" value=0 readonly>
+						</p>
+					</div>
 					<div class="point_cover">
 						<span class="tit">적립금 사용
 							<span class="desc" style="display:{?_member.emoney}inline;{ : }none;{ / }">(사용가능 적립금 : {=number_format(_member.emoney)}원)</span>
@@ -219,27 +225,8 @@
 							<!--{ / }-->
 							<input type=hidden name=emoney_max value="{ _emoney_max }">
 						</div>
-						
-
-						
 					</div>
-					<div class="point_cover">
-						<span class="tit">할인 쿠폰 사용</span>
-						<p>
-							<input type="text" name="coupon" size="12" class="ipt_text" placeholder="쿠폰할인" value="0" readonly>
-							
-							<a href="javascript:popup('../proc/popup_coupon.php',600,700)" class="btn_lookup">조회</a>
-							<span id="del_coupon"><a href='javascript:del_coupon();' class="btn_regist">취소</a></span>
-<!-- 							<input type=text name=coupon_emoney size=12 style="text-align:right" value=0 readonly> 원 -->
-						</p>
-					</div>
-
-						
 					<!--{ / }-->
-					
-					
-					
-					
 					
 					<!--{ ? ncash.useyn == 'Y' }-->
 					<tr id="naver-mileage-accum" style="display: none;">
@@ -307,19 +294,19 @@
 						<!--{ ? cart->special_discount_amount }-->
 						<tr>
 							<th>상품할인</th>
-							<td><strong><span id='special_discount_amount'>{=number_format(cart->special_discount_amount)}</span> 원</strong></td>
+							<td><strong><span id='special_discount_amount'>{=number_format(cart->special_discount_amount)}</span>원</strong></td>
 						</tr>
 						<!--{ / }-->
 						<!--{ ? _sess }-->
 						<tr>
 							<th>회원할인</th>
-							<td><strong><span id='memberdc'>{=number_format(cart->dcprice)}</span> 원</strong></td>
+							<td><strong><span id='memberdc'>{=number_format(cart->dcprice)}</span>원</strong></td>
 						</tr>
 						<!--{/}-->
 						<tr>
 							<th>총 결제금액</th>
 							<td>
-								<strong><span id="paper_settlement">{=number_format(cart->totalprice-cart->dcprice-cart->special_discount_amount)}</span> 원</strong>
+								<strong><span id="paper_settlement">{=number_format(cart->totalprice-cart->dcprice-cart->special_discount_amount)}</span>원</strong>
 							</td>
 						</tr>
 					</tbody></table>
@@ -328,79 +315,66 @@
 				<!-- 04 결제수단 -->
 				<div class="pay_method">
 					<input type=hidden name=escrow value="N">
-					<table>
-					<col width=100>
-					<tr>
-						<td>일반결제</td>
-						<td class=noline>
+					
+					<ul>
 						<!--{ ? _set.use.a }-->
-						<input type=radio name=settlekind value="a" onclick="input_escrow(this,'N')"> 무통장입금
+						<li>
+							<span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="a" id="settlekind_1" checked="checked"><label for="settlekind_1">무통장입금</label></span>
+							<span class="desc">입금 확인 시간은 오후 3시 입니다.</span>
+							</li>
 						<!--{ / }-->
 						<!--{ ? _set.use.c }-->
-						<input type=radio name=settlekind value="c" onclick="input_escrow(this,'N')"> 신용카드
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="c" id="settlekind_2"><label for="settlekind_2">신용카드</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _set.use.o }-->
-						<input type=radio name=settlekind value="o" onclick="input_escrow(this,'N')"> 계좌이체
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="o" id="settlekind_3"><label for="settlekind_3">계좌이체</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _set.use.v }-->
-						<input type=radio name=settlekind value="v" onclick="input_escrow(this,'N')"> 가상계좌
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="v" id="settlekind_4"><label for="settlekind_4">가상계좌</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _set.use.h }-->
-						<input type=radio name=settlekind value="h" onclick="input_escrow(this,'N')"> 핸드폰
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="h" id="settlekind_5"><label for="settlekind_5">핸드폰</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _set.use.p }-->
-						<input type=radio name=settlekind value="p" onclick="input_escrow(this,'N')"> 포인트
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="p" id="settlekind_6"><label for="settlekind_6">포인트</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _set.use.u }-->
-						<input type=radio name=settlekind value="u" onclick="input_escrow(this,'N')"> CUP (중국카드)
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="u" id="settlekind_7"><label for="settlekind_7">CUP (중국카드)</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _set.use.y }-->
-						<input type=radio name=settlekind value="y" onclick="input_escrow(this,'N')"> 옐로페이
+						<li><span class="ipt_rdo"><input type="radio" name="settlekind" onclick="input_escrow(this,'N')" value="y" id="settlekind_8"><label for="settlekind_8">옐로페이</label></span></li>
 						<!--{ / }-->
-						</td>
-					</tr>
-				
-					<!--{ ?  _escrow.use=="Y" && cart->totalprice-cart->dcprice>=_escrow.min }-->
-					<tr>
-						<td>에스크로결제</td>
-						<td class=noline>
+						
+						<!--{ ?  _escrow.use=="Y" && cart->totalprice-cart->dcprice>=_escrow.min }-->
 						<!--{ ? _escrow.c }-->
-						<input type=radio name=settlekind value="c" onclick="input_escrow(this,'Y')"> 신용카드
+						<li><span class="ipt_rdo"><input type="radio" value="c" name="settlekind" id="settlekind_9" onclick="input_escrow(this,'Y')"><label for="settlekind_9">신용카드</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _escrow.o }-->
-						<input type=radio name=settlekind value="o" onclick="input_escrow(this,'Y')"> 계좌이체
+						<li><span class="ipt_rdo"><input type="radio" value="o" name="settlekind" id="settlekind_10" onclick="input_escrow(this,'Y')"><label for="settlekind_10">계좌이체</label></span></li>
 						<!--{ / }-->
 						<!--{ ? _escrow.v }-->
-						<input type=radio name=settlekind value="v" onclick="input_escrow(this,'Y')"> 가상계좌
+						<li><span class="ipt_rdo"><input type="radio" value="v" name="settlekind" id="settlekind_11" onclick="input_escrow(this,'Y')"><label for="settlekind_11">가상계좌</label></span></li>
 						<!--{ / }-->
-						</td>
-					</tr>
-					<!--{ / }-->
-				
-					<!--{ ? useIpayPg===true }-->
-					<tr>
-						<td>옥션 iPay</td>
-						<td class="noline">
-							<input type=radio name=settlekind value="i" onclick="input_escrow(this,'Y')"> 아이페이 안전결제
+						<!--{ / }-->
+						<!--{ ? useIpayPg===true }-->
+						<li>
+						<span class="ipt_rdo"><input type="radio" value="i" name="settlekind" id="settlekind_12" onclick="input_escrow(this,'Y')"><label for="settlekind_12">아이페이 안전결제</label></span>
 							<div class="small" style="padding-left:25px;">
 								- 결제수단은 iPay 결제창에서 선택합니다.<br>
 								- iPay 결제창에서 상품가격은 쇼핑몰 할인혜택이 적용된 가격입니다.
-							</div>
-						</td>
-					</tr>
-					<!--{ / }-->
+							</div></li>
+						<!--{ / }-->
+						
+					</ul>
+					
+					
 				
 					<!--{ ? _set.use.a }-->
-					<tr>
-						<th></th>
-						<td class="small red">(무통장입금의 경우 입금확인 후부터 배송단계가 진행됩니다)</td>
-					</tr>
+					
 					<!--{ / }-->
-					<tr>
-						<th></th>
-						<td class="small red"><div id="coupon_typinfo" style="display:none">무통장입금에서만 사용가능한 쿠폰을 선택하였습니다. <br>다른 결제 수단을 선택하시려면 쿠폰을 제거 하여 주십시오.</div></td>
-					</tr>
-					</table>
+					<div class="desc">
+						<div id="coupon_typinfo" style="display:none">무통장입금에서만 사용가능한 쿠폰을 선택하였습니다. <br>다른 결제 수단을 선택하시려면 쿠폰을 제거 하여 주십시오.</div>
+					</div>
 				
 					<!--{ ? _egg.use=="Y" && (_egg.scope=="A" || (_egg.scope=="P" && cart->totalprice-cart->dcprice>=_egg.min)) }-->
 					<table id="egg" style="display:none; margin-top:10px;">
@@ -458,11 +432,11 @@
 					<!--{ / }-->
 				</div>
 				
-				<div style="padding:20px" align=center class="noline">
-				<input type="image" src="../img/common/btn_payment.gif">
-				<img src="../img/common/btn_cancel.gif" onclick="history.back()" style="cursor:pointer">
+				<div class="task_btn">
+					<button class="btn_payment" type="submit">결제하기</button>
+					<button class="btn_cancel" onclick="history.back()" type="button">취소하기</button>
 				</div>
-				<!-- 구매안전표시 start -->{=displayEggBanner(1)}<!-- 구매안전표시 end -->
+				<!-- 구매안전표시 start --><div class="eggBanner_1">{=displayEggBanner(1)}</div><!-- 구매안전표시 end -->
 			</div>
 		
 		</form>
@@ -802,6 +776,7 @@ function getDelivery(){
 		param : "zipcode="+zipcode+"&deliPoli="+deliPoli+"&coupon="+coupon+"&emoney="+emoney+"&mode="+mode,
 		success : function(data) {
 			eval(data);
+			console.log(data);
 		}
 	});
 }

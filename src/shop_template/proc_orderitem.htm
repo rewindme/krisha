@@ -25,7 +25,7 @@
 			<th>판매가격</th>
 			<th>수량</th>
 			<th>주문금액</th>
-			<!--{ ? _orderitem_mode!=="cart" }--><th>배송</th><!--{ / }-->
+			
 		</tr>
 		</thead>
 		<tbody>
@@ -89,31 +89,6 @@
 				<!--{ / }-->
 			</td>
 			<td class="order_price">{=number_format((.price + .addprice)*.ea)}원</td>
-			<!--{ ? _orderitem_mode!=="cart" }-->
-			<!--{ ? orderitem_rowspan[.index_] > 0}-->
-			<td rowspan="{orderitem_rowspan[.index_]}">
-				<!--{ ? .delivery_type == 1 }-->
-				무료배송
-				<!--{ : .delivery_type == 2 && .goods_delivery }-->
-				개별배송
-				<div>({=number_format(.goods_delivery)}원)</div>
-				<!--{ : .delivery_type == 3 && .goods_delivery }-->
-				착불배송
-				<div>({=number_format(.goods_delivery)}원)</div>
-				<!--{ : .delivery_type == 4 && .goods_delivery }-->
-				고정배송
-				<div>({=number_format(.goods_delivery)}원)</div>
-				<!--{ : .delivery_type == 5 && .goods_delivery }-->
-				수량별배송
-				<div>({=number_format(.goods_delivery * .ea)}원)</div>
-				<!--{ : }-->
-				<div id="el-default-delivery">
-				기본배송
-				</div>
-				<!--{ / }-->
-			</td>
-			<!--{ / }-->
-			<!--{ / }-->
 		</tr>
 			<!--{ ? _orderitem_mode=="cart" }-->
 			<script>nsGodo_CartAction.pushdata({reserve:{=.reserve},price:{=(.price + .addprice)},ea:{=.ea}});</script>

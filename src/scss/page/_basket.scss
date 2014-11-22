@@ -1,12 +1,25 @@
 %tit-bar{border-bottom:2px solid $point-color1;color:#666;font-weight:normal;height:29px;line-height:29px;font-size:14px}
 
+
+$aside-column-spacing-vertical:25px;
+$info-column-spacing-vertical:25px;
+
 .basket{
 	@extend %form_container;overflow:hidden;
 	//750px
 	.info_column{width:750px;float:left;margin-right:40px}
 	//270px
-	.aside_column{width:270px;float:left;.tit_bar{border-color:$color-price;color:$color-price}}
-	.tit_bar{@extend %tit-bar;font-size:16px;color:$point-color1;margin-bottom:24px}
+	.tit_bar{@extend %tit-bar;font-size:16px;color:$point-color1;margin-bottom:$info-column-spacing-vertical}
+	
+	.aside_column{
+		width:270px;float:left;
+		.tit_bar{
+			border-color:$color-price;color:$color-price;
+			margin-bottom:$aside-column-spacing-vertical;
+		}
+		.task_btn{padding:3px 0 ($aside-column-spacing-vertical + 1)}
+	}
+	
 	
 }
 
@@ -53,40 +66,81 @@
 }
 
 .total_price{
-	border-bottom:1px solid #e4e4e4;padding-bottom:24px;margin-bottom:38px;	
+	border-bottom:1px solid #e4e4e4;
+	margin-bottom:$aside-column-spacing-vertical;
 }
 .price_summary{
+	$_cell_padding:15px;
 	width:100%;border-collapse:collapse;padding:0;border:0;
-	th,td{text-align:left;padding:10px 0;font-weight:normal;color:#666;font-size:15px}
+	margin-bottom:$aside-column-spacing-vertical - $_cell_padding - 3;
+	th,td{text-align:left;padding:0 0 $_cell_padding;font-weight:normal;color:#666;font-size:15px}
+	
 	td{text-align:right}
 	.desc{font-size:11px}
 	strong{color:$color-price}
+	
+	.bank_sender{text-align:right;width:134px;padding:3px 6px;font-size:12px;color:#666}
+	
+	.real_price{
+		.real_price_tit{display:block;font-size:12px;}
+		strong{font-size:30px;display:block;text-align:right}
+		border-bottom:1px dotted #e4e4e4;
+	}
+	
+	.txt_point{
+		text-align:right;
+		font-size:12px;
+		color:#666;
+		.txt_point_tit{
+			font-size:12px;
+		}
+		.point_number{font-size:15px;}
+		
+	}
+	
+	
+	
 }
 
 .task_btn{
-	border-bottom:1px solid #e4e4e4;padding:0 0 38px;overflow:hidden;
+	border-bottom:1px solid #e4e4e4;padding:0 0 40px;overflow:hidden;
 	.btn_order,.btn_payment{@extend %btn-point2;width:100%;margin-bottom:6px;box-sizing:border-box}
 	.btn_shopping,.btn_cancel{@extend %btn-gray;width:100%}
 	.btn_print_bill{@extend %btn-point1;width:100%;margin-bottom:6px}
 	.btn_wishlist{@extend %btn-gray;width:100%;margin-bottom:6px;box-sizing:border-box;line-height:45px}
 	.btn_remove{@extend %btn-gray;width:48%;float:left;margin-right:6px;box-sizing:border-box;line-height:45px}
 	.btn_shopping{width:auto;display:block;overflow:hidden;box-sizing:border-box;line-height:45px}
+	.now_paying{
+		color:#f54500;
+		font-size:14px;
+		font-weight:bold;
+		text-align:center;
+		display:block;
+		margin-bottom:40px;
+	}
 }
 
 /* 주문결제 */
 .form_tb{
-	th,td{text-align:left;padding:10px 0;font-weight:normal;color:#666;font-size:14px;vertical-align:top;line-height:38px}
+	$_cell_padding:15px;
+	margin-bottom:$info-column-spacing-vertical - $_cell_padding;
+	th,td{text-align:left;padding:0 0 $_cell_padding;font-weight:normal;color:#666;font-size:14px;vertical-align:top;line-height:38px}
 	th{padding-left:8px}
 	.ipt_text{@extend %ipt-text;height:18px;line-height:18px;padding:10px;width:340px;color:#454545;margin-right:9px}
 	.ipt_text:focus{border-color:#f54500}
 	.phone_cell .ipt_text{text-align:center;width:90px}
 	.address,.road_address{}
 	.road_address{color:#999;font-size:11px;line-height:18px;margin-top:-5px}
+	
+	&.no_form{
+		th,td{line-height:1.5}
+	}
+	
 }
 
 .order_person_info,
 .order_reciept_info,
-.pay_method{border-bottom:1px solid #e4e4e4;padding-bottom:10px;margin-bottom:45px}
+.pay_method{border-bottom:1px solid #e4e4e4;padding-bottom:0;margin-bottom:45px}
 
 .order_reciept_info{
 	@extend %form_item;
@@ -100,19 +154,75 @@
 }
 
 .pay_method{
-	li{margin-bottom:30px}
+	li{
+		margin-bottom:$aside-column-spacing-vertical - 2;
+		display:inline-block;
+		*display:inline;*zoom:1
+	}
+	.desc{color:#999;font-size:11px;margin-top:0px}
+	padding-bottom:0;
+	margin-bottom:$aside-column-spacing-vertical;
 }
 
 .use_point{
-	border-bottom:1px solid #e4e4e4;padding:16px 0 17px;
+	border-bottom:1px solid #e4e4e4;padding:1px 0;
+	margin-bottom:$aside-column-spacing-vertical;
 	.tit{color:$color-price;font-size:12px;line-height:18px;margin-bottom:5px;display:block}
 	.tit .desc{color:#999}
-	.ipt_text{@extend %ipt-text;width:140px;padding:10px;text-align:center}
+	.ipt_text{@extend %ipt-text;width:140px;padding:10px;text-align:center;color:#999}
 	
 	.btn_lookup,.btn_regist,.btn_use_point{@extend %btn-gray;height:36px;line-height:36px;font-size:14px}
 	.btn_use_point{width:100px}
 	.btn_lookup,.btn_regist{width:47px}	
-	.point_cover{margin-bottom:27px}
+	.point_cover{margin-bottom:$aside-column-spacing-vertical}
 	.btn_use_point{}
 	.desc{color:#999;font-size:11px;padding:5px 0 0}
+}
+
+.eggBanner_1{
+	border:1px solid #dedede;
+	border-top:0;
+	padding:10px 13px 7px;
+	*{
+		height:auto!important;
+		padding:0!important;
+		font-size:12px;
+		border:0!important;
+		display:inline!important;
+		line-height:18px;
+		vertical-align:baseline!important;
+		color:#999;
+	}
+	span.red,span.red b{color:#f54500}
+}
+
+.card_gate{position:absolute;}
+.account_select{max-width:150px;}
+
+.privacy_statement{
+	margin-bottom:30px;
+	.tit_bar{@extend %tit-bar;font-size:16px;color:$point-color1;margin-bottom:10px}
+	.desc{color:#666;font-size:12px;line-height:18px;margin-bottom:11px;}
+	.scroll{border:1px solid #e4e4e4;overflow:auto;max-height:190px;*height:190px;padding:20px;line-height:18px;font-size:11px;color:#666}
+	a{color:#666;text-decoration:underline}
+	
+	.btns{
+		text-align:right;
+		padding:10px 0 0;
+		font-size:12px;
+		line-height:18px;
+		input{width:13px;height:13px;overflow:hidden;margin-right:3px;vertical-align:middle;margin-left:14px}
+		label{display:inline-block;vertical-align:middle;color:#454545}
+	}
+}
+
+.task_btn_bottom{
+	padding:30px 0;
+	text-align:center;
+	.btn_home{
+		@extend %btn-gray;height:36px;line-height:36px;font-size:14px;
+		width:auto;
+		padding:0 15px;
+		
+	}
 }
