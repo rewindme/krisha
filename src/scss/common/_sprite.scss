@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+@import "compass/utilities/sprites/base";
+
+// 스프라이트 폴더 추가시마다 내용 추가
+$icons: sprite-map("mypage/*.png", $layout: smart, $spacing:30px, $repeat:no-repeat) !default;
+
+
+
+// 스프라이트 이미지의 base-class placeholder를 생성함
+@each $sprite-base-class in $icons
+{
+	%#{sprite-map-name($sprite-base-class)}#{'-sprite'} {
+		background-image:sprite-url($sprite-base-class);
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display:inline-block;
+		vertical-align:top;
+	}
+}
+
+
+
+// 여기부터는 수정하지 마세요~!
+
+
+// 스프라이트 이미지 mixin - 기본
+@mixin use-sprite($sprite, $map: $icons, $sprite-retina: false, $offset-x: 0, $offset-y: 0) {
+	
+	// baseclass	
+	$base-class:#{'%'}#{sprite-map-name($map)}#{'-sprite'};	
+    @extend #{$base-class} !optional;
+    
+    // 레티나 체크
+	$_pixel-ratio:1;	
+	@if $sprite-retina {
+		$_pixel-ratio:2;
+		background-size:round( image-width(sprite-path($map)) / $_pixel-ratio ) round( image-height(sprite-path($map)) / $_pixel-ratio );
+	} @else {
+		$_pixel-ratio:1;		
+	}
+	
+    // background-position
+	background-position: round( (nth(sprite-position($map, $sprite), 1) / $_pixel-ratio) + $offset-x) round((nth(sprite-position($map, $sprite), 2) / $_pixel-ratio) + $offset-y);
+	    
+    // width
+    width:round( image-width(sprite-file($map, $sprite)) / $_pixel-ratio ) + $offset-x;
+
+    // height
+	height:round( image-height(sprite-file($map, $sprite)) / $_pixel-ratio) + $offset-y;
+
+}
+
+// 스프라이트 이미지 mixin 확장 - margin-left: width /2 * -1 , left:50%;
+
+
+
+// width 값 받아오기
+@function get-sprite-width($sprite,$map: $icons, $sprite-retina: false) {
+	$_pixel-ratio:1;
+	
+	// 레티나 인경우 pixel ratio를 2로 변경	
+	@if $sprite-retina {
+		$_pixel-ratio:2;
+	} @else {
+		$_pixel-ratio:1;
+	}
+	
+    @return round( image-width( sprite-file($map, $sprite) ) / $_pixel-ratio );
+}
+
+// height 값 받아오기
+@function get-sprite-height($sprite,$map: $icons, $sprite-retina: false) {
+	$_pixel-ratio:1;
+	
+	// 레티나 인경우 pixel ratio를 2로 변경	
+	@if $sprite-retina {
+		$_pixel-ratio:2;
+	} @else {
+		$_pixel-ratio:1;
+	}
+	
+    @return round( image-height(sprite-file($map, $sprite)) / $_pixel-ratio);
+}

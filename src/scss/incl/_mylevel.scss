@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+.my_level_cont{
+	$border-bottom-color:#d5d5d5;
+	$padding-value:25px;
+	$color-selected:#f54500;
+	
+	padding:$padding-value;
+	background-color:#f2f2f2;
+	margin-bottom:15px;
+	
+	.tit_mylevel{
+		@include use-sprite(my_level);
+		margin-bottom:20px;
+		margin-left:-5px;
+	}
+	
+	.grade{
+		border-bottom:1px solid $border-bottom-color;
+		padding-bottom:$padding-value;
+		margin-bottom:20px;
+		
+		strong{
+			display:block;
+		}
+		.user_name{
+			
+		}
+		.chk_grade{
+			color:#999;
+			text-decoration:underline;
+			font-size:11px;
+		}
+		
+	}
+	
+	.stats{
+		$line-spacing:15px;
+		
+		border-bottom:1px solid $border-bottom-color;
+		margin-bottom:$padding-value;
+		padding:0 5px $padding-value - $line-spacing;
+		
+		dt{
+			float:left;
+			clear:both;
+			margin-bottom:$line-spacing;
+		}
+		dd{
+			overflow:hidden;
+			text-align:right;
+			color:#666;
+			margin-bottom:$line-spacing;
+		}
+		
+		.price{
+			color:$color-selected;
+			font-weight:bold;
+			font-size:16px;
+		}
+	}
+	
+	.article{
+		padding:0 7px 0;
+		li{
+			height:32px;
+			line-height:32px;
+			margin-bottom:12px;
+			
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+		
+		a{
+			color:#757575;
+		}
+		
+		.cnt{
+			font-weight:bold;
+			color:#454545;
+		}
+		
+		.ico_menu1{
+			@include use-sprite(ico_menu1,$icons,false,0,5px);
+			width:45px;
+			height:32px;
+		}
+		.ico_menu2{
+			@include use-sprite(ico_menu2,$icons,false,3px,7px);
+			width:45px;
+			height:32px;
+		}
+		.ico_menu3{
+			@include use-sprite(ico_menu3,$icons,false,5px,4px);
+			width:45px;
+			height:32px;
+		}
+		.ico_menu4{
+			@include use-sprite(ico_menu4,$icons,false,2px,2px);
+			width:45px;
+			height:32px;
+		}
+		
+	}
+}
+
+.banner_area{
+	background-color:#f2f2f2;
+	padding:10px;
+}

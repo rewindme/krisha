@@ -1,10 +1,10 @@
 %tit-bar{border-bottom:2px solid $point-color1;color:#666;font-weight:normal;height:29px;line-height:29px;font-size:14px}
 
-
 $aside-column-spacing-vertical:25px;
 $info-column-spacing-vertical:25px;
 
-.basket{
+.basket,.mypage{
+
 	@extend %form_container;overflow:hidden;
 	//750px
 	.info_column{width:750px;float:left;margin-right:40px}

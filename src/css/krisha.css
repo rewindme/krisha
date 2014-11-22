@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Sungkyu, Choi */
 /* common */
 body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
@@ -5,7 +6,7 @@ body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, fo
   padding: 0; }
 
 body, input, textarea, select, button {
-  font-family: Helvetica, 'Apple SD Gothic Neo', 'nanumgothic', 'Dotum', '돋움', Sans-serif;
+  font-family: Helvetica,'Apple SD Gothic Neo','nanumgothic','Dotum','돋움',Sans-serif;
   font-size: 14px; }
 
 img, fieldset {
@@ -50,28 +51,29 @@ i, .ht {
   color: transparent;
   line-height: 0; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png");
+  background-image: url("../im/sp/sp_img.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .btn_next, .btn_prev, .nav_dot button {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_ico.png"); }
+  background-image: url("../im/sp/sp_ico.png"); }
 
 .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_main_tit.png"); }
+  background-image: url("../im/sp/sp_main_tit.png"); }
 
 .favorite_bar .tit_favorite, .favorite_bar li a {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_fav.png"); }
+  background-image: url("../im/sp/sp_fav.png"); }
 
 .general_store .tab, .prod_tab {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/pt_sp_bg.png");
+  background-image: url("../im/sp/pt_sp_bg.png");
   background-repeat: repeat-x; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info {
@@ -80,20 +82,21 @@ i, .ht {
   position: relative;
   zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
+  background-image: url("../im/sp/sp_prod_view.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .ipt_rdo label, .ipt_chk label {
-  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
+  background: url("../im/sp/sp_component.png") no-repeat; }
 
 .product_view .info_head {
-  font-family: nanumgothic, sans-serif; }
+  font-family: nanumgothic,sans-serif; }
 
 .join_complete .logo_krisha, .join_complete .img_welcome {
-  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_join_complete.png") no-repeat; }
+  background: url("../im/sp/sp_join_complete.png") no-repeat; }
 
 .general_store .tab, .prod_tab, .section_head .tab {
   position: absolute;
@@ -109,7 +112,10 @@ i, .ht {
     letter-spacing: -1px;
     height: 23px;
     line-height: 23px; }
-  .general_store .tab a:hover, .prod_tab a:hover, .section_head .tab a:hover, .general_store .tab .selected a, .prod_tab .selected a, .section_head .tab .selected a {
+  .general_store .tab a:hover, .prod_tab a:hover, .section_head .tab a:hover,
+  .general_store .tab .selected a,
+  .prod_tab .selected a,
+  .section_head .tab .selected a {
     color: #454545; }
   .general_store .tab .selected a, .prod_tab .selected a, .section_head .tab .selected a {
     border-bottom: 2px solid #f54500; }
@@ -170,20 +176,20 @@ i, .ht {
     height: 0;
     visibility: hidden; }
 
-.product_view .location, .login .location, .join .location, .basket .location, .container .location {
+.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .container .location {
   position: absolute;
   left: 40px;
   top: 23px;
   line-height: 16px; }
-  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .container .location .ico_home {
+  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home {
     width: 89px;
     height: 13px;
     background-position: 0 1px; }
-  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .container .location .slash {
+  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .container .location .slash {
     color: #999;
     vertical-align: top;
     font-size: 11px; }
-  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .container .location .current a {
+  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .container .location .current a {
     color: #f54500;
     font-size: 11px;
     font-weight: bold;
@@ -256,6 +262,20 @@ i, .ht {
   padding-left: 26px; }
 .ipt_chk input:checked + label {
   background-position: 0 -76px; }
+
+.mypage .mypage_head ul:after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.mypage .tit_mykrisha, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
+  background-image: url('../im/mypage-sabcd901108.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top; }
 
 body {
   background-color: #f8f8f8; }
@@ -480,7 +500,8 @@ body {
     vertical-align: middle; }
   .contact a, .contact .txt {
     color: #fff; }
-  .contact a:hover, .contact a.txt:hover {
+  .contact a:hover,
+  .contact a.txt:hover {
     text-decoration: underline; }
   .contact .bar {
     padding: 0 5px; }
@@ -528,7 +549,9 @@ body {
   margin: 0;
   position: relative; }
 
-.bnr_box.cst_center .delivery, .bnr_box.cst_center .qna, .bnr_box.cst_center .faq {
+.bnr_box.cst_center .delivery,
+.bnr_box.cst_center .qna,
+.bnr_box.cst_center .faq {
   position: absolute;
   left: 26px;
   top: 97px;
@@ -688,7 +711,8 @@ body {
     vertical-align: middle;
     display: inline-block;
     width: 0; }
-  .prod_list .selected .prod_thumb:before, .prod_list a:hover .prod_thumb:before {
+  .prod_list .selected .prod_thumb:before,
+  .prod_list a:hover .prod_thumb:before {
     border-color: #f54500;
     z-index: 30; }
   .prod_list .prod_thumb img {
@@ -812,7 +836,8 @@ body {
     display: block; }
   .product_view .info_head .price {
     padding: 0; }
-  .product_view .info_head .price strong, .product_view .info_head .point strong {
+  .product_view .info_head .price strong,
+  .product_view .info_head .point strong {
     font-family: arial;
     font-size: 24px; }
   .product_view .info_head .point strong {
@@ -894,7 +919,8 @@ body {
     text-align: center;
     color: #666;
     font-size: 12px; }
-  .qty_cont .qty_cnt_up, .qty_cont .qty_cnt_down {
+  .qty_cont .qty_cnt_up,
+  .qty_cont .qty_cnt_down {
     position: absolute;
     right: 0;
     top: 0;
@@ -938,7 +964,8 @@ body {
       background-color: #e5e5e5; }
     .goods-multi-option .multi_option_cover .qty_ipt {
       background-color: #f2f2f2; }
-    .goods-multi-option .multi_option_cover .qty_cnt_up, .goods-multi-option .multi_option_cover .qty_cnt_down {
+    .goods-multi-option .multi_option_cover .qty_cnt_up,
+    .goods-multi-option .multi_option_cover .qty_cnt_down {
       width: 18px;
       height: 18px;
       background-position: 5px -47px; }
@@ -988,7 +1015,8 @@ body {
     width: 14.1%; }
   .prod_tab li a {
     width: 100%; }
-  .prod_tab li.selected a, .prod_tab .cnt {
+  .prod_tab li.selected a,
+  .prod_tab .cnt {
     color: #f54500;
     font-weight: bold; }
 
@@ -1110,7 +1138,9 @@ body {
     background-color: #f8f8f8;
     padding: 18px 21px;
     color: #999; }
-  .board .receipt, .board .complete, .board .label_reply {
+  .board .receipt,
+  .board .complete,
+  .board .label_reply {
     border: 1px solid #5cc4b9;
     border-radius: 3px;
     color: #5cc4b9;
@@ -1177,7 +1207,9 @@ body {
   .text_board .task_article {
     text-align: right;
     padding: 10px 20px 0 0; }
-  .text_board .btn_answer, .text_board .btn_modify, .text_board .btn_delete {
+  .text_board .btn_answer,
+  .text_board .btn_modify,
+  .text_board .btn_delete {
     background-color: #999;
     display: inline-block;
     color: #fff;
@@ -1276,10 +1308,10 @@ body {
     background-position: -55px -132px;
     height: 70px; }
 
-.login, .join, .basket {
+.login, .join, .basket, .mypage {
   padding: 130px 60px 80px;
   position: relative; }
-  .login h2, .join h2, .basket h2 {
+  .login h2, .join h2, .basket h2, .mypage h2 {
     font-size: 16px;
     font-weight: normal;
     border-bottom: 1px solid #5cc4b9;
@@ -1287,7 +1319,7 @@ body {
     padding-bottom: 8px;
     color: #5cc4b9;
     margin-bottom: 38px; }
-  .login button, .join button, .basket button, .login label, .join label, .basket label {
+  .login button, .join button, .basket button, .mypage button, .login label, .join label, .basket label, .mypage label {
     cursor: pointer; }
 
 /* 로그인 */
@@ -1626,7 +1658,7 @@ body {
     padding: 135px 0 110px; }
 
 .ico_arrow {
-  background: url("/shop/data/skin/KRISHA_ING/img//ico_arrow.png") no-repeat;
+  background: url("../im//ico_arrow.png") no-repeat;
   width: 6px;
   height: 10px;
   display: inline-block;
@@ -1655,7 +1687,8 @@ body {
     width: auto;
     vertical-align: top;
     padding: 0 16px; }
-  .goods_list .tab li.all, .goods_list .tab li:hover {
+  .goods_list .tab li.all,
+  .goods_list .tab li:hover {
     position: relative;
     border: 1px solid #f54500;
     z-index: 10; }
@@ -1705,7 +1738,7 @@ body {
     padding: 0 18px;
     width: auto; }
 
-.basket .tit_bar, .order_list th, .privacy_statement .tit_bar {
+.basket .tit_bar, .mypage .tit_bar, .order_list th, .privacy_statement .tit_bar {
   border-bottom: 2px solid #5cc4b9;
   color: #666;
   font-weight: normal;
@@ -1713,24 +1746,24 @@ body {
   line-height: 29px;
   font-size: 14px; }
 
-.basket {
+.basket, .mypage {
   overflow: hidden; }
-  .basket .info_column {
+  .basket .info_column, .mypage .info_column {
     width: 750px;
     float: left;
     margin-right: 40px; }
-  .basket .tit_bar {
+  .basket .tit_bar, .mypage .tit_bar {
     font-size: 16px;
     color: #5cc4b9;
     margin-bottom: 25px; }
-  .basket .aside_column {
+  .basket .aside_column, .mypage .aside_column {
     width: 270px;
     float: left; }
-    .basket .aside_column .tit_bar {
+    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar {
       border-color: #f54500;
       color: #f54500;
       margin-bottom: 25px; }
-    .basket .aside_column .task_btn {
+    .basket .aside_column .task_btn, .mypage .aside_column .task_btn {
       padding: 3px 0 26px; }
 
 .order_list {
@@ -1946,7 +1979,9 @@ body {
   .form_tb.no_form th, .form_tb.no_form td {
     line-height: 1.5; }
 
-.order_person_info, .order_reciept_info, .pay_method {
+.order_person_info,
+.order_reciept_info,
+.pay_method {
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 0;
   margin-bottom: 45px; }
@@ -2083,3 +2118,139 @@ body {
     font-size: 14px;
     width: auto;
     padding: 0 15px; }
+
+.mypage .tit_mykrisha {
+  background-position: 0 -43px;
+  width: 98px;
+  height: 14px;
+  margin-bottom: 20px; }
+.mypage .mypage_head ul {
+  border-bottom: 1px solid #f54500; }
+.mypage .mypage_head li {
+  float: left;
+  width: 140px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #e4e4e4;
+  border-bottom: 0;
+  margin-right: -1px; }
+  .mypage .mypage_head li a {
+    display: block;
+    text-align: center;
+    color: #666;
+    font-size: 14px; }
+.mypage .mypage_head li.selected {
+  position: relative;
+  border: 1px solid #f54500;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px; }
+  .mypage .mypage_head li.selected a {
+    color: #f54500; }
+.mypage .mypage_table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0;
+  table-layout: fixed; }
+  .mypage .mypage_table td {
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+    padding: 16px 0;
+    color: #666; }
+    .mypage .mypage_table td.title {
+      text-align: left; }
+  .mypage .mypage_table .order_no {
+    display: block;
+    color: #f54500;
+    font-weight: normal; }
+  .mypage .mypage_table .date {
+    display: block;
+    color: #666;
+    font-size: 11px; }
+  .mypage .mypage_table .view_order {
+    color: #666;
+    text-decoration: underline;
+    font-size: 12px; }
+.mypage .navigation a {
+  color: #757575; }
+.mypage .navigation b {
+  color: #f54500;
+  padding: 0 6px; }
+
+.my_level_cont {
+  padding: 25px;
+  background-color: #f2f2f2;
+  margin-bottom: 15px; }
+  .my_level_cont .tit_mylevel {
+    background-position: 0 0;
+    width: 83px;
+    height: 13px;
+    margin-bottom: 20px;
+    margin-left: -5px; }
+  .my_level_cont .grade {
+    border-bottom: 1px solid #d5d5d5;
+    padding-bottom: 25px;
+    margin-bottom: 20px; }
+    .my_level_cont .grade strong {
+      display: block; }
+    .my_level_cont .grade .chk_grade {
+      color: #999;
+      text-decoration: underline;
+      font-size: 11px; }
+  .my_level_cont .stats {
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 25px;
+    padding: 0 5px 10px; }
+    .my_level_cont .stats dt {
+      float: left;
+      clear: both;
+      margin-bottom: 15px; }
+    .my_level_cont .stats dd {
+      overflow: hidden;
+      text-align: right;
+      color: #666;
+      margin-bottom: 15px; }
+    .my_level_cont .stats .price {
+      color: #f54500;
+      font-weight: bold;
+      font-size: 16px; }
+  .my_level_cont .article {
+    padding: 0 7px 0; }
+    .my_level_cont .article li {
+      height: 32px;
+      line-height: 32px;
+      margin-bottom: 12px; }
+      .my_level_cont .article li:last-child {
+        margin-bottom: 0; }
+    .my_level_cont .article a {
+      color: #757575; }
+    .my_level_cont .article .cnt {
+      font-weight: bold;
+      color: #454545; }
+    .my_level_cont .article .ico_menu1 {
+      background-position: -58px -140px;
+      width: 34px;
+      height: 27px;
+      width: 45px;
+      height: 32px; }
+    .my_level_cont .article .ico_menu2 {
+      background-position: 3px -138px;
+      width: 31px;
+      height: 25px;
+      width: 45px;
+      height: 32px; }
+    .my_level_cont .article .ico_menu3 {
+      background-position: -117px -141px;
+      width: 29px;
+      height: 28px;
+      width: 45px;
+      height: 32px; }
+    .my_level_cont .article .ico_menu4 {
+      background-position: 2px -85px;
+      width: 32px;
+      height: 30px;
+      width: 45px;
+      height: 32px; }
+
+.banner_area {
+  background-color: #f2f2f2;
+  padding: 10px; }
