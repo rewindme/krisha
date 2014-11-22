@@ -2,8 +2,8 @@
 # - 로컬    :development
 # - 배포버전 :production
 
-environment = :development
-# environment = :production
+# environment = :development
+environment = :production
 
 # 경로 설정
 # - config.rb 파일의 위치를 기준으로 상대경로
@@ -17,7 +17,7 @@ javascripts_dir = "src/js"
 # 스프라이트 이미지 경로
 # - 로컬 버전인경우 css상에 표시될 이미지의 상대경로
 # - 배포버전인경우 cdn url 
-http_generated_images_path = (environment == :development) ? "../im" : "https://ssl.pstatic.net/static/pwe/nm"
+http_generated_images_path = (environment == :development) ? "../im" : "img/sp/"
 
 
 # css 생성시 코드 스타일 지정

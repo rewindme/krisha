@@ -1,0 +1,67 @@
+{*** 상단레이아웃 | main/index.php ***}
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="{_meta_title}">
+<meta name="keywords" content="{_meta_keywords}">
+<title>{_meta_title}</title>
+
+<!--{ ? _POST }-->
+
+<script>
+
+history.back = function() {
+
+    var step = (document.location.protocol == 'https:' ? 2 : 1) * -1;
+
+    history.go( step );
+
+}
+
+</script>
+
+<!--{ / }-->
+	
+<!--{ ? connInterpark == 'ok' // 인터파크 헤더 호출 }-->
+<script type="text/javascript">var entr_nm = "<a href='/'>{_cfg.shopName}</a>"; // 상점명</script>
+<script type="text/javascript" src="http://www.interpark.com/gate/minm/topnav_shopplus_soho.js"></script>
+<!--{ / }-->
+<!--{ ? _COOKIE['cc_inflow'] == 'yahoo_fss' || _GET['ref'] == 'yahoo_fss' }-->
+<script language="javascript" src="http://kr.ysp.shopping.yahoo.com/ysp/ysp_fss.js"></script>
+<script> ykfss_bar();</script>
+<!--{ / }-->
+<script src="../common.js"></script>
+<script src="../cart_tab/godo.cart_tab.js"></script>
+<!-- <link rel="styleSheet" href="../cart_tab/style.css"> -->
+<link rel="stylesheet" href="../style.css">
+<script src="../jquery.1.9.1.min.js"></script>
+<script src="../jssor.sliders.mini.js"></script>
+	<!--{ ? _overture_cc }-->{ # overture_cc }<!--{ / }-->
+<!-- {=customHeader} -->
+</head>
+
+{=copyProtect()}
+<body bgcolor="{_cfg['outbg_color']}" background="{_cfg['outbg_img']}" {=copyProtect(true)}>
+
+{ # myBoxLayer }
+<!--{? useMyLevelLayerBox == 'y'}-->
+{ # myLevelLayer }
+<!--{/}-->
+<!--{ ? alertCoupon == true}-->
+{ # myCouponLayer }
+<!--{ / }-->
+
+<!--{ ? this->tpl_['header_inc'] }-->
+{ # header_inc // 상단디자인 }
+<!--{ / }-->
+
+<!-- {_cfg['shopAlign']} -->
+<!-- {_cfg['shopSize']} -->
+
+<!--{ ? this->tpl_['side_inc'] && _cfg['outline_sidefloat'] == 'left' }-->
+{ # side_inc // 측면디자인 }
+<!--{ / }-->
+	
+<!-- bgcolor="{_cfg['inbg_color']}" background="{_cfg['inbg_img']}" -->

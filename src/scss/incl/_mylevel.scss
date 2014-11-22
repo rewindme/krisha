@@ -20,17 +20,77 @@
 		padding-bottom:$padding-value;
 		margin-bottom:20px;
 		
-		strong{
-			display:block;
-		}
-		.user_name{
+		.group_thumb{
+			float:left;
+			margin-right:13px;
+			height:78px;
+			white-space:nowrap;
+			font-size:0;
 			
+			.guide{
+				display:inline-block;
+				vertical-align:middle;
+				width:0;
+				height:100%;
+			}
+			img{vertical-align:middle}
 		}
-		.chk_grade{
-			color:#999;
-			text-decoration:underline;
-			font-size:11px;
+		.info{
+			overflow:hidden;
+			position:relative;
+			color:#454545;
+			line-height:18px;
+			
+			strong{
+				display:block;
+			}
+			
+			.user_name{
+				
+			}
+			
+			.group_name{
+				font-weight:bold;
+				font-size:24px;
+				font-family:"Arial Black";
+				display:block;
+				line-height:24px;
+				text-transform:uppercase;
+			}
+			.group_name.krisha{
+				color:#6cc;
+			}
+			.group_name.prime{
+				color:#ffc600;
+			}
+			.group_name.diamond{
+				color:#ffc600;
+			}
+			.group_name.crystal{
+				color:#ffc600;
+			}
+			.group_name.gold{
+				color:#ffc600;
+			}
+			.group_name.silver{
+				color:#ffc600;
+			}
+			.group_name.cubic{
+				color:#ffc600;
+			}
+			
+			
+			.chk_grade{
+				color:#999;
+				text-decoration:underline;
+				font-size:11px;
+				position:absolute;
+				right:0;
+				bottom:0;
+				line-height:1.4;
+			}
 		}
+		
 		
 	}
 	
@@ -39,7 +99,8 @@
 		
 		border-bottom:1px solid $border-bottom-color;
 		margin-bottom:$padding-value;
-		padding:0 5px $padding-value - $line-spacing;
+		padding:0 5px $padding-value - $line-spacing - 5;
+		color:#666;
 		
 		dt{
 			float:left;
@@ -49,7 +110,6 @@
 		dd{
 			overflow:hidden;
 			text-align:right;
-			color:#666;
 			margin-bottom:$line-spacing;
 		}
 		
@@ -61,7 +121,7 @@
 	}
 	
 	.article{
-		padding:0 7px 0;
+		padding:0 7px 8px;
 		li{
 			height:32px;
 			line-height:32px;
@@ -106,6 +166,5 @@
 }
 
 .banner_area{
-	background-color:#f2f2f2;
-	padding:10px;
+	margin-bottom:15px;
 }

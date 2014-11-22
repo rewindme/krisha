@@ -8,81 +8,97 @@
 			<span class="slash">/</span>
 			<span class="current">주문실패</span>
 		</div>
-		<table width=100% style="border:1px solid #DEDEDE" cellpadding=0 cellspacing=0>
-		<tr>
-			<td width=150 valign=top align=right bgcolor="#F3F3F3" style="padding-top:5px"><img src="../img/common/order_step_end.gif"></td>
-			<td style="border:5px solid #F3F3F3; padding:5px 10px;">
-		
-			<table width=100% cellpadding=2>
-			<col width=100>
-			<!--{ ? settlekind=="o" }-->
-			<tr>
-				<td>결제방법</td>
-				<td>계좌이체</td>
-			</tr>
-			<tr>
-				<td>결과</td>
-				<td>주문이 실패되었습니다</td>
-			</tr>
-			<!--{ : settlekind=="c" }-->
-			<tr>
-				<td>결제방법</td>
-				<td>신용카드</td>
-			</tr>
-			<tr>
-				<td>결과</td>
-				<td>주문이 실패되었습니다</td>
-			</tr>
-			<!--{ : settlekind=="y" }-->
-			<tr>
-				<td>결제방법</td>
-				<td>옐로페이</td>
-			</tr>
-			<tr>
-				<td>결과</td>
-				<td>주문이 실패되었습니다</td>
-			</tr>
-			<!--{ / }-->
-			<!--{ ? step==0 && step2 > 50 && in_array(settlekind,array('c','o','v','y')) && pgfailreason }--><!-- 결제실패사유 -->
-			<tr>
-				<td>결제실패사유</td>
-				<td>{=pgfailreason}</td>
-			</tr>
-			<!--{ / }-->
-			<!--{ ? eggyn == 'f' }-->
-			<tr>
-				<td>전자보증보험</td>
-				<td>보증서 발급 실패로 주문이 실패되었습니다.</td>
-			</tr>
-			<!--{ / }-->
-			<tr><td height=3></td></tr>
-			<tr><td height=1 bgcolor=#efefef colspan=2 style="font-size:0px;"></td></tr>
-			<tr><td height=3></td></tr>
-			<tr>
-				<td>주문번호</td>
-				<td>{ordno}</td>
-			</tr>
-			<tr>
-				<td>주문자명</td>
-				<td>{nameOrder}</td>
-			</tr>
-			<tr>
-				<td>주문일자</td>
-				<td>{orddt}</td>
-			</tr>
-			<tr>
-				<td>주문금액</td>
-				<td>{=number_format(settleprice)}원</td>
-			</tr>
-			</table>
-		
-			</td>
-		</tr>
-		</table>
-		
-		<div class="task_btn_bottom">
-			<a href="../index.php" class="btn_home">쇼핑 계속하기</a>
+		<div class="info_column">
+			<div class="order_reciept_info">
+				<h3 class="tit_bar">주문실패정보</h3>
+				<table class="form_tb">
+					<caption><span class="blind">주문실패정보</span></caption>
+					<colgroup>
+						<col style="width:160px">
+						<col style="width:auto">
+					</colgroup>
+					<tr>
+						<td>주문번호</td>
+						<td><a href="../mypage/mypage_orderview.php?ordno={ordno}" class="order_number">{ordno}</a></td>
+					</tr>
+					<tr>
+						<td>주문자명</td>
+						<td>{nameOrder}</td>
+					</tr>
+					<tr>
+						<td>주문일자</td>
+						<td>{orddt}</td>
+					</tr>
+					<tr>
+						<td>주문금액</td>
+						<td><strong class="price">{=number_format(goodsprice)}원</strong></td>
+					</tr>
+				</table>
+			</div>
+			<!--{ @ dataBanner( 46 ) }-->{.tag}<!--{ / }-->
+			
 		</div>
+		<div class="aside_column">
+			<h3 class="tit_bar">결제결과</h3>		
+			<div class="total_price">
+				<table class="price_summary">
+					<caption><span class="blind">결제결과</span></caption>
+					<colgroup>
+						<col style="width:auto">
+						<col style="width:180px;">
+					</colgroup>
+					<tbody>
+
+					<!--{ ? settlekind=="o" }-->
+					<tr>
+						<th>결제방법</th>
+						<td>계좌이체</td>
+					</tr>
+					<tr>
+						<th>결과</th>
+						<td>주문이 실패되었습니다</td>
+					</tr>
+					<!--{ : settlekind=="c" }-->
+					<tr>
+						<th>결제방법</th>
+						<td>신용카드</td>
+					</tr>
+					<tr>
+						<th>결과</th>
+						<td>주문이 실패되었습니다</td>
+					</tr>
+					<!--{ : settlekind=="y" }-->
+					<tr>
+						<th>결제방법</th>
+						<td>옐로페이</td>
+					</tr>
+					<tr>
+						<th>결과</th>
+						<td>주문이 실패되었습니다</td>
+					</tr>
+					<!--{ / }-->
+					<!--{ ? step==0 && step2 > 50 && in_array(settlekind,array('c','o','v','y')) && pgfailreason }--><!-- 결제실패사유 -->
+					<tr>
+						<th>결제실패사유</th>
+						<td>{=pgfailreason}</td>
+					</tr>
+					<!--{ / }-->
+					<!--{ ? eggyn == 'f' }-->
+					<tr>
+						<th>전자보증보험</th>
+						<td>보증서 발급 실패로 주문이 실패되었습니다.</td>
+					</tr>
+					<!--{ / }-->				
+					</tbody>
+				</table>
+			</div>
+			<div class="task_btn">
+				<a href="../index.php" class="btn_home">쇼핑 계속하기</a>
+				<a href="../mypage/mypage_orderlist.php" class="btn_mykrisha">마이크리샤</a>
+			</div>
+			
+		</div>
+		
 	</div>
 
 

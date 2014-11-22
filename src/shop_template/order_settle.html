@@ -77,8 +77,37 @@
 				</table>
 			</div>
 		</div>
-		<div class="aside_column">
+		<div class="aside_column settle">
 			<h3 class="tit_bar">결제정보</h3>			
+			<div class="total_price">
+				<table class="price_summary">
+					<caption><span class="blind">주문결제금액</span></caption>
+					<colgroup>
+						<col style="width:auto">
+						<col style="width:180px;">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th>
+							<span class="real_price_tit">결제금액</span>
+						</th>
+						<td>
+							<strong class="real_price">{=number_format(settleprice)}원</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="txt_point_tit"><!-- { ?_set.emoney.emoney_standard == 1} -->받으실<br>예상 적립금<!-- { : } -->받으실 적립금<!-- { / } --></span>
+						</th>
+						<td>
+							<div class="txt_point">
+								<span class="point_number" id="el-orderitem-total-reserve">{=number_format(cart->bonus)}</span>원
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
 			<div class="total_price">
 				<table class="price_summary">
 					<caption><span class="blind">주문결제금액</span></caption>
@@ -87,18 +116,6 @@
 						<col style="width:130px;">
 					</colgroup>
 					<tbody>
-					<tr>
-						<th class="real_price" colspan="2">
-							<span class="real_price_tit">실제 결제금액</span>
-							<strong>{=number_format(settleprice)}원</strong>
-							<div class="txt_point">
-								<span class="txt_point_tit"><!-- { ?_set.emoney.emoney_standard == 1} -->받으실예상적립금<!-- { : } -->받으실적립금<!-- { / } --></span>
-								<span class="point_number" id="el-orderitem-total-reserve">{=number_format(cart->bonus)}</span>원
-							</div>
-							</tr>
-						</th>
-						
-					</tr>
 					<tr>
 						<th class="">총 주문금액</th>
 						<td>{=number_format(cart->goodsprice)}원</td>
@@ -239,7 +256,7 @@
 				<!--{ / }-->
 				</form>
 				
-				<table class="price_summary">
+				<table class="price_summary<!--{ ? settlekind=="a" }--> exception_card<!--{ / }-->">
 					<caption><span class="blind">결제정보</span></caption>
 					<colgroup>
 						<col style="width:auto">

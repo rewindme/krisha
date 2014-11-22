@@ -52,28 +52,28 @@ i, .ht {
   line-height: 0; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
-.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay {
-  background-image: url("../im/sp/sp_img.png");
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .btn_next, .btn_prev, .nav_dot button {
-  background-image: url("../im/sp/sp_ico.png"); }
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_ico.png"); }
 
 .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general {
-  background-image: url("../im/sp/sp_main_tit.png"); }
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_main_tit.png"); }
 
 .favorite_bar .tit_favorite, .favorite_bar li a {
-  background-image: url("../im/sp/sp_fav.png"); }
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_fav.png"); }
 
 .general_store .tab, .prod_tab {
-  background-image: url("../im/sp/pt_sp_bg.png");
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/pt_sp_bg.png");
   background-repeat: repeat-x; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info {
@@ -84,19 +84,19 @@ i, .ht {
 
 .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
-  background-image: url("../im/sp/sp_prod_view.png");
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .ipt_rdo label, .ipt_chk label {
-  background: url("../im/sp/sp_component.png") no-repeat; }
+  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
 
 .product_view .info_head {
   font-family: nanumgothic,sans-serif; }
 
 .join_complete .logo_krisha, .join_complete .img_welcome {
-  background: url("../im/sp/sp_join_complete.png") no-repeat; }
+  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_join_complete.png") no-repeat; }
 
 .general_store .tab, .prod_tab, .section_head .tab {
   position: absolute;
@@ -195,7 +195,7 @@ i, .ht {
     font-weight: bold;
     vertical-align: top; }
 
-.login_box .submit_cover .btn_login, .task_btn .btn_print_bill {
+.login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home {
   border: 1px solid #58bcb1;
   background-color: #5cc4b9;
   color: #fff;
@@ -217,7 +217,7 @@ i, .ht {
 .review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .task_btn a.btn_order, .task_btn a.btn_payment {
   line-height: 47px; }
 
-.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home {
+.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .task_btn .btn_home, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home {
   border: 1px solid #aeaeae;
   background-color: #b4b4b4;
   color: #fff;
@@ -271,7 +271,7 @@ i, .ht {
   visibility: hidden; }
 
 .mypage .tit_mykrisha, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
-  background-image: url('../im/mypage-sabcd901108.png');
+  background-image: url('img/sp/mypage-sabcd901108.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -1658,7 +1658,7 @@ body {
     padding: 135px 0 110px; }
 
 .ico_arrow {
-  background: url("../im//ico_arrow.png") no-repeat;
+  background: url("/shop/data/skin/KRISHA_ING/img//ico_arrow.png") no-repeat;
   width: 6px;
   height: 10px;
   display: inline-block;
@@ -1890,26 +1890,32 @@ body {
     padding: 3px 6px;
     font-size: 12px;
     color: #666; }
+  .price_summary .real_price_tit {
+    font-size: 12px; }
   .price_summary .real_price {
-    border-bottom: 1px dotted #e4e4e4; }
-    .price_summary .real_price .real_price_tit {
-      display: block;
-      font-size: 12px; }
-    .price_summary .real_price strong {
-      font-size: 30px;
-      display: block;
-      text-align: right; }
+    font-size: 30px;
+    text-align: right; }
+  .price_summary .txt_point_tit {
+    font-size: 12px; }
   .price_summary .txt_point {
-    text-align: right;
-    font-size: 12px;
-    color: #666; }
-    .price_summary .txt_point .txt_point_tit {
-      font-size: 12px; }
+    font-size: 12px; }
     .price_summary .txt_point .point_number {
-      font-size: 15px; }
+      font-size: 12px;
+      font-weight: bold; }
+  .price_summary.exception_card {
+    margin-bottom: 0; }
+  .price_summary #orderbox {
+    padding: 0;
+    height: 0; }
+  .price_summary.result_end th {
+    font-size: 12px; }
+  .price_summary.result_end td {
+    font-size: 12px; }
+
+.basket .aside_column.settle .tit_bar {
+  margin-bottom: 18px; }
 
 .task_btn {
-  border-bottom: 1px solid #e4e4e4;
   padding: 0 0 40px;
   overflow: hidden; }
   .task_btn .btn_order, .task_btn .btn_payment {
@@ -1918,6 +1924,8 @@ body {
     box-sizing: border-box; }
   .task_btn .btn_shopping, .task_btn .btn_cancel {
     width: 100%; }
+  .task_btn a.btn_cancel {
+    line-height: 47px; }
   .task_btn .btn_print_bill {
     width: 100%;
     margin-bottom: 6px; }
@@ -1938,6 +1946,11 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     line-height: 45px; }
+  .task_btn .btn_mykrisha, .task_btn .btn_home {
+    width: 100%;
+    line-height: 45px; }
+  .task_btn .btn_home {
+    margin-bottom: 6px; }
   .task_btn .now_paying {
     color: #f54500;
     font-size: 14px;
@@ -2001,6 +2014,13 @@ body {
   margin: 0;
   line-height: 18px;
   padding: 10px 0 0; }
+.order_reciept_info .order_number {
+  color: #f54500;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: underline; }
+.order_reciept_info .price {
+  color: #f54500; }
 
 .pay_method {
   padding-bottom: 0;
@@ -2049,7 +2069,6 @@ body {
 
 .eggBanner_1 {
   border: 1px solid #dedede;
-  border-top: 0;
   padding: 10px 13px 7px; }
   .eggBanner_1 * {
     height: auto !important;
@@ -2119,62 +2138,68 @@ body {
     width: auto;
     padding: 0 15px; }
 
-.mypage .tit_mykrisha {
-  background-position: 0 -43px;
-  width: 98px;
-  height: 14px;
-  margin-bottom: 20px; }
-.mypage .mypage_head ul {
-  border-bottom: 1px solid #f54500; }
-.mypage .mypage_head li {
-  float: left;
-  width: 140px;
-  height: 38px;
-  line-height: 38px;
-  border: 1px solid #e4e4e4;
-  border-bottom: 0;
-  margin-right: -1px; }
-  .mypage .mypage_head li a {
-    display: block;
-    text-align: center;
-    color: #666;
-    font-size: 14px; }
-.mypage .mypage_head li.selected {
-  position: relative;
-  border: 1px solid #f54500;
-  border-bottom: 1px solid #fff;
-  margin-bottom: -1px; }
-  .mypage .mypage_head li.selected a {
-    color: #f54500; }
-.mypage .mypage_table {
-  width: 100%;
-  border-collapse: collapse;
-  padding: 0;
-  table-layout: fixed; }
-  .mypage .mypage_table td {
-    border-bottom: 1px solid #e4e4e4;
-    text-align: center;
-    padding: 16px 0;
-    color: #666; }
-    .mypage .mypage_table td.title {
-      text-align: left; }
-  .mypage .mypage_table .order_no {
-    display: block;
+.mypage {
+  padding-top: 80px; }
+  .mypage .tit_mykrisha {
+    background-position: 0 -43px;
+    width: 98px;
+    height: 14px;
+    margin-bottom: 20px; }
+  .mypage .mypage_head ul {
+    border-bottom: 1px solid #f54500; }
+  .mypage .mypage_head li {
+    float: left;
+    width: 140px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+    margin-right: -1px; }
+    .mypage .mypage_head li a {
+      display: block;
+      text-align: center;
+      color: #666;
+      font-size: 14px; }
+  .mypage .mypage_head li.selected {
+    position: relative;
+    border: 1px solid #f54500;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px; }
+    .mypage .mypage_head li.selected a {
+      color: #f54500; }
+  .mypage .mypage_table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    table-layout: fixed; }
+    .mypage .mypage_table td {
+      border-bottom: 1px solid #e4e4e4;
+      text-align: center;
+      padding: 16px 0;
+      color: #666; }
+      .mypage .mypage_table td.title {
+        text-align: center; }
+        .mypage .mypage_table td.title a {
+          color: #f54500;
+          font-size: 16px;
+          font-weight: bold; }
+    .mypage .mypage_table .order_no {
+      display: block;
+      color: #f54500;
+      font-weight: normal; }
+    .mypage .mypage_table .date {
+      display: block;
+      color: #666;
+      font-size: 11px; }
+    .mypage .mypage_table .view_order {
+      color: #666;
+      text-decoration: underline;
+      font-size: 12px; }
+  .mypage .navigation a {
+    color: #757575; }
+  .mypage .navigation b {
     color: #f54500;
-    font-weight: normal; }
-  .mypage .mypage_table .date {
-    display: block;
-    color: #666;
-    font-size: 11px; }
-  .mypage .mypage_table .view_order {
-    color: #666;
-    text-decoration: underline;
-    font-size: 12px; }
-.mypage .navigation a {
-  color: #757575; }
-.mypage .navigation b {
-  color: #f54500;
-  padding: 0 6px; }
+    padding: 0 6px; }
 
 .my_level_cont {
   padding: 25px;
@@ -2190,16 +2215,60 @@ body {
     border-bottom: 1px solid #d5d5d5;
     padding-bottom: 25px;
     margin-bottom: 20px; }
-    .my_level_cont .grade strong {
-      display: block; }
-    .my_level_cont .grade .chk_grade {
-      color: #999;
-      text-decoration: underline;
-      font-size: 11px; }
+    .my_level_cont .grade .group_thumb {
+      float: left;
+      margin-right: 13px;
+      height: 78px;
+      white-space: nowrap;
+      font-size: 0; }
+      .my_level_cont .grade .group_thumb .guide {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: 100%; }
+      .my_level_cont .grade .group_thumb img {
+        vertical-align: middle; }
+    .my_level_cont .grade .info {
+      overflow: hidden;
+      position: relative;
+      color: #454545;
+      line-height: 18px; }
+      .my_level_cont .grade .info strong {
+        display: block; }
+      .my_level_cont .grade .info .group_name {
+        font-weight: bold;
+        font-size: 24px;
+        font-family: "Arial Black";
+        display: block;
+        line-height: 24px;
+        text-transform: uppercase; }
+      .my_level_cont .grade .info .group_name.krisha {
+        color: #6cc; }
+      .my_level_cont .grade .info .group_name.prime {
+        color: #ffc600; }
+      .my_level_cont .grade .info .group_name.diamond {
+        color: #ffc600; }
+      .my_level_cont .grade .info .group_name.crystal {
+        color: #ffc600; }
+      .my_level_cont .grade .info .group_name.gold {
+        color: #ffc600; }
+      .my_level_cont .grade .info .group_name.silver {
+        color: #ffc600; }
+      .my_level_cont .grade .info .group_name.cubic {
+        color: #ffc600; }
+      .my_level_cont .grade .info .chk_grade {
+        color: #999;
+        text-decoration: underline;
+        font-size: 11px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        line-height: 1.4; }
   .my_level_cont .stats {
     border-bottom: 1px solid #d5d5d5;
     margin-bottom: 25px;
-    padding: 0 5px 10px; }
+    padding: 0 5px 5px;
+    color: #666; }
     .my_level_cont .stats dt {
       float: left;
       clear: both;
@@ -2207,14 +2276,13 @@ body {
     .my_level_cont .stats dd {
       overflow: hidden;
       text-align: right;
-      color: #666;
       margin-bottom: 15px; }
     .my_level_cont .stats .price {
       color: #f54500;
       font-weight: bold;
       font-size: 16px; }
   .my_level_cont .article {
-    padding: 0 7px 0; }
+    padding: 0 7px 8px; }
     .my_level_cont .article li {
       height: 32px;
       line-height: 32px;
@@ -2252,5 +2320,6 @@ body {
       height: 32px; }
 
 .banner_area {
-  background-color: #f2f2f2;
-  padding: 10px; }
+  margin-bottom: 15px; }
+
+/*# sourceMappingURL=krisha.css.map */

@@ -81,35 +81,67 @@ $info-column-spacing-vertical:25px;
 	
 	.bank_sender{text-align:right;width:134px;padding:3px 6px;font-size:12px;color:#666}
 	
+	.real_price_tit{font-size:12px;}
+	
 	.real_price{
-		.real_price_tit{display:block;font-size:12px;}
-		strong{font-size:30px;display:block;text-align:right}
-		border-bottom:1px dotted #e4e4e4;
+		font-size:30px;
+		text-align:right;
 	}
 	
-	.txt_point{
-		text-align:right;
+	.txt_point_tit{
 		font-size:12px;
-		color:#666;
-		.txt_point_tit{
+	}
+	.txt_point{
+		font-size:12px;
+		.point_number{
 			font-size:12px;
+			font-weight:bold
 		}
-		.point_number{font-size:15px;}
 		
 	}
 	
-	
-	
+	&.exception_card{
+		margin-bottom:0;
+	}
+	#orderbox{
+		padding:0;
+		height:0;
+	}
+	&.result_end{
+		th{
+			font-size:12px;
+		}
+		td{
+			font-size:12px;
+		}
+	}
+}
+
+.basket .aside_column.settle{
+	.tit_bar{
+		margin-bottom:18px;
+	}
 }
 
 .task_btn{
-	border-bottom:1px solid #e4e4e4;padding:0 0 40px;overflow:hidden;
+	padding:0 0 40px;overflow:hidden;
 	.btn_order,.btn_payment{@extend %btn-point2;width:100%;margin-bottom:6px;box-sizing:border-box}
-	.btn_shopping,.btn_cancel{@extend %btn-gray;width:100%}
+	.btn_shopping,.btn_cancel{
+		@extend %btn-gray;
+		width:100%;
+	}
+	a.btn_cancel{
+		line-height:47px;
+	}
+	
 	.btn_print_bill{@extend %btn-point1;width:100%;margin-bottom:6px}
 	.btn_wishlist{@extend %btn-gray;width:100%;margin-bottom:6px;box-sizing:border-box;line-height:45px}
 	.btn_remove{@extend %btn-gray;width:48%;float:left;margin-right:6px;box-sizing:border-box;line-height:45px}
 	.btn_shopping{width:auto;display:block;overflow:hidden;box-sizing:border-box;line-height:45px}
+	
+	.btn_mykrisha,.btn_home{@extend %btn-point1;width:100%;line-height:45px;}
+	.btn_home{@extend %btn-gray;margin-bottom:6px;}
+	
 	.now_paying{
 		color:#f54500;
 		font-size:14px;
@@ -151,6 +183,16 @@ $info-column-spacing-vertical:25px;
 		.ipt_text{width:47px;text-align:center}
 	}
 	.road_address{margin:0;line-height:18px;padding:10px 0 0}
+	
+	.order_number{
+		color:$color-price;	
+		font-weight:bold;
+		font-size:14px;
+		text-decoration:underline;
+	}
+	.price{
+		color:$color-price;
+	}
 }
 
 .pay_method{
@@ -181,7 +223,6 @@ $info-column-spacing-vertical:25px;
 
 .eggBanner_1{
 	border:1px solid #dedede;
-	border-top:0;
 	padding:10px 13px 7px;
 	*{
 		height:auto!important;

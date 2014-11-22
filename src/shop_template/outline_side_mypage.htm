@@ -1,0 +1,71 @@
+{*** 마이페이지_left | member/myinfo.php ***}
+<div class="aside_column" id="left_mypage">
+	<div class="my_level_cont">
+		<h3 class="tit_mylevel"><i class="blind">MY LEVEL</i></h3>
+		<div class="grade">
+			<div class="group_thumb">
+				<!--{ ? _sess.grpnm_disp_type == 'icon' }--><img src="../data/member/icon/{_sess.grpnm_icon}" alt="{_sess.grpnm_icon}"><!--{ / }--> 
+				<span class="guide"></span>
+			</div>
+			<div class="info">
+				<strong>Hello!</strong>
+				<span class="user_name">{_member.name}</span>님의 멤버십은<br>
+				<span class="group_name {_sess.grpnm}">{_sess.grpnm}</span>		
+				등급입니다.
+				<a href="../main/html.php?htmid=service/level.htm" class="chk_grade">혜택확인</a>
+			</div>
+			
+			
+		</div>
+		<div class="stats">
+			<dl>
+				<dt>총 구매금액</dt>
+				<dd><span class="price">{=number_format(_sess.sum_sale)}</span>원</dd>
+				<dt>적립금</dt>
+				<dd><span class="price">{=number_format(_sess.emoney)}</span>원</dd>
+				<dt>할인쿠폰</dt>
+				<dd><span class="price">{=number_format(_sess.cnt_coupon)}</span>장</dd>
+			</dl>
+		</div>
+		<div class="article">
+			<ul>
+			<li>
+				<a href="../mypage/mypage_qna.php">
+					<span class="ico_menu1"></span>
+					1:1 상담문의
+					<em class="cnt"></em>
+				</a>
+			</li>
+			<li>
+				<a href="../mypage/mypage_review.php">
+					<span class="ico_menu2"></span>
+					나의 상품후기
+					<em class="cnt"></em>
+				</a>
+			</li>
+			<li>
+				<a href="../mypage/mypage_qna_goods.php">
+					<span class="ico_menu3"></span>
+					나의 상품문의
+					<em class="cnt"></em>
+				</a>
+			</li>
+			<li>
+				<a href="../member/myinfo.php">
+					<span class="ico_menu4"></span>
+					회원정보수정/탈퇴
+					<!-- ../member/hack.php -->
+				</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner_area">
+		<!--{ @ dataBanner( 51 ) }-->{.tag}<!--{ / }-->
+	</div>
+	<div class="banner_area">
+		<!--{ @ dataBanner( 52 ) }-->{.tag}<!--{ / }-->
+	</div>
+</div>
+
+
