@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.view_today{
+	$point-color:#f54500;
+	
+	position:relative;
+	zoom:1;
+	
+	h3{
+		border-bottom:3px solid $point-color;	
+		margin-bottom:30px;
+		padding-bottom:10px;
+		font-size:18px;
+	}
+	.prod_list{
+		li{
+			width:168px;
+		}
+		
+		.prod_thumb{
+			height:auto;
+			img{height:auto;}
+		}
+	}
+	
+	.view_more{
+		position:absolute;
+		right:0;
+		top:0;
+		color:$point-color;
+		font-size:12px;
+	}
+}

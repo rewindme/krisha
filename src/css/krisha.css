@@ -51,6 +51,40 @@ i, .ht {
   color: transparent;
   line-height: 0; }
 
+/* 
+ * Nanum Barun Gothic (Korean) http://hangeul.naver.com
+ */
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Nanum Barun Gothic UltraLight"), local("Nanum Barun Gothic-UltraLight"), local("NanumBarunGothic UltraLight");
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-UltraLight.eot);
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-UltraLight.eot?#iefix) format("embedded-opentype"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-UltraLight.woff) format("woff"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-UltraLight.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Nanum Barun Gothic Light"), local("Nanum Barun Gothic-Light"), local("NanumBarunGothic Light");
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Light.eot);
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Light.eot?#iefix) format("embedded-opentype"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Light.woff) format("woff"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Light.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Nanum Barun Gothic Regular"), local("Nanum Barun Gothic-Regular"), local("NanumBarunGothic Regular");
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Regular.eot);
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Regular.eot?#iefix) format("embedded-opentype"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Regular.woff) format("woff"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Nanum Barun Gothic Bold"), local("Nanum Barun Gothic-Bold"), local("NanumBarunGothic Bold");
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.eot);
+  src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.eot?#iefix) format("embedded-opentype"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.woff) format("woff"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.ttf) format("truetype"); }
+body {
+  font-family: 'Nanum Barun Gothic',sans-serif; }
+
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
@@ -58,22 +92,22 @@ i, .ht {
   *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png");
+  background-image: url("../im/sp/sp_img.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .btn_next, .btn_prev, .nav_dot button {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_ico.png"); }
+  background-image: url("../im/sp/sp_ico.png"); }
 
 .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_main_tit.png"); }
+  background-image: url("../im/sp/sp_main_tit.png"); }
 
 .favorite_bar .tit_favorite, .favorite_bar li a {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_fav.png"); }
+  background-image: url("../im/sp/sp_fav.png"); }
 
 .general_store .tab, .prod_tab {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/pt_sp_bg.png");
+  background-image: url("../im/sp/pt_sp_bg.png");
   background-repeat: repeat-x; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info {
@@ -84,19 +118,19 @@ i, .ht {
 
 .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
-  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
+  background-image: url("../im/sp/sp_prod_view.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .ipt_rdo label, .ipt_chk label {
-  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
+  background: url("../im/sp/sp_component.png") no-repeat; }
 
 .product_view .info_head {
   font-family: nanumgothic,sans-serif; }
 
 .join_complete .logo_krisha, .join_complete .img_welcome {
-  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_join_complete.png") no-repeat; }
+  background: url("../im/sp/sp_join_complete.png") no-repeat; }
 
 .general_store .tab, .prod_tab, .section_head .tab {
   position: absolute;
@@ -271,7 +305,7 @@ i, .ht {
   visibility: hidden; }
 
 .mypage .tit_mykrisha, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
-  background-image: url('img/sp/mypage-sabcd901108.png');
+  background-image: url('../im/mypage-sabcd901108.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -1658,7 +1692,7 @@ body {
     padding: 135px 0 110px; }
 
 .ico_arrow {
-  background: url("/shop/data/skin/KRISHA_ING/img//ico_arrow.png") no-repeat;
+  background: url("../im//ico_arrow.png") no-repeat;
   width: 6px;
   height: 10px;
   display: inline-block;
@@ -2200,6 +2234,27 @@ body {
   .mypage .navigation b {
     color: #f54500;
     padding: 0 6px; }
+
+.view_today {
+  position: relative;
+  zoom: 1; }
+  .view_today h3 {
+    border-bottom: 3px solid #f54500;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-size: 18px; }
+  .view_today .prod_list li {
+    width: 168px; }
+  .view_today .prod_list .prod_thumb {
+    height: auto; }
+    .view_today .prod_list .prod_thumb img {
+      height: auto; }
+  .view_today .view_more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #f54500;
+    font-size: 12px; }
 
 .my_level_cont {
   padding: 25px;
