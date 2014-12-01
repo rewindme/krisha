@@ -2,8 +2,8 @@
 # - 로컬    :development
 # - 배포버전 :production
 
-# environment = :development
-environment = :production
+environment = :development
+# environment = :production
 
 # 경로 설정
 # - config.rb 파일의 위치를 기준으로 상대경로
