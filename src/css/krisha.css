@@ -92,22 +92,22 @@ body {
   *zoom: 1; }
 
 .btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay {
-  background-image: url("../im/sp/sp_img.png");
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .btn_next, .btn_prev, .nav_dot button {
-  background-image: url("../im/sp/sp_ico.png"); }
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_ico.png"); }
 
 .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general {
-  background-image: url("../im/sp/sp_main_tit.png"); }
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_main_tit.png"); }
 
 .favorite_bar .tit_favorite, .favorite_bar li a {
-  background-image: url("../im/sp/sp_fav.png"); }
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_fav.png"); }
 
 .general_store .tab, .prod_tab {
-  background-image: url("../im/sp/pt_sp_bg.png");
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/pt_sp_bg.png");
   background-repeat: repeat-x; }
 
 .container, .footer, .header .cover, .header .category_cover, .product_view .product_info {
@@ -118,19 +118,16 @@ body {
 
 .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
-  background-image: url("../im/sp/sp_prod_view.png");
+  background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
   background-repeat: no-repeat;
   background-color: transparent;
   vertical-align: top; }
 
 .ipt_rdo label, .ipt_chk label {
-  background: url("../im/sp/sp_component.png") no-repeat; }
-
-.product_view .info_head {
-  font-family: nanumgothic,sans-serif; }
+  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_component.png") no-repeat; }
 
 .join_complete .logo_krisha, .join_complete .img_welcome {
-  background: url("../im/sp/sp_join_complete.png") no-repeat; }
+  background: url("/shop/data/skin/KRISHA_ING/img/sp/sp_join_complete.png") no-repeat; }
 
 .general_store .tab, .prod_tab, .section_head .tab {
   position: absolute;
@@ -305,7 +302,7 @@ body {
   visibility: hidden; }
 
 .mypage .tit_mykrisha, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
-  background-image: url('../im/mypage-sabcd901108.png');
+  background-image: url('img/sp/mypage-sabcd901108.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -1692,7 +1689,7 @@ body {
     padding: 135px 0 110px; }
 
 .ico_arrow {
-  background: url("../im//ico_arrow.png") no-repeat;
+  background: url("/shop/data/skin/KRISHA_ING/img//ico_arrow.png") no-repeat;
   width: 6px;
   height: 10px;
   display: inline-block;
@@ -2244,15 +2241,16 @@ body {
     padding-bottom: 10px;
     font-size: 18px; }
   .view_today .prod_list li {
-    width: 168px; }
+    width: 168px;
+    margin-right: 26px; }
   .view_today .prod_list .prod_thumb {
     height: auto; }
     .view_today .prod_list .prod_thumb img {
       height: auto; }
   .view_today .view_more {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
     color: #f54500;
     font-size: 12px; }
 

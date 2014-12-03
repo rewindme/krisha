@@ -15,6 +15,7 @@
 	.prod_list{
 		li{
 			width:168px;
+			margin-right:26px;
 		}
 		
 		.prod_thumb{
@@ -25,8 +26,8 @@
 	
 	.view_more{
 		position:absolute;
-		right:0;
-		top:0;
+		right:10px;
+		top:10px;
 		color:$point-color;
 		font-size:12px;
 	}

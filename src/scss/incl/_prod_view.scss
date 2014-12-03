@@ -11,7 +11,6 @@
 	
 	.info_cover{position:absolute;left:660px;top:40px}
 	.info_head{
-		@extend %nanum;
 		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block;font-weight:bold;font-family:arial}
 		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:6px;font-weight:normal}
 		.prod_desc{color:$color-weak;font-size:13px;line-height:18px;margin-bottom:15px}
