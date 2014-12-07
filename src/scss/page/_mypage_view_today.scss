@@ -1,16 +1,27 @@
 @charset "utf-8";
-
+%header3_style{
+	border-bottom:3px solid #f54500;
+	margin-bottom:30px;
+	padding-bottom:10px;
+	font-size:18px;
+}
+%view_more{
+	position:absolute;
+	right:10px;
+	top:10px;
+	color:#999;
+	font-size:12px;
+}
 .view_today{
 	$point-color:#f54500;
 	
 	position:relative;
+	padding-top:30px;
+	
 	zoom:1;
 	
 	h3{
-		border-bottom:3px solid $point-color;	
-		margin-bottom:30px;
-		padding-bottom:10px;
-		font-size:18px;
+		@extend %header3_style;
 	}
 	.prod_list{
 		li{
@@ -25,10 +36,88 @@
 	}
 	
 	.view_more{
-		position:absolute;
-		right:10px;
-		top:10px;
-		color:$point-color;
-		font-size:12px;
+		@extend %view_more;
+		top:40px;
+	}
+}
+
+.board_summary{
+	@extend %clear;
+	
+	clear:both;
+	overflow:hidden;
+	padding:50px 0 0;
+	
+	.summary_cover{
+		position:relative;
+		width:330px;
+		margin-right:35px;
+		float:left;
+		
+		h3{
+			@extend %header3_style;
+			margin-bottom:0;
+		}
+		
+		li{
+			position:relative;
+			border-bottom:1px solid #e4e4e4;
+			line-height:21px;
+			height:21px;
+			padding:15px 90px 15px 22px;
+			background:url($IMG_DOMAIN + 'bullet_point.png') no-repeat 10px center;
+						
+			a{
+				color:#666;
+				display:inline-block;
+				vertical-align:middle;
+				@extend %ellipsis;
+			}
+			.ellisis_cover{
+				display:inline-block;
+				max-width:100%;
+				position:relative;
+				white-space:nowrap;
+				
+				.ellisis_post{
+					display:inline-block;
+					vertical-align:middle;
+				}
+			}
+			
+			.date{
+				color:#a0a0a0;
+				position:absolute;
+				right:10px;
+				top:15px;
+			}
+		}
+		.view_more{
+			@extend %view_more;
+		}
+		
+		.btn_view_prod{
+			border:1px solid #f54500;
+			color:#f54500;
+			border-radius:3.1px;
+			font-size:11px;
+			height:15px;
+			line-height:17px;
+			padding:0 3px;
+			position:relative;
+			top:-1px;
+		}
+		
+		&.board_2{
+			li{
+				padding-right:90px + 70px;
+			}
+		}
+		&.board_3{
+			margin-right:0;
+			li{
+				padding-right:90px + 60px;
+			}
+		}
 	}
 }

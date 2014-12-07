@@ -294,12 +294,18 @@ body {
 .ipt_chk input:checked + label {
   background-position: 0 -76px; }
 
-.mypage .mypage_head ul:after {
+.mypage .mypage_head ul:after, .board_summary:after {
   content: '';
   clear: both;
   display: block;
   height: 0;
   visibility: hidden; }
+
+.board_summary .summary_cover li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; }
 
 .mypage .tit_mykrisha, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
   background-image: url('img/sp/mypage-sabcd901108.png');
@@ -2231,15 +2237,40 @@ body {
   .mypage .navigation b {
     color: #f54500;
     padding: 0 6px; }
+  .mypage .emoney .mypage_table .point_summary {
+    font-size: 19px;
+    text-align: center;
+    color: #555; }
+  .mypage .emoney .mypage_table .user_name {
+    font-weight: normal; }
+  .mypage .emoney .mypage_table .price {
+    color: #ff5400;
+    font-size: 20px; }
+  .mypage .emoney .mypage_table td {
+    text-align: left; }
+  .mypage .emoney .mypage_table .cell_date {
+    text-align: center; }
+  .mypage .emoney .mypage_table .cell_log {
+    text-align: right;
+    padding-right: 30px; }
+
+.view_today h3, .board_summary .summary_cover h3 {
+  border-bottom: 3px solid #f54500;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 18px; }
+
+.view_today .view_more, .board_summary .summary_cover .view_more {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #999;
+  font-size: 12px; }
 
 .view_today {
   position: relative;
+  padding-top: 30px;
   zoom: 1; }
-  .view_today h3 {
-    border-bottom: 3px solid #f54500;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    font-size: 18px; }
   .view_today .prod_list li {
     width: 168px;
     margin-right: 26px; }
@@ -2248,11 +2279,64 @@ body {
     .view_today .prod_list .prod_thumb img {
       height: auto; }
   .view_today .view_more {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #f54500;
-    font-size: 12px; }
+    top: 40px; }
+
+.board_summary {
+  clear: both;
+  overflow: hidden;
+  padding: 50px 0 0; }
+  .board_summary .summary_cover {
+    position: relative;
+    width: 330px;
+    margin-right: 35px;
+    float: left; }
+    .board_summary .summary_cover h3 {
+      margin-bottom: 0; }
+    .board_summary .summary_cover li {
+      position: relative;
+      border-bottom: 1px solid #e4e4e4;
+      line-height: 21px;
+      height: 21px;
+      padding: 15px 90px 15px 22px;
+      background: url("/shop/data/skin/KRISHA_ING/img/bullet_point.png") no-repeat 10px center; }
+      .board_summary .summary_cover li a {
+        color: #666;
+        display: inline-block;
+        vertical-align: middle; }
+      .board_summary .summary_cover li .ellisis_cover {
+        display: inline-block;
+        max-width: 100%;
+        position: relative;
+        white-space: nowrap; }
+        .board_summary .summary_cover li .ellisis_cover .ellisis_post {
+          display: inline-block;
+          vertical-align: middle; }
+      .board_summary .summary_cover li .date {
+        color: #a0a0a0;
+        position: absolute;
+        right: 10px;
+        top: 15px; }
+    .board_summary .summary_cover .btn_view_prod {
+      border: 1px solid #f54500;
+      color: #f54500;
+      border-radius: 3.1px;
+      font-size: 11px;
+      height: 15px;
+      line-height: 17px;
+      padding: 0 3px;
+      position: relative;
+      top: -1px; }
+    .board_summary .summary_cover.board_2 li {
+      padding-right: 160px; }
+    .board_summary .summary_cover.board_3 {
+      margin-right: 0; }
+      .board_summary .summary_cover.board_3 li {
+        padding-right: 150px; }
+
+.mypage .emoney .mypage_table .price, .my_level_cont .grade .info .group_name {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Arial Black"; }
 
 .my_level_cont {
   padding: 25px;
@@ -2289,9 +2373,6 @@ body {
       .my_level_cont .grade .info strong {
         display: block; }
       .my_level_cont .grade .info .group_name {
-        font-weight: bold;
-        font-size: 24px;
-        font-family: "Arial Black";
         display: block;
         line-height: 24px;
         text-transform: uppercase; }

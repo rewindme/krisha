@@ -23,53 +23,40 @@ function order_confirm(ordno)
 			<span class="current">쇼핑백</span>
 		</div>
 		<div class="info_column">
-			<div class="history">
+			<div class="emoney">
 				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
 				<div class="mypage_head">
 					<ul>
-						<li class="selected"><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
-						<li><a href="../mypage/mypage_emoney.php">적립금</a></li>
+						<li><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
+						<li class="selected"><a href="../mypage/mypage_emoney.php">적립금</a></li>
 						<li><a href="../mypage/mypage_coupon.php">할인쿠폰</a></li>
 						<li><a href="../mypage/mypage_wishlist.php">관심상품</a></li>
 					</ul>
 				</div>
 				<div class="mypage_body">
-					<form name=frmOrderList method=post>
-					<input type=hidden name=mode>
-					<input type=hidden name=ordno>
 					<table class="mypage_table">
 						<caption><i class="blind">주문내역</i></caption>
 						<colgroup>
 							<col style="width:140px">
 							<col style="width:auto">
 							<col style="width:110px">
-							<col style="width:110px">
-							<col style="width:110px">
-							<col style="width:70px">
 						</colgroup>
 						<tbody>
-							<!--{ @ loop }-->
 							<tr>
-								<td>
-									<span class="date">{.orddt}</span>
-									<a href="mypage_orderview.php?ordno={.ordno}" class="view_order">주문상세보기</a>
+								<td colspan="3" class="point_summary">
+									<strong class="user_name">{_name}</strong>님의 사용 가능한 적립금은 <strong class="price">{=number_format(_emoney)}</strong>원 입니다.
 								</td>
-								<td class="title">
-									<a href="mypage_orderview.php?ordno={.ordno}">{.ordno}</a>
-								</td>
-								<td align=center>{.str_settlekind}</td>
-								<td>
-									<span class="price">{=number_format(.settleprice)}</span>원
-								</td>
-								<td>
-									{.str_step}
-								</td>
-								<td>
-									<!--{ ? .step==3 && !.step2 }-->
-									<a href="javascript:order_confirm({.ordno})" class="btn_receive">수령확인</a>
-									<!--{ : .escrowconfirm==2 }-->
-									수령완료
-									<!--{ / }-->
+							</tr>
+							<!--{ @ _loop }-->
+							<tr>
+								<td class="cell_date">{.regdts}</td>
+								<td>{.memo}</td>
+								<td class="cell_log">
+									{ ? .emoney > 0 }
+										+{=number_format(.emoney)}원
+									{ : }
+										{=number_format(.emoney)}원
+									{ / }
 								</td>
 							</tr>
 							<!--{ / }-->
@@ -78,7 +65,6 @@ function order_confirm(ordno)
 					<div class="navigation">
 						 {pg->page['navi']}
 					</div>
-					</form>
 				</div>
 			</div>
 			

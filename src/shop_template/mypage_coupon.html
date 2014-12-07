@@ -1,18 +1,5 @@
-{*** 주문내역/배송조회 | mypage/mypage_orderlist.php ***}
+{*** 할인쿠폰내역 | mypage/mypage_coupon.php ***}
 { # header }
-
-
-<script>
-function order_confirm(ordno)
-{
-	var fm = document.frmOrderList;
-	fm.mode.value = "confirm";
-	fm.ordno.value = ordno;
-	fm.action = "indb.php";
-	if (confirm('주문하신 상품을 수령하셨습니까?')) fm.submit();
-}
-</script>
-
 
 <!-- container -->
 <div class="container">
@@ -27,16 +14,20 @@ function order_confirm(ordno)
 				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
 				<div class="mypage_head">
 					<ul>
-						<li class="selected"><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
+						<li><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
 						<li><a href="../mypage/mypage_emoney.php">적립금</a></li>
-						<li><a href="../mypage/mypage_coupon.php">할인쿠폰</a></li>
+						<li class="selected"><a href="../mypage/mypage_coupon.php">할인쿠폰</a></li>
 						<li><a href="../mypage/mypage_wishlist.php">관심상품</a></li>
 					</ul>
 				</div>
 				<div class="mypage_body">
-					<form name=frmOrderList method=post>
-					<input type=hidden name=mode>
-					<input type=hidden name=ordno>
+					<table width=100% cellpadding=0 cellspacing=0 border=0>
+						<tr><td align="center">
+						<a href="mypage_coupon.php?tab=all"><img src="../img/common/sale_btn_01{_tab01}.gif" alt="전체" id="sale_btn_01" onmouseover="tab_over(1,'on');" onmouseout="tab_over(1,'off');"/></a>&nbsp;
+						<a href="mypage_coupon.php?tab=wait"><img src="../img/common/sale_btn_03{_tab03}.gif" alt="보유내역" id="sale_btn_03"  onmouseover="tab_over(3,'on');" onmouseout="tab_over(3,'off');"/></a>&nbsp;
+						<a href="mypage_coupon.php?tab=used"><img src="../img/common/sale_btn_02{_tab02}.gif" alt="사용내역" id="sale_btn_02"  onmouseover="tab_over(2,'on');" onmouseout="tab_over(2,'off');"/></a>
+						</td></tr>
+						</table>
 					<table class="mypage_table">
 						<caption><i class="blind">주문내역</i></caption>
 						<colgroup>
@@ -44,41 +35,35 @@ function order_confirm(ordno)
 							<col style="width:auto">
 							<col style="width:110px">
 							<col style="width:110px">
-							<col style="width:110px">
-							<col style="width:70px">
 						</colgroup>
 						<tbody>
-							<!--{ @ loop }-->
+							<!--{ @ goods }-->
 							<tr>
+								<td>{.coupon}</td>
 								<td>
-									<span class="date">{.orddt}</span>
-									<a href="mypage_orderview.php?ordno={.ordno}" class="view_order">주문상세보기</a>
-								</td>
-								<td class="title">
-									<a href="mypage_orderview.php?ordno={.ordno}">{.ordno}</a>
-								</td>
-								<td align=center>{.str_settlekind}</td>
-								<td>
-									<span class="price">{=number_format(.settleprice)}</span>원
+									<div>{.summa}</div>
+									<div>
+										{.dataStr}
+									</div>
 								</td>
 								<td>
-									{.str_step}
+									{_r_couponAbility[.ability]}
+									{=number_format(.price)}{ ? substr(.price,-1)!='%' }원{:}%{/}
 								</td>
 								<td>
-									<!--{ ? .step==3 && !.step2 }-->
-									<a href="javascript:order_confirm({.ordno})" class="btn_receive">수령확인</a>
-									<!--{ : .escrowconfirm==2 }-->
-									수령완료
-									<!--{ / }-->
+									<!--{? .cnt == '미사용' }-->
+									<strong>사용가능</strong>
+									<!--{:}-->
+									<span>사용완료</span>
+									<!--{/}-->
 								</td>
 							</tr>
 							<!--{ / }-->
 						</tbody>
 					</table>
-					<div class="navigation">
-						 {pg->page['navi']}
-					</div>
-					</form>
+					<img src="../img/common/btn_paper.gif" onclick="popup('../mypage/paper_coupon.php',350,200)" style="cursor:hand">
+					
+					
 				</div>
 			</div>
 			
@@ -122,3 +107,9 @@ function order_confirm(ordno)
 </div><!-- End indiv -->
 
 { # footer }
+
+
+
+
+
+

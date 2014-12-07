@@ -98,4 +98,34 @@
 			padding:0 6px;
 		}
 	}
+	
+	.emoney .mypage_table{
+		.point_summary{
+			font-size:19px;
+			text-align:center;
+			color:#555;
+		}
+		.user_name{
+			font-weight:normal;
+		}
+		.price{
+			@extend %arial-black;
+			
+			color:#ff5400;
+			font-size:20px;
+		}
+		td{
+			text-align:left;
+		}
+		
+		.cell_date{
+			text-align:center;
+		}
+		
+		.cell_log{
+			text-align:right;
+			padding-right:30px;
+		}
+		
+	}
 }

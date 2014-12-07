@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+%arial-black{
+	font-weight:bold;
+	font-size:24px;
+	font-family:"Arial Black";
+}
+
 .my_level_cont{
 	$border-bottom-color:#d5d5d5;
 	$padding-value:25px;
@@ -50,9 +56,7 @@
 			}
 			
 			.group_name{
-				font-weight:bold;
-				font-size:24px;
-				font-family:"Arial Black";
+				@extend %arial-black;
 				display:block;
 				line-height:24px;
 				text-transform:uppercase;

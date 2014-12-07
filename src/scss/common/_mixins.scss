@@ -115,3 +115,10 @@ a%btn-point2{
 %clear{
 	&:after{content:'';clear:both;display:block;height:0;visibility:hidden}
 }
+
+%ellipsis{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	max-width:100%;
+}
