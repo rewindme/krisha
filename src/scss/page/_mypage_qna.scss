@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.view_qna{
+	padding:10px 0 0;
+	h3{
+		@extend %header3_style;
+		color:#454545;
+	}
+}

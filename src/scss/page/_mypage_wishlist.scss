@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.mypage{
+	.task_cover{
+		padding:30px 0;
+		.btn_gray{
+			@extend %btn-gray;
+			font-size:14px;
+			height:30px;
+			line-height:28px;
+			width:120px;
+		}	
+	}
+	
+	.wish_list{
+		ul{
+			width:780px;
+		}
+		li{
+			width:168px;
+			margin-right:26px;
+		}
+		
+		.prod_thumb{
+			height:auto;
+		}
+		
+		.chk_prod{
+			display:block;
+			margin-bottom:5px;
+			font-size:12px;
+			
+			input{
+				
+			}
+			label{
+				color:#757575;
+				padding-left:3px;
+				
+			}
+		}
+	}
+	.btns_task{
+		text-align:center;
+		
+		.btn_gray{
+			@extend %btn-gray;
+			
+		}
+		
+		.btn_orange{
+			@extend %btn-point2;
+			
+		}
+		
+		.btn_gray,.btn_orange{
+			font-size:14px;
+			height:30px;
+			line-height:28px;
+			width:120px;
+		}
+	}
+	
+}

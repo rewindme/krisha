@@ -21,13 +21,27 @@
 					</ul>
 				</div>
 				<div class="mypage_body">
-					<table width=100% cellpadding=0 cellspacing=0 border=0>
-						<tr><td align="center">
-						<a href="mypage_coupon.php?tab=all"><img src="../img/common/sale_btn_01{_tab01}.gif" alt="전체" id="sale_btn_01" onmouseover="tab_over(1,'on');" onmouseout="tab_over(1,'off');"/></a>&nbsp;
-						<a href="mypage_coupon.php?tab=wait"><img src="../img/common/sale_btn_03{_tab03}.gif" alt="보유내역" id="sale_btn_03"  onmouseover="tab_over(3,'on');" onmouseout="tab_over(3,'off');"/></a>&nbsp;
-						<a href="mypage_coupon.php?tab=used"><img src="../img/common/sale_btn_02{_tab02}.gif" alt="사용내역" id="sale_btn_02"  onmouseover="tab_over(2,'on');" onmouseout="tab_over(2,'off');"/></a>
-						</td></tr>
-						</table>
+					<div class="coupon_cover">
+						<button type="button" class="btn_regist_coupon" onclick="popup('../mypage/paper_coupon.php',350,200)">쿠폰등록</button>
+						
+						<span class="coupon_select_box" onclick="var el = document.getElementById('coupon_view');el.style.display=='none'?el.style.display='block':el.style.display='none'">
+							<button class="current_option">
+							<!--{? _tab01=='on'}-->
+							할인쿠폰 전체보기
+							<!--{: _tab03=='on'}-->
+							할인쿠폰 보유내역
+							<!--{: _tab02=='on'}-->
+							할인쿠폰 사용내역
+							<!--{/}-->
+							<span class="ico_arrow"></span>
+							</button>
+							<ul id="coupon_view" style="display:none">
+								<li><a href="mypage_coupon.php?tab=all" <!--{? _tab01=='on'}-->class="on"<!--{/}-->>할인쿠폰 전체보기</a></li>
+								<li><a href="mypage_coupon.php?tab=wait" <!--{? _tab03=='on'}-->class="on"<!--{/}-->>할인쿠폰 보유내역</a></li>
+								<li><a href="mypage_coupon.php?tab=used" <!--{? _tab02=='on'}-->class="on"<!--{/}-->>할인쿠폰 사용내역</a></li>
+							</ul>
+						</span>
+					</div>
 					<table class="mypage_table">
 						<caption><i class="blind">주문내역</i></caption>
 						<colgroup>
@@ -61,12 +75,13 @@
 							<!--{ / }-->
 						</tbody>
 					</table>
-					<img src="../img/common/btn_paper.gif" onclick="popup('../mypage/paper_coupon.php',350,200)" style="cursor:hand">
+					
 					
 					
 				</div>
 			</div>
 			
+			<!--{? _todayGoodsList }-->
 			<div class="view_today">
 				<h3>오늘 본 상품</h3>
 				<div class="prod_list">
@@ -88,6 +103,7 @@
 				</div>
 				<a href="../mypage/mypage_today.php" class="view_more"><i>오늘 본 상품</i>더보기</a>
 			</div>
+			<!--{ / }-->
 
 
 		</div>
@@ -96,15 +112,6 @@
 		<!--{ / }-->
 		
 	</div>	
-
-
-
-
-
-
-
-
-</div><!-- End indiv -->
 
 { # footer }
 
