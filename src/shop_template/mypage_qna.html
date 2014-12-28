@@ -4,9 +4,9 @@
 <div class="container">
 	<div class="mypage">
 		<div class="location">
-			<a href="#" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<a href="http://krisha.co.kr" class="ico_home"><i class="blind">KRISHA HOME</i></a>
 			<span class="slash">/</span>
-			<span class="parent">마이크리샤</span>
+			<a href="../mypage/mypage_orderlist.php" class="parent">마이크리샤</a>
 			<span class="slash">/</span>
 			<span class="current">1:1 상담문의</span>
 		</div>
@@ -15,65 +15,49 @@
 				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
 				<div class="view_qna">
 					<h3>1:1 상담문의</h3>
+					
 					<ul class="qna_board">
+						<!--{ @ _loop }-->
 						<li>
+							<div class="title_cover" onclick="view_content(this, event)">
+								<!--{ ? .sno == .parent // 질문 }-->
+								<span class="category_name">{.itemcd}</span>
+								<p>{.subject} <!--{? .replecnt}-->[{.replecnt}]<!--{/}--> {.m_id}</p>
+								<span class="date">{=substr(.regdt,0,10)}</span>
+								
+								<!--{ : .sno != .parent // 답글 }-->
+								<span class="category_name"><img src="../img/common/myqna_answer.gif"></span>
+								<p>{.subject} <!--{? .replecnt}-->[{.replecnt}]<!--{/}--> {.m_id}</p>
+								<span class="date">{=substr(.regdt,0,10)}</span>
+								<!--{ / }-->
+							</div>
 							
+							<div class="contents_cover">
+								<!--{ ? .ordno != '0' }-->
+								<div>[ 주문번호 {.ordno} 문의 ]</div>
+							    <!--{ / }-->
+								<div>{.contents}</div>
+								<div style="text-align:right;">
+									<!--{ ? .authreply == 'Y' }-->
+									<a href="javascript:;" onclick="popup_register( 'reply_qna', '{.sno}' );"><img src="../img/common/btn_reply.gif" border="0" align="absmiddle"></a>
+								    <!--{ / }-->
+									<!--{ ? .authmodify == 'Y' }-->
+									<a href="javascript:;" onclick="popup_register( 'mod_qna', '{.sno}' );"><img src="../img/common/btn_modify2.gif" border="0" align="absmiddle"></a>
+								    <!--{ / }-->
+									<!--{ ? .authdelete == 'Y' }-->
+								    <a href="javascript:;" onclick="popup_register( 'del_qna', '{.sno}' );"><img src="../img/common/btn_delete.gif" border="0" align="absmiddle"></a>
+								    <!--{ / }-->
+							    </div>
+							</div>
 						</li>
-					</ul>
-					
-					
-					
-					<!--{ @ _loop }-->
-					<div>
-						<!--{ ? .sno == .parent // 질문 }-->
-						<table width=100% cellpadding=3 cellspacing=0 style="border-bottom-style:solid;border-bottom-color:#E6E6E6;border-bottom-width:1;cursor:pointer;" onclick="view_content(this, event)">
-						<tr height=25 onmouseover=this.style.background="#F7F7F7" onmouseout=this.style.background="">
-							<td width=8% align="center">{.idx}</td>
-							<td width=15% align="left"  class=stxt><B>[{.itemcd}]</B></td>
-							<td style="padding-top:5; padding-bottom:5">{.subject} {.sno} {.parent} <span style="color:#007FC8;"  class=stxt>[{.replecnt}]</span></td>
-							<td width=12% align="center">{.m_id}</td>
-							<td width=12% align="center">{=substr(.regdt,0,10)}</td>
-						</tr>
-						</table>	
-						<!--{ : .sno != .parent // 답글 }-->
-						<table width=100% cellpadding=3 cellspacing=0 style="border-bottom-style:solid;border-bottom-color:#E6E6E6;border-bottom-width:1;cursor:pointer;" onclick="view_content(this, event)">
-						<tr height=25 onmouseover=this.style.background="#F7F7F7" onmouseout=this.style.background="">
-							<td width=8% align="center">{.idx}</td>
-							<td width=15% align="left"><img src="../img/common/myqna_answer.gif"></td>
-							<td style="padding-top:5; padding-bottom:5" class=stxt>{.subject} {.sno} {.parent} </td>
-							<td width=12% align="center">{.m_id}</td>
-							<td width=12% align="center">{=substr(.regdt,0,10)}</td>
-						</tr>
-						</table>
 						<!--{ / }-->
-						
-						
-						<div style="display:none;padding:10;border-bottom-style:solid;border-bottom-color:#E6E6E6;border-bottom-width:1;">
-							<!--{ ? .ordno != '0' }-->
-							<div width="100%" style="padding-left:55">[ 주문번호 {.ordno} 문의 ]</div>
-						    <!--{ / }-->
-							<div width="100%" style="padding-left:55">{.contents}</div>
-							<div style="text-align:right;">
-								<!--{ ? .authreply == 'Y' }-->
-								<a href="javascript:;" onclick="popup_register( 'reply_qna', '{.sno}' );"><img src="../img/common/btn_reply.gif" border="0" align="absmiddle"></a>
-							    <!--{ / }-->
-								<!--{ ? .authmodify == 'Y' }-->
-								<a href="javascript:;" onclick="popup_register( 'mod_qna', '{.sno}' );"><img src="../img/common/btn_modify2.gif" border="0" align="absmiddle"></a>
-							    <!--{ / }-->
-								<!--{ ? .authdelete == 'Y' }-->
-							    <a href="javascript:;" onclick="popup_register( 'del_qna', '{.sno}' );"><img src="../img/common/btn_delete.gif" border="0" align="absmiddle"></a>
-							    <!--{ / }-->
-						    </div>
-						</div>
-					
-					</div>
-					<!--{ / }-->
+					</ul>
 					
 					<div style="float:right;padding:10px 5px">
 						<a href="javascript:;" onclick="popup_register( 'add_qna' )"><img src="../img/common/btn_write.gif"></a>
 					</div>
 					
-					<div class="pagediv">{pg->page['navi']}</div>
+					<div class="navigation">{pg->page['navi']}</div>
 					<script language="javascript">
 
 					function popup_register( mode, sno )

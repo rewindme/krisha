@@ -225,6 +225,10 @@ body {
     font-size: 11px;
     font-weight: bold;
     vertical-align: top; }
+  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .container .location .parent {
+    font-size: 11px;
+    color: #999;
+    vertical-align: top; }
 
 .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home {
   border: 1px solid #58bcb1;
@@ -301,14 +305,14 @@ body {
   height: 0;
   visibility: hidden; }
 
-.board_summary .summary_cover li a {
+.board_summary .summary_cover li a, .view_qna .qna_board .title_cover p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%; }
 
-.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
-  background-image: url('img/sp/mypage-s92118185cc.png');
+.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4 {
+  background-image: url('img/sp/mypage-sb0459ab9df.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -2178,7 +2182,7 @@ body {
 .mypage {
   padding-top: 80px; }
   .mypage .tit_mykrisha {
-    background-position: 0 -43px;
+    background-position: 0 -97px;
     width: 98px;
     height: 14px;
     margin-bottom: 20px; }
@@ -2357,7 +2361,7 @@ body {
     color: #999;
     padding: 0 30px 0 10px; }
   .mypage .coupon_select_box .ico_arrow {
-    background-position: 0 -87px;
+    background-position: -113px -54px;
     width: 11px;
     height: 6px;
     position: absolute;
@@ -2408,7 +2412,67 @@ body {
 .view_qna {
   padding: 10px 0 0; }
   .view_qna h3 {
-    color: #454545; }
+    color: #454545;
+    margin-bottom: 0; }
+  .view_qna .qna_board .title_cover {
+    border-bottom: 1px solid #e4e4e4;
+    position: relative;
+    padding: 15px 106px 15px 125px;
+    line-height: 21px;
+    color: #666;
+    cursor: pointer;
+    zoom: 1; }
+    .view_qna .qna_board .title_cover .category_name {
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 115px;
+      text-align: center;
+      color: #666; }
+    .view_qna .qna_board .title_cover .date {
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 106px;
+      text-align: center;
+      color: #999; }
+  .view_qna .qna_board .contents_cover {
+    padding: 15px 0 15px 125px;
+    color: #666;
+    line-height: 21px;
+    border-bottom: 1px solid #e4e4e4;
+    display: none; }
+  .view_qna .review_board .title_cover .category_name {
+    color: #f54500; }
+  .view_qna .review_board .title_cover .ico_attach {
+    background-position: 0 -141px;
+    width: 16px;
+    height: 12px;
+    vertical-align: middle;
+    margin-left: 4px; }
+  .view_qna .prod_card {
+    overflow: hidden;
+    margin-bottom: 10px; }
+    .view_qna .prod_card .prod_img {
+      float: left;
+      border: 1px solid #e4e4e4;
+      margin-right: 10px; }
+      .view_qna .prod_card .prod_img img {
+        vertical-align: top; }
+    .view_qna .prod_card .prod_name_cover {
+      overflow: hidden; }
+      .view_qna .prod_card .prod_name_cover .prod_name {
+        color: #f54500;
+        display: block; }
+      .view_qna .prod_card .prod_name_cover .btn_prod_view {
+        color: #f54500;
+        border: 1px solid #f54500;
+        border-radius: 3.1px;
+        display: inline-block;
+        height: 15px;
+        line-height: 17px;
+        padding: 0 3px;
+        font-size: 11px; }
 
 .mypage .emoney .mypage_table .price, .my_level_cont .grade .info .group_name {
   font-weight: bold;
@@ -2420,7 +2484,7 @@ body {
   background-color: #f2f2f2;
   margin-bottom: 15px; }
   .my_level_cont .tit_mylevel {
-    background-position: 0 0;
+    background-position: 0 -54px;
     width: 83px;
     height: 13px;
     margin-bottom: 20px;
@@ -2506,25 +2570,25 @@ body {
       font-weight: bold;
       color: #454545; }
     .my_level_cont .article .ico_menu1 {
-      background-position: -58px -140px;
+      background-position: -58px 5px;
       width: 34px;
       height: 27px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu2 {
-      background-position: 3px -138px;
+      background-position: 3px 7px;
       width: 31px;
       height: 25px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu3 {
-      background-position: -117px -141px;
+      background-position: -117px 4px;
       width: 29px;
       height: 28px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu4 {
-      background-position: -39px -85px;
+      background-position: -44px -139px;
       width: 32px;
       height: 30px;
       width: 45px;
