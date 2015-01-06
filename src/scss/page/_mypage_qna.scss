@@ -47,6 +47,29 @@
 			border-bottom:1px solid #e4e4e4;
 			display:none;
 		}
+		
+		&.prod_qna_board{
+			.category_name{
+				.goods_name{
+					font-size:11px;
+					
+					display:inline-block;
+					overflow:hidden;
+					white-space:nowrap;
+					text-overflow:ellipsis;
+					max-width:100%;
+					
+				}
+			}
+			
+			.cnt{
+				color:#f54500;
+			}
+			
+			.user_id{
+				padding-left:10px;
+			}
+		}
 	}
 	
 	.review_board{
@@ -95,5 +118,7 @@
 			}
 		}
 	}
+	
+	
 }
 

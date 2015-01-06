@@ -15,22 +15,31 @@
 			<div class="history">
 				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
 				<div class="view_qna">
-					<h3>1:1 상담문의</h3>
+					<h3>나의 상품 문의</h3>
 					
-					<ul class="qna_board">
+					<ul class="qna_board prod_qna_board">
 						<!--{ @ _loop }-->
 						<li>
 							<div class="title_cover" onclick="view_content(this, event)">
 								<!--{ ? .sno == .parent // 질문 }-->
-								<span class="category_name"><a href="../goods/goods_view.php?goodsno={.goodsno}">{=goodsimg(.img_s,50)}</a></span>
-								<p>{.subject} <!--{? .replecnt}-->[{.replecnt}]<!--{/}--> {.m_id}</p>
+								<span class="category_name">
+<!-- 									<a href="../goods/goods_view.php?goodsno={.goodsno}">{=goodsimg(.img_s,50)}</a> -->
+									<!--{? .goodsnm}-->
+									<span class="goods_name">{.goodsnm}</span>
+									<!--{/}-->
+								</span>
+								<!--{ : .sno != .parent // 답글 }-->
+								<span class="category_name answer">
+									<img src="../img/common/myqna_answer.gif">
+								</span>
+								<!--{ / }-->
+								<p>
+									{.subject} 
+									<!--{? .replecnt}--><span class="cnt">[{.replecnt}]</span><!--{/}--> 
+									<span class="user_id">{.m_id}</span>
+								</p>
 								<span class="date">{=substr(.regdt,0,10)}</span>
 								
-								<!--{ : .sno != .parent // 답글 }-->
-								<span class="category_name"><img src="../img/common/myqna_answer.gif"></span>
-								<p>{.subject} <!--{? .replecnt}-->[{.replecnt}]<!--{/}--> {.m_id}</p>
-								<span class="date">{=substr(.regdt,0,10)}</span>
-								<!--{ / }-->
 							</div>
 							
 							<div class="contents_cover">

@@ -2442,6 +2442,17 @@ body {
     line-height: 21px;
     border-bottom: 1px solid #e4e4e4;
     display: none; }
+  .view_qna .qna_board.prod_qna_board .category_name .goods_name {
+    font-size: 11px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%; }
+  .view_qna .qna_board.prod_qna_board .cnt {
+    color: #f54500; }
+  .view_qna .qna_board.prod_qna_board .user_id {
+    padding-left: 10px; }
   .view_qna .review_board .title_cover .category_name {
     color: #f54500; }
   .view_qna .review_board .title_cover .ico_attach {
