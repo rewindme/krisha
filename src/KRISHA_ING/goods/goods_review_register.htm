@@ -1,3 +1,4 @@
+<!doctype html>
 {*** 이용후기 작성 | goods/goods_review_register.php ***}
 <html>
 <head>
@@ -88,143 +89,125 @@ function calcul()
 <input type=hidden name=sno value="{_sno}">
 <input type=hidden name=referer value="{_referer}">
 
-<table id="table_after" width=100% cellpadding=0 cellspacing=0 border=0>
-<tr>
-	<td style="border-style:solid; border-width:10px; border-color:#000000" valign=top>
-
-	<div style="width:100%; background:#000000; border-bottom:2px solid #DDDDDD"><img src="../img/common/popup_title_review.gif"></div>
-
-	<div style="margin-left:20px; margin-right:20px; margin-top: 10px;">
-	<!--{ ? _goods }-->
-	<div style="border-width:5; border-style:solid; border-color:#EFEEEE;" class="hundred">
-	<table width=500 cellpadding=0 cellspacing=0 border=0 align="center" style="margin-top:5; margin-bottom:5">
-	<tr>
-		<td width=50>{=goodsimg(_goods.img_s,50)}</td>
-		<td style="line-height:20px;padding-left:10">
-		<b>{_goods.goodsnm}</b><br>
-		{=number_format(_goods.price)}원
-		</td>
-	</tr>
-	</table>
+<div class="pop_wrap">
+	<div class="pop_header">
+		<h1 class="tit_review"><i>REVIEW</i></h1>
+		<p class="description">상품에 대해 센스있는 후기를 남겨주세요.</p>
 	</div>
-	<!--{ / }-->
-
-	<div style="border-width:1px; border-style:solid; border-color:#DEDEDE; margin-top:5px;" class="hundred">
-	<table width=100% cellpadding=0 cellspacing=0 border=0>
-	<tr>
-		<td style="border-width:3px; border-style:solid; border-color:#F3F3F3; padding:5 5 5 5">
-
-		<table width=500 id=form cellpadding=5 cellspacing=0 border=0 align=center>
-		<col width=50>
-<!--{ ? _mode != 'reply_review' }-->
-		<tr>
-			<td class="input_txt" align=right>평가</td>
-			<td class="noline">
-			<input type=radio name=point value=5 class=noline {_data.point['5']}>★★★★★
-			<input type=radio name=point value=4 class=noline {_data.point['4']}>★★★★☆
-			<input type=radio name=point value=3 class=noline {_data.point['3']}>★★★☆☆
-			<input type=radio name=point value=2 class=noline {_data.point['2']}>★★☆☆☆
-			<input type=radio name=point value=1 class=noline {_data.point['1']}>★☆☆☆☆
+	<div class="pop_container">
+		<div class="goods_cover">
+			<!--{ ? _goods }-->
+			<span class="goods_img">
+				{=goodsimg(_goods.img_s,50)}
+			</span>
+			<div class="goods_info">
+				<span class="goods_name">{_goods.goodsnm}</span>
+				<p class="price">{=number_format(_goods.price)}원</p>
 			</div>
-			</td>
-		</tr>
-<!--{ / }-->
-		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
-		<tr>
-			<td class="input_txt" align=right>작성자</td>
-			<td>
-			<div style="float:left; width:50%;"><input type=text name=name style="width:100" required fld_esssential label="작성자" value="{_data.name}"></div>
-			<!--{ ? ! _sess && empty(_data['m_no']) // 작성자==회원 }-->
-			<div style="float:left; width:50%;"><span class="input_txt">비밀번호</span> <input type=password name=password style="width:100" required fld_esssential label="비밀번호"></div>
 			<!--{ / }-->
-			</td>
-		</tr>
-		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
-		<tr>
-			<td class="input_txt" align=right>제목</td>
-			<td><input type=text name=subject style="width:95%" required fld_esssential label="제목" value="{_data.subject}"></td>
-		</tr>
-		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
-		<tr>
-			<td class="input_txt" align=right>내용</td>
-			<td><textarea name=contents style="width:95%;height:120" required fld_esssential label="내용">{_data.contents}</textarea></td>
-		</tr>
-		<!--{ ? _cfg.reviewSpamBoard&2 }-->
-		<tr>
-			<td align=right class=input_txt>자동등록방지</td>
-			<td class=cell_L><!--{ = include_file( "proc/_captcha.htm" ) }--></td>
-		</tr>
-		<!--{ / }-->
-		<tr><td colspan=2 height=1 bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
-		<tr>
-			<td align=right class=input_txt>이미지</td>
-			<td class=cell_L>
-			<table width=95% id=table cellpadding=0 cellspacing=0 border="0" style="border:solid 1px #CCC; border-collapse:collapse;">
-			<!--{ ? _mode == 'mod_review' && _file_arr }-->
-			<!--{ @ _file_arr }-->
-			<tr id="tr_{_file_arr.index_}">
-				<td width=20 nowrap align="center">{ _file_arr.index_ + 1 }</td>
-				<td width=100%>
-				<input type=file name="file[]" style="width:50%" class=linebg>
-				<!--{ ? _reviewFileNum > 1 }-->
-					<!--{ ? _file_arr.index_ == 0 }-->
-					<a href="javascript:add()"><img src="../img/common/btn_upload_plus.gif" align=absmiddle></a>
-					<!--{ : }-->
-						<!--{ ? _file_arr.value_ }-->
-					<a href="javascript:del('tr_{_file_arr.index_}',1)"><img src="../img/common/btn_upload_minus.gif" align=absmiddle></a>
-						<!--{ : }-->
-					<a href="javascript:del('tr_{_file_arr.index_}')"><img src="../img/common/btn_upload_minus.gif" align=absmiddle></a>
-						<!--{ / }-->
+		</div>
+		<div class="write_review">
+			<table class="tb" width="100%" border="0">
+				<colgroup>
+					<col width="20%">
+					<col width="*">
+				</colgroup>
+				
+				<!--{ ? _mode != 'reply_review' }-->
+				<tr>
+					<th>평가</th>
+					<td class="noline">
+					<input type=radio id="point_1" name=point value=5 class=noline {_data.point['5']}>
+					<label for="point_1">★★★★★</label>
+					<input type=radio id="point_2" name=point value=4 class=noline {_data.point['4']}>
+					<label for="point_2">★★★★</label>
+					<input type=radio id="point_3" name=point value=3 class=noline {_data.point['3']}>
+					<label for="point_3">★★★</label>
+					<input type=radio id="point_4" name=point value=2 class=noline {_data.point['2']}>
+					<label for="point_4">★★</label>
+					<input type=radio id="point_5" name=point value=1 class=noline {_data.point['1']}>
+					<label for="point_5">★</label>
+					</div>
+					</td>
+				</tr>
+				<!--{ / }-->
+				<tr>
+					<th>작성자</th>
+					<td>
+					<input type=text class="nb_tf" name=name style="width:100" required fld_esssential label="작성자" value="{_data.name}"></div>
+					<!--{ ? ! _sess && empty(_data['m_no']) // 작성자==회원 }-->
+					<div style="float:left; width:50%;"><span class="input_txt">비밀번호</span> <input type=password name=password style="width:100" required fld_esssential label="비밀번호"></div>
 					<!--{ / }-->
+					</td>
+				</tr>
+				<tr>
+					<th>제목</th>
+					<td><input type=text name=subject class="nb_tf" style="width:95%" required fld_esssential label="제목" value="{_data.subject}"></td>
+				</tr>
+				<tr>
+					<th>내용</th>
+					<td><textarea name=contents class="nb_tf" style="width:100%;height:120px" required fld_esssential label="내용">{_data.contents}</textarea></td>
+				</tr>
+				<!--{ ? _cfg.reviewSpamBoard&2 }-->
+				<tr>
+					<th>자동등록방지</th>
+					<td class=cell_L><!--{ = include_file( "proc/_captcha.htm" ) }--></td>
+				</tr>
 				<!--{ / }-->
-				<!--{ ? _file_arr.value_ }-->
-				{ _file_arr.value_ }
-				<!--{ / }-->
-				</td>
-			</tr>
-			<!--{ / }-->
-			<!--{ : }-->
-			<tr id="tr_0">
-				<td width=20 nowrap align="center">1</td>
-				<td width=100%>
-				<input type=file name="file[]" style="width:50%" class=linebg>
-				<!--{ ? _reviewFileNum > 1 }-->
-				<a href="javascript:add()"><img src="../img/common/btn_upload_plus.gif" align=absmiddle></a>
-				<!--{ / }-->
-				</td>
-			</tr>
-			<!--{ / }-->
+				<tr>
+					<th>이미지</th>
+					<td class=cell_L>
+					<table width=95% id=table cellpadding=0 cellspacing=0 border="0" style="border:solid 1px #CCC; border-collapse:collapse;">
+					<!--{ ? _mode == 'mod_review' && _file_arr }-->
+					<!--{ @ _file_arr }-->
+					<tr id="tr_{_file_arr.index_}">
+						<td width=20 nowrap align="center">{ _file_arr.index_ + 1 }</td>
+						<td width=100%>
+						<input type=file name="file[]" style="width:50%" class=linebg>
+						<!--{ ? _reviewFileNum > 1 }-->
+							<!--{ ? _file_arr.index_ == 0 }-->
+							<a href="javascript:add()"><img src="../img/common/btn_upload_plus.gif" align=absmiddle></a>
+							<!--{ : }-->
+								<!--{ ? _file_arr.value_ }-->
+							<a href="javascript:del('tr_{_file_arr.index_}',1)"><img src="../img/common/btn_upload_minus.gif" align=absmiddle></a>
+								<!--{ : }-->
+							<a href="javascript:del('tr_{_file_arr.index_}')"><img src="../img/common/btn_upload_minus.gif" align=absmiddle></a>
+								<!--{ / }-->
+							<!--{ / }-->
+						<!--{ / }-->
+						<!--{ ? _file_arr.value_ }-->
+						{ _file_arr.value_ }
+						<!--{ / }-->
+						</td>
+					</tr>
+					<!--{ / }-->
+					<!--{ : }-->
+					<tr id="tr_0">
+						<td width=20 nowrap align="center">1</td>
+						<td width=100%>
+						<input type=file name="file[]" style="width:50%" class=linebg>
+						<!--{ ? _reviewFileNum > 1 }-->
+						<a href="javascript:add()"><img src="../img/common/btn_upload_plus.gif" align=absmiddle></a>
+						<!--{ / }-->
+						</td>
+					</tr>
+					<!--{ / }-->
+					</table>
+					<div width=100% style="padding:5;" class=stxt>
+					- 파일은 최대 <!--{ _reviewFileNum }-->개까지 업로드가 지원됩니다.<br>
+					<!--{ ? _cfg.reviewLimitPixel }-->- 파일은 가로 사이즈가 {=number_format(_cfg.reviewLimitPixel)}px보다 클 경우 자동 리사이즈 됩니다.<br><!--{ / }-->
+					<!--{ ? _cfg.reviewFileSize }-->- 파일은 장당 최대 {_cfg.reviewFileSize}KB를 넘을 수 없습니다.<br><!--{ / }-->
+					</div>
+					</td>
+				</tr>
 			</table>
-			<table><tr><td height=2></td></tr></table>
-			<div width=100% style="padding:5;" class=stxt>
-			- 파일은 최대 <!--{ _reviewFileNum }-->개까지 업로드가 지원됩니다.<br>
-			<!--{ ? _cfg.reviewLimitPixel }-->- 파일은 가로 사이즈가 {=number_format(_cfg.reviewLimitPixel)}px보다 클 경우 자동 리사이즈 됩니다.<br><!--{ / }-->
-			<!--{ ? _cfg.reviewFileSize }-->- 파일은 장당 최대 {_cfg.reviewFileSize}KB를 넘을 수 없습니다.<br><!--{ / }-->
-			</div>
-			</td>
-		</tr>
-		</table>
-
-		</td>
-	</tr>
-	</table>
+		</div>
 	</div>
+	<div class="pop_submit">
+		<button type="submit" class="btn_point">후기쓰기</button>
+		<button type="button" class="btn_gray" onclick="window.close()">쓰기취소</button>
 	</div>
-
-	<TABLE width=100%>
-	<tr>
-		<td align=center style="padding-top:5"><input type="image" src="../img/common/btn_upload.gif"></td>
-	</tr>
-	</TABLE>
-	<TABLE width=100% cellpadding=0 cellspacing=0 border=0>
-	<TR>
-		<TD align=right><A HREF="javascript:this.close()" onFocus="blur()"><img src="../img/common/popup_close.gif"></A></TD>
-	</TR>
-	</TABLE>
-	</td>
-</tr>
-</table>
-
+</div>
 </form>
 
 </body>
