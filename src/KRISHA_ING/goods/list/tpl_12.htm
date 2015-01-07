@@ -1,0 +1,91 @@
+{*** 탭형_S | main/html.php?htmid=goods/list/tpl_12.htm ***}
+<!--{ ? !id }--><? {id} = "es_".md5(crypt('')); ?><!--{ / }-->
+<script language="JavaScript">
+function {id}_tab(tabNo) {
+	for(i = 0; i < { dpCfg['tabNum'] }; i++) {
+		if(tabNo == i) {
+			try {
+				document.getElementById("{id}_" + i).style.display = "";
+				if(i == 0)document.getElementById("{id}_t" + i).className = "mainTabStyle{dpCfg['dOpt3']}_1 mainTabStyle{dpCfg['dOpt3']}_2 mainTabStyle{dpCfg['dOpt3']}_3";
+				else document.getElementById("{id}_t" + i).className = "mainTabStyle{dpCfg['dOpt3']}_1 mainTabStyle{dpCfg['dOpt3']}_3";
+			} catch(e) {}
+		}
+		else {
+			try {
+				document.getElementById("{id}_" + i).style.display = "none";
+				if(i == 0)document.getElementById("{id}_t" + i).className = "mainTabStyle{dpCfg['dOpt3']}_1 mainTabStyle{dpCfg['dOpt3']}_2 mainTabStyle{dpCfg['dOpt3']}_4";
+				else document.getElementById("{id}_t" + i).className = "mainTabStyle{dpCfg['dOpt3']}_1 mainTabStyle{dpCfg['dOpt3']}_4";
+			} catch(e) {}
+		}
+	}
+}
+</script>
+
+<!-- 상품 리스트 -->
+
+<!--{ ?dpCfg['dOpt3'] == 1 }-->
+<ul class="tab">
+	<!--{ @ dpCfg['tabLoop'] }-->
+	<li class="<!--{ ? .index_ == 0 }-->selected<!--{ : }--> <!--{ / }-->" id="{id}_t{.index_}" onclick="{id}_tab({.index_})"><a href="#"><!--{ dpCfg['tabName'+(.index_ + 1)] }--></a></li>
+	<!--{ / }-->
+</ul>
+<!--{ / }-->
+</div> <!-- //section_head -->
+<!--{ ?dpCfg['dOpt3'] == 2 }-->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr align="center" valign="top">
+	<td>
+		<table width="100" border="0" cellpadding="5" cellspacing="0">
+	<!--{ @ dpCfg['tabLoop'] }-->
+		<tr align="left" valign="middle">
+			<td id="{id}_t{.index_}" class="mainTabStyle2_1<!--{ ? .index_ == 0 }--> mainTabStyle2_2 mainTabStyle2_3<!--{ : }--> mainTabStyle2_4<!--{ / }-->" onclick="{id}_tab({.index_});"><!--{ dpCfg['tabName'+(.index_ + 1)] }--></td>
+		</tr>
+	<!--{ / }-->
+		</table>
+	</td>
+	<td>
+<!--{ / }-->
+	
+	
+<!--{ @ dpCfg['tabLoop'] }-->
+<div class="prod_list" id="{id}_{.index_}" <!--{ ? .index_ != 0 }-->style="display:none;"<!--{ / }-->>
+	<ul>
+		<!--{ @ dpCfg['tabLoop'][.key_] }-->
+		<li>
+			<a href="{..goods_view_url}">
+				<span class="prod_thumb">
+					{=goodsimg(..img_s,size,'class="'+ ..css_selector +'"')}
+				</span>				
+				<strong class="prod_name"><!--{ ? ..goodsnm }-->{..goodsnm}<!--{ / }--> <!--{ ? ..soldout_icon }-->{? ..soldout_icon == 'custom'}<img src="../data/goods/icon/custom/soldout_icon">{:}<img src="../../img/icon/good_icon_soldout.gif">{/}<!--{ / }--></strong>
+				
+				<!--{ ? ..shortdesc}--><span class="prod_desc">{..shortdesc}</span><!--{ / }-->
+				<!--{ ? !..strprice }-->
+					<!--{ ? ..price}-->
+					<!--{ ? ..consumer > 1}-->
+					<span class="price discount">
+						<span class="before"><em>{=number_format(..consumer)}</em>원</span>
+						<strong class="after"><em>{=number_format(..price)}</em>원</strong> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
+					</span>					
+					<!--{ : }--><span class="price"><em>{=number_format(..price)}</em>원</span> {? .special_discount_amount}<img src="../../img/icon/goods_special_discount.gif">{/}
+					<!--{ / }-->
+					<!--{ / }-->
+					
+					<!--{? .soldout_price_string}-->{.soldout_price_string}<!--{/}-->
+					<!--{? .soldout_price_image}-->{.soldout_price_image}<!--{/}-->
+				<!--{ : }--><span class="price">{..strprice}</span>
+				<!--{ / }-->
+				<!--{ ? ..icon }--><div>{..icon}</div><!--{ / }-->
+				<!--{ ? ..coupon }--><div class="eng"><b style="color:red">{..coupon}<font class="small">원</font></b> <img src="../../img/icon/good_icon_coupon.gif" align="absmiddle"></div><!--{ / }-->
+			</a>
+		</li>
+		<!--{ / }-->
+	</ul>
+</div>
+<!--{ / }-->
+
+
+<!-- 품절상품 마스크 -->
+<div id="el-goods-soldout-image-mask" style="display:none;position:absolute;top:0;left:0;background:url({ ? _cfg_soldout.display_overlay == 'custom'}../data/goods/icon/custom/soldout_overlay{:}../data/goods/icon/icon_soldout{_cfg_soldout.display_overlay}{/}) no-repeat center center;"></div>
+<script>
+addOnloadEvent(function(){ setGoodsImageSoldoutMask() });
+</script>

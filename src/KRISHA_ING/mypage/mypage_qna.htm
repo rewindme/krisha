@@ -1,0 +1,112 @@
+{*** 1:1문의 | mypage/mypage_qna.php ***}
+{ # header }
+<!-- container -->
+<div class="container">
+	<div class="mypage">
+		<div class="location">
+			<a href="http://krisha.co.kr" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<span class="slash">/</span>
+			<a href="../mypage/mypage_orderlist.php" class="parent">마이크리샤</a>
+			<span class="slash">/</span>
+			<span class="current">1:1 상담문의</span>
+		</div>
+		<div class="info_column">
+			<div class="history">
+				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
+				<div class="view_qna">
+					<h3>1:1 상담문의</h3>
+					
+					<ul class="qna_board">
+						<!--{ @ _loop }-->
+						<li>
+							<div class="title_cover" onclick="view_content(this, event)">
+								<!--{ ? .sno == .parent // 질문 }-->
+								<span class="category_name">{.itemcd}</span>
+								<p>{.subject} <!--{? .replecnt}-->[{.replecnt}]<!--{/}--> {.m_id}</p>
+								<span class="date">{=substr(.regdt,0,10)}</span>
+								
+								<!--{ : .sno != .parent // 답글 }-->
+								<span class="category_name"><img src="../img/common/myqna_answer.gif"></span>
+								<p>{.subject} <!--{? .replecnt}-->[{.replecnt}]<!--{/}--> {.m_id}</p>
+								<span class="date">{=substr(.regdt,0,10)}</span>
+								<!--{ / }-->
+							</div>
+							
+							<div class="contents_cover">
+								<!--{ ? .ordno != '0' }-->
+								<div>[ 주문번호 {.ordno} 문의 ]</div>
+							    <!--{ / }-->
+								<div>{.contents}</div>
+								<div style="text-align:right;">
+									<!--{ ? .authreply == 'Y' }-->
+									<a href="javascript:;" onclick="popup_register( 'reply_qna', '{.sno}' );"><img src="../img/common/btn_reply.gif" border="0" align="absmiddle"></a>
+								    <!--{ / }-->
+									<!--{ ? .authmodify == 'Y' }-->
+									<a href="javascript:;" onclick="popup_register( 'mod_qna', '{.sno}' );"><img src="../img/common/btn_modify2.gif" border="0" align="absmiddle"></a>
+								    <!--{ / }-->
+									<!--{ ? .authdelete == 'Y' }-->
+								    <a href="javascript:;" onclick="popup_register( 'del_qna', '{.sno}' );"><img src="../img/common/btn_delete.gif" border="0" align="absmiddle"></a>
+								    <!--{ / }-->
+							    </div>
+							</div>
+						</li>
+						<!--{ / }-->
+					</ul>
+					
+					<div style="float:right;padding:10px 5px">
+						<a href="javascript:;" onclick="popup_register( 'add_qna' )"><img src="../img/common/btn_write.gif"></a>
+					</div>
+					
+					<div class="navigation">{pg->page['navi']}</div>
+					<script language="javascript">
+
+					function popup_register( mode, sno )
+					{
+						if ( mode == 'del_qna' ) var win = window.open("../mypage/mypage_qna_del.php?mode=" + mode + "&sno=" + sno,"qna_register","width=400,height=200");
+						else var win = window.open("../mypage/mypage_qna_register.php?mode=" + mode + "&sno=" + sno,"qna_register","width=600,height=500");
+						win.focus();
+					}
+					
+					var preContent;
+					
+					function view_content(obj)
+					{
+						var div = obj.parentNode;
+					
+						for (var i=1, m=div.childNodes.length;i<m;i++) {
+							if (div.childNodes[i].nodeType != 1) continue;	// text node.
+							else if (obj == div.childNodes[ i ]) continue;
+					
+							obj = div.childNodes[ i ];
+							break;
+						}
+					
+						if (preContent && obj!=preContent){
+							obj.style.display = "block";
+							preContent.style.display = "none";
+						}
+						else if (preContent && obj==preContent) preContent.style.display = ( preContent.style.display == "none" ? "block" : "none" );
+						else if (preContent == null ) obj.style.display = "block";
+					
+						preContent = obj;
+					}
+					</script>
+
+				</div>
+			</div>
+		</div>
+		<!--{ ? this->tpl_['side_inc'] && _cfg['outline_sidefloat'] == 'left' }-->
+		{ # side_inc // 측면디자인 }
+		<!--{ / }-->
+		
+	</div>	
+
+{ # footer }
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+{*** 할인쿠폰내역 | mypage/mypage_coupon.php ***}
+{ # header }
+
+<!-- container -->
+<div class="container">
+	<div class="mypage">
+		<div class="location">
+			<a href="http://krisha.co.kr" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<span class="slash">/</span>
+			<span class="current">쇼핑백</span>
+		</div>
+		<div class="info_column">
+			<div class="history">
+				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
+				<div class="mypage_head">
+					<ul>
+						<li><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
+						<li><a href="../mypage/mypage_emoney.php">적립금</a></li>
+						<li class="selected"><a href="../mypage/mypage_coupon.php">할인쿠폰</a></li>
+						<li><a href="../mypage/mypage_wishlist.php">관심상품</a></li>
+					</ul>
+				</div>
+				<div class="mypage_body">
+					<div class="coupon_cover">
+						<button type="button" class="btn_regist_coupon" onclick="popup('../mypage/paper_coupon.php',350,200)">쿠폰등록</button>
+						
+						<span class="coupon_select_box" onclick="var el = document.getElementById('coupon_view');el.style.display=='none'?el.style.display='block':el.style.display='none'">
+							<button class="current_option">
+							<!--{? _tab01=='on'}-->
+							할인쿠폰 전체보기
+							<!--{: _tab03=='on'}-->
+							할인쿠폰 보유내역
+							<!--{: _tab02=='on'}-->
+							할인쿠폰 사용내역
+							<!--{/}-->
+							<span class="ico_arrow"></span>
+							</button>
+							<ul id="coupon_view" style="display:none">
+								<li><a href="mypage_coupon.php?tab=all" <!--{? _tab01=='on'}-->class="on"<!--{/}-->>할인쿠폰 전체보기</a></li>
+								<li><a href="mypage_coupon.php?tab=wait" <!--{? _tab03=='on'}-->class="on"<!--{/}-->>할인쿠폰 보유내역</a></li>
+								<li><a href="mypage_coupon.php?tab=used" <!--{? _tab02=='on'}-->class="on"<!--{/}-->>할인쿠폰 사용내역</a></li>
+							</ul>
+						</span>
+					</div>
+					<table class="mypage_table">
+						<caption><i class="blind">주문내역</i></caption>
+						<colgroup>
+							<col style="width:140px">
+							<col style="width:auto">
+							<col style="width:110px">
+							<col style="width:110px">
+						</colgroup>
+						<tbody>
+							<!--{ @ goods }-->
+							<tr>
+								<td>{.coupon}</td>
+								<td>
+									<div>{.summa}</div>
+									<div>
+										{.dataStr}
+									</div>
+								</td>
+								<td>
+									{_r_couponAbility[.ability]}
+									{=number_format(.price)}{ ? substr(.price,-1)!='%' }원{:}%{/}
+								</td>
+								<td>
+									<!--{? .cnt == '미사용' }-->
+									<strong>사용가능</strong>
+									<!--{:}-->
+									<span>사용완료</span>
+									<!--{/}-->
+								</td>
+							</tr>
+							<!--{ / }-->
+						</tbody>
+					</table>
+					
+					
+					
+				</div>
+			</div>
+			
+			<!--{? _todayGoodsList }-->
+			<div class="view_today">
+				<h3>오늘 본 상품</h3>
+				<div class="prod_list">
+					<ul>
+						<!--{ @ _todayGoodsList }-->
+						<!--{? .index_ < 4 }-->
+						<li>
+							<a href="../goods/goods_view.php?goodsno={.goodsno}">
+								<span class="prod_thumb">
+									{=goodsimg(.img,254)}
+								</span>
+								<strong class="prod_name">{.goodsnm}</strong>					
+								<span class="price"><em>{=number_format(.price)}</em>원</span>
+							</a>
+						</li>
+						<!--{ / }-->
+						<!--{ / }-->
+					</ul>
+				</div>
+				<a href="../mypage/mypage_today.php" class="view_more"><i>오늘 본 상품</i>더보기</a>
+			</div>
+			<!--{ / }-->
+
+
+		</div>
+		<!--{ ? this->tpl_['side_inc'] && _cfg['outline_sidefloat'] == 'left' }-->
+		{ # side_inc // 측면디자인 }
+		<!--{ / }-->
+		
+	</div>	
+
+{ # footer }
+
+
+
+
+
+

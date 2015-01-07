@@ -1,0 +1,264 @@
+{*** 쇼핑몰 메인본문 | index.php ***}
+{ # header } 
+<!-- 메인팝업창 --> 
+<!--{ @ dataPopup() }--> 
+
+<!--{ ? .type == 'layer' && isset(_COOKIE['blnCookie_' + .code]) === false }-->
+<div id="{'blnCookie_' + .code}" STYLE="position:absolute; width:{.width}px; height:{.height}px; left:{.left}px; top:{.top}px; z-index:200;"> 
+	<!--{ = eval("\$_GET[code]='blnCookie_" + .code + "';") }--> 
+	<!--{ = include_file( .file ) }--> 
+</div>
+<!--{ / }--> 
+
+<!--{ ? .type == 'layerMove' && isset(_COOKIE['blnCookie_' + .code]) === false }--> 
+<!-- 이동레이어 팝업창 시작 -->
+<div id="{'blnCookie_' + .code}" STYLE="position:absolute; width:{.width}px; height:{.height}px; left:{.left}px; top:{.top}px; z-index:200;">
+	<div onmousedown="Start_move(event,'{'blnCookie_' + .code}');" onmouseup="Moveing_stop();" style='cursor:move;'>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td> 
+					<!--{ = eval("\$_GET[code]='blnCookie_" + .code + "';") }--> 
+					<!--{ = include_file( .file ) }--> 
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<!-- 이동레이어 팝업창 끝 --> 
+<!--{ / }--> 
+
+<!--{ / }--> 
+
+<script language="JavaScript"><!--
+<!--{ @ dataPopup() }-->
+<!--{ ? .type == '' }-->
+if ( !getCookie( "blnCookie_{.code}" ) ) { // {.name} 팝업호출
+var property = 'width={.width}, height={.height}, top={.top}, left={.left}, scrollbars=no, toolbar=no';
+var win=window.open( './html.php?htmid={.file}&code=blnCookie_{.code}', '{.code}', property );
+if(win) win.focus();
+}
+<!--{ / }-->
+<!--{ / }-->
+//--></script> 
+
+<!-- container -->
+<div class="container">
+	<div class="hero">
+	    <div id="main_hero_slidder" class="slider">	        
+	        <div class="slider_cover" u="slides">
+	        	<!--{ @ dataBanner( 1 ) }--> 
+				<div>
+					<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+				</div>
+				<!--{ / }-->
+				<!--{ @ dataBanner( 2 ) }--> 
+				<div>
+					<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+				</div>
+				<!--{ / }-->
+				<!--{ @ dataBanner( 3 ) }--> 
+				<div>
+					<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+				</div>
+				<!--{ / }-->
+				<!--{ @ dataBanner( 4 ) }--> 
+				<div>
+					<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+				</div>
+				<!--{ / }-->
+	        </div>
+	        <!-- Arrow Left -->
+	        <button u="arrowleft" class="btn_prev jssora05l"><i>이전 상품 보기</i></button>
+	        <!-- Arrow Right -->
+	        <button u="arrowright" class="btn_next jssora05r"><i>다음 상품 보기</i></button>
+	    </div>
+	</div>
+	
+	<div class="section_list recmd_item">
+		<!-- 추천상품 리스트 -->
+			<!--{ ? _cfg_step[0].chk  }-->
+			<div class="section_head">
+				<a href="../goods/goods_grp_01.php"><h2 class="tit_recomm"><i>Recommend Item</i></h2></a>			
+
+			<!--{ = this->assign( 'loop', dataDisplayGoods( 0, _cfg_step[0].img, _cfg_step[0].page_num ) ) // 데이타 호출 }-->
+			<!--{ = this->assign( 'cols', _cfg_step[0].cols ) // 행당 컬럼수 }-->
+			<!--{ = this->assign( 'size', _cfg[_cfg_step[0].img] ) // 이미지 사이즈 }-->
+			<!--{ = this->assign( 'id', "main_list_01" ) // 고유 ID }-->
+			<!--{ = this->assign( 'dpCfg', _cfg_step[0] ) // 설정 }-->
+			<!--{ = include_file( "goods/list/" + _cfg_step[0].tpl + ".htm" ) }-->
+		
+			<!--{ / }-->
+	</div>
+	
+	
+	<div class="banner_cover">
+		<!--{ @ dataBanner( 11 ) }--> 
+		<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+		<!--{ / }-->
+		<!--{ @ dataBanner( 12 ) }--> 
+		<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+		<!--{ / }-->
+		<!--{ @ dataBanner( 13 ) }--> 
+		<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+		<!--{ / }-->
+	</div>
+	
+	<div class="section_list best_item">
+		<!-- 베스트 아이템 리스트 -->
+			<!--{ ? _cfg_step[1].chk  }-->
+			<div class="section_head">
+				<a href="../goods/goods_grp_02.php"><h2 class="tit_best_item"><i>Best Item</i></h2></a>		
+			</div>
+
+			<!--{ = this->assign( 'loop', dataDisplayGoods( 1, _cfg_step[1].img, _cfg_step[1].page_num ) ) // 데이타 호출 }-->
+			<!--{ = this->assign( 'cols', _cfg_step[1].cols ) // 행당 컬럼수 }-->
+			<!--{ = this->assign( 'size', _cfg[_cfg_step[1].img] ) // 이미지 사이즈 }-->
+			<!--{ = this->assign( 'id', "main_list_02" ) // 고유 ID }-->
+			<!--{ = this->assign( 'dpCfg', _cfg_step[1] ) // 설정 }-->
+			<!--{ = include_file( "goods/list/" + _cfg_step[1].tpl + ".htm" ) }-->
+		
+			<!--{ / }-->
+	</div>
+	
+	<div class="section_list new_arrival">
+		<!-- 신상품 아이템 리스트 -->
+			<!--{ ? _cfg_step[2].chk  }-->
+			<div class="section_head">
+				<a href="../goods/goods_grp_03.php"><h2 class="tit_new_arrival"><i>New Arrival</i></h2></a>			
+			</div>
+
+			<!--{ = this->assign( 'loop', dataDisplayGoods( 2, _cfg_step[2].img, _cfg_step[2].page_num ) ) // 데이타 호출 }-->
+			<!--{ = this->assign( 'cols', _cfg_step[2].cols ) // 행당 컬럼수 }-->
+			<!--{ = this->assign( 'size', _cfg[_cfg_step[2].img] ) // 이미지 사이즈 }-->
+			<!--{ = this->assign( 'id', "main_list_03" ) // 고유 ID }-->
+			<!--{ = this->assign( 'dpCfg', _cfg_step[2] ) // 설정 }-->
+			<!--{ = include_file( "goods/list/" + _cfg_step[2].tpl + ".htm" ) }-->
+		
+			<!--{ / }-->
+	</div>
+	
+	
+	
+	<div class="banner_cover">
+		<!-- 31~35 -->
+		<!--{ @ dataBanner( 31 ) }--> 
+		<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+		<!--{ / }-->
+	</div>
+	
+	<div class="section_list general_store">
+		<!-- 신상품 아이템 리스트 -->
+			<!--{ ? _cfg_step[3].chk  }-->
+			<div class="section_head">
+				<a href="../goods/goods_grp_04.php"><h2 class="tit_general"><i>General Store</i></h2></a>
+			
+
+			<!--{ = this->assign( 'loop', dataDisplayGoods( 3, _cfg_step[3].img, _cfg_step[3].page_num ) ) // 데이타 호출 }-->
+			<!--{ = this->assign( 'cols', _cfg_step[3].cols ) // 행당 컬럼수 }-->
+			<!--{ = this->assign( 'size', _cfg[_cfg_step[3].img] ) // 이미지 사이즈 }-->
+			<!--{ = this->assign( 'id', "main_list_04" ) // 고유 ID }-->
+			<!--{ = this->assign( 'dpCfg', _cfg_step[3] ) // 설정 }-->
+			<!--{ = include_file( "goods/list/" + _cfg_step[3].tpl + ".htm" ) }-->
+		
+			<!--{ / }-->
+	</div>
+	<div class="notice_box">
+		<div class="bnr_box notice">
+			<h2 class="tit_notice"><i>Notice&amp;News</i></h2>			
+			<ul>
+				{@ dataBoardArticle( 'notice', 4 )}
+				<li><a href="../board/view.php?id={.id}&no={.no}"><strong>[{.category}]</strong> {.subject}</a></li>				
+				{ / }
+			</ul>
+			<span class="innr_bnr">	
+			<!--{ @ dataBanner( 37 ) }--> 
+			<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+			<!--{ / }-->
+			</span>
+		</div>
+		<div class="bnr_box">
+			<!--{ @ dataBanner( 38 ) }--> 
+			<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+			<!--{ / }-->
+		</div>
+		<div class="bnr_box">
+			<!--{ @ dataBanner( 39 ) }--> 
+			<a href="{.linkaddr}" target="{.target}">{.tag}</a>
+			<!--{ / }-->
+		</div>
+		<div class="bnr_box cst_center">
+			<!--{ @ dataBanner( 40 ) }--> 
+			{.tag}
+			<!--{ / }-->
+			<a href="../mypage/mypage_orderlist.php" class="delivery"><i>배송조회</i></a>
+			<a href="../mypage/mypage_qna.php" class="qna"><i>QnA</i></a>
+			<a href="/shop/service/faq.php" class="faq"><i>FAQ</i></a>
+		</div>
+	</div>
+	<div class="favorite_bar">
+
+	</div>	
+</div>
+<!-- //container -->
+{ # footer }
+<script>
+jQuery(document).ready(function ($) {
+    var _SlideshowTransitions = [
+    //Fade in R
+    {$Duration: 1200, $During: { $Left: [0.3, 0.7] }, $FlyDirection: 2, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.3, $Opacity: 2 }
+    //Fade out L
+    , { $Duration: 1200, $SlideOut: true, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.3, $Opacity: 2 }
+    ];
+
+    var options = {
+        $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+        $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+        $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+        $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
+
+        $ArrowKeyNavigation: false,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+        $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+        $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+        //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+        //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+        $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+        $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+        $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+        $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+        $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+        $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+        $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+            $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+            $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+            $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+            $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+        },
+
+        $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+            $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+            $ChanceToShow: 0,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+            $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+            $SpacingY: 10                                    //[Optional] Vertical space between each item in pixel, default value is 0
+        },
+
+        $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+            $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+        },
+
+        $ThumbnailNavigatorOptions: {
+            $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+            $ChanceToShow: 0,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+            $DisableDrag: true                              //[Optional] Disable drag or not, default value is false
+        }
+    };
+
+    var jssor_sliderb = new $JssorSlider$("main_hero_slidder", options);
+    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+        $(window).bind('resize', ScaleSlider);
+    }
+});
+</script>

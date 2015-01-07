@@ -1,0 +1,133 @@
+{*** 이용후기 목록 | goods/goods_view.php ***}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="../common.js"></script>
+<link rel="styleSheet" href="../style.css">
+<script src="/shop/data/skin/KRISHA_ING/jquery.1.9.1.min.js"></script>
+<script>
+function popup_register( mode, goodsno, sno )
+{
+<!--{ ? empty(_cfg['reviewWriteAuth']) && !_sess }-->
+	alert( "회원전용입니다." );
+<!--{ : }-->
+	if ( mode == 'del_review' ) var win = window.open("goods_review_del.php?mode=" + mode + "&sno=" + sno,"qna_register","width=400,height=200");
+	else var win = window.open("goods_review_register.php?mode=" + mode + "&goodsno=" + goodsno + "&sno=" + sno,"qna_register","width=600,height=550");
+	win.focus();
+<!--{ / }-->
+}
+
+var preContent;
+var IntervarId;
+
+function view_content(obj, e)
+{
+	var ca = $(obj).parent().find('.contents_area')
+	
+	$(ca).toggle();
+	
+
+	IntervarId = setInterval( 'resizeFrame()', 100 );
+}
+function resizeFrame()
+{
+    var oBody = document.body;
+    var tb_contents = document.getElementById("contents-wrapper");
+    var i_height = tb_contents.offsetHeight;
+    if(i_height==0){
+    	i_height  = 100;
+    }
+
+    parent.resizeFrameHeight('inreview',i_height);
+    if ( IntervarId ) clearInterval( IntervarId );
+
+	var i_width = tb_contents.offsetWidth;
+    if(i_width==0){
+    	i_width  = 100;
+    }
+    parent.resizeFrameWidth('inreview',i_width);
+    if ( IntervarId ) clearInterval( IntervarId );
+}
+</script>
+</head>
+
+<body style="margin-top:10px;background-color:#fff" onLoad="resizeFrame()">
+<div id="contents-wrapper">
+	<div class="review_top">
+		<!--{ @ dataBanner( 41 ) }-->
+		<a href="{.linkaddr}" target="{? .target} {.target} { : }_top{ / }"><img src="{.img}" alt=""></a>
+		<!--{ / }-->
+		<span class="btn_cover">
+			<a href="./goods_review.php" class="btn_view_list" target="_parent">상품후기 전체보기</a><a href="javascript:;" onclick="popup_register( 'add_review', '{_goodsno}' )" class="btn_upload">상품후기 올리기</a>
+		</span>
+	</div>
+	<div class="text_board">
+		<div class="board">
+			<div class="board_head">
+				<ul>
+					<li class="count"></li>
+					<li class="subject">상품후기</li>
+					<li class="writer">작성자</li>
+					<li class="date">작성일</li>						
+				</ul>
+			</div>
+			<div class="board_body">
+				<ul>
+					<!--{ @ _loop }-->
+					<li>
+						<span class="count">
+							<!--{ ? .type == 'Q' }-->
+								<!--{? .attach }-->
+								<span class="complete">포토후기</span>
+								<!--{:}-->
+								<span class="receipt">상품후기</span>
+								<!--{/}-->
+							<!--{ : }-->
+							<span class="label_reply">후기답변</span>
+							<!--{ / }-->
+						</span>
+						<div class="subject" onclick="view_content(this,event)">
+							<a href="javascript:;" class="subject_cover">	
+								<div class="remain_cover">
+									<h4 class="subject_tit">
+									<!--{ ? .type == 'Q' }-->			
+									{.subject}
+									<span class="reply_cnt">{? .replecnt > 0}{.replecnt}{/}</span>
+									{? .attach}&nbsp;<img src="../img/ico_attach_file.png" align="absmiddle" style="position:relative;top:-2px">&nbsp;{/}
+									<!--{ ? .point > 0 }--><span style="color:#5cc4b9"><!--{ @ array_fill(0,.point,'') }-->★<!--{ / }--></span><!--{ / }--> 
+									<!--{ : }-->
+									<img src="../img/ico_reply.png" alt="답변글">
+									{.subject}
+									{? .attach}&nbsp;<img src="../img/ico_attach_file.png" align="absmiddle" style="position:relative;top:-2px">&nbsp;{/}
+									<!--{ / }-->
+									</h4>											
+								</div>
+							</a>
+						</div>
+						<span class="writer">{ ? .name }{.name}{ : .m_name }{.m_name}{ : }{.m_id}{ / }</span>
+						<span class="date">{=substr(.regdt,0,10)}</span>
+						
+						<div class="contents_area" style="display:none">
+							<div width="100%" style="padding-left:17">
+							<!--{ ? .image != ''}-->
+							{.image} <br><br>
+							<!--{ / }-->
+							{.contents}
+							</div>
+							<div class="task_article">
+							<!--{ ? .authreply == 'Y' }--><a href="javascript:;" onclick="popup_register( 'reply_review', '{.goodsno}', '{.sno}' );" class="btn_answer">답변</a><!--{ / }--><!--{ ? .authmodify == 'Y' }--><a href="javascript:;" onclick="popup_register( 'mod_review', '{.goodsno}', '{.sno}' );" class="btn_modify">수정</a><!--{ / }--><!--{ ? .authdelete == 'Y' }--><a href="javascript:;" onclick="popup_register( 'del_review', '{.goodsno}', '{.sno}' );" class="btn_delete">삭제</a><!--{ / }-->
+						</div>						
+					</li>
+					<!--{ / }-->							
+				</ul>
+			</div>
+		</div>
+		<div class="navigation">
+			{pg->page['navi']} 
+		</div>
+	</div>
+</div>
+</body>
+</html>

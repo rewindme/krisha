@@ -1,0 +1,114 @@
+{*** 주문내역/배송조회 | mypage/mypage_orderlist.php ***}
+{ # header }
+
+
+<script>
+function order_confirm(ordno)
+{
+	var fm = document.frmOrderList;
+	fm.mode.value = "confirm";
+	fm.ordno.value = ordno;
+	fm.action = "indb.php";
+	if (confirm('주문하신 상품을 수령하셨습니까?')) fm.submit();
+}
+</script>
+
+
+<!-- container -->
+<div class="container">
+	<div class="mypage">
+		<div class="location">
+			<a href="http://krisha.co.kr" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<span class="slash">/</span>
+			<span class="current">쇼핑백</span>
+		</div>
+		<div class="info_column">
+			<div class="history">
+				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
+				<div class="mypage_head">
+					<ul>
+						<li class="selected"><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
+						<li><a href="../mypage/mypage_emoney.php">적립금</a></li>
+						<li><a href="../mypage/mypage_coupon.php">할인쿠폰</a></li>
+						<li><a href="../mypage/mypage_wishlist.php">관심상품</a></li>
+					</ul>
+				</div>
+				<div class="mypage_body">
+					<form name=frmOrderList method=post>
+					<input type=hidden name=mode>
+					<input type=hidden name=ordno>
+					<table class="mypage_table">
+						<caption><i class="blind">주문내역</i></caption>
+						<colgroup>
+							<col style="width:140px">
+							<col style="width:auto">
+							<col style="width:110px">
+							<col style="width:110px">
+							<col style="width:110px">
+							<col style="width:70px">
+						</colgroup>
+						<tbody>
+							<!--{ @ loop }-->
+							<tr>
+								<td>
+									<span class="date">{.orddt}</span>
+									<a href="mypage_orderview.php?ordno={.ordno}" class="view_order">주문상세보기</a>
+								</td>
+								<td class="title">
+									<a href="mypage_orderview.php?ordno={.ordno}">{.ordno}</a>
+								</td>
+								<td align=center>{.str_settlekind}</td>
+								<td>
+									<span class="price">{=number_format(.settleprice)}</span>원
+								</td>
+								<td>
+									{.str_step}
+								</td>
+								<td>
+									<!--{ ? .step==3 && !.step2 }-->
+									<a href="javascript:order_confirm({.ordno})" class="btn_receive">수령확인</a>
+									<!--{ : .escrowconfirm==2 }-->
+									수령완료
+									<!--{ / }-->
+								</td>
+							</tr>
+							<!--{ / }-->
+						</tbody>
+					</table>
+					<div class="navigation">
+						 {pg->page['navi']}
+					</div>
+					</form>
+				</div>
+			</div>
+			<!--{? _todayGoodsList }-->
+			<div class="view_today">
+				<h3>오늘 본 상품</h3>
+				<div class="prod_list">
+					<ul>
+						<!--{ @ _todayGoodsList }-->
+						<!--{? .index_ < 4 }-->
+						<li>
+							<a href="../goods/goods_view.php?goodsno={.goodsno}">
+								<span class="prod_thumb">
+									{=goodsimg(.img,254)}
+								</span>
+								<strong class="prod_name">{.goodsnm}</strong>					
+								<span class="price"><em>{=number_format(.price)}</em>원</span>
+							</a>
+						</li>
+						<!--{ / }-->
+						<!--{ / }-->
+					</ul>
+				</div>
+				<a href="../mypage/mypage_today.php" class="view_more"><i>오늘 본 상품</i>더보기</a>
+			</div>
+			<!--{ / }-->
+
+		</div>
+		<!--{ ? this->tpl_['side_inc'] && _cfg['outline_sidefloat'] == 'left' }-->
+		{ # side_inc // 측면디자인 }
+		<!--{ / }-->
+		
+	</div>	
+{ # footer }

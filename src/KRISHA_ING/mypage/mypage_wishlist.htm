@@ -1,0 +1,110 @@
+{*** 상품보관함 | mypage/mypage_wishlist.php ***}
+{ # header }
+
+<!-- container -->
+<div class="container">
+	<div class="mypage">
+		<div class="location">
+			<a href="#" class="ico_home"><i class="blind">KRISHA HOME</i></a>
+			<span class="slash">/</span>
+			<span class="current">쇼핑백</span>
+		</div>
+		<div class="info_column">
+			<div class="history">
+				<h3 class="tit_mykrisha"><i class="blind">MY KRISHA</i></h3>
+				<div class="mypage_head">
+					<ul>
+						<li><a href="../mypage/mypage_orderlist.php">주문내역</a></li>
+						<li><a href="../mypage/mypage_emoney.php">적립금</a></li>
+						<li><a href="../mypage/mypage_coupon.php">할인쿠폰</a></li>
+						<li class="selected"><a href="../mypage/mypage_wishlist.php">관심상품</a></li>
+					</ul>
+				</div>
+				<div class="mypage_body">
+					
+
+					<script>
+					function act(mode)
+					{
+						var fm = document.frmWish;
+						if (isChked('sno[]')){
+							fm.mode.value = mode;
+							fm.submit();
+						}
+					}
+					</script>
+					
+					
+					<form name=frmWish method=post>
+					<input type=hidden name=mode>
+					
+					<div class="task_cover">
+						<button type="button" class="btn_gray" onclick="chkBox('sno[]','rev')">전체상품 선택</button>
+					</div>
+					
+					<div class="prod_list wish_list">
+						<ul>
+						<!--{ @ loop }-->
+						<li>
+							<input type=hidden name=goodsno[{.sno}] value="{.goodsno}">
+							<input type=hidden name=opt[{.sno}][] value="{=implode('|',.opt)}">
+							<!--{ @ .r_addopt }--><input type=hidden name=addopt[{.sno}][] value="{..value_}"><!--{ / }-->
+							<!--{ @ .r_addopt_inputable }--><input type=hidden name=addopt_inputable[{.sno}][] value="{..value_}"><!--{ / }-->
+							<a href="../goods/goods_view.php?goodsno={.goodsno}">
+								<span class="prod_thumb">
+									{=goodsimg(.img_s,254)}
+								</span>
+							</a>
+								<span class="chk_prod"><input type="checkbox" name=sno[] value="{.sno}" id="chk_wish_{.sno}"><label for="chk_wish_{.sno}">선택</label></span>
+							<a href="../goods/goods_view.php?goodsno={.goodsno}">
+								<strong class="prod_name">{.goodsnm}</strong>
+								<span class="price"><em>{=number_format(.price + .addprice)}</em>원</span>
+							</a>
+						</li>
+						<!--{ / }-->
+						</ul>
+					
+						<div class="navigation">{pg->page['navi']}</div>
+						
+						<div class="btns_task">
+							<button type="button" class="btn_gray" onclick="act('delItem')">선택상품 삭제</button>
+							<button type="button" class="btn_orange" onclick="act('cart')">장바구니 담기</button>
+							
+						</div>
+					</div>
+					</form>
+					
+
+				</div>
+			</div>
+			
+			<div class="view_today">
+				<h3>오늘 본 상품</h3>
+				<div class="prod_list">
+					<ul>
+						<!--{ @ _todayGoodsList }-->
+						<!--{? .index_ < 4 }-->
+						<li>
+							<a href="../goods/goods_view.php?goodsno={.goodsno}">
+								<span class="prod_thumb">
+									{=goodsimg(.img,254)}
+								</span>
+								<strong class="prod_name">{.goodsnm}</strong>					
+								<span class="price"><em>{=number_format(.price)}</em>원</span>
+							</a>
+						</li>
+						<!--{ / }-->
+						<!--{ / }-->
+					</ul>
+				</div>
+				<a href="../mypage/mypage_today.php" class="view_more"><i>오늘 본 상품</i>더보기</a>
+			</div>
+
+
+		</div>
+		<!--{ ? this->tpl_['side_inc'] && _cfg['outline_sidefloat'] == 'left' }-->
+		{ # side_inc // 측면디자인 }
+		<!--{ / }-->
+		
+	</div>	
+{ # footer }

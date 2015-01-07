@@ -1,0 +1,120 @@
+{*** 장바구니 상품목록 | goods/goods_cart.php ***}
+
+	<table class="order_list">
+		<caption><span class="blind">상품정보</span></caption>
+		<colgroup>
+			<!--{ ? _orderitem_mode=="cart" }-->
+			<col style="width:40px">
+			<!--{ / }-->
+			<col style="width:auto">
+			<col style="width:110px">
+			<col style="width:110px">
+			<col style="width:110px">
+			<!--{ ? _orderitem_mode!=="cart" }--><col style="width:79px"><!--{ / }-->
+		</colgroup>
+		<thead>
+		<tr>
+			<!--{ ? _orderitem_mode=="cart" }-->
+			<th>
+				<!-- <a href="javascript:void(0);" onClick="chkBox('idxs[]','rev');nsGodo_CartAction.recalc();">선택</a> -->
+				<input type="checkbox" checked="checked" onClick="chkBox('idxs[]','rev');nsGodo_CartAction.recalc();">
+				
+			</th>
+			<!--{ / }-->
+			<th>상품정보</th>
+			<th>판매가격</th>
+			<th>수량</th>
+			<th>주문금액</th>
+			
+		</tr>
+		</thead>
+		<tbody>
+		<!--{ ? cart->item }-->
+		<!--{ @ cart->item }-->
+		<tr>
+			<input type="hidden" name="adultpro[]" value="{.use_only_adult}">
+			<!--{ ? _orderitem_mode=="cart" }-->
+			<td align=center>
+				<input type="checkbox" name="idxs[]" value="{.index_}" checked="checked" onClick="nsGodo_CartAction.recalc();">
+			</td>
+			<!--{ / }-->
+		
+			<td class="prod_name">
+				<span class="prod_thumb">
+					<!--{?.todaygoods=='y'}--><a href="../todayshop/today_goods.php?tgsno={.tgsno}">{=goodsimgTS(.img,52)}</a><!--{:}--><a href="../goods/goods_view.php?goodsno={.goodsno}">{=goodsimg(.img,52)}</a><!--{/}--></span><div class="prod_info"><p class="name">{.goodsnm}</p>
+					<p class="status">
+						<!--{ ? .opt }-->
+						선택옵션 : [{=implode("/",.opt)}]
+						<!--{ / }-->
+						
+						<!--{ ? .select_addopt}-->
+						<br>추가옵션 : <!--{ @ .select_addopt }-->[{..optnm}:{..opt}]<!--{ / }-->
+						<!--{ / }-->
+						
+						<!--{ ? .input_addopt}-->
+						<br>입력옵션 : <!--{ @ .input_addopt }-->[{..optnm}:{..opt}]<!--{ / }-->
+						<!--{ / }-->
+						
+						<!--{ ? _orderitem_mode=="cart" }-->
+						<a href="javascript:void(0);" onClick="nsGodo_CartAction.editOption('{.index_}');" class="btn_modify_option">옵션수정</a>
+						<!--{ / }-->
+					</p>
+				</div>
+			</td>
+			<td>
+				<!-- 판매가격, 단가 -->
+				<span class="price">
+					{=number_format(.price + .addprice)}원
+					<!--{ ? .special_discount_amount}-->
+					<img src="../img/icon/goods_sale_icon.png" />
+					<!--{/}-->
+				</span>
+				
+				<!-- 적립금 -->
+				<span class="point">적립금 {=number_format(.reserve)}원</span>
+			</td>
+			<td>
+				<!--{ ? _orderitem_mode=="cart" }-->
+				<div class="qty_cover">
+					<span class="qty_cont">
+						<input type="text" class="qty_ipt" name=ea[] step="{? .sales_unit}{.sales_unit}{:}1{/}" min="{? .min_ea}{.min_ea}{:}1{/}" max="{? .max_ea}{.max_ea}{:}0{/}" size=2 value="{.ea}" onkeydown="onlynumber()" onblur="chg_cart_ea(this,'set')">
+						
+						<span class="qty_cnt_up" onClick="chg_cart_ea(frmCart['ea[]'],'up',{.index_})"><i>수량 추가</i></span>
+						<span class="qty_cnt_down" onClick="chg_cart_ea(frmCart['ea[]'],'dn',{.index_})"><i>수량 감소</i></span>
+					</span>
+					<button type="submit" class="btn_modify">수량변경</button>
+				</div>
+				<!--{ : }-->
+				{.ea}개
+				<!--{ / }-->
+			</td>
+			<td class="order_price">{=number_format((.price + .addprice)*.ea)}원</td>
+		</tr>
+			<!--{ ? _orderitem_mode=="cart" }-->
+			<script>nsGodo_CartAction.pushdata({reserve:{=.reserve},price:{=(.price + .addprice)},ea:{=.ea}});</script>
+			<!--{ / }-->
+		<!--{ / }-->
+		<!--{:}-->
+		<tr>
+			<td colspan="5">
+				<p class="blank_msg">현재 장바구니에 담긴 상품이 없습니다.</p>
+			</td>
+		</tr>
+		<!--{/}-->
+		</tbody>
+	</table>
+	<!--{ ? _orderitem_mode=="cart" }-->
+	<div class="help_msg">
+		<h3>장바구니 이용안내</h3>
+		<p>장바구니에 담긴 상품은 접속을 종료하시거나 일정시간 페이지 이동이 없으면 장바구니가 자동으로 비워집니다.<br>
+장바구니에 담긴 상품을 보관하시려면 <strong>관심상품</strong>에 등록하시기 바랍니다.<br>
+총 결제금액이 <strong>3만원 	이상인 경우 배송비 무료</strong>입니다.</p>
+	</div>
+	<!--{/}-->
+
+
+
+
+
+
+
