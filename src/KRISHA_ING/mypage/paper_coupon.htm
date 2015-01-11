@@ -1,29 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>쿠폰적용하기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
 <script src="../common.js"></script>
 <link rel="styleSheet" href="../style.css">
-<body bgcolor="#000000" style="padding:10px;">
+</head>
+<body>
 <form method="post" action="indb.paper.php" onsubmit="return chkForm(this)">
 <input type="hidden" name="sno" value="{_sno}"/>
-<table height=100% width=100% cellpadding=0 cellspacing=0 border=0 bgcolor="#FFFFFF">
-<tr>
-	<td style="background:#000000; border-bottom:2px solid #DDDDDD"><img src="../img/common/popup_title_coupon.gif"></td>
-</tr>
-<tr>
-	<td align=center height="100">
-	<div>
-	<input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/>-
-	<input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/>-
-	<input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/>-
-	<input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/>
+
+<div class="pop_wrap" id="table_after">
+	<div class="pop_header">
+		<h1 class="tit_coupon"><i>Coupon</i></h1>
+		<p class="description">보유하신 쿠폰의 일련번호를 등록하시고, 상품을 구매하실 때 할인받으세요.</p>
 	</div>
-	<div style="padding-top:10">
-	<input type="submit" value="확인"/>
+	<div class="pop_container ">
+		<div class="coupon_regist">
+			<input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/><input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/><input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" required/><input type="text" name="coupon_number[]" size="5" maxlength="4" label="쿠폰번호" style="margin-right:0" required/>
+		</div>
 	</div>
-	</td>
-</tr>
-<tr>
-	<td valign=bottom align=right style="padding:0 14 6 0;"><A HREF="javascript:this.close()" onFocus="blur()"><img src="../img/common/popup_close.gif"></A></td>
-</tr>
-</table>
+	<div class="pop_submit">
+		<button type="submit" class="btn_point">쿠폰등록</button>
+		<button type="button" class="btn_gray" onclick="window.close()">등록취소</button>
+	</div>
+</div>
 </form>
 </body>
 </html>

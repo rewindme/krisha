@@ -1,3 +1,4 @@
+<!doctype html>
 {*** 1:1문의 주문번호검색창 | mypage/mypage_qna_order.php ***}
 <html>
 <head>
@@ -6,59 +7,45 @@
 <script src="../common.js"></script>
 <link rel="styleSheet" href="../style.css">
 </head>
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<table width=100% height=100% cellpadding=0 cellspacing=0 border=0>
-<tr>
-	<td height=260 style="border:10px solid #000000" valign=top>
-
-	<table height=100% width=95% cellpadding=0 cellspacing=0 border=0 align=center>
-	<tr>
-		<td height=100% valign=top>
-
-		<TABLE cellpadding=3 cellspacing=0 border=0>
-		<tr><td class=stxt style="padding-top:10">문의하실 주문번호를 선택하세요.</td></tr>
-		</TABLE>
-
-		<table width=100% cellpadding=0 cellspacing=0 border=0 style="margin-top:10px;">
-		<col width=20%>
-		<col width=12%>
-		<col width=36%>
-		<col width=10%>
-		<col width=15%>
-		<col width=7%>
-		<tr height=19 bgcolor="#A8A8A8">
-			<th style="font:bold 8pt 돋움; color:#FFFFFF">주문번호</th>
-			<th style="font:bold 8pt 돋움; color:#FFFFFF">주문일자</th>
-			<th style="font:bold 8pt 돋움; color:#FFFFFF">상품명</th>
-			<th style="font:bold 8pt 돋움; color:#FFFFFF">수량</th>
-			<th style="font:bold 8pt 돋움; color:#FFFFFF">주문금액</th>
-			<th style="font:bold 8pt 돋움; color:#FFFFFF">선택</th>
-		</tr>
-		<!--{ @ _loop }-->
-		<tr {?.index_%2}bgcolor="#f7f7f7"{/} height=25 align=center>
-			<td>{.ordno}</td>
-			<td>{.orddt}</td>
-			<td>{.goodsnm}</td>
-			<td align=right>{=number_format(.ea)} 개</td>
-			<td align=right>{=number_format(.settleprice)} 원</td>
-			<td><input type="radio" name="" onclick="parent.order_put('{.ordno}')"></td>
-		</tr>
-		<tr><td colspan=6 height=1 bgcolor="E5E5E5"></td></tr>
-		<!--{ / }-->
-		</table>
-
-		<div style="padding:10px" align=center>{pg->page['navi']}</div>
-
-
-		</td>
+<body>
+<div class="pop_wrap" style="padding:10px 19px 0">
+	<h2 class="order_tit">상담받으실 주문번호를 선택해주세요.</h2>
+	
+	
+	<table class="tb_list">
+	<col width=7%>
+	<col width=20%>
+	<col width=12%>
+	<col width=36%>
+	<col width=10%>
+	<col width=15%>
+	
+	<tr height=19 bgcolor="#A8A8A8">
+		<th >선택</th>
+		<th >주문번호</th>
+		<th >주문일자</th>
+		<th >상품명</th>
+		<th >수량</th>
+		<th >주문금액</th>
+		
 	</tr>
-	<TR>
-		<TD height="19" align=right><A HREF="javascript:parent.order_close()" onFocus="blur()"><img src="../img/common/popup_close.gif"></A></TD>
-	</TR>
+	<!--{ @ _loop }-->
+	<tr>
+		<td><input type="radio" name="select_order" id="order_select_{.index_}" onclick="parent.order_put('{.ordno}')"></td>
+		<td><label for="order_select_{.index_}">{.ordno}</label></td>
+		<td>{.orddt}</td>
+		<td>{.goodsnm}</td>
+		<td>{=number_format(.ea)} 개</td>
+		<td>{=number_format(.settleprice)} 원</td>
+		
+	</tr>
+	<!--{ / }-->
 	</table>
-
-	</td>
-</tr>
-</table>
+	
+	<div class="pagenation">
+		{pg->page['navi']}
+	</div>
+	<button type="button" class="btn_close" onclick="window.parent.order_close()"><span class="icon"></span>창닫기</button>
+</div>
 </body>
 </html>
