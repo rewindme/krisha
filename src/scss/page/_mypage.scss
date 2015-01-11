@@ -38,7 +38,9 @@
 		li.selected{
 			position:relative;
 			border:1px solid $color-selected;
-			border-bottom:1px solid #fff;
+			border-bottom:0;
+			padding-bottom:1px;
+			background-color:#fff;
 			margin-bottom:-1px;
 			a {
 				color:$color-selected;
@@ -93,6 +95,18 @@
 			text-decoration:underline;
 			font-size:12px;
 		}
+		.info{
+			.desc{
+				margin-bottom:3px;
+				font-size:12px;
+			}			
+			.period{
+				font-size:11px;
+				color:#999;
+				br{display:none}
+			}
+		}
+		
 	}
 	.navigation{
 		a{
@@ -109,6 +123,7 @@
 			font-size:19px;
 			text-align:center;
 			color:#555;
+			padding:28px 0 29px;
 		}
 		.user_name{
 			font-weight:normal;
@@ -132,5 +147,45 @@
 			padding-right:30px;
 		}
 		
+	}
+	
+	a.btn_write{
+		@extend %btn-point2;
+		font-size:14px;
+		height:28px;
+		line-height:28px;
+		width: 98px;
+	}
+	
+	.btn_fn{
+		background-color:#999;
+		display:inline-block;
+		color:#fff;
+		padding:3px 7px 2px;
+		border-radius:3.1px;
+		font-size:11px;
+		line-height:12px;
+	}
+	
+	.reply_cnt{
+		color:#5cc4b9;
+		position:relative;
+		font-size:9px;
+		top:-4px;
+		font-weight:normal;
+		font-family:verdana,sans-serif;
+	}
+	
+	.blank_msg{
+		height:220px;
+		line-height:200px;
+		text-align:center;
+		font-size:14px;
+		font-weight:bold;
+		color:#999;
+		border-bottom:1px solid #e4e4e4;
+	}
+	td .blank_msg{
+		border-bottom:0
 	}
 }

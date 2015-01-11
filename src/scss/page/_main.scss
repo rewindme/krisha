@@ -79,3 +79,58 @@
 /* 임시 */
 
 #left_cs{position:fixed;right:50%;margin-right:600px;top:140px;z-index:100}
+
+
+/* 마이크리샤 레이어 */
+.ly_mypage_box{
+	position:absolute;
+	top:0;
+	z-index:1000;
+	width:90px;
+	display:none;
+	
+	ul{
+		background-color:#fff;
+		padding:0 0 9px 0;
+		border:1px solid #5cc4b9;
+		li{
+			padding:2px 10px;
+			line-height:18px;
+		}
+		li a{
+			color:#fff;
+			font-size:11px;
+			color:#666;
+		}
+		
+		li a:hover,li a:hover .group_name{
+			color:#f54500;
+		}
+		
+		.fake_parent{
+			height:39px;
+			padding:0 5px;
+			margin-bottom:10px;
+			a {
+				display:block;
+				line-height:40px;
+				text-align:center;
+				font-size:11px;
+				letter-spacing:0;
+				color:#5cc4b9;
+				border-bottom:1px solid #5cc4b9;
+			}
+		}
+		.group{
+			line-height: 15px;
+			
+		}
+		.group_name{
+			color:#999;
+		}	
+		.cnt{
+			color:#f54500;
+			padding:0 2px;
+		}
+	}	
+}

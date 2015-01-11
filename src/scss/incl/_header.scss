@@ -2,7 +2,7 @@
 /* 메인 - header */
 .header{
 	position:relative;background-color:#fff;min-width:1180px;height:130px;
-	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block;width:100%}
+	.gnb_area{height:40px;line-height:40px;background-color:#5cc4b9;@extend %display-inline-block;width:100%;position:relative}
 	.cover{@extend %cover;}
 	/* .logo a{@extend %sp-img;width:125px;height:18px;background-position:-30px 0;position:relative;top:11px} */
 	.logo {display:inline-block;vertical-align:top;height:40px;overflow:hidden;line-height:normal;font-size:0;white-space:nowrap}
@@ -12,14 +12,14 @@
 /* 	#top_logo img{vertical-align:top} */
 	.gnb{position:absolute;right:238px;top:0;font-size:0;}
 	.gnb li{@extend %display-inline-block;vertical-align:top;height:40px;}
-	.gnb li a{color:#fff;font-size:11px;letter-spacing:-1px}
+	.gnb li a{color:#fff;font-size:11px;letter-spacing:0}
 	.gnb li a:hover{text-decoration:underline}
 	.gnb li .bar{color:#fff;font-size:11px;padding:0 11px 0 12px}
 	.gnb .cnt{
 		background-color:#fff;
 		color:#5cc4b9;
 		border-radius:15px;
-		padding:0px 4px;
+		padding:0px 7px;
 		height:14px;
 		font-size:10px;
 		line-height:14px;
@@ -40,6 +40,7 @@
 	.category_cover.fix_fake,.category_cover.fix_top{
 		position:fixed;top: 0;left:0;right:0;width: auto;height: 50px;line-height: 50px;z-index: 100;
 		box-shadow:0;transition:0.2s box-shadow;
+		overflow:hidden;
 		#t_cate{
 		    width:1180px;
 		    margin:0 auto;

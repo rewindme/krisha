@@ -1,12 +1,16 @@
 @charset "utf-8";
-.prod_section{padding:45px 40px 0}
+.prod_section{padding:55px 40px 0}
 .prod_tab{
 	@extend %tab-box;display:block;margin-bottom:20px;
 	li{width:14.1%}
 	li a{width:100%}
 	li.selected a,
-	.cnt{color:#f54500;font-weight:bold}
-	
+	.cnt{
+		color:#f54500;
+		font-weight:bold;
+		padding:0 2px;
+	}
+	li.selected a{padding:0}
 }	
 //상품 상세 보기
 .prod_view_detail{
@@ -62,7 +66,7 @@
 	}	
 	.receipt,
 	.complete,
-	.label_reply{border:1px solid #5cc4b9;border-radius:3px;color:#5cc4b9;font-size:11px;padding:3px 7px 2px}
+	.label_reply{border:1px solid #5cc4b9;border-radius:3.1px;color:#5cc4b9;font-size:11px;padding:3px 7px 2px}
 	.complete{border-color:#f54500;color:#f54500}
 	.label_reply{border-color:#999;color:#999}
 }
@@ -102,12 +106,12 @@
 	h3.tit,h4.tit{font-size:14px;color:$color-strong;margin-bottom:13px}
 	h4.tit{font-size:12px;margin-bottom:0;line-height:18px}
 	.tit_category{color:$color-price;display:block;font-size:11px;font-weight:bold;margin-bottom:18px}
-	.desc{color:#999;font-size:11px;letter-spacing:-1px;margin-bottom:10px;line-height:18px}
+	.desc{color:#999;font-size:11px;letter-spacing:0;margin-bottom:10px;line-height:18px}
 	.cause{margin-bottom:38px}
-	.cause li{line-height:20px;margin-bottom:3px;font-size:11px;letter-spacing:-1px;color:#999}
+	.cause li{line-height:20px;margin-bottom:3px;font-size:11px;letter-spacing:0;color:#999}
 }
 .tb_info{
 	width:100%;table-layout:fixed;padding:0;border:1px solid #e8e8e8;border-collapse:collapse;margin:13px 0 40px;
-	th,td{border:1px solid #e8e8e8;font-size:11px;text-align:left;padding:10px 0 10px 20px;color:#999;letter-spacing:-1px}
+	th,td{border:1px solid #e8e8e8;font-size:11px;text-align:left;padding:10px 0 10px 20px;color:#999;letter-spacing:0}
 	th{background-color:#fbfbfb;color:#666}
 }

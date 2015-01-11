@@ -3,13 +3,27 @@
 .mypage{
 	.task_cover{
 		padding:30px 0;
+		
+		.pos_r{
+			float:right;
+		}
+		
 		.btn_gray{
 			@extend %btn-gray;
+			
+		}
+		
+		.btn_orange{
+			@extend %btn-point2;
+			
+		}
+		
+		.btn_gray,.btn_orange{
 			font-size:14px;
 			height:30px;
 			line-height:28px;
 			width:120px;
-		}	
+		}
 	}
 	
 	.wish_list{
@@ -39,26 +53,7 @@
 				
 			}
 		}
+		
+		
 	}
-	.btns_task{
-		text-align:center;
-		
-		.btn_gray{
-			@extend %btn-gray;
-			
-		}
-		
-		.btn_orange{
-			@extend %btn-point2;
-			
-		}
-		
-		.btn_gray,.btn_orange{
-			font-size:14px;
-			height:30px;
-			line-height:28px;
-			width:120px;
-		}
-	}
-	
 }
