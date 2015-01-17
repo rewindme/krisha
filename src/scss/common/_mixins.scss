@@ -103,6 +103,12 @@ a%btn-point2{
 	width:128px;
 }
 
+%reset-btn{
+	border:0;
+	background:transparent;
+	border-radius:0;
+}
+
 //input
 %ipt-text{border:1px solid #e4e4e4;-webkit-appearance:none;border-radius:0;vertical-align:top;}
 %input-fix{width:13px;height:13px;margin-right:3px;vertical-align:middle}

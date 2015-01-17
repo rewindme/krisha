@@ -85,8 +85,8 @@ i, .ht {
 body, table, input, textarea, button {
   font-family: 'Nanum Barun Gothic',sans-serif; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
-.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -116,7 +116,7 @@ body, table, input, textarea, button {
   position: relative;
   zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
   background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
   background-repeat: no-repeat;
@@ -209,25 +209,25 @@ body, table, input, textarea, button {
     height: 0;
     visibility: hidden; }
 
-.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .container .location {
+.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .cs_center .location, .container .location {
   position: absolute;
   left: 40px;
   top: 23px;
   line-height: 16px; }
-  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .container .location .ico_home {
+  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .container .location .ico_home {
     width: 89px;
     height: 13px;
     background-position: 0 1px; }
-  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .container .location .slash {
+  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .cs_center .location .slash, .container .location .slash {
     color: #999;
     vertical-align: top;
     font-size: 11px; }
-  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .container .location .current a {
+  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .cs_center .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .cs_center .location .current a, .container .location .current a {
     color: #f54500;
     font-size: 11px;
     font-weight: bold;
     vertical-align: top; }
-  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .container .location .parent {
+  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .cs_center .location .parent, .container .location .parent {
     font-size: 11px;
     color: #999;
     vertical-align: top; }
@@ -241,7 +241,7 @@ body, table, input, textarea, button {
   height: 43px;
   line-height: 43px; }
 
-.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order {
+.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order {
   border: 1px solid #db3e00;
   background-color: #f54500;
   color: #fff;
@@ -251,10 +251,10 @@ body, table, input, textarea, button {
   line-height: 43px;
   width: 128px; }
 
-.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order {
+.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order {
   line-height: 47px; }
 
-.order_guest .btn_order, .order_guest .btn_guest_order, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .task_btn .btn_home, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray {
+.order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .task_btn .btn_home, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray {
   border: 1px solid #aeaeae;
   background-color: #b4b4b4;
   color: #fff;
@@ -263,6 +263,11 @@ body, table, input, textarea, button {
   height: 45px;
   line-height: 43px;
   width: 128px; }
+
+.cs_center .search_cover .btn_search {
+  border: 0;
+  background: transparent;
+  border-radius: 0; }
 
 .form_item .ipt_text, .order_reciept_info .ipt_text, .form_item .choose_email, .order_reciept_info .choose_email, .certify_cont .ipt_area input, .order_list .ipt_text, .form_tb .ipt_text, .use_point .ipt_text {
   border: 1px solid #e4e4e4;
@@ -315,6 +320,13 @@ body, table, input, textarea, button {
 
 .mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon {
   background-image: url('img/sp/mypage-se13f806e21.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top; }
+
+.cs_center .tit_faq_search, .cs_center .search_cover .btn_search .icon, .cs_center .cs_center_info .tit_cs_center, .cs_center .cs_center_info .tel_number .img, .cs_center .cs_center_info .cs_period .img, .cs_center .cs_center_info .cs_menu .menu1 a, .cs_center .cs_center_info .cs_menu .menu2 a, .cs_center .cs_center_info .cs_menu .menu3 a, .cs_center .cs_center_info .cs_menu .menu4 a, .cs_center .cs_center_info .cs_menu .menu5 a, .cs_center .cs_center_info .cs_menu .menu6 a, .cs_center .cs_center_info .consult_katalk .img {
+  background-image: url('img/sp/cs-center-s39a1cd63ce.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -1396,10 +1408,10 @@ body {
     background-position: -55px -132px;
     height: 70px; }
 
-.login, .join, .basket, .mypage {
+.login, .join, .basket, .mypage, .cs_center {
   padding: 130px 60px 80px;
   position: relative; }
-  .login h2, .join h2, .basket h2, .mypage h2 {
+  .login h2, .join h2, .basket h2, .mypage h2, .cs_center h2 {
     font-size: 16px;
     font-weight: normal;
     border-bottom: 1px solid #5cc4b9;
@@ -1407,7 +1419,7 @@ body {
     padding-bottom: 8px;
     color: #5cc4b9;
     margin-bottom: 38px; }
-  .login button, .join button, .basket button, .mypage button, .login label, .join label, .basket label, .mypage label {
+  .login button, .join button, .basket button, .mypage button, .cs_center button, .login label, .join label, .basket label, .mypage label, .cs_center label {
     cursor: pointer; }
 
 /* 로그인 */
@@ -1503,6 +1515,20 @@ body {
   padding: 18px 0 0; }
 .order_guest .btn_guest_order {
   line-height: 45px; }
+
+.confirm_pw .login_box {
+  width: auto;
+  float: none; }
+  .confirm_pw .login_box h2 {
+    color: #f54500;
+    border-color: #f54500;
+    margin-bottom: 0; }
+.confirm_pw .hero {
+  padding: 92px 99px 0 60px;
+  float: left; }
+.confirm_pw .login_cover {
+  overflow: hidden;
+  padding-top: 50px; }
 
 .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel {
   height: 40px;
@@ -1826,7 +1852,7 @@ body {
     padding: 0 18px;
     width: auto; }
 
-.basket .tit_bar, .mypage .tit_bar, .order_list th, .privacy_statement .tit_bar {
+.basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .order_list th, .privacy_statement .tit_bar {
   border-bottom: 2px solid #5cc4b9;
   color: #666;
   font-weight: normal;
@@ -1834,24 +1860,24 @@ body {
   line-height: 29px;
   font-size: 14px; }
 
-.basket, .mypage {
+.basket, .mypage, .cs_center {
   overflow: hidden; }
-  .basket .info_column, .mypage .info_column {
+  .basket .info_column, .mypage .info_column, .cs_center .info_column {
     width: 750px;
     float: left;
     margin-right: 40px; }
-  .basket .tit_bar, .mypage .tit_bar {
+  .basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar {
     font-size: 16px;
     color: #5cc4b9;
     margin-bottom: 25px; }
-  .basket .aside_column, .mypage .aside_column {
+  .basket .aside_column, .mypage .aside_column, .cs_center .aside_column {
     width: 270px;
     float: left; }
-    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar {
+    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar, .cs_center .aside_column .tit_bar {
       border-color: #f54500;
       color: #f54500;
       margin-bottom: 25px; }
-    .basket .aside_column .task_btn, .mypage .aside_column .task_btn {
+    .basket .aside_column .task_btn, .mypage .aside_column .task_btn, .cs_center .aside_column .task_btn {
       padding: 3px 0 26px; }
 
 .order_list {
@@ -2979,5 +3005,141 @@ body {
       color: #f54500;
       font-weight: bold;
       font-size: 12px; }
+
+.cs_center .cs_center_info .tel_number, .cs_center .cs_center_info .cs_period {
+  border-bottom: 1px solid #d5d5d5;
+  padding-bottom: 24px;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.cs_center {
+  padding-top: 80px; }
+  .cs_center .tit_faq_search {
+    background-position: 0 0;
+    width: 109px;
+    height: 14px;
+    border: 0;
+    padding: 0;
+    margin: 0 0 20px; }
+  .cs_center .search_area {
+    width: 574px; }
+  .cs_center .search_cover {
+    background-color: #f54500;
+    padding: 8px 82px 8px 8px;
+    position: relative;
+    margin-bottom: 78px; }
+    .cs_center .search_cover .search_input {
+      border: 0;
+      padding: 0 0 0 10px;
+      width: 474px;
+      height: 38px;
+      line-height: 38px;
+      color: #f54500; }
+    .cs_center .search_cover .btn_search {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 15px 29px; }
+      .cs_center .search_cover .btn_search .icon {
+        background-position: -234px -44px;
+        width: 24px;
+        height: 24px; }
+  .cs_center .faq_category {
+    margin-bottom: 11px; }
+    .cs_center .faq_category li {
+      display: inline-block;
+      margin-right: 25px;
+      *display: inline;
+      *zoom: 1; }
+    .cs_center .faq_category a {
+      color: #999;
+      font-size: 16px; }
+  .cs_center .faq_board {
+    border-top: 3px solid #f54500; }
+    .cs_center .faq_board li {
+      padding: 14px 0;
+      border-bottom: 1px solid #e4e4e4;
+      font-size: 14px;
+      line-height: 22px;
+      color: #666; }
+    .cs_center .faq_board a, .cs_center .faq_board .question, .cs_center .faq_board .answer {
+      font-size: 14px;
+      line-height: 22px;
+      color: #666; }
+    .cs_center .faq_board .category {
+      display: inline-block;
+      color: #f54500;
+      width: 126px;
+      text-align: center; }
+    .cs_center .faq_board .question {
+      padding-left: 5px;
+      cursor: pointer; }
+    .cs_center .faq_board .answer {
+      display: none;
+      border-top: 1px solid #e4e4e4;
+      padding: 16px 0 0 130px;
+      margin-top: 14px; }
+    .cs_center .faq_board .open .answer {
+      display: block; }
+  .cs_center .cs_center_info {
+    background-color: #f2f2f2;
+    padding: 25px 25px 20px; }
+    .cs_center .cs_center_info .tit_cs_center {
+      background-position: -139px 0;
+      width: 95px;
+      height: 14px;
+      border: 0;
+      padding: 0;
+      margin: 0 0 20px -5px; }
+    .cs_center .cs_center_info .tel_number .img {
+      background-position: 0 -44px;
+      width: 204px;
+      height: 43px; }
+    .cs_center .cs_center_info .cs_period .img {
+      background-position: 0 -295px;
+      width: 196px;
+      height: 90px; }
+    .cs_center .cs_center_info .cs_menu {
+      padding: 8px 0 0; }
+      .cs_center .cs_center_info .cs_menu li {
+        float: left;
+        width: 110px;
+        text-align: center;
+        margin-bottom: 19px; }
+        .cs_center .cs_center_info .cs_menu li .guide {
+          display: inline-block;
+          width: 0;
+          height: 63px;
+          vertical-align: middle; }
+        .cs_center .cs_center_info .cs_menu li a {
+          vertical-align: middle !important; }
+      .cs_center .cs_center_info .cs_menu .menu1 a {
+        background-position: -114px -202px;
+        width: 73px;
+        height: 63px; }
+      .cs_center .cs_center_info .cs_menu .menu2 a {
+        background-position: 0 -202px;
+        width: 84px;
+        height: 63px; }
+      .cs_center .cs_center_info .cs_menu .menu3 a {
+        background-position: -188px -117px;
+        width: 64px;
+        height: 55px; }
+      .cs_center .cs_center_info .cs_menu .menu4 a {
+        background-position: -217px -202px;
+        width: 63px;
+        height: 63px; }
+      .cs_center .cs_center_info .cs_menu .menu5 a {
+        background-position: -100px -117px;
+        width: 58px;
+        height: 54px; }
+      .cs_center .cs_center_info .cs_menu .menu6 a {
+        background-position: 0 -117px;
+        width: 70px;
+        height: 54px; }
+    .cs_center .cs_center_info .consult_katalk .img {
+      background-position: 0 -415px;
+      width: 230px;
+      height: 177px; }
 
 /*# sourceMappingURL=krisha.css.map */

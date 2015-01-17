@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+%cs_info_box{
+	border-bottom:1px solid #d5d5d5;
+	padding-bottom:24px;
+	margin-bottom:20px;	
+	text-align:center;
+}
+
+.cs_center{
+	$color-selected:#f54500;
+	$color-normal:#e4e4e4;
+	padding-top:80px;
+	
+	.tit_faq_search{
+		@include use-sprite(faq_search,$icons-cs);
+		border:0;
+		padding:0;
+		margin:0 0 20px;
+	}
+	
+	
+	
+	.search_area{
+		width:574px;
+	}
+	.search_cover{
+		background-color:$color-selected;
+		padding:8px 82px 8px 8px;
+		position:relative;
+		margin-bottom:78px;
+		
+		.search_input{
+			border:0;
+			padding:0 0 0 10px;
+			width:474px;
+			height:38px;
+			line-height:38px;
+			color:$color-selected;
+		}
+		
+		.btn_search{
+			@extend %reset-btn;
+			
+			position:absolute;
+			right:0;
+			top:0;
+			padding:15px 29px;
+			.icon{
+				@include use-sprite(ico_search,$icons-cs);
+			}
+		}
+	}	
+	
+	
+	.faq_category{
+		margin-bottom:11px;
+		
+		li{
+			display:inline-block;
+			margin-right:25px;
+			*display:inline;
+			*zoom:1
+		}
+		a{
+			color:#999;
+			font-size:16px;
+		}
+	}
+	
+	.faq_board{
+		border-top:3px solid $color-selected;
+		li{
+			padding:14px 0;
+			border-bottom:1px solid $color-normal;
+			font-size:14px;
+			line-height:22px;
+			color:#666;
+		}
+		a,.question,.answer{
+			font-size:14px;
+			line-height:22px;
+			color:#666;
+			
+		}
+		.category{
+			display:inline-block;
+			color:$color-selected;
+			width:126px;
+			text-align:center;
+		}
+		.question{
+			padding-left:5px;
+			cursor:pointer;
+		}
+		.answer{
+			display:none;
+			border-top:1px solid $color-normal;
+			padding:16px 0 0 130px;
+			margin-top:14px;
+		}
+		
+		.open .answer{
+			display:block;
+		}
+	}
+	
+	.cs_center_info{
+		background-color:#f2f2f2;
+		padding:25px 25px 20px;
+		
+		.tit_cs_center{
+			@include use-sprite(cs_center,$icons-cs);
+			border:0;
+			padding:0;
+			margin:0 0 20px -5px;
+		}
+		
+		.tel_number{
+			@extend %cs_info_box;
+			
+			.img{
+				@include use-sprite(help_number,$icons-cs);
+			}
+		}
+		
+		.cs_period{
+			@extend %cs_info_box;
+			.img{
+				@include use-sprite(cs_period,$icons-cs);
+			}
+		}
+		
+		.cs_menu{
+			padding:8px 0 0;
+			li{
+				float:left;
+				width:110px;
+				text-align:center;
+				margin-bottom:19px;
+				
+				.guide{
+					display:inline-block;
+					width:0;
+					height:63px;
+					vertical-align:middle;
+				}
+				a{
+					vertical-align:middle !important;
+				}
+			}
+			.menu1{
+				a{
+					@include use-sprite(menu_01,$icons-cs);
+				}
+			}
+			.menu2{
+				a{
+					@include use-sprite(menu_02,$icons-cs);
+				}
+			}
+			.menu3{
+				a{
+					@include use-sprite(menu_03,$icons-cs);
+				}
+			}
+			.menu4{
+				a{
+					@include use-sprite(menu_04,$icons-cs);
+				}
+			}
+			.menu5{
+				a{
+					@include use-sprite(menu_05,$icons-cs);
+				}
+			}
+			.menu6{
+				a{
+					@include use-sprite(menu_06,$icons-cs);
+				}
+			}
+		}
+		
+		.consult_katalk{
+			.img{
+				@include use-sprite(info_katalk,$icons-cs);
+			}
+		}
+	}
+	
+}

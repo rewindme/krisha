@@ -55,8 +55,42 @@
 	.btn_guest_order{@extend %btn-gray;line-height:45px}
 }
 
-
-
+// 비밀번호 재확인
+.confirm_pw{
+	.login_box{
+		width:auto;
+		float:none;
+		h2{
+			color:#f54500;
+			border-color:#f54500;
+			margin-bottom:0;
+		}
+	}
+	
+	.hero{
+		padding:92px 99px 0 60px;
+		float:left;
+	}
+	
+	.login_cover{
+		overflow:hidden;
+		padding-top:50px;
+	}
+	
+	.submit_cover{
+		.btn_login{
+			@extend %btn-point2;
+		}
+		.btn_gray{
+			@extend %btn-gray;
+		}
+		
+		
+		
+	
+	}
+	
+}
 
 
 

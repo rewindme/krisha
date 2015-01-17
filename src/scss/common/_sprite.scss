@@ -4,10 +4,10 @@
 
 // 스프라이트 폴더 추가시마다 내용 추가
 $icons: sprite-map("mypage/*.png", $layout: smart, $spacing:30px, $repeat:no-repeat) !default;
-
+$icons-cs: sprite-map("cs-center/*.png", $layout: smart, $spacing:30px, $repeat:no-repeat) !default;
 
 // 스프라이트 이미지의 base-class placeholder를 생성함
-@each $sprite-base-class in $icons
+@each $sprite-base-class in $icons,$icons-cs
 {
 	%#{sprite-map-name($sprite-base-class)}#{'-sprite'} {
 		background-image:sprite-url($sprite-base-class);
