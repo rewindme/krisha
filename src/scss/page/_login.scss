@@ -80,6 +80,7 @@
 	.submit_cover{
 		.btn_login{
 			@extend %btn-point2;
+			margin-right:5px;
 		}
 		.btn_gray{
 			@extend %btn-gray;

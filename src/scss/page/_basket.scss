@@ -3,7 +3,7 @@
 $aside-column-spacing-vertical:25px;
 $info-column-spacing-vertical:25px;
 
-.basket,.mypage,.cs_center{
+.basket,.mypage,.cs_center,.review_board{
 
 	@extend %form_container;overflow:hidden;
 	//750px
@@ -23,6 +23,16 @@ $info-column-spacing-vertical:25px;
 	
 }
 
+.basket{
+	.notice{
+		color:#999;
+		font-size:11px;
+		a{
+			color:#f54500;
+			text-decoration:underline;
+		}
+	}
+}
 .order_list{
 	width:100%;border-collapse:collapse;padding:0;border:0;margin-bottom:45px;
 	th{
@@ -39,11 +49,23 @@ $info-column-spacing-vertical:25px;
 		.name{color:#666;font-size:14px;margin-bottom:4px;}
 		.status{font-size:12px;color:$color-price}
 	}
+	.delivery_number{
+		a{
+			color:#f54500;
+		}
+		
+		.delivery_code{
+			font-size:11px;
+		}
+	}
+	
 	
 	.ipt_text{@extend %ipt-text;width:48px;text-align:center;height:18px;line-height:18px;padding:8px 0}
 	.qty_cont{margin-bottom:4px}
 	.btn_modify{@extend %btn-gray;width:106px;height:28px;line-height:28px;font-size:11px}
-	.btn_modify_option{@extend %btn-gray;width:auto;height:auto;font-size:11px;line-height:1;font-weight:normal;padding:2px 3px}
+	.btn_modify_option{
+		@extend %btn-gray;width:auto;height:17px;font-size:11px;font-weight:normal;padding:0 3px 0 4px;line-height:18px;
+	}
 	.order_price{color:$color-price}
 	.btn_remove{background:none;border:0;width:48px;height:36px;line-height:34px;font-size:14px;color:#666}
 	.price{display:block;text-align:center;margin-bottom:3px}
@@ -68,7 +90,12 @@ $info-column-spacing-vertical:25px;
 .total_price{
 	border-bottom:1px solid #e4e4e4;
 	margin-bottom:$aside-column-spacing-vertical;
+	&.detail_view{
+		padding-top:8px;
+	}
 }
+
+
 .price_summary{
 	$_cell_padding:15px;
 	width:100%;border-collapse:collapse;padding:0;border:0;
@@ -114,6 +141,29 @@ $info-column-spacing-vertical:25px;
 		td{
 			font-size:12px;
 		}
+	}
+	
+	&.align_left{
+		margin-bottom:3px;
+		td{
+			text-align:left;
+			label{
+				font-size:12px;
+				margin-right:3px;
+			}
+		}
+		.receipt_ipt{
+			width:120px;
+			font-size:12px;
+			height:18px;
+			line-height:20px;
+			text-align:center;
+			color:#999;
+		}
+	}
+	.btn_receipt{
+		@extend %btn-point2;
+		width:100%;
 	}
 }
 

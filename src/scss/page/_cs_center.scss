@@ -22,14 +22,37 @@
 	
 	
 	.search_area{
-		width:574px;
+		margin-bottom:50px;
+		.faq_category {
+			padding-left:19px;
+			
+			li{
+				margin-right:0;
+			}
+			a{
+				font-size:14px;
+				color:#666;
+				
+				&:hover{
+					color:$color-selected;
+					text-decoration:underline;
+				}
+			}
+			
+			.bar{
+				color:#aeaeae;
+				vertical-align:baseline;
+				font-size:14px;
+				padding:0 4px;
+			}
+		}
 	}
 	.search_cover{
 		background-color:$color-selected;
 		padding:8px 82px 8px 8px;
 		position:relative;
-		margin-bottom:78px;
-		
+		margin-bottom:13px;
+		width:484px;
 		.search_input{
 			border:0;
 			padding:0 0 0 10px;
@@ -66,6 +89,12 @@
 			color:#999;
 			font-size:16px;
 		}
+		
+		a.selected{
+			color:$color-selected;
+		}
+		
+		
 	}
 	
 	.faq_board{
@@ -76,6 +105,7 @@
 			font-size:14px;
 			line-height:22px;
 			color:#666;
+			position:relative;
 		}
 		a,.question,.answer{
 			font-size:14px;
@@ -92,16 +122,36 @@
 		.question{
 			padding-left:5px;
 			cursor:pointer;
+			
+			.index{
+				color:$color-selected;
+				font-weight:bold;
+			}
+		}
+		
+		a .question{
+			padding-left:10px;
 		}
 		.answer{
 			display:none;
 			border-top:1px solid $color-normal;
-			padding:16px 0 0 130px;
+			padding:16px 0 0 131px;
 			margin-top:14px;
 		}
 		
 		.open .answer{
 			display:block;
+		}
+		
+		.icon_stat{
+			@include use-sprite(ico_plus,$icons-cs);
+			position:absolute;
+			right:18px;
+			top:20px;
+		}
+		
+		.open .icon_stat{
+			@include use-sprite(ico_minus,$icons-cs);
 		}
 	}
 	
@@ -188,4 +238,10 @@
 		}
 	}
 	
+	.tit_faq_top10{
+		@include use-sprite(faq_top10,$icons-cs);
+		border:0;
+		padding:0;
+		margin:0 0 13px;
+	}
 }

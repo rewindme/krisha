@@ -85,8 +85,8 @@ i, .ht {
 body, table, input, textarea, button {
   font-family: 'Nanum Barun Gothic',sans-serif; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
-.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .review_board .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -116,7 +116,7 @@ body, table, input, textarea, button {
   position: relative;
   zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .review_board .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
   background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
   background-repeat: no-repeat;
@@ -209,25 +209,25 @@ body, table, input, textarea, button {
     height: 0;
     visibility: hidden; }
 
-.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .cs_center .location, .container .location {
+.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .cs_center .location, .review_board .location, .container .location {
   position: absolute;
   left: 40px;
   top: 23px;
   line-height: 16px; }
-  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .container .location .ico_home {
+  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .review_board .location .ico_home, .container .location .ico_home {
     width: 89px;
     height: 13px;
     background-position: 0 1px; }
-  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .cs_center .location .slash, .container .location .slash {
+  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .cs_center .location .slash, .review_board .location .slash, .container .location .slash {
     color: #999;
     vertical-align: top;
     font-size: 11px; }
-  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .cs_center .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .cs_center .location .current a, .container .location .current a {
+  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .cs_center .location .current, .review_board .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .cs_center .location .current a, .review_board .location .current a, .container .location .current a {
     color: #f54500;
     font-size: 11px;
     font-weight: bold;
     vertical-align: top; }
-  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .cs_center .location .parent, .container .location .parent {
+  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .cs_center .location .parent, .review_board .location .parent, .container .location .parent {
     font-size: 11px;
     color: #999;
     vertical-align: top; }
@@ -241,7 +241,7 @@ body, table, input, textarea, button {
   height: 43px;
   line-height: 43px; }
 
-.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order {
+.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order {
   border: 1px solid #db3e00;
   background-color: #f54500;
   color: #fff;
@@ -251,7 +251,7 @@ body, table, input, textarea, button {
   line-height: 43px;
   width: 128px; }
 
-.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order {
+.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .price_summary a.btn_receipt, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order {
   line-height: 47px; }
 
 .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .task_btn .btn_home, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray {
@@ -325,8 +325,8 @@ body, table, input, textarea, button {
   display: inline-block;
   vertical-align: top; }
 
-.cs_center .tit_faq_search, .cs_center .search_cover .btn_search .icon, .cs_center .cs_center_info .tit_cs_center, .cs_center .cs_center_info .tel_number .img, .cs_center .cs_center_info .cs_period .img, .cs_center .cs_center_info .cs_menu .menu1 a, .cs_center .cs_center_info .cs_menu .menu2 a, .cs_center .cs_center_info .cs_menu .menu3 a, .cs_center .cs_center_info .cs_menu .menu4 a, .cs_center .cs_center_info .cs_menu .menu5 a, .cs_center .cs_center_info .cs_menu .menu6 a, .cs_center .cs_center_info .consult_katalk .img {
-  background-image: url('img/sp/cs-center-s39a1cd63ce.png');
+.cs_center .tit_faq_search, .cs_center .search_cover .btn_search .icon, .cs_center .faq_board .icon_stat, .cs_center .faq_board .open .icon_stat, .cs_center .cs_center_info .tit_cs_center, .cs_center .cs_center_info .tel_number .img, .cs_center .cs_center_info .cs_period .img, .cs_center .cs_center_info .cs_menu .menu1 a, .cs_center .cs_center_info .cs_menu .menu2 a, .cs_center .cs_center_info .cs_menu .menu3 a, .cs_center .cs_center_info .cs_menu .menu4 a, .cs_center .cs_center_info .cs_menu .menu5 a, .cs_center .cs_center_info .cs_menu .menu6 a, .cs_center .cs_center_info .consult_katalk .img, .cs_center .tit_faq_top10 {
+  background-image: url('img/sp/cs-center-sd449e4b374.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -1408,10 +1408,10 @@ body {
     background-position: -55px -132px;
     height: 70px; }
 
-.login, .join, .basket, .mypage, .cs_center {
+.login, .join, .basket, .mypage, .cs_center, .review_board {
   padding: 130px 60px 80px;
   position: relative; }
-  .login h2, .join h2, .basket h2, .mypage h2, .cs_center h2 {
+  .login h2, .join h2, .basket h2, .mypage h2, .cs_center h2, .review_board h2 {
     font-size: 16px;
     font-weight: normal;
     border-bottom: 1px solid #5cc4b9;
@@ -1419,7 +1419,7 @@ body {
     padding-bottom: 8px;
     color: #5cc4b9;
     margin-bottom: 38px; }
-  .login button, .join button, .basket button, .mypage button, .cs_center button, .login label, .join label, .basket label, .mypage label, .cs_center label {
+  .login button, .join button, .basket button, .mypage button, .cs_center button, .review_board button, .login label, .join label, .basket label, .mypage label, .cs_center label, .review_board label {
     cursor: pointer; }
 
 /* 로그인 */
@@ -1529,6 +1529,8 @@ body {
 .confirm_pw .login_cover {
   overflow: hidden;
   padding-top: 50px; }
+.confirm_pw .submit_cover .btn_login {
+  margin-right: 5px; }
 
 .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel {
   height: 40px;
@@ -1852,7 +1854,7 @@ body {
     padding: 0 18px;
     width: auto; }
 
-.basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .order_list th, .privacy_statement .tit_bar {
+.basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .review_board .tit_bar, .order_list th, .privacy_statement .tit_bar {
   border-bottom: 2px solid #5cc4b9;
   color: #666;
   font-weight: normal;
@@ -1860,25 +1862,32 @@ body {
   line-height: 29px;
   font-size: 14px; }
 
-.basket, .mypage, .cs_center {
+.basket, .mypage, .cs_center, .review_board {
   overflow: hidden; }
-  .basket .info_column, .mypage .info_column, .cs_center .info_column {
+  .basket .info_column, .mypage .info_column, .cs_center .info_column, .review_board .info_column {
     width: 750px;
     float: left;
     margin-right: 40px; }
-  .basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar {
+  .basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .review_board .tit_bar {
     font-size: 16px;
     color: #5cc4b9;
     margin-bottom: 25px; }
-  .basket .aside_column, .mypage .aside_column, .cs_center .aside_column {
+  .basket .aside_column, .mypage .aside_column, .cs_center .aside_column, .review_board .aside_column {
     width: 270px;
     float: left; }
-    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar, .cs_center .aside_column .tit_bar {
+    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar, .cs_center .aside_column .tit_bar, .review_board .aside_column .tit_bar {
       border-color: #f54500;
       color: #f54500;
       margin-bottom: 25px; }
-    .basket .aside_column .task_btn, .mypage .aside_column .task_btn, .cs_center .aside_column .task_btn {
+    .basket .aside_column .task_btn, .mypage .aside_column .task_btn, .cs_center .aside_column .task_btn, .review_board .aside_column .task_btn {
       padding: 3px 0 26px; }
+
+.basket .notice {
+  color: #999;
+  font-size: 11px; }
+  .basket .notice a {
+    color: #f54500;
+    text-decoration: underline; }
 
 .order_list {
   width: 100%;
@@ -1914,6 +1923,10 @@ body {
     .order_list .prod_info .status {
       font-size: 12px;
       color: #f54500; }
+  .order_list .delivery_number a {
+    color: #f54500; }
+  .order_list .delivery_number .delivery_code {
+    font-size: 11px; }
   .order_list .ipt_text {
     width: 48px;
     text-align: center;
@@ -1929,11 +1942,11 @@ body {
     font-size: 11px; }
   .order_list .btn_modify_option {
     width: auto;
-    height: auto;
+    height: 17px;
     font-size: 11px;
-    line-height: 1;
     font-weight: normal;
-    padding: 2px 3px; }
+    padding: 0 3px 0 4px;
+    line-height: 18px; }
   .order_list .order_price {
     color: #f54500; }
   .order_list .btn_remove {
@@ -1979,6 +1992,8 @@ body {
 .total_price {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 25px; }
+  .total_price.detail_view {
+    padding-top: 8px; }
 
 .price_summary {
   width: 100%;
@@ -2025,6 +2040,22 @@ body {
     font-size: 12px; }
   .price_summary.result_end td {
     font-size: 12px; }
+  .price_summary.align_left {
+    margin-bottom: 3px; }
+    .price_summary.align_left td {
+      text-align: left; }
+      .price_summary.align_left td label {
+        font-size: 12px;
+        margin-right: 3px; }
+    .price_summary.align_left .receipt_ipt {
+      width: 120px;
+      font-size: 12px;
+      height: 18px;
+      line-height: 20px;
+      text-align: center;
+      color: #999; }
+  .price_summary .btn_receipt {
+    width: 100%; }
 
 .basket .aside_column.settle .tit_bar {
   margin-bottom: 18px; }
@@ -2322,6 +2353,16 @@ body {
       color: #999; }
       .mypage .mypage_table .info .period br {
         display: none; }
+    .mypage .mypage_table .btn_receive {
+      border: 0;
+      background-color: #f54500;
+      border-radius: 3.1px;
+      padding: 0 5px 0 6px;
+      height: 20px;
+      line-height: 22px;
+      color: #fff;
+      font-size: 12px;
+      display: inline-block; }
   .mypage .navigation a {
     color: #757575; }
   .mypage .navigation b {
@@ -2611,7 +2652,7 @@ body {
         display: inline-block;
         height: 15px;
         line-height: 17px;
-        padding: 0 3px;
+        padding: 0 3px 0 4px;
         font-size: 11px; }
 
 .mypage .emoney .mypage_table .price, .my_level_cont .grade .info .group_name {
@@ -2761,7 +2802,8 @@ body {
       height: 36px;
       line-height: 34px;
       padding: 0 20px;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-right: 3px; }
   .pop_wrap .tit_review {
     background-position: -113px 0;
     width: 68px;
@@ -3015,19 +3057,35 @@ body {
 .cs_center {
   padding-top: 80px; }
   .cs_center .tit_faq_search {
-    background-position: 0 0;
+    background-position: -82px -84px;
     width: 109px;
     height: 14px;
     border: 0;
     padding: 0;
     margin: 0 0 20px; }
   .cs_center .search_area {
-    width: 574px; }
+    margin-bottom: 50px; }
+    .cs_center .search_area .faq_category {
+      padding-left: 19px; }
+      .cs_center .search_area .faq_category li {
+        margin-right: 0; }
+      .cs_center .search_area .faq_category a {
+        font-size: 14px;
+        color: #666; }
+        .cs_center .search_area .faq_category a:hover {
+          color: #f54500;
+          text-decoration: underline; }
+      .cs_center .search_area .faq_category .bar {
+        color: #aeaeae;
+        vertical-align: baseline;
+        font-size: 14px;
+        padding: 0 4px; }
   .cs_center .search_cover {
     background-color: #f54500;
     padding: 8px 82px 8px 8px;
     position: relative;
-    margin-bottom: 78px; }
+    margin-bottom: 13px;
+    width: 484px; }
     .cs_center .search_cover .search_input {
       border: 0;
       padding: 0 0 0 10px;
@@ -3041,7 +3099,7 @@ body {
       top: 0;
       padding: 15px 29px; }
       .cs_center .search_cover .btn_search .icon {
-        background-position: -234px -44px;
+        background-position: 0 0;
         width: 24px;
         height: 24px; }
   .cs_center .faq_category {
@@ -3054,6 +3112,8 @@ body {
     .cs_center .faq_category a {
       color: #999;
       font-size: 16px; }
+    .cs_center .faq_category a.selected {
+      color: #f54500; }
   .cs_center .faq_board {
     border-top: 3px solid #f54500; }
     .cs_center .faq_board li {
@@ -3061,7 +3121,8 @@ body {
       border-bottom: 1px solid #e4e4e4;
       font-size: 14px;
       line-height: 22px;
-      color: #666; }
+      color: #666;
+      position: relative; }
     .cs_center .faq_board a, .cs_center .faq_board .question, .cs_center .faq_board .answer {
       font-size: 14px;
       line-height: 22px;
@@ -3074,29 +3135,45 @@ body {
     .cs_center .faq_board .question {
       padding-left: 5px;
       cursor: pointer; }
+      .cs_center .faq_board .question .index {
+        color: #f54500;
+        font-weight: bold; }
+    .cs_center .faq_board a .question {
+      padding-left: 10px; }
     .cs_center .faq_board .answer {
       display: none;
       border-top: 1px solid #e4e4e4;
-      padding: 16px 0 0 130px;
+      padding: 16px 0 0 131px;
       margin-top: 14px; }
     .cs_center .faq_board .open .answer {
       display: block; }
+    .cs_center .faq_board .icon_stat {
+      background-position: 0 -84px;
+      width: 11px;
+      height: 11px;
+      position: absolute;
+      right: 18px;
+      top: 20px; }
+    .cs_center .faq_board .open .icon_stat {
+      background-position: -41px -84px;
+      width: 11px;
+      height: 11px; }
   .cs_center .cs_center_info {
     background-color: #f2f2f2;
     padding: 25px 25px 20px; }
     .cs_center .cs_center_info .tit_cs_center {
-      background-position: -139px 0;
+      background-position: -54px 0;
       width: 95px;
       height: 14px;
       border: 0;
       padding: 0;
       margin: 0 0 20px -5px; }
     .cs_center .cs_center_info .tel_number .img {
-      background-position: 0 -44px;
+      background-position: 0 -128px;
       width: 204px;
       height: 43px; }
     .cs_center .cs_center_info .cs_period .img {
-      background-position: 0 -295px;
+      background-position: 0 -379px;
       width: 196px;
       height: 90px; }
     .cs_center .cs_center_info .cs_menu {
@@ -3114,32 +3191,39 @@ body {
         .cs_center .cs_center_info .cs_menu li a {
           vertical-align: middle !important; }
       .cs_center .cs_center_info .cs_menu .menu1 a {
-        background-position: -114px -202px;
+        background-position: -114px -201px;
         width: 73px;
         height: 63px; }
       .cs_center .cs_center_info .cs_menu .menu2 a {
-        background-position: 0 -202px;
+        background-position: 0 -201px;
         width: 84px;
         height: 63px; }
       .cs_center .cs_center_info .cs_menu .menu3 a {
-        background-position: -188px -117px;
+        background-position: -88px -294px;
         width: 64px;
         height: 55px; }
       .cs_center .cs_center_info .cs_menu .menu4 a {
-        background-position: -217px -202px;
+        background-position: -217px -201px;
         width: 63px;
         height: 63px; }
       .cs_center .cs_center_info .cs_menu .menu5 a {
-        background-position: -100px -117px;
+        background-position: 0 -294px;
         width: 58px;
         height: 54px; }
       .cs_center .cs_center_info .cs_menu .menu6 a {
-        background-position: 0 -117px;
+        background-position: -179px 0;
         width: 70px;
         height: 54px; }
     .cs_center .cs_center_info .consult_katalk .img {
-      background-position: 0 -415px;
+      background-position: 0 -499px;
       width: 230px;
       height: 177px; }
+  .cs_center .tit_faq_top10 {
+    background-position: -221px -84px;
+    width: 97px;
+    height: 14px;
+    border: 0;
+    padding: 0;
+    margin: 0 0 13px; }
 
 /*# sourceMappingURL=krisha.css.map */
