@@ -1,5 +1,102 @@
 @charset "utf-8";
+//extend end.scss
 
-.review_board{
+.board_view_all{
+	padding-top:80px;
+	
+	.tit_review{
+		@include use-sprite(tit_review,$icons-cs);
+		border:0;
+		margin:0;
+		padding:0;
+	}
+	
+	.tit_qna{
+		@include use-sprite(tit_qna,$icons-cs);
+		border:0;
+		margin:0;
+		padding:0;
+	}
+	.review_top{
+		.btn_upload,.btn_upload_qna{
+			width:178px;
+			height:58px;
+			line-height:58px;
+			font-size:23px;
+		}
+		
+	}
+	
+	.board .board_body{
+		font-size:14px;
+		
+		.contents_area{
+			display:none;
+			
+			.prod_card{
+				@extend %prod_card;
+				
+
+			}
+		}
+		.count{
+			font-size:12px;
+			top:16px;
+		}
+		.open .contents_area{
+			display:block;
+			margin-top:17px;
+		}
+		
+		.subject_tit{
+			font-weight:normal;
+			
+			img{
+				display:none
+			}
+			.attach_icon,.reply_icon{
+				display:inline
+			}
+			
+			.goods_name{
+				font-size:11px;
+				color:#999;
+			}
+		}
+		.task_article{
+			a{
+				font-size:11px;
+			}
+		}
+	}
+	
+	.review_search{
+		
+	}
+	
+	.qna_board{
+		.board_body{
+			.contents_area{
+				margin-top:15px;
+			}
+		}
+		
+		.subject{
+			cursor:pointer;
+			
+			.btn_prod_view{
+				border-radius:3.1px;
+				background-color:#f54500;
+				color:#fff;
+				padding:0 3px 0 4px;
+				height:18px;
+				line-height:20px;
+				display:inline-block;
+				font-size:11px;
+				margin-left:4px;
+			}
+			
+		}
+	}
 	
 }

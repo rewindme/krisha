@@ -85,7 +85,7 @@ i, .ht {
 body, table, input, textarea, button {
   font-family: 'Nanum Barun Gothic',sans-serif; }
 
-.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .review_board .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.btn_next, .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .board_view_all .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
@@ -116,7 +116,7 @@ body, table, input, textarea, button {
   position: relative;
   zoom: 1; }
 
-.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .review_board .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .board_view_all .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
 .qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next {
   background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_prod_view.png");
   background-repeat: no-repeat;
@@ -140,9 +140,10 @@ body, table, input, textarea, button {
   .general_store .tab a, .prod_tab a, .section_head .tab a {
     color: #999;
     font-size: 12px;
-    letter-spacing: -1px;
+    letter-spacing: 0;
     height: 23px;
-    line-height: 23px; }
+    line-height: 23px;
+    font-family: arial,sans-serif; }
   .general_store .tab a:hover, .prod_tab a:hover, .section_head .tab a:hover,
   .general_store .tab .selected a,
   .prod_tab .selected a,
@@ -209,25 +210,25 @@ body, table, input, textarea, button {
     height: 0;
     visibility: hidden; }
 
-.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .cs_center .location, .review_board .location, .container .location {
+.product_view .location, .login .location, .join .location, .basket .location, .mypage .location, .cs_center .location, .board_view_all .location, .container .location {
   position: absolute;
   left: 40px;
   top: 23px;
   line-height: 16px; }
-  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .review_board .location .ico_home, .container .location .ico_home {
+  .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .board_view_all .location .ico_home, .container .location .ico_home {
     width: 89px;
     height: 13px;
     background-position: 0 1px; }
-  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .cs_center .location .slash, .review_board .location .slash, .container .location .slash {
+  .product_view .location .slash, .login .location .slash, .join .location .slash, .basket .location .slash, .mypage .location .slash, .cs_center .location .slash, .board_view_all .location .slash, .container .location .slash {
     color: #999;
     vertical-align: top;
     font-size: 11px; }
-  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .cs_center .location .current, .review_board .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .cs_center .location .current a, .review_board .location .current a, .container .location .current a {
+  .product_view .location .current, .login .location .current, .join .location .current, .basket .location .current, .mypage .location .current, .cs_center .location .current, .board_view_all .location .current, .container .location .current, .product_view .location .current a, .login .location .current a, .join .location .current a, .basket .location .current a, .mypage .location .current a, .cs_center .location .current a, .board_view_all .location .current a, .container .location .current a {
     color: #f54500;
     font-size: 11px;
     font-weight: bold;
     vertical-align: top; }
-  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .cs_center .location .parent, .review_board .location .parent, .container .location .parent {
+  .product_view .location .parent, .login .location .parent, .join .location .parent, .basket .location .parent, .mypage .location .parent, .cs_center .location .parent, .board_view_all .location .parent, .container .location .parent {
     font-size: 11px;
     color: #999;
     vertical-align: top; }
@@ -325,8 +326,8 @@ body, table, input, textarea, button {
   display: inline-block;
   vertical-align: top; }
 
-.cs_center .tit_faq_search, .cs_center .search_cover .btn_search .icon, .cs_center .faq_board .icon_stat, .cs_center .faq_board .open .icon_stat, .cs_center .cs_center_info .tit_cs_center, .cs_center .cs_center_info .tel_number .img, .cs_center .cs_center_info .cs_period .img, .cs_center .cs_center_info .cs_menu .menu1 a, .cs_center .cs_center_info .cs_menu .menu2 a, .cs_center .cs_center_info .cs_menu .menu3 a, .cs_center .cs_center_info .cs_menu .menu4 a, .cs_center .cs_center_info .cs_menu .menu5 a, .cs_center .cs_center_info .cs_menu .menu6 a, .cs_center .cs_center_info .consult_katalk .img, .cs_center .tit_faq_top10 {
-  background-image: url('img/sp/cs-center-sd449e4b374.png');
+.cs_center .tit_faq_search, .cs_center .search_cover .btn_search .icon, .cs_center .faq_board .icon_stat, .cs_center .faq_board .open .icon_stat, .cs_center .cs_center_info .tit_cs_center, .cs_center .cs_center_info .tel_number .img, .cs_center .cs_center_info .cs_period .img, .cs_center .cs_center_info .cs_menu .menu1 a, .cs_center .cs_center_info .cs_menu .menu2 a, .cs_center .cs_center_info .cs_menu .menu3 a, .cs_center .cs_center_info .cs_menu .menu4 a, .cs_center .cs_center_info .cs_menu .menu5 a, .cs_center .cs_center_info .cs_menu .menu6 a, .cs_center .cs_center_info .consult_katalk .img, .cs_center .tit_faq_top10, .board_view_all .tit_review, .board_view_all .tit_qna {
+  background-image: url('img/sp/cs-center-s512a4c5388.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -404,7 +405,9 @@ body {
     font-family: arial;
     display: inline-block;
     text-decoration: none !important;
-    margin-right: 3px; }
+    margin-right: 3px;
+    position: relative;
+    top: -1px; }
   .header .gnb .cart a {
     text-decoration: none; }
   .header .gnb .cart a:hover span {
@@ -1183,13 +1186,15 @@ body {
     right: 172px;
     top: 0;
     text-align: center;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 12px; }
   .board .date {
     width: 79px;
     position: absolute;
     right: 93px;
     top: 0;
-    text-align: center; }
+    text-align: center;
+    font-size: 12px; }
   .board .hits {
     width: 93px;
     position: absolute;
@@ -1280,8 +1285,8 @@ body {
 .text_board {
   padding: 0 20px; }
   .text_board .board .board_body li {
-    padding-top: 17px;
-    padding-bottom: 17px; }
+    padding-top: 15px;
+    padding-bottom: 15px; }
   .text_board .board .board_body .remain_cover {
     padding: 0; }
     .text_board .board .board_body .remain_cover .subject_tit {
@@ -1298,7 +1303,7 @@ body {
   .text_board .board .board_body .contents_area {
     margin-top: 12px;
     border-top: 1px solid #efefef;
-    padding: 21px 0 0;
+    padding: 15px 0 0;
     color: #999; }
   .text_board .writer {
     right: 133px; }
@@ -1315,7 +1320,8 @@ body {
     color: #fff;
     padding: 3px 7px 2px;
     border-radius: 3.1px;
-    margin-left: 4px; }
+    margin-left: 4px;
+    font-size: 12px; }
 
 /* 상품정보제공 고시 상세정보 */
 .notice_info {
@@ -1408,10 +1414,10 @@ body {
     background-position: -55px -132px;
     height: 70px; }
 
-.login, .join, .basket, .mypage, .cs_center, .review_board {
+.login, .join, .basket, .mypage, .cs_center, .board_view_all {
   padding: 130px 60px 80px;
   position: relative; }
-  .login h2, .join h2, .basket h2, .mypage h2, .cs_center h2, .review_board h2 {
+  .login h2, .join h2, .basket h2, .mypage h2, .cs_center h2, .board_view_all h2 {
     font-size: 16px;
     font-weight: normal;
     border-bottom: 1px solid #5cc4b9;
@@ -1419,7 +1425,7 @@ body {
     padding-bottom: 8px;
     color: #5cc4b9;
     margin-bottom: 38px; }
-  .login button, .join button, .basket button, .mypage button, .cs_center button, .review_board button, .login label, .join label, .basket label, .mypage label, .cs_center label, .review_board label {
+  .login button, .join button, .basket button, .mypage button, .cs_center button, .board_view_all button, .login label, .join label, .basket label, .mypage label, .cs_center label, .board_view_all label {
     cursor: pointer; }
 
 /* 로그인 */
@@ -1854,7 +1860,7 @@ body {
     padding: 0 18px;
     width: auto; }
 
-.basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .review_board .tit_bar, .order_list th, .privacy_statement .tit_bar {
+.basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .board_view_all .tit_bar, .order_list th, .privacy_statement .tit_bar {
   border-bottom: 2px solid #5cc4b9;
   color: #666;
   font-weight: normal;
@@ -1862,24 +1868,24 @@ body {
   line-height: 29px;
   font-size: 14px; }
 
-.basket, .mypage, .cs_center, .review_board {
+.basket, .mypage, .cs_center, .board_view_all {
   overflow: hidden; }
-  .basket .info_column, .mypage .info_column, .cs_center .info_column, .review_board .info_column {
+  .basket .info_column, .mypage .info_column, .cs_center .info_column, .board_view_all .info_column {
     width: 750px;
     float: left;
     margin-right: 40px; }
-  .basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .review_board .tit_bar {
+  .basket .tit_bar, .mypage .tit_bar, .cs_center .tit_bar, .board_view_all .tit_bar {
     font-size: 16px;
     color: #5cc4b9;
     margin-bottom: 25px; }
-  .basket .aside_column, .mypage .aside_column, .cs_center .aside_column, .review_board .aside_column {
+  .basket .aside_column, .mypage .aside_column, .cs_center .aside_column, .board_view_all .aside_column {
     width: 270px;
     float: left; }
-    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar, .cs_center .aside_column .tit_bar, .review_board .aside_column .tit_bar {
+    .basket .aside_column .tit_bar, .mypage .aside_column .tit_bar, .cs_center .aside_column .tit_bar, .board_view_all .aside_column .tit_bar {
       border-color: #f54500;
       color: #f54500;
       margin-bottom: 25px; }
-    .basket .aside_column .task_btn, .mypage .aside_column .task_btn, .cs_center .aside_column .task_btn, .review_board .aside_column .task_btn {
+    .basket .aside_column .task_btn, .mypage .aside_column .task_btn, .cs_center .aside_column .task_btn, .board_view_all .aside_column .task_btn {
       padding: 3px 0 26px; }
 
 .basket .notice {
@@ -2560,6 +2566,32 @@ body {
     color: #757575;
     padding-left: 3px; }
 
+.view_qna .prod_card, .board_view_all .board .board_body .contents_area .prod_card {
+  overflow: hidden;
+  margin-bottom: 10px; }
+  .view_qna .prod_card .prod_img, .board_view_all .board .board_body .contents_area .prod_card .prod_img {
+    float: left;
+    border: 1px solid #e4e4e4;
+    margin-right: 10px; }
+    .view_qna .prod_card .prod_img img, .board_view_all .board .board_body .contents_area .prod_card .prod_img img {
+      vertical-align: top; }
+  .view_qna .prod_card .prod_name_cover, .board_view_all .board .board_body .contents_area .prod_card .prod_name_cover {
+    overflow: hidden;
+    line-height: 21px; }
+    .view_qna .prod_card .prod_name_cover .prod_name, .board_view_all .board .board_body .contents_area .prod_card .prod_name_cover .prod_name {
+      color: #f54500;
+      display: block;
+      font-size: 14px; }
+    .view_qna .prod_card .prod_name_cover .btn_prod_view, .board_view_all .board .board_body .contents_area .prod_card .prod_name_cover .btn_prod_view {
+      color: #f54500;
+      border: 1px solid #f54500;
+      border-radius: 3.1px;
+      display: inline-block;
+      height: 15px;
+      line-height: 17px;
+      padding: 0 3px 0 4px;
+      font-size: 11px; }
+
 .view_qna {
   padding: 10px 0 0; }
   .view_qna h3 {
@@ -2631,29 +2663,6 @@ body {
     height: 12px;
     vertical-align: middle;
     margin-left: 4px; }
-  .view_qna .prod_card {
-    overflow: hidden;
-    margin-bottom: 10px; }
-    .view_qna .prod_card .prod_img {
-      float: left;
-      border: 1px solid #e4e4e4;
-      margin-right: 10px; }
-      .view_qna .prod_card .prod_img img {
-        vertical-align: top; }
-    .view_qna .prod_card .prod_name_cover {
-      overflow: hidden; }
-      .view_qna .prod_card .prod_name_cover .prod_name {
-        color: #f54500;
-        display: block; }
-      .view_qna .prod_card .prod_name_cover .btn_prod_view {
-        color: #f54500;
-        border: 1px solid #f54500;
-        border-radius: 3.1px;
-        display: inline-block;
-        height: 15px;
-        line-height: 17px;
-        padding: 0 3px 0 4px;
-        font-size: 11px; }
 
 .mypage .emoney .mypage_table .price, .my_level_cont .grade .info .group_name {
   font-weight: bold;
@@ -3057,7 +3066,7 @@ body {
 .cs_center {
   padding-top: 80px; }
   .cs_center .tit_faq_search {
-    background-position: -82px -84px;
+    background-position: -82px -54px;
     width: 109px;
     height: 14px;
     border: 0;
@@ -3148,32 +3157,32 @@ body {
     .cs_center .faq_board .open .answer {
       display: block; }
     .cs_center .faq_board .icon_stat {
-      background-position: 0 -84px;
+      background-position: 0 -54px;
       width: 11px;
       height: 11px;
       position: absolute;
       right: 18px;
       top: 20px; }
     .cs_center .faq_board .open .icon_stat {
-      background-position: -41px -84px;
+      background-position: -41px -54px;
       width: 11px;
       height: 11px; }
   .cs_center .cs_center_info {
     background-color: #f2f2f2;
     padding: 25px 25px 20px; }
     .cs_center .cs_center_info .tit_cs_center {
-      background-position: -54px 0;
+      background-position: -181px 0;
       width: 95px;
       height: 14px;
       border: 0;
       padding: 0;
       margin: 0 0 20px -5px; }
     .cs_center .cs_center_info .tel_number .img {
-      background-position: 0 -128px;
+      background-position: 0 -182px;
       width: 204px;
       height: 43px; }
     .cs_center .cs_center_info .cs_period .img {
-      background-position: 0 -379px;
+      background-position: 0 -433px;
       width: 196px;
       height: 90px; }
     .cs_center .cs_center_info .cs_menu {
@@ -3191,39 +3200,96 @@ body {
         .cs_center .cs_center_info .cs_menu li a {
           vertical-align: middle !important; }
       .cs_center .cs_center_info .cs_menu .menu1 a {
-        background-position: -114px -201px;
+        background-position: -114px -255px;
         width: 73px;
         height: 63px; }
       .cs_center .cs_center_info .cs_menu .menu2 a {
-        background-position: 0 -201px;
+        background-position: 0 -255px;
         width: 84px;
         height: 63px; }
       .cs_center .cs_center_info .cs_menu .menu3 a {
-        background-position: -88px -294px;
+        background-position: 0 -348px;
         width: 64px;
         height: 55px; }
       .cs_center .cs_center_info .cs_menu .menu4 a {
-        background-position: -217px -201px;
+        background-position: -217px -255px;
         width: 63px;
         height: 63px; }
       .cs_center .cs_center_info .cs_menu .menu5 a {
-        background-position: 0 -294px;
+        background-position: -198px -98px;
         width: 58px;
         height: 54px; }
       .cs_center .cs_center_info .cs_menu .menu6 a {
-        background-position: -179px 0;
+        background-position: -98px -98px;
         width: 70px;
         height: 54px; }
     .cs_center .cs_center_info .consult_katalk .img {
-      background-position: 0 -499px;
+      background-position: 0 -553px;
       width: 230px;
       height: 177px; }
   .cs_center .tit_faq_top10 {
-    background-position: -221px -84px;
+    background-position: -54px 0;
     width: 97px;
     height: 14px;
     border: 0;
     padding: 0;
     margin: 0 0 13px; }
+
+.board_view_all {
+  padding-top: 80px; }
+  .board_view_all .tit_review {
+    background-position: 0 -98px;
+    width: 68px;
+    height: 13px;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .board_view_all .tit_qna {
+    background-position: -221px -54px;
+    width: 42px;
+    height: 14px;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .board_view_all .review_top .btn_upload, .board_view_all .review_top .btn_upload_qna {
+    width: 178px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 23px; }
+  .board_view_all .board .board_body {
+    font-size: 14px; }
+    .board_view_all .board .board_body .contents_area {
+      display: none; }
+    .board_view_all .board .board_body .count {
+      font-size: 12px;
+      top: 16px; }
+    .board_view_all .board .board_body .open .contents_area {
+      display: block;
+      margin-top: 17px; }
+    .board_view_all .board .board_body .subject_tit {
+      font-weight: normal; }
+      .board_view_all .board .board_body .subject_tit img {
+        display: none; }
+      .board_view_all .board .board_body .subject_tit .attach_icon, .board_view_all .board .board_body .subject_tit .reply_icon {
+        display: inline; }
+      .board_view_all .board .board_body .subject_tit .goods_name {
+        font-size: 11px;
+        color: #999; }
+    .board_view_all .board .board_body .task_article a {
+      font-size: 11px; }
+  .board_view_all .qna_board .board_body .contents_area {
+    margin-top: 15px; }
+  .board_view_all .qna_board .subject {
+    cursor: pointer; }
+    .board_view_all .qna_board .subject .btn_prod_view {
+      border-radius: 3.1px;
+      background-color: #f54500;
+      color: #fff;
+      padding: 0 3px 0 4px;
+      height: 18px;
+      line-height: 20px;
+      display: inline-block;
+      font-size: 11px;
+      margin-left: 4px; }
 
 /*# sourceMappingURL=krisha.css.map */

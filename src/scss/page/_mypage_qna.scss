@@ -1,4 +1,39 @@
 @charset "utf-8";
+%prod_card{
+	overflow:hidden;
+	margin-bottom:10px;
+	
+	.prod_img{
+		float:left;
+		border:1px solid #e4e4e4;
+		margin-right:10px;
+		
+		img{
+			vertical-align:top
+		}
+	}
+	.prod_name_cover{
+		overflow:hidden;
+		line-height:21px;
+		
+		.prod_name{
+			color:#f54500;
+			display:block;
+			font-size:14px;
+		}
+		
+		.btn_prod_view{
+			color:#f54500;
+			border:1px solid #f54500;
+			border-radius:3.1px;
+			display:inline-block;
+			height:15px;
+			line-height:17px;
+			padding:0 3px 0 4px;
+			font-size:11px;
+		}
+	}
+}
 
 .view_qna{
 	padding:10px 0 0;
@@ -112,37 +147,7 @@
 	}
 	
 	.prod_card{
-		overflow:hidden;
-		margin-bottom:10px;
-		
-		.prod_img{
-			float:left;
-			border:1px solid #e4e4e4;
-			margin-right:10px;
-			
-			img{
-				vertical-align:top
-			}
-		}
-		.prod_name_cover{
-			overflow:hidden;
-			
-			.prod_name{
-				color:#f54500;
-				display:block;
-			}
-			
-			.btn_prod_view{
-				color:#f54500;
-				border:1px solid #f54500;
-				border-radius:3.1px;
-				display:inline-block;
-				height:15px;
-				line-height:17px;
-				padding:0 3px 0 4px;
-				font-size:11px;
-			}
-		}
+		@extend %prod_card;
 	}
 	
 	

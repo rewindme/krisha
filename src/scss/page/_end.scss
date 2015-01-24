@@ -36,8 +36,8 @@
 	font-size:11px;	
 	.count{position:absolute;left:0;top:0;width:100px;text-align:center}
 	.subject{display:block}
-	.writer{width:112px;position:absolute;right:172px;top:0;text-align:center;font-weight:bold}
-	.date{width:79px;position:absolute;right:93px;top:0;text-align:center}
+	.writer{width:112px;position:absolute;right:172px;top:0;text-align:center;font-weight:bold;font-size:12px;}
+	.date{width:79px;position:absolute;right:93px;top:0;text-align:center;font-size:12px;}
 	.hits{width:93px;position:absolute;right:0;top:0;text-align:center}
 	
 	.board_head{
@@ -83,21 +83,21 @@
 .text_board{
 	padding:0 20px;
 	.board .board_body {
-		li{padding-top:17px;padding-bottom:17px}
+		li{padding-top:15px;padding-bottom:15px}
 		.remain_cover{
 			padding:0;
 			.subject_tit{margin-bottom:0}
 			.reply_cnt{color:#5cc4b9;position:relative;font-size:9px;top:-4px;font-weight:normal;font-family:verdana}
 		}			
 		.count,.writer,.date,.hits{top:18px}
-		.contents_area{margin-top:12px;border-top:1px solid #efefef;padding:21px 0 0;color:#999}		
+		.contents_area{margin-top:12px;border-top:1px solid #efefef;padding:15px 0 0;color:#999}		
 	}
 	.writer{right:133px}
 	.date{right:30px}	
 	.task_article{text-align:right;padding:10px 20px 0 0}
 	.btn_answer,
 	.btn_modify,
-	.btn_delete{background-color:#999;display:inline-block;color:#fff;padding:3px 7px 2px;border-radius:3.1px;margin-left:4px}
+	.btn_delete{background-color:#999;display:inline-block;color:#fff;padding:3px 7px 2px;border-radius:3.1px;margin-left:4px;font-size:12px}
 }
 
 /* 상품정보제공 고시 상세정보 */
