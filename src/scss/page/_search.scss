@@ -1,0 +1,124 @@
+
+%search_cover{
+	$color-selected:#f54500;
+	$color-normal:#e4e4e4;
+	
+	background-color:$color-selected;
+	padding:8px 82px 8px 8px;
+	position:relative;
+	margin-bottom:13px;
+	width:484px;
+	.search_input{
+		border:0;
+		padding:0 0 0 10px;
+		width:474px;
+		height:38px;
+		line-height:38px;
+		color:$color-selected;
+	}
+	
+	.btn_search{
+		@extend %reset-btn;
+		
+		position:absolute;
+		right:0;
+		top:0;
+		padding:15px 29px;
+		.icon{
+			@include use-sprite(ico_search,$icons-cs);
+		}
+	}
+}
+
+%hidden_box{
+	position:absolute;
+	visibility:hidden;
+	width:2px;
+	height:1px;
+}
+
+.search_box{
+	margin-bottom:50px;
+	.search_cover{
+		@extend %search_cover;
+		
+		margin:0 auto;
+		.refind{
+			position:absolute;
+			top:11px;
+			right:82px;
+			color:#999;
+			font-size:12px;
+			
+			label{
+				display:inline-block;
+				padding:10px 10px 10px 0;
+				cursor:pointer;
+			}
+		}
+	}
+	
+	.hidden_box{
+		@extend %hidden_box;
+	}
+	
+	
+}
+.category_detail{
+	.search_list_sorting{
+		border:1px solid #e7e7e7;
+		margin-bottom:10px;
+		overflow:hidden;
+		
+		.search_result{
+			color:#757575;
+			font-size:12px;
+			padding:10px;
+			overflow:hidden;
+			
+			strong{
+				color:#f54500;
+			}
+		}
+		
+		.sorting_option{
+			padding-right:10px;
+			float:right;
+			margin:0;
+		}
+	}
+	
+	
+}
+
+
+
+// 상품QNA 검색창
+.review_search{
+	text-align:center;
+	
+	.hidden_box{
+		@extend %hidden_box;
+	}
+	
+	.search_ipt{
+		width:195px;
+		height:23px;
+		line-height:23px;
+		vertical-align:top;
+		padding:0;
+		color:#999;
+		padding-left:5px;
+	}
+	.btn_gray{
+		@extend %btn-gray;
+		
+		font-size:12px;
+		padding:4px 10px 3px;
+		line-height:1.5;
+		
+		width:auto;
+		height:auto;
+	}
+	
+}

@@ -24,7 +24,6 @@
 	.search_area{
 		margin-bottom:50px;
 		.faq_category {
-			padding-left:19px;
 			
 			li{
 				margin-right:0;
@@ -48,31 +47,7 @@
 		}
 	}
 	.search_cover{
-		background-color:$color-selected;
-		padding:8px 82px 8px 8px;
-		position:relative;
-		margin-bottom:13px;
-		width:484px;
-		.search_input{
-			border:0;
-			padding:0 0 0 10px;
-			width:474px;
-			height:38px;
-			line-height:38px;
-			color:$color-selected;
-		}
-		
-		.btn_search{
-			@extend %reset-btn;
-			
-			position:absolute;
-			right:0;
-			top:0;
-			padding:15px 29px;
-			.icon{
-				@include use-sprite(ico_search,$icons-cs);
-			}
-		}
+		@extend %search_cover;
 	}	
 	
 	

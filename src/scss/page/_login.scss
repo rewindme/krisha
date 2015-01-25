@@ -60,6 +60,7 @@
 	.login_box{
 		width:auto;
 		float:none;
+		margin-right:0;
 		h2{
 			color:#f54500;
 			border-color:#f54500;
@@ -74,24 +75,64 @@
 	
 	.login_cover{
 		overflow:hidden;
-		padding-top:50px;
+		padding-top:76px;
 	}
 	
 	.submit_cover{
 		.btn_login{
 			@extend %btn-point2;
+			margin:0;
 			margin-right:5px;
+			vertical-align:top;
 		}
 		.btn_gray{
 			@extend %btn-gray;
+			vertical-align:top;
 		}
-		
-		
-		
-	
 	}
 	
+	.find_id_tit{
+		color:#f54500;
+		font-size:20px;
+		margin-bottom:3px;
+	}
+	
+	.find_id_msg{
+		font-size:16px;
+		color:#666;
+		line-height:20px;
+	}
+	
+	.find_cover{
+		padding-top:70px;
+		
+		.submit_cover{
+			padding-top:20px;
+		}
+	}
+	
+	.find_success{
+		font-size:16px;
+		strong{
+			color:#f54500
+		}
+		
+	}
+	
+	.find_pw_cover{
+		padding-top:43px;
+		.ipt_cover{
+			margin-bottom:20px;
+		}
+		
+		.desc{
+			font-size:12px;
+			color:#666;
+			margin:-10px 0 20px;
+		}
+	}
 }
+
 
 
 

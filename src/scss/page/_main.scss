@@ -1,11 +1,56 @@
 @charset "utf-8";
+$slider-height:430px;
 
 /* 슬라이더 */
-.slider{position:relative;width:1180px;height:620px;overflow:hidden;zoom:1}
+.slider{
+	position:relative;width:1180px;height:$slider-height;overflow:hidden;zoom:1;
+	.slider_cover{
+		cursor:move;
+		position:absolute;
+		width:1180px;
+		height:$slider-height;
+		left:0;
+		right:0;
+		overflow:hidden
+	}
+	
+	.btn_next,
+	.btn_prev{@extend %sp-ico;border:0;width:46px;height:46px;position:absolute;left:30px;top:50%;margin-top:-23px;z-index:20;cursor:pointer}
+	.btn_next{background-position:-66px 0;right:30px;left:auto}
+	
+	.btn_bullets{
+		
+		position:absolute;
+		bottom:20px;
+		left:0!important;
+		right:0!important;
+		text-align:center;
+		width:auto!important;
+		height:auto!important;
+		
+		
+		.ico_bullet,.ico_bulletav,.ico_bulletdn{
+			width:16px!important;
+			height:16px!important;
+			position:static!important;
+			cursor:pointer;
+			display:inline-block!important;
+			vertical-align:top;
+			margin:0 5px;
+			
+			background-image:url(/shop/data/skin/KRISHA_ING/img/sp/sp_slider_bullet.png);
+			background-repeat:no-repeat;
+			background-position:0 -26px;
+			background-color:transparent;
+		}
+		
+		.ico_bulletav{
+			
+			background-position:0 0;
+		}
+	}
+}
 
-.slider .slider_cover{cursor:move;position:absolute;width:1180px;height:620px;left:0;right:0;overflow:hidden}
-.btn_next,.btn_prev{@extend %sp-ico;border:0;width:46px;height:46px;position:absolute;left:40px;top:50%;margin-top:-23px;z-index:20;cursor:pointer}
-.btn_next{background-position:-66px 0;right:40px;left:auto}
 
 
 /* 섹션 */
@@ -44,7 +89,7 @@
 	.prod_thumb:after{content:'';height:100%;vertical-align:middle;display:inline-block;width:0}
 	.selected .prod_thumb:before,
 	a:hover .prod_thumb:before{border-color:#f54500;z-index:30}
-	.prod_thumb img{vertical-align:middle;max-width:100%}
+	.prod_thumb img{vertical-align:middle;max-width:100%;width:auto;}
 	.prod_name{color:#454545;display:block;margin-bottom:7px}
 	.prod_name img{vertical-align:-2px}
 	.prod_desc{color:#999;display:block;margin-bottom:13px}
@@ -133,4 +178,12 @@
 			padding:0 2px;
 		}
 	}	
+}
+
+/* 스크롤 배너 */
+#pos_scroll{
+	position:fixed;
+	top:140px;
+	left:50%;
+	margin-left:590px;
 }

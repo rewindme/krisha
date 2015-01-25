@@ -182,6 +182,7 @@ $info-column-spacing-vertical:25px;
 	}
 	a.btn_cancel{
 		line-height:47px;
+		margin-bottom:6px;
 	}
 	
 	.btn_print_bill{@extend %btn-point1;width:100%;margin-bottom:6px}
