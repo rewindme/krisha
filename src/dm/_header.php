@@ -1,4 +1,5 @@
-<?php $img_path = '/shop/data/dm'; ?>
+<?php $img_path = 'img'; ?>
+<?php //$img_path = '/shop/data/dm'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>

@@ -1,4 +1,3 @@
-<?php $img_path = '/shop/data/dm'; ?>
 </td></tr></table>
 
 <table width="740" border="0" cellpadding="0" cellspacing="0" style="table-layout:fixed;margin:0 auto" align="center">
