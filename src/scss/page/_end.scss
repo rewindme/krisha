@@ -21,9 +21,9 @@
 
 //포토후기
 .review_top{
-	margin-bottom:30px;position:relative;padding:0 20px;
+	margin-bottom:30px;position:relative;padding:0;
 	img{vertical-align:top}
-	.btn_cover{position:absolute;right:20px;bottom:0;}
+	.btn_cover{position:absolute;right:0;bottom:0;}
 	.btn_upload,.btn_upload_qna,.btn_view_list{@extend %btn-point2;border-color:#6dc3ad;background-color:#7ad2bc;width:auto;padding:0 20px}
 	.btn_upload_qna{border-color:#ef9871;background-color:#fda67f}
 	.btn_view_list{border-color:#999;background-color:#999;margin-right:6px;}
@@ -81,7 +81,7 @@
 }
 
 .text_board{
-	padding:0 20px;
+	padding:0 0;
 	.board .board_body {
 		li{padding-top:15px;padding-bottom:15px}
 		.remain_cover{

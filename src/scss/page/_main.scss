@@ -3,11 +3,12 @@ $slider-height:430px;
 
 /* 슬라이더 */
 .slider{
-	position:relative;width:1180px;height:$slider-height;overflow:hidden;zoom:1;
+	$slider-width:1100px;
+	position:relative;width:$slider-width;height:$slider-height;overflow:hidden;zoom:1;
 	.slider_cover{
 		cursor:move;
 		position:absolute;
-		width:1180px;
+		width:$slider-width;
 		height:$slider-height;
 		left:0;
 		right:0;
@@ -117,8 +118,12 @@ $slider-height:430px;
 }
 
 /* 배너 */
-.banner_cover{padding:40px 31px 40px 30px;font-size:0}
-.banner_cover a{padding:0 9px 0 10px}
+.banner_cover{
+	padding:40px 31px 40px 30px;font-size:0;
+	a,span{
+		padding:0 9px 0 10px;
+	}
+}
 
 
 /* 임시 */

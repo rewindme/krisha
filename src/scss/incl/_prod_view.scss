@@ -9,7 +9,7 @@
 	
 	.location{@extend %location}
 	
-	.info_cover{position:absolute;left:660px;top:40px}
+	.info_cover{position:absolute;left:660px;top:40px;max-width:520px}
 	.info_head{
 		.prod_code{color:$color-price;font-size:12px;margin-bottom:4px;display:block;font-weight:bold;font-family:arial}
 		.prod_name{color:$color-strong;font-size:23px;letter-spacing:-1px;margin-bottom:6px;font-weight:normal}
@@ -27,7 +27,7 @@
 	.option{
 		padding:17px 0 0;
 		.tit{padding:0}
-		select{border:1px solid #d8d8d8;border-radius:0;height:29px;font-size:12px}
+		select{border:1px solid #d8d8d8;border-radius:0;height:29px;font-size:12px;max-width:49%}
 		.option_cover{display:inline-block;margin-right:5px}
 	}
 	.task{

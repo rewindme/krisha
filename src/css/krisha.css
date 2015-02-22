@@ -87,7 +87,7 @@ body, table, input, textarea, button {
 
 .slider .btn_next,
 .slider .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .board_view_all .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
-.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .form_container .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .review_search .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .notice_board .btn_cover a, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .form_container .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .review_search .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -245,7 +245,7 @@ body, table, input, textarea, button {
   height: 43px;
   line-height: 43px; }
 
-.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order {
+.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .notice_board .btn_cover a {
   border: 1px solid #db3e00;
   background-color: #f54500;
   color: #fff;
@@ -255,7 +255,7 @@ body, table, input, textarea, button {
   line-height: 43px;
   width: 128px; }
 
-.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .form_container .submit_cover a.btn_signup, .price_summary a.btn_receipt, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order {
+.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .form_container .submit_cover a.btn_signup, .price_summary a.btn_receipt, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order, .notice_board .btn_cover a {
   line-height: 47px; }
 
 .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .form_container .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .task_btn .btn_home, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .review_search .btn_gray, .pop_wrap .pop_submit .btn_gray {
@@ -322,8 +322,8 @@ body, table, input, textarea, button {
   text-overflow: ellipsis;
   max-width: 100%; }
 
-.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna {
-  background-image: url('img/sp/mypage-se13f806e21.png');
+.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .notice_board .tit_notice_board .img {
+  background-image: url('img/sp/mypage-sc47592f9ef.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -343,7 +343,8 @@ body {
   background-color: #fff; }
 
 .hero {
-  position: relative; }
+  position: relative;
+  padding: 0 40px; }
 
 .section_list {
   padding: 30px 40px 0; }
@@ -444,7 +445,8 @@ body {
     background-position: 8px 5px; }
   .header .category_cover {
     height: 90px;
-    line-height: 90px; }
+    line-height: 90px;
+    overflow: hidden; }
   .header .category_cover.fix_fake, .header .category_cover.fix_top {
     position: fixed;
     top: 0;
@@ -593,8 +595,7 @@ body {
   color: #757575;
   padding: 0 0 3px;
   line-height: 18px;
-  font-size: 11px;
-  letter-spacing: -1px; }
+  font-size: 11px; }
 
 .bnr_box .innr_bnr {
   display: block;
@@ -638,14 +639,14 @@ body {
 /* 슬라이더 */
 .slider {
   position: relative;
-  width: 1180px;
+  width: 1100px;
   height: 430px;
   overflow: hidden;
   zoom: 1; }
   .slider .slider_cover {
     cursor: move;
     position: absolute;
-    width: 1180px;
+    width: 1100px;
     height: 430px;
     left: 0;
     right: 0;
@@ -856,9 +857,8 @@ body {
 .banner_cover {
   padding: 40px 31px 40px 30px;
   font-size: 0; }
-
-.banner_cover a {
-  padding: 0 9px 0 10px; }
+  .banner_cover a, .banner_cover span {
+    padding: 0 9px 0 10px; }
 
 /* 임시 */
 #left_cs {
@@ -938,7 +938,8 @@ body {
   .product_view .info_cover {
     position: absolute;
     left: 660px;
-    top: 40px; }
+    top: 40px;
+    max-width: 520px; }
   .product_view .info_head .prod_code {
     color: #f54500;
     font-size: 12px;
@@ -994,7 +995,8 @@ body {
       border: 1px solid #d8d8d8;
       border-radius: 0;
       height: 29px;
-      font-size: 12px; }
+      font-size: 12px;
+      max-width: 49%; }
     .product_view .option .option_cover {
       display: inline-block;
       margin-right: 5px; }
@@ -1174,12 +1176,12 @@ body {
 .review_top {
   margin-bottom: 30px;
   position: relative;
-  padding: 0 20px; }
+  padding: 0; }
   .review_top img {
     vertical-align: top; }
   .review_top .btn_cover {
     position: absolute;
-    right: 20px;
+    right: 0;
     bottom: 0; }
   .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list {
     border-color: #6dc3ad;
@@ -1314,7 +1316,7 @@ body {
     margin: 0 0 0 6px; }
 
 .text_board {
-  padding: 0 20px; }
+  padding: 0 0; }
   .text_board .board .board_body li {
     padding-top: 15px;
     padding-bottom: 15px; }
@@ -2794,7 +2796,7 @@ body {
   background-color: #f2f2f2;
   margin-bottom: 15px; }
   .my_level_cont .tit_mylevel {
-    background-position: 0 0;
+    background-position: 0 -208px;
     width: 83px;
     height: 13px;
     margin-bottom: 20px;
@@ -2886,19 +2888,19 @@ body {
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu2 {
-      background-position: -208px 7px;
+      background-position: 3px 7px;
       width: 31px;
       height: 25px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu3 {
-      background-position: -264px 4px;
+      background-position: -53px 4px;
       width: 29px;
       height: 28px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu4 {
-      background-position: -198px -148px;
+      background-position: -126px -148px;
       width: 32px;
       height: 30px;
       width: 45px;
@@ -3011,7 +3013,7 @@ body {
       cursor: pointer;
       margin-right: 3px; }
   .pop_wrap .tit_review {
-    background-position: -113px 0;
+    background-position: -113px -208px;
     width: 68px;
     height: 13px;
     margin: 0; }
@@ -3053,7 +3055,7 @@ body {
     width: 9px;
     height: 9px; }
   .pop_wrap .write_review .remove_upload .icon {
-    background-position: -181px -98px;
+    background-position: -259px -98px;
     width: 9px;
     height: 9px; }
   .pop_wrap .tb {
@@ -3188,7 +3190,7 @@ body {
     font-size: 11px;
     cursor: pointer; }
     .pop_wrap .btn_close .icon {
-      background-position: -259px -98px;
+      background-position: -181px -98px;
       width: 9px;
       height: 9px;
       vertical-align: middle;
@@ -3254,7 +3256,7 @@ body {
       font-weight: bold;
       font-size: 12px; }
   .pop_wrap .tit_qna {
-    background-position: -128px -150px;
+    background-position: -207px 0;
     width: 42px;
     height: 14px; }
   .pop_wrap .write_qna .tb .tit_terms {
@@ -3488,5 +3490,79 @@ body {
       display: inline-block;
       font-size: 11px;
       margin-left: 4px; }
+
+.terms_body {
+  padding: 0 20px;
+  font-size: 12px;
+  color: #757575;
+  line-height: 1.7; }
+
+.notice_board .board .board_body .bx_notice, .notice_board .board .board_body .bx_fill {
+  border-radius: 3.1px;
+  font-size: 11px;
+  padding: 3px 7px 2px;
+  font-weight: normal;
+  vertical-align: baseline;
+  display: inline-block;
+  margin-right: 2px;
+  line-height: normal; }
+
+.notice_board .tit_notice_board .img {
+  background-position: -112px 0;
+  width: 65px;
+  height: 14px; }
+.notice_board.board_list .tit_notice_board {
+  border: 0;
+  margin: 0; }
+.notice_board .board {
+  padding-top: 36px; }
+.notice_board .board .board_body li {
+  padding-top: 17px;
+  padding-bottom: 18px; }
+.notice_board .board .board_body .subject {
+  line-height: 20px; }
+.notice_board .board .board_body .count, .notice_board .board .board_body .date, .notice_board .board .board_body .hits {
+  top: 50%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: -10px; }
+.notice_board .board .board_body .subject_tit a {
+  color: #757575;
+  vertical-align: baseline;
+  font-size: 12px; }
+.notice_board .board .board_body .bx_notice {
+  border: 1px solid #f54500;
+  color: #f54500; }
+.notice_board .board .board_body .bx_fill {
+  background-color: #f54500;
+  color: #fff; }
+.notice_board .board_view .bd_view_head {
+  border-top: 2px solid #5cc4b9;
+  border-bottom: 1px solid #e4e4e4;
+  height: 62px;
+  line-height: 62px;
+  font-size: 22px;
+  color: #757575;
+  position: relative; }
+  .notice_board .board_view .bd_view_head .date {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px; }
+.notice_board .board_view .bd_view_body {
+  padding: 29px 18px;
+  border-bottom: 1px solid #e4e4e4;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.5; }
+.notice_board .btn_cover {
+  padding: 20px 20px 0; }
+  .notice_board .btn_cover a {
+    height: 34px;
+    line-height: 36px;
+    padding: 0 18px;
+    width: auto;
+    margin-right: 3px;
+    font-size: 12px; }
 
 /*# sourceMappingURL=krisha.css.map */

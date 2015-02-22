@@ -408,6 +408,27 @@ function fnGodoTooltipHide_(obj) {
 				</select>
 				<!--{ / }-->
 				
+				
+				
+				
+
+				<!-- 추가 옵션 입력형 -->
+				<!--{ ? _addopt_inputable }-->
+				<table border=0 cellpadding=0 cellspacing=0 class=top>
+				<!--{ @ _addopt_inputable }-->
+				<tr><th>{.key_} :</th>
+				<td>
+				<input type="hidden" name="_addopt_inputable[]" value="">
+				<input type="text" name="addopt_inputable[]" label="{.key_}" option-value="{.sno}^{.key_}^{.opt}^{.addprice}" value="" { ? _addopt_inputable_req[.index_] }required fld_esssential{/} maxlength="{.opt}">
+				</td></tr>
+				<!--{ / }-->
+				</table>
+				<!--{ / }-->
+				
+				
+				
+				
+				
 				<!-- 필수 옵션 분리형 -->
 				<!--{ ? _opt && _typeOption=="double" }-->
 				
@@ -454,8 +475,38 @@ function fnGodoTooltipHide_(obj) {
 
 				<script>subOption(document.getElementsByName('opt[]')[0])</script>
 				<!--{ / }-->
+				
+				
+				
+				
+				
+				
+				<!-- 추가 옵션 -->
+				<table border=0 cellpadding=0 cellspacing=0 class=sub>
+				<!--{ @ _addopt }-->
+				<tr><th>{.key_} :</th>
+				<td>
+				<!--{ ? _addoptreq[.index_] }-->
+				<select name="addopt[]" required fld_esssential label="{.key_}" onchange="nsGodo_MultiOption.set();">
+				<option value="">=={.key_} 선택==
+				<!--{ : }-->
+				<select name="addopt[]" label="{.key_}" onchange="nsGodo_MultiOption.set();">
+				<option value="">=={.key_} 선택==
+				<option value="-1">선택안함
+				<!--{ / }-->
+				<!--{ @ .value_ }-->
+				<option value="{..sno}^{.key_}^{..opt}^{..addprice}">{..opt}
+				<!--{ ? ..addprice }-->({=number_format(..addprice)}원 추가)<!--{ / }-->
+				<!--{ / }-->
+				</select>
+				</td></tr>
+				<!--{ / }-->
+				</table>
 
 				
+
+
+
 
 				<!--{ ? !_opt }-->
 				<label class="tit">수량</label>
