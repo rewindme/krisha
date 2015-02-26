@@ -988,7 +988,8 @@ body {
     margin-bottom: 5px;
     padding-top: 15px; }
   .product_view .option {
-    padding: 17px 0 0; }
+    padding: 17px 0 0;
+    width: 480px; }
     .product_view .option .tit {
       padding: 0; }
     .product_view .option select {
@@ -996,10 +997,30 @@ body {
       border-radius: 0;
       height: 29px;
       font-size: 12px;
-      max-width: 49%; }
+      max-width: 100%; }
     .product_view .option .option_cover {
       display: inline-block;
-      margin-right: 5px; }
+      margin-right: 5px;
+      width: 160px;
+      margin-bottom: 6px; }
+      .product_view .option .option_cover select {
+        width: 100%;
+        background-color: #fff; }
+    .product_view .option .option_input_cover {
+      width: 326px;
+      height: 28px;
+      border: 1px solid #d8d8d8;
+      background-color: #fff;
+      max-width: none;
+      display: block; }
+      .product_view .option .option_input_cover input {
+        border: 0;
+        padding: 0;
+        width: 318px;
+        height: 100%;
+        color: #666;
+        font-size: 12px;
+        padding-left: 8px; }
   .product_view .task {
     padding: 18px 0 0; }
     .product_view .task a {
@@ -1076,25 +1097,27 @@ body {
   .goods-multi-option .multi_option_tit {
     padding: 10px 0 5px; }
   .goods-multi-option .multi_option_cover {
-    width: 92px;
-    display: inline-block;
-    background-color: #fff;
     position: relative;
+    background-color: #fff;
     border: 1px solid #d8d8d8;
-    border-radius: 3.1px;
-    margin: 0 4px 4px 0; }
+    margin: 0 0 4px;
+    padding: 6px 9px;
+    line-height: 20px;
+    color: #454545; }
+    .goods-multi-option .multi_option_cover .opt_control {
+      float: right;
+      padding-left: 10px; }
     .goods-multi-option .multi_option_cover .tit {
       display: block;
-      line-height: 16px;
-      text-align: center;
-      padding: 12px 0 4px;
-      margin: 0; }
+      overflow: hidden;
+      margin-bottom: 0; }
     .goods-multi-option .multi_option_cover .qty_cont {
-      border-width: 1px 0;
+      border-width: 1px;
       width: 54px;
       height: 18px;
       padding: 0 19px;
-      background-color: #e5e5e5; }
+      background-color: #e5e5e5;
+      margin-right: 16px; }
     .goods-multi-option .multi_option_cover .qty_ipt {
       background-color: #f2f2f2; }
     .goods-multi-option .multi_option_cover .qty_cnt_up,
@@ -1105,25 +1128,24 @@ body {
     .goods-multi-option .multi_option_cover .qty_cnt_down {
       background-position: -15px -47px; }
     .goods-multi-option .multi_option_cover .price {
-      color: #666;
+      color: #f54500;
       font-size: 14px;
-      text-align: center;
-      padding: 6px 0; }
+      font-weight: bold;
+      display: inline;
+      margin-right: 7px; }
     .goods-multi-option .multi_option_cover .btn_remove {
       width: 14px;
       height: 14px;
       background-position: -37px -49px;
       border: 0;
       background-color: transparent;
-      position: absolute;
-      right: 0;
-      top: 0;
-      cursor: pointer; }
+      cursor: pointer;
+      vertical-align: middle; }
   .goods-multi-option .multi_option_total {
-    padding: 5px 0 0 0; }
+    padding: 10px 0 0 0; }
     .goods-multi-option .multi_option_total .tit {
-      margin: 0;
-      display: inline-block;
+      margin: 0 0 5px;
+      display: block;
       vertical-align: middle; }
     .goods-multi-option .multi_option_total .price {
       display: inline-block;

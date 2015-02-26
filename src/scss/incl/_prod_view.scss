@@ -26,9 +26,33 @@
 	.tit{color:$color-strong;font-size:12px;display:block;margin-bottom:5px;padding-top:15px}
 	.option{
 		padding:17px 0 0;
+		width:480px;
 		.tit{padding:0}
-		select{border:1px solid #d8d8d8;border-radius:0;height:29px;font-size:12px;max-width:49%}
-		.option_cover{display:inline-block;margin-right:5px}
+		select{border:1px solid #d8d8d8;border-radius:0;height:29px;font-size:12px;max-width:100%}
+		.option_cover{
+			display:inline-block;margin-right:5px;width:160px;margin-bottom:6px;
+			select{
+				width:100%;
+				background-color:#fff;
+			}
+		}
+		.option_input_cover{
+			width:326px;
+			height:28px;
+			border:1px solid #d8d8d8;
+			background-color:#fff;
+			max-width:none;
+			display:block;
+			input{
+				border:0;
+				padding:0;
+				width:318px;
+				height:100%;
+				color:#666;
+				font-size:12px;
+				padding-left:8px
+			}
+		}
 	}
 	.task{
 		padding:18px 0 0;
@@ -61,21 +85,49 @@
 	.multi_option_tit{padding:10px 0 5px;}
 	
 	.multi_option_cover{
-		width:92px;display:inline-block;background-color:#fff;position:relative;
-		border:1px solid #d8d8d8;border-radius:3.1px;margin:0 4px 4px 0;
-		.tit{display:block;line-height:16px;text-align:center;padding:12px 0 4px;margin:0;}
-		.qty_cont{border-width:1px 0;width:54px;height:18px;padding:0 19px;background-color:#e5e5e5}
+		position:relative;
+		background-color:#fff;
+		border:1px solid #d8d8d8;
+		margin:0 0 4px;
+		padding:6px 9px;
+		line-height:20px;
+		color:#454545;
+		
+		.opt_control{
+			float:right;
+			padding-left:10px;
+		}
+		.tit{
+			display:block;
+			overflow:hidden;
+			margin-bottom:0;
+		}
+		.qty_cont{border-width:1px;width:54px;height:18px;padding:0 19px;background-color:#e5e5e5;margin-right:16px}
 		.qty_ipt{background-color:#f2f2f2}
+		
 		.qty_cnt_up,
 		.qty_cnt_down{width:18px;height:18px;background-position:5px -47px}
 		.qty_cnt_down{background-position:-15px -47px}
-		.price{color:#666;font-size:14px;text-align:center;padding:6px 0}
-		.btn_remove{@extend %sp-prod;width:14px;height:14px;background-position:-37px -49px;border:0;background-color:transparent;position:absolute;right:0;top:0;cursor:pointer}
+		
+		.price{
+			color:#f54500;
+			font-size:14px;
+			font-weight:bold;
+			display:inline;
+			margin-right:7px;
+		}
+		.btn_remove{
+			@extend %sp-prod;
+			width:14px;
+			height:14px;
+			background-position:-37px -49px;
+			border:0;background-color:transparent;cursor:pointer;
+			vertical-align:middle;}
 	}	
 	
 	.multi_option_total{
-		padding:5px 0 0 0;
-		.tit{margin:0;display:inline-block;vertical-align:middle}
+		padding:10px 0 0 0;
+		.tit{margin:0 0 5px;display:block;vertical-align:middle}
 		.price{display:inline-block;vertical-align:middle}
 	}
 
