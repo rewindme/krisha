@@ -130,6 +130,7 @@ $pop-border-color:#e4e4e4;
 		
 		th{
 			text-align:left;
+			vertical-align:middle;
 			padding-left:20px;
 			font-weight:normal;
 			color:#666;
@@ -423,6 +424,16 @@ $pop-border-color:#e4e4e4;
 				}
 			}
 		}
+	}
+	// 선택옵션 수정
+	//review
+	.tit_modify_option{
+		@include use-sprite(pop_tit_modify_option);
+		margin:0;
+	}
+	
+	select{
+		@extend %select-style;
 	}
 }
 

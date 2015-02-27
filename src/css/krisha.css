@@ -82,7 +82,7 @@ i, .ht {
   src: local("Nanum Barun Gothic Bold"), local("Nanum Barun Gothic-Bold"), local("NanumBarunGothic Bold");
   src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.eot);
   src: url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.eot?#iefix) format("embedded-opentype"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.woff) format("woff"), url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.ttf) format("truetype"); }
-body, table, input, textarea, button {
+body, table, input, textarea, button, select {
   font-family: 'Nanum Barun Gothic',sans-serif; }
 
 .slider .btn_next,
@@ -322,8 +322,8 @@ body, table, input, textarea, button {
   text-overflow: ellipsis;
   max-width: 100%; }
 
-.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .notice_board .tit_notice_board .img {
-  background-image: url('img/sp/mypage-sc47592f9ef.png');
+.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .pop_wrap .tit_modify_option, .notice_board .tit_notice_board .img {
+  background-image: url('img/sp/mypage-sfafbb18c9d.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -915,6 +915,14 @@ body {
   left: 50%;
   margin-left: 590px; }
 
+.product_view .option select, .pop_wrap select {
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+  height: 28px;
+  font-size: 12px;
+  max-width: 100%;
+  background-color: #fff; }
+
 /* 상품 상세 탑 */
 .product_view {
   position: relative;
@@ -971,7 +979,8 @@ body {
   .product_view .info_head .price strong,
   .product_view .info_head .point strong {
     font-family: arial;
-    font-size: 24px; }
+    font-size: 24px;
+    vertical-align: -2px; }
   .product_view .info_head .point strong {
     font-size: 14px;
     vertical-align: -1px; }
@@ -992,20 +1001,15 @@ body {
     width: 480px; }
     .product_view .option .tit {
       padding: 0; }
-    .product_view .option select {
-      border: 1px solid #d8d8d8;
-      border-radius: 0;
-      height: 29px;
-      font-size: 12px;
-      max-width: 100%; }
     .product_view .option .option_cover {
       display: inline-block;
       margin-right: 5px;
-      width: 160px;
+      width: 328px;
       margin-bottom: 6px; }
       .product_view .option .option_cover select {
-        width: 100%;
-        background-color: #fff; }
+        width: 100%; }
+    .product_view .option .option_cover.type_single {
+      width: 328px; }
     .product_view .option .option_input_cover {
       width: 326px;
       height: 28px;
@@ -1095,7 +1099,8 @@ body {
 .goods-multi-option {
   padding: 8px 0 0 0; }
   .goods-multi-option .multi_option_tit {
-    padding: 10px 0 5px; }
+    padding: 10px 0 5px;
+    font-size: 12px; }
   .goods-multi-option .multi_option_cover {
     position: relative;
     background-color: #fff;
@@ -1106,7 +1111,10 @@ body {
     color: #454545; }
     .goods-multi-option .multi_option_cover .opt_control {
       float: right;
-      padding-left: 10px; }
+      padding-left: 10px;
+      width: 199px;
+      text-align: right;
+      white-space: nowrap; }
     .goods-multi-option .multi_option_cover .tit {
       display: block;
       overflow: hidden;
@@ -1115,11 +1123,12 @@ body {
       border-width: 1px;
       width: 54px;
       height: 18px;
-      padding: 0 19px;
+      padding: 0 18px;
       background-color: #e5e5e5;
-      margin-right: 16px; }
+      float: left; }
     .goods-multi-option .multi_option_cover .qty_ipt {
-      background-color: #f2f2f2; }
+      background-color: #f2f2f2;
+      line-height: 20px; }
     .goods-multi-option .multi_option_cover .qty_cnt_up,
     .goods-multi-option .multi_option_cover .qty_cnt_down {
       width: 18px;
@@ -1150,6 +1159,10 @@ body {
     .goods-multi-option .multi_option_total .price {
       display: inline-block;
       vertical-align: middle; }
+      .goods-multi-option .multi_option_total .price strong {
+        font-family: arial;
+        font-size: 24px;
+        vertical-align: -2px; }
 
 .prod_icon {
   position: absolute;
@@ -2436,7 +2449,7 @@ body {
 .mypage {
   padding-top: 80px; }
   .mypage .tit_mykrisha {
-    background-position: 0 -150px;
+    background-position: 0 -186px;
     width: 98px;
     height: 14px;
     margin-bottom: 20px; }
@@ -2667,7 +2680,7 @@ body {
     color: #999;
     padding: 0 30px 0 10px; }
   .mypage .coupon_select_box .ico_arrow {
-    background-position: -140px -98px;
+    background-position: -174px -98px;
     width: 11px;
     height: 6px;
     position: absolute;
@@ -2802,7 +2815,7 @@ body {
   .view_qna .review_board .title_cover .category_name {
     color: #f54500; }
   .view_qna .review_board .title_cover .ico_attach {
-    background-position: -298px -98px;
+    background-position: -332px -98px;
     width: 16px;
     height: 12px;
     vertical-align: middle;
@@ -2818,7 +2831,7 @@ body {
   background-color: #f2f2f2;
   margin-bottom: 15px; }
   .my_level_cont .tit_mylevel {
-    background-position: 0 -208px;
+    background-position: -140px -142px;
     width: 83px;
     height: 13px;
     margin-bottom: 20px;
@@ -2904,25 +2917,25 @@ body {
       font-weight: bold;
       color: #454545; }
     .my_level_cont .article .ico_menu1 {
-      background-position: -344px -93px;
+      background-position: -200px -181px;
       width: 34px;
       height: 27px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu2 {
-      background-position: 3px 7px;
+      background-position: -95px 7px;
       width: 31px;
       height: 25px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu3 {
-      background-position: -53px 4px;
+      background-position: -151px 4px;
       width: 29px;
       height: 28px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu4 {
-      background-position: -126px -148px;
+      background-position: -262px -184px;
       width: 32px;
       height: 30px;
       width: 45px;
@@ -3035,7 +3048,7 @@ body {
       cursor: pointer;
       margin-right: 3px; }
   .pop_wrap .tit_review {
-    background-position: -113px -208px;
+    background-position: 0 0;
     width: 68px;
     height: 13px;
     margin: 0; }
@@ -3073,11 +3086,11 @@ body {
       vertical-align: middle;
       margin-right: 4px; }
   .pop_wrap .write_review .add_upload .icon {
-    background-position: -220px -98px;
+    background-position: -254px -98px;
     width: 9px;
     height: 9px; }
   .pop_wrap .write_review .remove_upload .icon {
-    background-position: -259px -98px;
+    background-position: -293px -98px;
     width: 9px;
     height: 9px; }
   .pop_wrap .tb {
@@ -3093,6 +3106,7 @@ body {
       vertical-align: top; }
     .pop_wrap .tb th {
       text-align: left;
+      vertical-align: middle;
       padding-left: 20px;
       font-weight: normal;
       color: #666; }
@@ -3212,14 +3226,14 @@ body {
     font-size: 11px;
     cursor: pointer; }
     .pop_wrap .btn_close .icon {
-      background-position: -181px -98px;
+      background-position: -215px -98px;
       width: 9px;
       height: 9px;
       vertical-align: middle;
       margin-right: 4px;
       height: 10px; }
   .pop_wrap .tit_coupon {
-    background-position: 0 -98px;
+    background-position: 0 -142px;
     width: 110px;
     height: 14px; }
   .pop_wrap .coupon_regist {
@@ -3278,7 +3292,7 @@ body {
       font-weight: bold;
       font-size: 12px; }
   .pop_wrap .tit_qna {
-    background-position: -207px 0;
+    background-position: -128px -186px;
     width: 42px;
     height: 14px; }
   .pop_wrap .write_qna .tb .tit_terms {
@@ -3301,6 +3315,11 @@ body {
       color: #666;
       padding-left: 4px;
       vertical-align: top; }
+  .pop_wrap .tit_modify_option {
+    background-position: 0 -98px;
+    width: 144px;
+    height: 14px;
+    margin: 0; }
 
 .cs_center .cs_center_info .tel_number, .cs_center .cs_center_info .cs_period {
   border-bottom: 1px solid #d5d5d5;
@@ -3530,7 +3549,7 @@ body {
   line-height: normal; }
 
 .notice_board .tit_notice_board .img {
-  background-position: -112px 0;
+  background-position: -210px 0;
   width: 65px;
   height: 14px; }
 .notice_board.board_list .tit_notice_board {

@@ -1,4 +1,12 @@
 @charset "utf-8";
+%select-style{
+	border:1px solid #d8d8d8;
+	border-radius:0;
+	height:28px;
+	font-size:12px;
+	max-width:100%;
+	background-color:#fff;
+}
 /* 상품 상세 탑 */
 .product_view{
 	position:relative;zoom:1;min-width:1180px;
@@ -18,7 +26,7 @@
 		.price_orgin{margin-bottom:2px;color:#afafaf;text-decoration:line-through;display:block}
 		.price{padding:0}
 		.price strong,
-		.point strong{font-family:arial;font-size:24px;}
+		.point strong{font-family:arial;font-size:24px;vertical-align:-2px}
 		.point strong{font-size:14px;vertical-align:-1px}
 		.rating{display:none}
 	}
@@ -28,13 +36,17 @@
 		padding:17px 0 0;
 		width:480px;
 		.tit{padding:0}
-		select{border:1px solid #d8d8d8;border-radius:0;height:29px;font-size:12px;max-width:100%}
+		select{@extend %select-style;}
 		.option_cover{
-			display:inline-block;margin-right:5px;width:160px;margin-bottom:6px;
+			display:inline-block;margin-right:5px;width:328px;margin-bottom:6px;
 			select{
 				width:100%;
-				background-color:#fff;
+				
 			}
+		}
+		
+		.option_cover.type_single{
+			width:328px;
 		}
 		.option_input_cover{
 			width:326px;
@@ -82,7 +94,10 @@
 
 .goods-multi-option{
 	padding:8px 0 0 0;
-	.multi_option_tit{padding:10px 0 5px;}
+	.multi_option_tit{
+		padding:10px 0 5px;
+		font-size:12px;
+	}
 	
 	.multi_option_cover{
 		position:relative;
@@ -96,14 +111,24 @@
 		.opt_control{
 			float:right;
 			padding-left:10px;
+			width:199px;
+			text-align:right;
+			white-space:nowrap;
+			
 		}
 		.tit{
 			display:block;
 			overflow:hidden;
 			margin-bottom:0;
 		}
-		.qty_cont{border-width:1px;width:54px;height:18px;padding:0 19px;background-color:#e5e5e5;margin-right:16px}
-		.qty_ipt{background-color:#f2f2f2}
+		.qty_cont{
+			border-width:1px;width:54px;height:18px;padding:0 18px;background-color:#e5e5e5;
+			float:left;
+		}
+		.qty_ipt{
+			background-color:#f2f2f2;
+			line-height:20px;
+		}
 		
 		.qty_cnt_up,
 		.qty_cnt_down{width:18px;height:18px;background-position:5px -47px}
@@ -128,7 +153,14 @@
 	.multi_option_total{
 		padding:10px 0 0 0;
 		.tit{margin:0 0 5px;display:block;vertical-align:middle}
-		.price{display:inline-block;vertical-align:middle}
+		.price{
+			display:inline-block;vertical-align:middle;
+			strong{
+				font-family:arial;
+				font-size:24px;
+				vertical-align:-2px;
+			}
+		}
 	}
 
 
