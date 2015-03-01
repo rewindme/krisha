@@ -50,10 +50,14 @@
 			color:#999;
 			font-size:12px;
 			
+			input{
+				vertical-align:-3px\0;
+			}
 			label{
 				display:inline-block;
 				padding:10px 10px 10px 0;
 				cursor:pointer;
+				vertical-align:middle;
 			}
 		}
 	}

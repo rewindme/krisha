@@ -6,7 +6,7 @@ body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, fo
   padding: 0; }
 
 body, input, textarea, select, button {
-  font-family: Helvetica,'Apple SD Gothic Neo','nanumgothic','Dotum','돋움',Sans-serif;
+  font-family: Helvetica,'Apple SD Gothic Neo','Dotum','돋움',Sans-serif;
   font-size: 14px; }
 
 img, fieldset {
@@ -594,19 +594,22 @@ body {
 .bnr_box a {
   color: #757575;
   padding: 0 0 3px;
-  line-height: 18px;
+  line-height: 20px;
   font-size: 11px; }
 
 .bnr_box .innr_bnr {
   display: block;
-  padding: 16px; }
+  position: absolute;
+  bottom: 16px;
+  left: 16px; }
 
 .bnr_box .innr_bnr img {
   vertical-align: top;
   border: 0; }
 
 .bnr_box.notice {
-  width: 290px; }
+  width: 290px;
+  position: relative; }
 
 .bnr_box.cst_center {
   width: 240px;
@@ -823,9 +826,12 @@ body {
     text-decoration: line-through;
     margin-right: 4px; }
   .prod_list .price .before em {
-    font-size: 14px; }
+    font-size: 14px;
+    vertical-align: -1px; }
   .prod_list .price .after {
     color: #f54500; }
+    .prod_list .price .after em {
+      vertical-align: -2px; }
 
 /* recommend 상품 목록 */
 /* .recmd_item .prod_list ul{width:auto} */
@@ -975,7 +981,8 @@ body {
     text-decoration: line-through;
     display: block; }
   .product_view .info_head .price {
-    padding: 0; }
+    padding: 0;
+    margin-bottom: 1px; }
   .product_view .info_head .price strong,
   .product_view .info_head .point strong {
     font-family: arial;
@@ -989,7 +996,7 @@ body {
   .product_view .price {
     color: #f54500;
     display: block;
-    font-size: 18px; }
+    font-size: 14px; }
   .product_view .tit {
     color: #454545;
     font-size: 12px;
@@ -1003,7 +1010,7 @@ body {
       padding: 0; }
     .product_view .option .option_cover {
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 3px;
       width: 328px;
       margin-bottom: 6px; }
       .product_view .option .option_cover select {
@@ -1097,10 +1104,11 @@ body {
     border-right: 1px solid #d8d8d8; }
 
 .goods-multi-option {
-  padding: 8px 0 0 0; }
+  padding: 0; }
   .goods-multi-option .multi_option_tit {
     padding: 10px 0 5px;
-    font-size: 12px; }
+    font-size: 12px;
+    color: #454545; }
   .goods-multi-option .multi_option_cover {
     position: relative;
     background-color: #fff;
@@ -1108,7 +1116,8 @@ body {
     margin: 0 0 4px;
     padding: 6px 9px;
     line-height: 20px;
-    color: #454545; }
+    color: #454545;
+    overflow: hidden; }
     .goods-multi-option .multi_option_cover .opt_control {
       float: right;
       padding-left: 10px;
@@ -1118,7 +1127,10 @@ body {
     .goods-multi-option .multi_option_cover .tit {
       display: block;
       overflow: hidden;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      vertical-align: middle;
+      position: relative;
+      top: 1px; }
     .goods-multi-option .multi_option_cover .qty_cont {
       border-width: 1px;
       width: 54px;
@@ -1141,7 +1153,9 @@ body {
       font-size: 14px;
       font-weight: bold;
       display: inline;
-      margin-right: 7px; }
+      margin-right: 7px;
+      position: relative;
+      top: 1px; }
     .goods-multi-option .multi_option_cover .btn_remove {
       width: 14px;
       height: 14px;
@@ -1149,11 +1163,12 @@ body {
       border: 0;
       background-color: transparent;
       cursor: pointer;
-      vertical-align: middle; }
+      position: relative;
+      top: 3px; }
   .goods-multi-option .multi_option_total {
     padding: 10px 0 0 0; }
     .goods-multi-option .multi_option_total .tit {
-      margin: 0 0 5px;
+      margin: 0 0 2px;
       display: block;
       vertical-align: middle; }
     .goods-multi-option .multi_option_total .price {
@@ -2540,7 +2555,9 @@ body {
     font-weight: normal; }
   .mypage .emoney .mypage_table .price {
     color: #ff5400;
-    font-size: 20px; }
+    font-size: 20px;
+    position: relative;
+    top: 2px; }
   .mypage .emoney .mypage_table td {
     text-align: left; }
   .mypage .emoney .mypage_table .cell_date {
@@ -2560,7 +2577,9 @@ body {
     padding: 3px 7px 2px;
     border-radius: 3.1px;
     font-size: 11px;
-    line-height: 12px; }
+    line-height: 12px;
+    min-height: 12px;
+    box-sizing: border-box; }
   .mypage .reply_cnt {
     color: #5cc4b9;
     position: relative;
@@ -2747,6 +2766,7 @@ body {
       height: 15px;
       line-height: 17px;
       padding: 0 3px 0 4px;
+      padding-bottom: 1px\0;
       font-size: 11px; }
 
 .view_qna {
@@ -2902,7 +2922,11 @@ body {
     .my_level_cont .stats .price {
       color: #f54500;
       font-weight: bold;
-      font-size: 16px; }
+      font-size: 16px;
+      vertical-align: middle;
+      display: inline-block;
+      height: 19px;
+      line-height: 19px; }
   .my_level_cont .article {
     padding: 0 7px 8px; }
     .my_level_cont .article li {
@@ -2983,10 +3007,13 @@ body {
       right: 82px;
       color: #999;
       font-size: 12px; }
+      .search_box .search_cover .refind input {
+        vertical-align: -3px\0; }
       .search_box .search_cover .refind label {
         display: inline-block;
         padding: 10px 10px 10px 0;
-        cursor: pointer; }
+        cursor: pointer;
+        vertical-align: middle; }
 
 .category_detail .search_list_sorting {
   border: 1px solid #e7e7e7;

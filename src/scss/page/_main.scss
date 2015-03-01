@@ -97,10 +97,17 @@ $slider-height:430px;
 	.price{font-weight:bold;color:#454545}
 	.price em{font-size:18px}
 	.price .before{color:#afafaf;text-decoration:line-through;margin-right:4px}
-	.price .before em{font-size:14px}
-	.price .after{color:#f54500}
+	.price .before em{font-size:14px;vertical-align:-1px}
+	.price .after{
+		color:#f54500;
+		em{
+			vertical-align:-2px
+		}
+	}
+	
 
 }
+
 /* recommend 상품 목록 */
 /* .recmd_item .prod_list ul{width:auto} */
 .recmd_item .prod_list ul{width:1133px}
