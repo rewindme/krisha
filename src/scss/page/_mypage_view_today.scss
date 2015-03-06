@@ -24,6 +24,10 @@
 		@extend %header3_style;
 	}
 	.prod_list{
+		ul{
+			width:780px;
+		}
+		
 		li{
 			width:168px;
 			margin-right:26px;
