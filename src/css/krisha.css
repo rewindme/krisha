@@ -330,7 +330,7 @@ body, table, input, textarea, button, select {
   vertical-align: top; }
 
 .search_box .search_cover .btn_search .icon, .cs_center .search_cover .btn_search .icon, .cs_center .tit_faq_search, .cs_center .faq_board .icon_stat, .cs_center .faq_board .open .icon_stat, .cs_center .cs_center_info .tit_cs_center, .cs_center .cs_center_info .tel_number .img, .cs_center .cs_center_info .cs_period .img, .cs_center .cs_center_info .cs_menu .menu1 a, .cs_center .cs_center_info .cs_menu .menu2 a, .cs_center .cs_center_info .cs_menu .menu3 a, .cs_center .cs_center_info .cs_menu .menu4 a, .cs_center .cs_center_info .cs_menu .menu5 a, .cs_center .cs_center_info .cs_menu .menu6 a, .cs_center .cs_center_info .consult_katalk .img, .cs_center .tit_faq_top10, .board_view_all .tit_review, .board_view_all .tit_qna {
-  background-image: url('img/sp/cs-center-s512a4c5388.png');
+  background-image: url('img/sp/cs-center-s8013c09c13.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -820,7 +820,8 @@ body {
     font-weight: bold;
     color: #454545; }
   .prod_list .price em {
-    font-size: 18px; }
+    font-size: 18px;
+    vertical-align: -2px; }
   .prod_list .price .before {
     color: #afafaf;
     text-decoration: line-through;
@@ -3447,15 +3448,17 @@ body {
       padding: 0;
       margin: 0 0 20px -5px; }
     .cs_center .cs_center_info .tel_number .img {
-      background-position: 0 -182px;
+      background-position: 0 -224px;
       width: 204px;
       height: 43px; }
     .cs_center .cs_center_info .cs_period .img {
-      background-position: 0 -433px;
+      background-position: 0 -391px;
       width: 196px;
-      height: 90px; }
+      height: 89px; }
     .cs_center .cs_center_info .cs_menu {
       padding: 8px 0 0; }
+      .cs_center .cs_center_info .cs_menu ul {
+        overflow: hidden; }
       .cs_center .cs_center_info .cs_menu li {
         float: left;
         width: 110px;
@@ -3469,33 +3472,37 @@ body {
         .cs_center .cs_center_info .cs_menu li a {
           vertical-align: middle !important; }
       .cs_center .cs_center_info .cs_menu .menu1 a {
-        background-position: -114px -255px;
-        width: 73px;
-        height: 63px; }
+        background-position: 0 -297px;
+        width: 78px;
+        height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu2 a {
-        background-position: 0 -255px;
-        width: 84px;
-        height: 63px; }
+        background-position: -205px -297px;
+        width: 67px;
+        height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu3 a {
-        background-position: 0 -348px;
-        width: 64px;
-        height: 55px; }
+        background-position: -186px -130px;
+        width: 67px;
+        height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu4 a {
-        background-position: -217px -255px;
-        width: 63px;
-        height: 63px; }
+        background-position: -108px -297px;
+        width: 67px;
+        height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu5 a {
-        background-position: -198px -98px;
+        background-position: -98px -138px;
         width: 58px;
         height: 54px; }
       .cs_center .cs_center_info .cs_menu .menu6 a {
-        background-position: -98px -98px;
-        width: 70px;
+        background-position: -293px -54px;
+        width: 53px;
         height: 54px; }
+    .cs_center .cs_center_info .consult_katalk a {
+      display: inline-block; }
     .cs_center .cs_center_info .consult_katalk .img {
-      background-position: 0 -553px;
+      margin-left: -5px;
+      background-position: 0 -510px;
       width: 230px;
-      height: 177px; }
+      height: 177px;
+      vertical-align: top; }
   .cs_center .tit_faq_top10 {
     background-position: -54px 0;
     width: 97px;
@@ -3507,7 +3514,7 @@ body {
 .board_view_all {
   padding-top: 80px; }
   .board_view_all .tit_review {
-    background-position: 0 -98px;
+    background-position: 0 -138px;
     width: 68px;
     height: 13px;
     border: 0;

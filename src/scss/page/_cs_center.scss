@@ -158,6 +158,9 @@
 		
 		.cs_menu{
 			padding:8px 0 0;
+			ul{
+				overflow:hidden;
+			}
 			li{
 				float:left;
 				width:110px;
@@ -186,7 +189,7 @@
 			}
 			.menu3{
 				a{
-					@include use-sprite(menu_03,$icons-cs);
+					@include use-sprite(menu_03,$icons-cs,false,0,8px);
 				}
 			}
 			.menu4{
@@ -207,8 +210,11 @@
 		}
 		
 		.consult_katalk{
+			a{display:inline-block;}
 			.img{
+				margin-left:-5px;
 				@include use-sprite(info_katalk,$icons-cs);
+				vertical-align:top;
 			}
 		}
 	}
