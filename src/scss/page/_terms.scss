@@ -108,7 +108,21 @@
 			line-height:1.5
 		}
 	}
-	
+	.login_to_comment{
+		margin-top:50px;
+		border:3px solid #e3e3e3;
+		color:#f54500;
+		font-size:16px;
+		text-align:center;
+		height:50px;
+		line-height:50px;
+		
+		a{
+			color:#999;
+			font-size:14px;
+			text-decoration:underline;
+		}
+	}
 	.comment_edit{
 		padding:50px 0 0;
 		overflow:hidden;
