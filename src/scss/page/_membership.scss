@@ -1,0 +1,43 @@
+.membership{
+	.tit_membership{
+		border:0;
+		padding:0;
+		margin-bottom:21px;
+		background:url(img/membership/tit_membership.png) no-repeat;
+		width:117px;
+		height:14px;
+		line-height:14px;
+		vertical-align:top;
+	}
+	
+	.mbs_cover{
+		padding:40px 20px 20px;
+		h3{
+			font-size:22px;
+			color:#454545;
+			line-height:1.5;
+			margin-bottom:5px;
+			font-weight:normal;
+		}
+		
+		.desc{
+			font-size:14px;
+			color:#757575;
+			line-height:1.43;
+		}
+		
+		.img_cover{
+			padding-top:36px;
+			padding-left:10px;
+		}
+	}
+	
+	.btn_cover{
+		padding:39px 0 0;
+		text-align:center;
+	}
+	
+	.btn_join{
+		@extend %btn-point2;
+	}
+}

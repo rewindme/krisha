@@ -1,6 +1,6 @@
 @charset "utf-8";
 %btn-gray-h40{@extend %btn-gray;height:40px;vertical-align:top;padding:0 20px;width:auto}
-a%btn-gray-h40{height:38px;line-height:38px}
+a%btn-gray-h40{height:38px;line-height:39px}
 %form_item{
 	.tit{display:block;color:#666;font-size:14px}
 	.ipt_text,.choose_email{@extend %ipt-text;height:18px;line-height:18px;padding:10px;width:368px;box-sizing:content-box;margin-right:6px}
@@ -77,7 +77,7 @@ a%btn-gray-h40{height:38px;line-height:38px}
 		clear:both;
 		.btn_cancel{@extend %btn-gray-h40;margin-right:10px;display:inline-block;line-height:40px}
 		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;display:inline-block;width:auto;padding:0 20px;line-height:40px}
-		a.btn_signup{line-height:38px;height:38px}
+		a.btn_signup{line-height:39px;height:38px}
 		
 		&.nb{border-top:0;padding-top:60px}
 	}
@@ -187,10 +187,72 @@ a%btn-gray-h40{height:38px;line-height:38px}
 		text-align:center;padding:40px 0;
 		border-top:1px solid #e4e4e4;
 		clear:both;
-		.btn_cancel{@extend %btn-gray-h40;margin-right:10px;display:inline-block;line-height:40px}
-		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;display:inline-block;width:auto;padding:0 20px;line-height:40px}
+		position:relative;
+		.btn_cancel{@extend %btn-gray-h40;margin-right:10px;display:inline-block;line-height:39px}
+		.btn_hack{
+			margin-right:0;
+			position:absolute;
+			right:0;
+			top:40px;
+		}
+		.btn_signup{@extend %btn-point2;height:40px;vertical-align:top;display:inline-block;width:auto;padding:0 20px;line-height:39px}
 		a.btn_signup{line-height:38px;height:38px}
 		
 		&.nb{border-top:0;padding-top:60px}
+	}
+}
+
+/* 회원탈퇴 */
+.withdraw{
+	.ipt_chk{
+		width:260px;
+		display:inline-block;
+		line-height:20px;
+	}
+	.textarea_cover{
+		border:1px solid #e4e4e4;
+		padding:10px;
+		textarea{
+			border:0;
+			padding:0;
+			width:100%;
+			height:72px;
+		}
+	}
+	
+	.coloumn_2{
+		.item_cover{
+			width:48%;
+			float:left;
+			margin-right:10px;
+		}
+		.flex_cover{width:auto;float:none;overflow:hidden}
+	}
+	
+	.withdraw_notice{
+		border:1px solid #e4e4e4;
+		background-color:#efefef;
+		color:#666;
+		line-height:1.43;
+		padding:14px 17px;
+		
+		ul{
+			height:80px;
+		}
+		li{
+			color:#666;
+			position:relative;
+			padding-left:13px;
+			zoom:1;
+			
+			.bu{
+				width:3px;
+				height:3px;
+				position:absolute;
+				background-color:#f54500;
+				left:2px;
+				top:8px;
+			}
+		}
 	}
 }

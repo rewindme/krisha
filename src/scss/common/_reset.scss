@@ -15,3 +15,12 @@ legend,.blind,i{position:absolute;top:0;left:0;width:0;height:0;overflow:hidden;
 .ht{position:absolute}
 i,.ht{color:transparent;font-size:0}
 .u_hc,.u_skip{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;color:transparent;line-height:0}
+
+::selection {
+	background: #5cc4b9;
+	color: #fff;
+}
+::-moz-selection {
+	background: #5cc4b9;
+	color: #fff; 
+}

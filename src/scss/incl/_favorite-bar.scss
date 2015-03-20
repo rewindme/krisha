@@ -6,7 +6,9 @@
 	ul{border:1px solid #ddd;margin-bottom:3px;background-color:#fff}
 	li{vertical-align:top}
 	li a{@extend %sp-fav;width:68px;height:51px}
+	
 	.logout{background-position:9px 8px}
+	.sign_in{background-position:9px -294px}
 	.sign_up{background-position:9px -43px}
 	.shopping_bag{background-position:9px -94px}
 	.wish_list{background-position:9px -145px}

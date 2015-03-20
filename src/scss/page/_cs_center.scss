@@ -165,7 +165,7 @@
 				float:left;
 				width:110px;
 				text-align:center;
-				margin-bottom:19px;
+				margin-bottom:20px;
 				
 				.guide{
 					display:inline-block;
@@ -189,12 +189,12 @@
 			}
 			.menu3{
 				a{
-					@include use-sprite(menu_03,$icons-cs,false,0,8px);
+					@include use-sprite(menu_03,$icons-cs,false,1px,8px);
 				}
 			}
 			.menu4{
 				a{
-					@include use-sprite(menu_04,$icons-cs);
+					@include use-sprite(menu_04,$icons-cs,false,1px);
 				}
 			}
 			.menu5{

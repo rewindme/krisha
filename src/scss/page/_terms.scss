@@ -28,9 +28,14 @@
 			@include use-sprite(tit_notice);
 		}
 	}
+	.tit_event_board{
+		.img{
+			@include use-sprite(tit_event);
+		}
+	}
 
 	&.board_list{
-		.tit_notice_board{
+		.tit_event_board,.tit_notice_board{
 			border:0;
 			margin:0;
 		}
@@ -79,18 +84,19 @@
 		.bd_view_head{
 			border-top:2px solid #5cc4b9;
 			border-bottom:1px solid #e4e4e4;
-			height:62px;
-			line-height:62px;
 			font-size:22px;
 			color:#757575;
 			position:relative;
+			padding:17px 90px 17px 0;
 			
 			.date{
 				position:absolute;
 				right:0;
-				top:0;
+				top:22px;
 				font-size:14px;
 			}
+			
+			br{display:none}
 			
 		}
 		
@@ -103,16 +109,209 @@
 		}
 	}
 	
+	.comment_edit{
+		padding:50px 0 0;
+		overflow:hidden;
+		.tit{
+			color:#f54500;
+			font-size:20px;
+			font-weight:bold;
+		}
+		
+		.comment_box{
+			$height:72px;
+			
+			width:740px;
+			float:left;
+			margin-right:10px;
+			
+			.inr_cover{
+				border:3px solid #f54500;
+				padding-right:100px;
+				position:relative;
+				
+				textarea{
+					border:0;
+					margin:0;
+					width:637 - 20px;
+					height:$height - 6 - 16;
+					vertical-align:top;
+					padding:8px 10px;
+				}
+			}
+			
+			.comment_submit{
+				position:absolute;
+				right:0;
+				top:0;
+				border:0;
+				background-color:#f54500;
+				width:97px;
+				height:$height - 6;
+				color:#fff;
+			}
+		}
+		
+		.comment_box.fullbox{
+			width:100%;
+			
+			.inr_cover{
+				textarea{
+					width:901px;
+				}
+			}
+		}
+		.captcha{
+			overflow:hidden;
+			border:1px solid #e4e4e4;
+			
+			.captcha_head{
+				background-color:#e4e4e4;
+				position:relative;
+				height:30px;
+				padding-left:10px;
+				line-height:30px;
+			}
+			.captcha_body{
+				overflow:hidden;
+				.captcha_img{
+					border-right:1px solid #e4e4e4;
+					float:left;
+					zoom:1;
+					
+					img{vertical-align:top}
+				}	
+				.captcha_ipt{
+					overflow:hidden;
+					display:block;
+					.ipt{
+						width:100%;
+						border:0;
+						height:40px;
+						line-height:40px;
+						text-align:center;
+						color:#f54500;
+						font-size:12px;
+						font-family:arial,sans-serif;
+					}
+				}
+			}
+			
+			.refresh_captcha{
+				@include use-sprite(captcha_refresh);
+				position:absolute;
+				right:4px;
+				top:4px;
+			}
+		}
+	}
+	.comment_list{
+		padding:33px 0 0;
+		margin-bottom:-29px;
+		.tit{
+			color:#454545;
+			font-weight:bold;
+			padding-bottom:7px;
+			.desc{
+				color:#999;
+				font-weight:normal;
+			}
+		}
+		
+		li{
+			border-top:1px solid #e4e4e4;
+			padding:28px 11px;
+			
+			.username{
+				display:inline-block;
+				width:135px;
+				color:#666;
+				font-weight:bold;
+			}
+			.reg_date{
+				color:#999;
+				font-size:12px;
+				
+				.delete{
+					a{
+						color:#999;
+					}
+				}
+			}
+			
+			.comment_txt{
+				color:#666;
+				line-height:24px;
+				padding-top:18px;
+			}
+		}
+		.empty_reply{
+			text-align:center;
+			padding:60px 0;
+		}
+	}
+	
 	.btn_cover{
 		padding:20px 20px 0;
+		position:relative;
 		a{
 			@extend %btn-point2;
 			height:34px;
-			line-height:36px;
+			line-height:35px;
 			padding:0 18px;
 			width:auto;
 			margin-right:3px;
 			font-size:12px;
+		}
+		
+		.btn_write{
+			position:absolute;
+			right:20px;
+			top:20px;
+		}
+	}
+	
+	.bn_fullsize{
+		margin-bottom:60px;
+	}
+	
+	.board_list_thumbnail{
+		$margin-right:36px;
+		ul{
+			overflow:hidden;
+			width:1060 + $margin-right;
+			font-size:0;
+		}
+		li{
+			width:238px;
+			display:inline-block;
+			*display:inline;
+			zoom:1;
+			margin-right:$margin-right;
+			font-size:14px;
+			vertical-align:top;
+		}
+		.thumbnail{
+			text-align:center;
+			img{vertical-align:top}
+			.no_img{
+				display:inline-block;
+				width:238px;
+				height:242px;
+				background-color:#92d7d2;
+				line-height:242px;
+				color:#fff;
+				border-radius:10px;
+			}
+		}
+		.subject{
+			text-align:center;
+			padding:20px 0 56px;
+			a{
+				color:#757575;
+				font-size:16px;
+				line-height:19px;				
+			}
 		}
 	}
 }

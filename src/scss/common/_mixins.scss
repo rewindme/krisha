@@ -4,7 +4,9 @@
 %sp-img{background-image:url($IMG_DOMAIN + "sp/sp_img.png");background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
 %sp-ico{@extend %sp-img;background-image:url($IMG_DOMAIN + "sp/sp_ico.png")}
 %sp-main-tit{@extend %sp-img;background-image:url($IMG_DOMAIN + "sp/sp_main_tit.png")}
+
 %sp-fav{@extend %sp-img;background-image:url($IMG_DOMAIN + "sp/sp_fav.png")}
+
 %sp-pt-bg{@extend %sp-img;background-image:url($IMG_DOMAIN + "sp/pt_sp_bg.png");background-repeat:repeat-x}
 %cover{width:1180px;margin:0 auto;position:relative;zoom:1}
 %sp-prod{background-image:url($IMG_DOMAIN + "sp/sp_prod_view.png");background-repeat:no-repeat;background-color:transparent;@extend %display-inline-block;vertical-align:top}
@@ -88,7 +90,7 @@ $point-color1:#5cc4b9;
 	width:128px;
 }
 a%btn-point2{
-	line-height:47px
+	line-height:46px;
 }
 
 %btn-gray{

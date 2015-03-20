@@ -24,6 +24,14 @@
 		margin:-18px 0 37px;line-height:18px;
 		input{@extend %input-fix}
 		label{color:$color-weak;margin-right:17px}
+		
+		.desc{
+			color:#999;
+			font-size:12px;
+			strong{
+				color:#f54500;
+			}
+		}
 	}
 	
 	.submit_cover{

@@ -51,6 +51,14 @@ i, .ht {
   color: transparent;
   line-height: 0; }
 
+::selection {
+  background: #5cc4b9;
+  color: #fff; }
+
+::-moz-selection {
+  background: #5cc4b9;
+  color: #fff; }
+
 /* 
  * Nanum Barun Gothic (Korean) http://hangeul.naver.com
  */
@@ -86,14 +94,14 @@ body, table, input, textarea, button, select {
   font-family: 'Nanum Barun Gothic',sans-serif; }
 
 .slider .btn_next,
-.slider .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .board_view_all .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
-.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .notice_board .btn_cover a, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .form_container .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .review_search .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .policy a, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
+.slider .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .contact .logo_yellowphant, .contact .logo_inipay, .product_view .location .ico_home, .login .location .ico_home, .join .location .ico_home, .basket .location .ico_home, .mypage .location .ico_home, .cs_center .location .ico_home, .board_view_all .location .ico_home, .container .location .ico_home, .product_view .task .btn_buy i, .product_view .task .btn_cart i, .product_view .task .btn_like i, .qty_cont .qty_cnt_up,
+.qty_cont .qty_cnt_down, .goods-multi-option .multi_option_cover .btn_remove, .navigation .btn_prev, .navigation .btn_next, .general_store .tab li, .prod_tab li, .section_head .tab li, .general_store .tab a, .prod_tab a, .section_head .tab a, .login_box .submit_cover .btn_login, .task_btn .btn_print_bill, .task_btn .btn_mykrisha, .task_btn .btn_home, .review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .notice_board .btn_cover a, .membership .btn_join, .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .form_container .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .review_search .btn_gray, .pop_wrap .pop_submit .btn_gray, .ipt_rdo label, .ipt_chk label, .header .gnb_area, .header .gnb li, .header .category li, .policy li, .contact .link, .bnr_box, .general_store .inr_bnr, .prod_list li, .prod_list a, .product_view .task a, .order_guest .ipt_wrap, .certify_cont .ipt_area, .goods_list .tab li, .goods_list .tab li a, .goods_list .navigation a, .goods_list .navigation b, .order_list .prod_thumb, .order_list .prod_info {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
 
 .slider .btn_next,
-.slider .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .policy .corp_intro, .policy .user_guide, .policy .terms, .policy .private, .policy .help_cs, .contact .logo_yellowphant, .contact .logo_inipay {
+.slider .btn_prev, .nav_dot button, .tit_notice, .section_head .tit_recomm, .section_head .tit_best_item, .section_head .tit_new_arrival, .section_head .tit_general, .favorite_bar .tit_favorite, .favorite_bar li a, .general_store .tab, .prod_tab, .header .search_bar .btn_search, .contact .logo_yellowphant, .contact .logo_inipay {
   background-image: url("/shop/data/skin/KRISHA_ING/img/sp/sp_img.png");
   background-repeat: no-repeat;
   background-color: transparent;
@@ -245,7 +253,7 @@ body, table, input, textarea, button, select {
   height: 43px;
   line-height: 43px; }
 
-.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .notice_board .btn_cover a {
+.review_top .btn_upload, .review_top .btn_upload_qna, .review_top .btn_view_list, .membership_reward .btn_join, .confirm_pw .submit_cover .btn_login, .join .submit_cover .btn_signup, .certify_cont .btn_certify, .form_container .submit_cover .btn_signup, .price_summary .btn_receipt, .task_btn .btn_order, .task_btn .btn_payment, .mypage a.btn_write, .mypage .btn_regist_coupon, .mypage .task_cover .btn_orange, .pop_wrap .pop_submit .btn_point, .pop_wrap .customer_service .order_cover .btn_order, .notice_board .btn_cover a, .membership .btn_join {
   border: 1px solid #db3e00;
   background-color: #f54500;
   color: #fff;
@@ -255,8 +263,8 @@ body, table, input, textarea, button, select {
   line-height: 43px;
   width: 128px; }
 
-.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .form_container .submit_cover a.btn_signup, .price_summary a.btn_receipt, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order, .notice_board .btn_cover a {
-  line-height: 47px; }
+.review_top a.btn_upload, .review_top a.btn_upload_qna, .review_top a.btn_view_list, .membership_reward a.btn_join, .confirm_pw .submit_cover a.btn_login, .join .submit_cover a.btn_signup, .certify_cont a.btn_certify, .form_container .submit_cover a.btn_signup, .price_summary a.btn_receipt, .task_btn a.btn_order, .task_btn a.btn_payment, .mypage a.btn_write, .mypage a.btn_regist_coupon, .mypage .task_cover a.btn_orange, .pop_wrap .pop_submit a.btn_point, .pop_wrap .customer_service .order_cover a.btn_order, .notice_board .btn_cover a, .membership a.btn_join {
+  line-height: 46px; }
 
 .order_guest .btn_order, .order_guest .btn_guest_order, .confirm_pw .submit_cover .btn_gray, .form_item .btn_valid, .order_reciept_info .btn_valid, .form_item .btn_find_zip, .order_reciept_info .btn_find_zip, .form_item .btn_chk_email, .order_reciept_info .btn_chk_email, .join .submit_cover .btn_cancel, .form_container .submit_cover .btn_cancel, .order_list .btn_modify, .order_list .btn_modify_option, .task_btn .btn_shopping, .task_btn .btn_cancel, .task_btn .btn_wishlist, .task_btn .btn_remove, .task_btn .btn_home, .use_point .btn_lookup, .use_point .btn_regist, .use_point .btn_use_point, .task_btn_bottom .btn_home, .mypage .task_cover .btn_gray, .review_search .btn_gray, .pop_wrap .pop_submit .btn_gray {
   border: 1px solid #aeaeae;
@@ -322,8 +330,8 @@ body, table, input, textarea, button, select {
   text-overflow: ellipsis;
   max-width: 100%; }
 
-.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .pop_wrap .tit_modify_option, .notice_board .tit_notice_board .img {
-  background-image: url('img/sp/mypage-sfafbb18c9d.png');
+.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .pop_wrap .tit_modify_option, .notice_board .tit_notice_board .img, .notice_board .tit_event_board .img, .notice_board .comment_edit .captcha .refresh_captcha {
+  background-image: url('img/sp/mypage-s73f5902261.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -427,6 +435,7 @@ body {
   .header .search_bar .search_ipt {
     box-sizing: border-box;
     padding-left: 8px;
+    padding-top: 1px;
     width: 100%;
     height: 26px;
     border: 0;
@@ -507,32 +516,18 @@ body {
 /* footer */
 .policy {
   text-align: center;
-  font-size: 0;
-  padding: 17px 0; }
+  padding: 17px 0;
+  /*
+  	.corp_intro{@extend %sp-img;width:41px;height:16px;background-position:0 -118px}
+  	.user_guide{@extend %sp-img;width:40px;height:16px;background-position:-51px -118px}
+  	.terms{@extend %sp-img;width:41px;height:16px;background-position:-101px -118px}
+  	.private{@extend %sp-img;width:81px;height:16px;background-position:-152px -118px}
+  	.help_cs{@extend %sp-img;width:41px;height:16px;background-position:-243px -118px}
+  */ }
   .policy li {
     padding: 0 13px; }
   .policy a {
     color: #757575; }
-  .policy .corp_intro {
-    width: 41px;
-    height: 16px;
-    background-position: 0 -118px; }
-  .policy .user_guide {
-    width: 40px;
-    height: 16px;
-    background-position: -51px -118px; }
-  .policy .terms {
-    width: 41px;
-    height: 16px;
-    background-position: -101px -118px; }
-  .policy .private {
-    width: 81px;
-    height: 16px;
-    background-position: -152px -118px; }
-  .policy .help_cs {
-    width: 41px;
-    height: 16px;
-    background-position: -243px -118px; }
 
 .contact {
   color: #fff;
@@ -821,7 +816,7 @@ body {
     color: #454545; }
   .prod_list .price em {
     font-size: 18px;
-    vertical-align: -2px; }
+    vertical-align: -1px; }
   .prod_list .price .before {
     color: #afafaf;
     text-decoration: line-through;
@@ -832,7 +827,7 @@ body {
   .prod_list .price .after {
     color: #f54500; }
     .prod_list .price .after em {
-      vertical-align: -2px; }
+      vertical-align: -1px; }
 
 /* recommend 상품 목록 */
 /* .recmd_item .prod_list ul{width:auto} */
@@ -1478,6 +1473,8 @@ body {
     height: 51px; }
   .favorite_bar .logout {
     background-position: 9px 8px; }
+  .favorite_bar .sign_in {
+    background-position: 9px -294px; }
   .favorite_bar .sign_up {
     background-position: 9px -43px; }
   .favorite_bar .shopping_bag {
@@ -1541,6 +1538,11 @@ body {
     .login_box .option_cover label {
       color: #757575;
       margin-right: 17px; }
+    .login_box .option_cover .desc {
+      color: #999;
+      font-size: 12px; }
+      .login_box .option_cover .desc strong {
+        color: #f54500; }
   .login_box .submit_cover .btn_login {
     width: 118px;
     margin-bottom: 20px; }
@@ -1659,7 +1661,7 @@ body {
 
 .form_item a.btn_valid, .order_reciept_info a.btn_valid, .form_item a.btn_find_zip, .order_reciept_info a.btn_find_zip, .form_item a.btn_chk_email, .order_reciept_info a.btn_chk_email, .join .submit_cover a.btn_cancel, .form_container .submit_cover a.btn_cancel {
   height: 38px;
-  line-height: 38px; }
+  line-height: 39px; }
 
 .form_item .tit, .order_reciept_info .tit {
   display: block;
@@ -1763,7 +1765,7 @@ body {
       padding: 0 20px;
       line-height: 40px; }
     .join .submit_cover a.btn_signup {
-      line-height: 38px;
+      line-height: 39px;
       height: 38px; }
     .join .submit_cover.nb {
       border-top: 0;
@@ -1939,24 +1941,72 @@ body {
   text-align: center;
   padding: 40px 0;
   border-top: 1px solid #e4e4e4;
-  clear: both; }
+  clear: both;
+  position: relative; }
   .form_container .submit_cover .btn_cancel {
     margin-right: 10px;
     display: inline-block;
-    line-height: 40px; }
+    line-height: 39px; }
+  .form_container .submit_cover .btn_hack {
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    top: 40px; }
   .form_container .submit_cover .btn_signup {
     height: 40px;
     vertical-align: top;
     display: inline-block;
     width: auto;
     padding: 0 20px;
-    line-height: 40px; }
+    line-height: 39px; }
   .form_container .submit_cover a.btn_signup {
     line-height: 38px;
     height: 38px; }
   .form_container .submit_cover.nb {
     border-top: 0;
     padding-top: 60px; }
+
+/* 회원탈퇴 */
+.withdraw .ipt_chk {
+  width: 260px;
+  display: inline-block;
+  line-height: 20px; }
+.withdraw .textarea_cover {
+  border: 1px solid #e4e4e4;
+  padding: 10px; }
+  .withdraw .textarea_cover textarea {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 72px; }
+.withdraw .coloumn_2 .item_cover {
+  width: 48%;
+  float: left;
+  margin-right: 10px; }
+.withdraw .coloumn_2 .flex_cover {
+  width: auto;
+  float: none;
+  overflow: hidden; }
+.withdraw .withdraw_notice {
+  border: 1px solid #e4e4e4;
+  background-color: #efefef;
+  color: #666;
+  line-height: 1.43;
+  padding: 14px 17px; }
+  .withdraw .withdraw_notice ul {
+    height: 80px; }
+  .withdraw .withdraw_notice li {
+    color: #666;
+    position: relative;
+    padding-left: 13px;
+    zoom: 1; }
+    .withdraw .withdraw_notice li .bu {
+      width: 3px;
+      height: 3px;
+      position: absolute;
+      background-color: #f54500;
+      left: 2px;
+      top: 8px; }
 
 .category_detail {
   padding: 70px 40px 40px; }
@@ -2011,7 +2061,7 @@ body {
     font-size: 11px;
     padding: 0 4px 0 4px; }
 .goods_list .navigation {
-  font-family: tahoma;
+  font-family: arial,sans-serif;
   font-size: 0;
   padding-bottom: 0; }
   .goods_list .navigation a, .goods_list .navigation b {
@@ -2072,7 +2122,14 @@ body {
   border-collapse: collapse;
   padding: 0;
   border: 0;
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+  /*
+  	&.mypage_order_list{
+  		.prod_info{
+  			width:265px;
+  		}
+  	}
+  */ }
   .order_list th a {
     color: #666; }
   .order_list td {
@@ -2088,12 +2145,15 @@ body {
   .order_list .prod_thumb {
     border: 1px solid #e4e4e4;
     vertical-align: middle;
-    margin-right: 18px; }
+    margin-right: 18px;
+    float: left; }
   .order_list .prod_thumb img {
     vertical-align: top; }
   .order_list .prod_info {
     vertical-align: middle;
-    line-height: 18px; }
+    line-height: 18px;
+    display: block;
+    overflow: hidden; }
     .order_list .prod_info .name {
       color: #666;
       font-size: 14px;
@@ -2200,7 +2260,7 @@ body {
   .price_summary .real_price_tit {
     font-size: 12px; }
   .price_summary .real_price {
-    font-size: 30px;
+    font-size: 26px;
     text-align: right; }
   .price_summary .txt_point_tit {
     font-size: 12px; }
@@ -2465,7 +2525,7 @@ body {
 .mypage {
   padding-top: 80px; }
   .mypage .tit_mykrisha {
-    background-position: 0 -186px;
+    background-position: 0 -241px;
     width: 98px;
     height: 14px;
     margin-bottom: 20px; }
@@ -2540,7 +2600,7 @@ body {
       height: 20px;
       line-height: 22px;
       color: #fff;
-      font-size: 12px;
+      font-size: 11px;
       display: inline-block; }
   .mypage .navigation a {
     color: #757575; }
@@ -2702,7 +2762,7 @@ body {
     color: #999;
     padding: 0 30px 0 10px; }
   .mypage .coupon_select_box .ico_arrow {
-    background-position: -174px -98px;
+    background-position: 0 -58px;
     width: 11px;
     height: 6px;
     position: absolute;
@@ -2838,7 +2898,7 @@ body {
   .view_qna .review_board .title_cover .category_name {
     color: #f54500; }
   .view_qna .review_board .title_cover .ico_attach {
-    background-position: -332px -98px;
+    background-position: -158px -58px;
     width: 16px;
     height: 12px;
     vertical-align: middle;
@@ -2854,7 +2914,7 @@ body {
   background-color: #f2f2f2;
   margin-bottom: 15px; }
   .my_level_cont .tit_mylevel {
-    background-position: -140px -142px;
+    background-position: -204px -58px;
     width: 83px;
     height: 13px;
     margin-bottom: 20px;
@@ -2888,19 +2948,19 @@ body {
         line-height: 24px;
         text-transform: uppercase; }
       .my_level_cont .grade .info .group_name.krisha {
-        color: #6cc; }
+        color: #f54500; }
       .my_level_cont .grade .info .group_name.prime {
-        color: #ffc600; }
+        color: #e0aa4b; }
       .my_level_cont .grade .info .group_name.diamond {
-        color: #ffc600; }
+        color: #6cc; }
       .my_level_cont .grade .info .group_name.crystal {
-        color: #ffc600; }
+        color: #5ecbdd; }
       .my_level_cont .grade .info .group_name.gold {
         color: #ffc600; }
       .my_level_cont .grade .info .group_name.silver {
-        color: #ffc600; }
+        color: #989fa3; }
       .my_level_cont .grade .info .group_name.cubic {
-        color: #ffc600; }
+        color: #b3b3b3; }
       .my_level_cont .grade .info .chk_grade {
         color: #999;
         text-decoration: underline;
@@ -2944,25 +3004,25 @@ body {
       font-weight: bold;
       color: #454545; }
     .my_level_cont .article .ico_menu1 {
-      background-position: -200px -181px;
+      background-position: -140px -184px;
       width: 34px;
       height: 27px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu2 {
-      background-position: -95px 7px;
+      background-position: 3px 7px;
       width: 31px;
       height: 25px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu3 {
-      background-position: -151px 4px;
+      background-position: -53px 4px;
       width: 29px;
       height: 28px;
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu4 {
-      background-position: -262px -184px;
+      background-position: -292px 2px;
       width: 32px;
       height: 30px;
       width: 45px;
@@ -3017,10 +3077,19 @@ body {
         padding: 10px 10px 10px 0;
         cursor: pointer;
         vertical-align: middle; }
+  .search_box .popular_keyword {
+    width: 574px;
+    margin: 0 auto;
+    padding-top: 13px; }
+    .search_box .popular_keyword a {
+      color: #666; }
+    .search_box .popular_keyword a:hover {
+      color: #f54500;
+      text-decoration: underline; }
 
 .category_detail .search_list_sorting {
   border: 1px solid #e7e7e7;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   overflow: hidden; }
   .category_detail .search_list_sorting .search_result {
     color: #757575;
@@ -3078,7 +3147,7 @@ body {
       cursor: pointer;
       margin-right: 3px; }
   .pop_wrap .tit_review {
-    background-position: 0 0;
+    background-position: -317px -58px;
     width: 68px;
     height: 13px;
     margin: 0; }
@@ -3116,11 +3185,11 @@ body {
       vertical-align: middle;
       margin-right: 4px; }
   .pop_wrap .write_review .add_upload .icon {
-    background-position: -254px -98px;
+    background-position: -80px -58px;
     width: 9px;
     height: 9px; }
   .pop_wrap .write_review .remove_upload .icon {
-    background-position: -293px -98px;
+    background-position: -119px -58px;
     width: 9px;
     height: 9px; }
   .pop_wrap .tb {
@@ -3198,7 +3267,7 @@ body {
     font-size: 14px;
     color: #666; }
   .pop_wrap .tit_customer_service {
-    background-position: 0 -54px;
+    background-position: 0 -101px;
     width: 205px;
     height: 14px; }
   .pop_wrap .customer_service .order_cover {
@@ -3256,14 +3325,14 @@ body {
     font-size: 11px;
     cursor: pointer; }
     .pop_wrap .btn_close .icon {
-      background-position: -215px -98px;
+      background-position: -41px -58px;
       width: 9px;
       height: 9px;
       vertical-align: middle;
       margin-right: 4px;
       height: 10px; }
   .pop_wrap .tit_coupon {
-    background-position: 0 -142px;
+    background-position: 0 -189px;
     width: 110px;
     height: 14px; }
   .pop_wrap .coupon_regist {
@@ -3322,7 +3391,7 @@ body {
       font-weight: bold;
       font-size: 12px; }
   .pop_wrap .tit_qna {
-    background-position: -128px -186px;
+    background-position: -174px -145px;
     width: 42px;
     height: 14px; }
   .pop_wrap .write_qna .tb .tit_terms {
@@ -3346,7 +3415,7 @@ body {
       padding-left: 4px;
       vertical-align: top; }
   .pop_wrap .tit_modify_option {
-    background-position: 0 -98px;
+    background-position: 0 -145px;
     width: 144px;
     height: 14px;
     margin: 0; }
@@ -3463,7 +3532,7 @@ body {
         float: left;
         width: 110px;
         text-align: center;
-        margin-bottom: 19px; }
+        margin-bottom: 20px; }
         .cs_center .cs_center_info .cs_menu li .guide {
           display: inline-block;
           width: 0;
@@ -3480,12 +3549,12 @@ body {
         width: 67px;
         height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu3 a {
-        background-position: -186px -130px;
-        width: 67px;
+        background-position: -185px -130px;
+        width: 68px;
         height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu4 a {
-        background-position: -108px -297px;
-        width: 67px;
+        background-position: -107px -297px;
+        width: 68px;
         height: 64px; }
       .cs_center .cs_center_info .cs_menu .menu5 a {
         background-position: -98px -138px;
@@ -3585,10 +3654,14 @@ body {
   line-height: normal; }
 
 .notice_board .tit_notice_board .img {
-  background-position: -210px 0;
+  background-position: -199px 0;
   width: 65px;
   height: 14px; }
-.notice_board.board_list .tit_notice_board {
+.notice_board .tit_event_board .img {
+  background-position: -112px 0;
+  width: 57px;
+  height: 13px; }
+.notice_board.board_list .tit_event_board, .notice_board.board_list .tit_notice_board {
   border: 0;
   margin: 0; }
 .notice_board .board {
@@ -3616,30 +3689,198 @@ body {
 .notice_board .board_view .bd_view_head {
   border-top: 2px solid #5cc4b9;
   border-bottom: 1px solid #e4e4e4;
-  height: 62px;
-  line-height: 62px;
   font-size: 22px;
   color: #757575;
-  position: relative; }
+  position: relative;
+  padding: 17px 90px 17px 0; }
   .notice_board .board_view .bd_view_head .date {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 22px;
     font-size: 14px; }
+  .notice_board .board_view .bd_view_head br {
+    display: none; }
 .notice_board .board_view .bd_view_body {
   padding: 29px 18px;
   border-bottom: 1px solid #e4e4e4;
   color: #757575;
   font-size: 14px;
   line-height: 1.5; }
+.notice_board .comment_edit {
+  padding: 50px 0 0;
+  overflow: hidden; }
+  .notice_board .comment_edit .tit {
+    color: #f54500;
+    font-size: 20px;
+    font-weight: bold; }
+  .notice_board .comment_edit .comment_box {
+    width: 740px;
+    float: left;
+    margin-right: 10px; }
+    .notice_board .comment_edit .comment_box .inr_cover {
+      border: 3px solid #f54500;
+      padding-right: 100px;
+      position: relative; }
+      .notice_board .comment_edit .comment_box .inr_cover textarea {
+        border: 0;
+        margin: 0;
+        width: 617px;
+        height: 50px;
+        vertical-align: top;
+        padding: 8px 10px; }
+    .notice_board .comment_edit .comment_box .comment_submit {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: 0;
+      background-color: #f54500;
+      width: 97px;
+      height: 66px;
+      color: #fff; }
+  .notice_board .comment_edit .comment_box.fullbox {
+    width: 100%; }
+    .notice_board .comment_edit .comment_box.fullbox .inr_cover textarea {
+      width: 901px; }
+  .notice_board .comment_edit .captcha {
+    overflow: hidden;
+    border: 1px solid #e4e4e4; }
+    .notice_board .comment_edit .captcha .captcha_head {
+      background-color: #e4e4e4;
+      position: relative;
+      height: 30px;
+      padding-left: 10px;
+      line-height: 30px; }
+    .notice_board .comment_edit .captcha .captcha_body {
+      overflow: hidden; }
+      .notice_board .comment_edit .captcha .captcha_body .captcha_img {
+        border-right: 1px solid #e4e4e4;
+        float: left;
+        zoom: 1; }
+        .notice_board .comment_edit .captcha .captcha_body .captcha_img img {
+          vertical-align: top; }
+      .notice_board .comment_edit .captcha .captcha_body .captcha_ipt {
+        overflow: hidden;
+        display: block; }
+        .notice_board .comment_edit .captcha .captcha_body .captcha_ipt .ipt {
+          width: 100%;
+          border: 0;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          color: #f54500;
+          font-size: 12px;
+          font-family: arial,sans-serif; }
+    .notice_board .comment_edit .captcha .refresh_captcha {
+      background-position: 0 -285px;
+      width: 122px;
+      height: 21px;
+      position: absolute;
+      right: 4px;
+      top: 4px; }
+.notice_board .comment_list {
+  padding: 33px 0 0;
+  margin-bottom: -29px; }
+  .notice_board .comment_list .tit {
+    color: #454545;
+    font-weight: bold;
+    padding-bottom: 7px; }
+    .notice_board .comment_list .tit .desc {
+      color: #999;
+      font-weight: normal; }
+  .notice_board .comment_list li {
+    border-top: 1px solid #e4e4e4;
+    padding: 28px 11px; }
+    .notice_board .comment_list li .username {
+      display: inline-block;
+      width: 135px;
+      color: #666;
+      font-weight: bold; }
+    .notice_board .comment_list li .reg_date {
+      color: #999;
+      font-size: 12px; }
+      .notice_board .comment_list li .reg_date .delete a {
+        color: #999; }
+    .notice_board .comment_list li .comment_txt {
+      color: #666;
+      line-height: 24px;
+      padding-top: 18px; }
+  .notice_board .comment_list .empty_reply {
+    text-align: center;
+    padding: 60px 0; }
 .notice_board .btn_cover {
-  padding: 20px 20px 0; }
+  padding: 20px 20px 0;
+  position: relative; }
   .notice_board .btn_cover a {
     height: 34px;
-    line-height: 36px;
+    line-height: 35px;
     padding: 0 18px;
     width: auto;
     margin-right: 3px;
     font-size: 12px; }
+  .notice_board .btn_cover .btn_write {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+.notice_board .bn_fullsize {
+  margin-bottom: 60px; }
+.notice_board .board_list_thumbnail ul {
+  overflow: hidden;
+  width: 1096px;
+  font-size: 0; }
+.notice_board .board_list_thumbnail li {
+  width: 238px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin-right: 36px;
+  font-size: 14px;
+  vertical-align: top; }
+.notice_board .board_list_thumbnail .thumbnail {
+  text-align: center; }
+  .notice_board .board_list_thumbnail .thumbnail img {
+    vertical-align: top; }
+  .notice_board .board_list_thumbnail .thumbnail .no_img {
+    display: inline-block;
+    width: 238px;
+    height: 242px;
+    background-color: #92d7d2;
+    line-height: 242px;
+    color: #fff;
+    border-radius: 10px; }
+.notice_board .board_list_thumbnail .subject {
+  text-align: center;
+  padding: 20px 0 56px; }
+  .notice_board .board_list_thumbnail .subject a {
+    color: #757575;
+    font-size: 16px;
+    line-height: 19px; }
+
+.membership .tit_membership {
+  border: 0;
+  padding: 0;
+  margin-bottom: 21px;
+  background: url(img/membership/tit_membership.png) no-repeat;
+  width: 117px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: top; }
+.membership .mbs_cover {
+  padding: 40px 20px 20px; }
+  .membership .mbs_cover h3 {
+    font-size: 22px;
+    color: #454545;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    font-weight: normal; }
+  .membership .mbs_cover .desc {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.43; }
+  .membership .mbs_cover .img_cover {
+    padding-top: 36px;
+    padding-left: 10px; }
+.membership .btn_cover {
+  padding: 39px 0 0;
+  text-align: center; }
 
 /*# sourceMappingURL=krisha.css.map */
