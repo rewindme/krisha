@@ -330,8 +330,8 @@ body, table, input, textarea, button, select {
   text-overflow: ellipsis;
   max-width: 100%; }
 
-.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .pop_wrap .tit_modify_option, .notice_board .tit_notice_board .img, .notice_board .tit_event_board .img, .notice_board .comment_edit .captcha .refresh_captcha {
-  background-image: url('img/sp/mypage-s73f5902261.png');
+.mypage .tit_mykrisha, .mypage .coupon_select_box .ico_arrow, .view_qna .review_board .title_cover .ico_attach, .my_level_cont .tit_mylevel, .my_level_cont .article .ico_menu1, .my_level_cont .article .ico_menu2, .my_level_cont .article .ico_menu3, .my_level_cont .article .ico_menu4, .pop_wrap .tit_review, .pop_wrap .write_review .add_upload .icon, .pop_wrap .write_review .remove_upload .icon, .pop_wrap .tit_customer_service, .pop_wrap .btn_close .icon, .pop_wrap .tit_coupon, .pop_wrap .tit_qna, .pop_wrap .tit_modify_option, .pop_wrap .tit_delete, .notice_board .tit_notice_board .img, .notice_board .tit_event_board .img, .notice_board .comment_edit .captcha .refresh_captcha {
+  background-image: url('img/sp/mypage-sfd9eaa135c.png');
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -2525,7 +2525,7 @@ body {
 .mypage {
   padding-top: 80px; }
   .mypage .tit_mykrisha {
-    background-position: 0 -241px;
+    background-position: 0 -244px;
     width: 98px;
     height: 14px;
     margin-bottom: 20px; }
@@ -2762,7 +2762,7 @@ body {
     color: #999;
     padding: 0 30px 0 10px; }
   .mypage .coupon_select_box .ico_arrow {
-    background-position: 0 -58px;
+    background-position: 0 -54px;
     width: 11px;
     height: 6px;
     position: absolute;
@@ -2898,11 +2898,18 @@ body {
   .view_qna .review_board .title_cover .category_name {
     color: #f54500; }
   .view_qna .review_board .title_cover .ico_attach {
-    background-position: -158px -58px;
+    background-position: -158px -54px;
     width: 16px;
     height: 12px;
     vertical-align: middle;
     margin-left: 4px; }
+
+.blank_list {
+  color: #999;
+  font-size: 12px;
+  border-bottom: 1px solid #e4e4e4;
+  text-align: center;
+  padding: 95px 0; }
 
 .mypage .emoney .mypage_table .price, .my_level_cont .grade .info .group_name {
   font-weight: bold;
@@ -2914,7 +2921,7 @@ body {
   background-color: #f2f2f2;
   margin-bottom: 15px; }
   .my_level_cont .tit_mylevel {
-    background-position: -204px -58px;
+    background-position: -140px -200px;
     width: 83px;
     height: 13px;
     margin-bottom: 20px;
@@ -3004,7 +3011,7 @@ body {
       font-weight: bold;
       color: #454545; }
     .my_level_cont .article .ico_menu1 {
-      background-position: -140px -184px;
+      background-position: -128px -239px;
       width: 34px;
       height: 27px;
       width: 45px;
@@ -3022,7 +3029,7 @@ body {
       width: 45px;
       height: 32px; }
     .my_level_cont .article .ico_menu4 {
-      background-position: -292px 2px;
+      background-position: -202px -52px;
       width: 32px;
       height: 30px;
       width: 45px;
@@ -3147,7 +3154,7 @@ body {
       cursor: pointer;
       margin-right: 3px; }
   .pop_wrap .tit_review {
-    background-position: -317px -58px;
+    background-position: -336px -54px;
     width: 68px;
     height: 13px;
     margin: 0; }
@@ -3185,11 +3192,11 @@ body {
       vertical-align: middle;
       margin-right: 4px; }
   .pop_wrap .write_review .add_upload .icon {
-    background-position: -80px -58px;
+    background-position: -119px -54px;
     width: 9px;
     height: 9px; }
   .pop_wrap .write_review .remove_upload .icon {
-    background-position: -119px -58px;
+    background-position: -41px -54px;
     width: 9px;
     height: 9px; }
   .pop_wrap .tb {
@@ -3267,7 +3274,7 @@ body {
     font-size: 14px;
     color: #666; }
   .pop_wrap .tit_customer_service {
-    background-position: 0 -101px;
+    background-position: 0 -112px;
     width: 205px;
     height: 14px; }
   .pop_wrap .customer_service .order_cover {
@@ -3325,14 +3332,14 @@ body {
     font-size: 11px;
     cursor: pointer; }
     .pop_wrap .btn_close .icon {
-      background-position: -41px -58px;
+      background-position: -80px -54px;
       width: 9px;
       height: 9px;
       vertical-align: middle;
       margin-right: 4px;
       height: 10px; }
   .pop_wrap .tit_coupon {
-    background-position: 0 -189px;
+    background-position: 0 -200px;
     width: 110px;
     height: 14px; }
   .pop_wrap .coupon_regist {
@@ -3391,7 +3398,7 @@ body {
       font-weight: bold;
       font-size: 12px; }
   .pop_wrap .tit_qna {
-    background-position: -174px -145px;
+    background-position: -264px -54px;
     width: 42px;
     height: 14px; }
   .pop_wrap .write_qna .tb .tit_terms {
@@ -3415,10 +3422,29 @@ body {
       padding-left: 4px;
       vertical-align: top; }
   .pop_wrap .tit_modify_option {
-    background-position: 0 -145px;
+    background-position: 0 -156px;
     width: 144px;
     height: 14px;
     margin: 0; }
+  .pop_wrap .tit_delete {
+    background-position: -112px 0;
+    width: 63px;
+    height: 13px;
+    margin-bottom: 5px; }
+  .pop_wrap.border_outline {
+    border: 5px solid #f54500;
+    padding-bottom: 0; }
+    .pop_wrap.border_outline .pop_submit {
+      padding-bottom: 0; }
+  .pop_wrap .delete_article {
+    text-align: center; }
+    .pop_wrap .delete_article .msg {
+      padding: 3px 0 11px;
+      color: #666; }
+    .pop_wrap .delete_article .ipt_pw {
+      height: 34px;
+      width: 183px;
+      text-align: center; }
 
 .cs_center .cs_center_info .tel_number, .cs_center .cs_center_info .cs_period {
   border-bottom: 1px solid #d5d5d5;
@@ -3654,11 +3680,11 @@ body {
   line-height: normal; }
 
 .notice_board .tit_notice_board .img {
-  background-position: -199px 0;
+  background-position: -205px 0;
   width: 65px;
   height: 14px; }
 .notice_board .tit_event_board .img {
-  background-position: -112px 0;
+  background-position: -174px -156px;
   width: 57px;
   height: 13px; }
 .notice_board.board_list .tit_event_board, .notice_board.board_list .tit_notice_board {
@@ -3783,7 +3809,7 @@ body {
           font-size: 12px;
           font-family: arial,sans-serif; }
     .notice_board .comment_edit .captcha .refresh_captcha {
-      background-position: 0 -285px;
+      background-position: 0 -296px;
       width: 122px;
       height: 21px;
       position: absolute;

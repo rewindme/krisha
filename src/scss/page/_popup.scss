@@ -11,8 +11,7 @@ $pop-border-color:#e4e4e4;
 	right:0;
 	overflow:auto;
 	padding:20px;
-
-
+	
 	.pop_header{
 		margin-bottom:18px;
 		
@@ -435,6 +434,38 @@ $pop-border-color:#e4e4e4;
 	select{
 		@extend %select-style;
 	}
+	
+	//게시글 삭제 팝업
+	.tit_delete{
+		@include use-sprite(pop_tit_delete);
+		margin-bottom:5px;
+	}
+	
+	&.border_outline{
+		border:5px solid #f54500;
+		padding-bottom:0;
+		
+		.pop_submit{
+			padding-bottom:0;
+		}
+	}
+	
+	.delete_article{
+		text-align:center;
+		.msg{
+			padding:3px 0 11px;
+			color:#666;
+		}
+		.ipt_pw{
+			height:34px;
+			width:183px;
+			text-align:center;
+		}
+	}
+	
+	
+	
+	
 }
 
 
