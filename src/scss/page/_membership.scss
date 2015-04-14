@@ -1,4 +1,4 @@
-.membership{
+.membership,.prime{
 	.tit_membership{
 		border:0;
 		padding:0;
@@ -39,5 +39,30 @@
 	
 	.btn_join{
 		@extend %btn-point2;
+	}
+}
+
+.prime{
+	.column_cover{
+		zoom:1;
+		.column{
+			width:49.9%;
+			float:left;
+		}
+		
+		&:after{
+			content:'';
+			display:block;
+			height:0;
+			clear:both;
+			visibility:hidden;
+		}
+	}
+	.mbs_cover{
+		border-bottom:1px solid #e4e4e4;
+		padding-bottom:40px;
+		h3{
+			color:#f54500;
+		}
 	}
 }
