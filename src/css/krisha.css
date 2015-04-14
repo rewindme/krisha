@@ -3921,6 +3921,15 @@ body {
   padding: 39px 0 0;
   text-align: center; }
 
+.prime .tit_freebie {
+  border: 0;
+  padding: 0;
+  margin-bottom: 21px;
+  background: url(img/membership/tit_freebie.png) no-repeat;
+  width: 157px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: top; }
 .prime .column_cover {
   zoom: 1; }
   .prime .column_cover .column {
